@@ -898,14 +898,9 @@ function sparafolkslag(){
 		//rollperson.folkslag=valj_subval(rollperson.folkslag, slump);
 		rollperson.folkslag=summera_subval(rollperson.folkslag);
 		
-		console.log("i sparafolkslag: valdasub för rollpersonens folkslag:" + rollperson.folkslag.subval[0][3][0].valdasub)
-		console.log("i sparafolkslag: lättlärdakunskap i folkslaget:" + rollperson.folkslag.lattlardkunskapsfardigheter);
-		console.log("i sparafolkslag: lättlärdamystik i folkslaget:" + rollperson.folkslag.lattlardmystikfardigheter) ;
 		
 		rollperson= summerarollperson(rollperson, rollperson.folkslag);
 		
-		console.log("i sparafolkslag: lättlärdakunskap i rollperson:" + rollperson.lattlardkunskapsfardigheter);
-		console.log("i sparafolkslag: lättlärdamystik i rollperson:" + rollperson.lattlardmystikfardigheter) ;
 		
 		rollperson=kvarhandelsetabellslag(rollperson);
 		
