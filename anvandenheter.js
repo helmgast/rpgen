@@ -1497,6 +1497,9 @@ function andraavtrubbning(rollperson, kategori, steg){
 			}else if (rollperson.anvandenheter[avtrubbningsfardighetsgrupper[i]].kvarenheter==1){
 				if (rollperson.anvandenheter.kvarvalfriaenheter>=1){
 					// Använd en färdighetsgruppenhet och en valfri
+					//console.log("I andraavtrubbning. Använd en färdighetsgruppenhet: " + avtrubbningsfardighetsgrupper[i]  +" och en valfri")
+					//console.log("Antal använda färdighetsgruppenheter innan: " + rollperson.anvandenheter.avtrubbning[avtrubbningsfardighetsgrupper[i]].anvandaenheter);
+					//console.log("Antal använda valfria på " + avtrubbningskategorier[i] + " innan: " + rollperson.anvandenheter.avtrubbning[kategori].anvandavalfriaenheter);
 					
 					rollperson.anvandenheter[avtrubbningsfardighetsgrupper[i]].kvarenheter -=1;
 					rollperson.anvandenheter.avtrubbning[avtrubbningsfardighetsgrupper[i]].anvandaenheter +=1;
@@ -1510,6 +1513,9 @@ function andraavtrubbning(rollperson, kategori, steg){
 					
 					rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] +=1;
 					rollperson.anvandenheter.avtrubbning[kategori + "krysstotal"] =rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] + rollperson["avtrubbning" + kategori];
+					
+					//console.log("Antal använda färdighetsgruppenheter efter: " + rollperson.anvandenheter.avtrubbning[avtrubbningsfardighetsgrupper[i]].anvandaenheter);
+					//console.log("Antal använda valfria på " + avtrubbningskategorier[i] + " efter: " + rollperson.anvandenheter.avtrubbning[kategori].anvandavalfriaenheter);
 					
 				}
 			}else if (rollperson.anvandenheter[avtrubbningsfardighetsgrupper[i]].kvarenheter>=2){
@@ -1545,7 +1551,7 @@ function andraavtrubbning(rollperson, kategori, steg){
 	}else if(steg==-1){
 		if (rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] >=1){
 			// Prioordning: Betala tillbaka valfria, kategorienhet, valfritt kryss
-			if (rollperson.anvandenheter.avtrubbning.anvandavalfriaenheter>=2){
+			if (rollperson.anvandenheter.avtrubbning[kategori].anvandavalfriaenheter>=2){
 				
 				rollperson.anvandenheter.kvarvalfriaenheter +=2;
 				rollperson.anvandenheter.avtrubbning.anvandavalfriaenheter -=2;
@@ -1554,7 +1560,7 @@ function andraavtrubbning(rollperson, kategori, steg){
 				rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] -=1;
 				rollperson.anvandenheter.avtrubbning[kategori + "krysstotal"] =rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] + rollperson["avtrubbning" + kategori];
 
-			}else if (rollperson.anvandenheter.avtrubbning.anvandavalfriaenheter==1){
+			}else if (rollperson.anvandenheter.avtrubbning[kategori].anvandavalfriaenheter==1){
 				if (rollperson.anvandenheter.avtrubbning[avtrubbningsfardighetsgrupper[i]].anvandaenheter >=1){
 					// Betala tillbaka en färdighetsgruppenhet och en valfri
 					
@@ -1563,7 +1569,7 @@ function andraavtrubbning(rollperson, kategori, steg){
 					rollperson.anvandenheter[avtrubbningsfardighetsgrupper[i]].anvandaenheterovrigt -=1;
 					
 					rollperson.anvandenheter.kvarvalfriaenheter +=1;
-					rollperson.anvandenheter.avtrubbning[kategori].anvandavalfriaenheter -=2;
+					rollperson.anvandenheter.avtrubbning[kategori].anvandavalfriaenheter -=1;
 					rollperson.anvandenheter.avtrubbning.anvandavalfriaenheter -=1;
 					
 					rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] -=1;
@@ -1580,10 +1586,11 @@ function andraavtrubbning(rollperson, kategori, steg){
 				rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] -=1;
 				rollperson.anvandenheter.avtrubbning[kategori + "krysstotal"] =rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] + rollperson["avtrubbning" + kategori];
 
-			}else if(rollperson.anvandenheter.avtrubbning.anvandavalfriakryss>0){
+			}else if(rollperson.anvandenheter.avtrubbning[kategori].anvandavalfriakryss>0){
 				// Betala tillbaka ett valfritt avtrubbningskryss
 				rollperson.anvandenheter.avtrubbning.kvarvalfriakryss +=1;
 				rollperson.anvandenheter.avtrubbning.anvandavalfriakryss -=1;
+				rollperson.anvandenheter.avtrubbning[kategori].anvandavalfriakryss -=1;
 				
 				rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] -=1;
 				rollperson.anvandenheter.avtrubbning[kategori + "krysstotal"] =rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] + rollperson["avtrubbning" + kategori];
