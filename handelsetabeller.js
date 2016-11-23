@@ -6918,7 +6918,6 @@ function hamta_handelsetabeller(){
 	handelsetabeller.striderdrabbningar[52].subval[0][0][0].vald = 0; 
 	handelsetabeller.striderdrabbningar[52].subval[0][0][0].rorlighet = {};
 	handelsetabeller.striderdrabbningar[52].subval[0][0][0].rorlighet.varde =2; 
-	handelsetabeller.striderdrabbningar[52].subval[0][0][0] = {};
 	handelsetabeller.striderdrabbningar[52].subval[0][0][0].lattlardstridsfardigheter=1;
 	handelsetabeller.striderdrabbningar[52].subval[0][0][0].vapen="Ett ovanligt vapen knutet till rollpersonens lättlärda stridsfärdighet som har skada \+2";
 
