@@ -1823,8 +1823,8 @@ function slapahandelsetabell(){
 	
 	//--- Om ett val redan är gjort ska slumptal slås om
 	
-	//startnummer=99;
-	
+	//startnummer=66;
+	//slumptal=startnummer;
 	
 	if (saknadeobjekt.length==0){
 	
@@ -1845,6 +1845,8 @@ function slapahandelsetabell(){
 			
 			while(omslag==1){
 				slumptal=window.parent.slumpa(aktiv_handelsetabell.length-1);
+				
+				//slumptal+=1;
 				if(aktiv_handelsetabell[slumptal].vald==1){
 				}else{
 					omslag=0;
@@ -3718,10 +3720,10 @@ function skrivanvandenheterkategorier(){
 	htmlkod += "<br>";
 	
 	i=6; // Språk
-	htmlkod += "<a id=\"rpvalkategori_anvandenheter_sprak" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"skrivanvandenheter('" + "sprak" + "');return false;\">" + "Språk" + ""; 
-	//console.log("<a id=\"rpvalkategori_anvandenheter_sprak" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"skrivanvandenheter('" + "sprak" + "');return false;\">" + "Språk" + ""); 
+	//htmlkod += "<a id=\"rpvalkategori_anvandenheter_sprak" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"skrivanvandenheter('" + "sprak" + "');return false;\">";
+	htmlkod += "Språk"; 
 	
-	htmlkod +=" \(" + rollperson.anvandenheter[fardighetsgrupplista[i]].kvarenheter + "/" + rollperson.sprakenheter + "\) ";
+	//htmlkod +=" \(" + rollperson.anvandenheter[fardighetsgrupplista[i]].kvarenheter + "/" + rollperson.sprakenheter + "\) ";
 	htmlkod +="</a>"; 
 	
 	htmlkod += " &#124; ";
@@ -5340,7 +5342,7 @@ function skrivformular(rollperson){
 function slumparollperson(){
 	// Skapa Fyra dropdown i vänsterspalt:
 	// Bakgrundstabell, folkslag, arketyp, miljö
-	/*
+	
 	var i;
 	
 	// Förberedelser
@@ -5355,13 +5357,43 @@ function slumparollperson(){
 	
 	ovrigafardighetertabeller=hamta_ovrigafardighetertabeller();
 	fardighetsobjekt= hamta_fardighetsobjekt();
+	fardighetslistaobjekt= hamta_fardighetslistaobjekt();
 	attributobjekt=hamta_attributobjekt();
 	ovrigafardigheterarray=[];
+	
+	ovrigafardigheterkategorier=fardighetslistaobjekt.ovrigafardighetergrupplista_namn;
+	
+	// Skapa rollperson
+	rollperson=new rpval();
+	
 	
 	aktiv_fardighetslista={};
 	aktiv_fardighetslista.expertis=[];
 	aktiv_fardighetslista.hantverk=[];
 	aktiv_fardighetslista.kannetecken=[];
+	
+	rollperson.handelsetabellobjektlista=[];
+	rollperson.ovrigafardigheter={};
+	rollperson.ovrigafardigheter.anvant_expertispoang=0;
+	rollperson.ovrigafardigheter.anvant_hantverkpoang=0;
+	rollperson.ovrigafardigheter.anvant_kanneteckenpoang=0;
+	
+	rollperson.ovrigafardigheter.expertis={};
+	rollperson.ovrigafardigheter.expertis.anvantpoang=0;
+	rollperson.ovrigafardigheter.expertis.lista=[];
+	
+	rollperson.ovrigafardigheter.hantverk={};
+	rollperson.ovrigafardigheter.hantverk.anvantpoang=0;
+	rollperson.ovrigafardigheter.hantverk.lista=[];
+	
+	rollperson.ovrigafardigheter.kannetecken={};
+	rollperson.ovrigafardigheter.kannetecken.anvantpoang=0;
+	rollperson.ovrigafardigheter.kannetecken.lista=[];
+	
+	hantverkattributbonuslista=[];
+	
+	aktivthandelsetabellslag={};
+	
 	
 	infotext=hamta_infotext();
 	
@@ -5379,8 +5411,7 @@ function slumparollperson(){
 	slumpobjekt.miljo="slump";
 	
 	
-	// Skapa rollperson
-	rollperson=new rpval();
+	
 	
 	
 	// Bakgrund
@@ -5411,6 +5442,7 @@ function slumparollperson(){
 	
 	// Välj subval och spara
 	aktivtfolkslagobjekt=valj_subval(aktivtfolkslagobjekt,1);
+	aktivtfolkslagobjekt=summera_subval(aktivtfolkslagobjekt);
 	rollperson.folkslag=clone(aktivtfolkslagobjekt);
 	
 	// Grundattribut
@@ -5434,6 +5466,7 @@ function slumparollperson(){
 	
 	// Välj subval och spara
 	aktivtarketypobjekt=valj_subval(aktivtarketypobjekt,1);
+	aktivtarketypobjekt=summera_subval(aktivtarketypobjekt);
 	rollperson.arketyp=clone(aktivtarketypobjekt);
 	
 	// miljo
@@ -5447,20 +5480,61 @@ function slumparollperson(){
 	
 	// Välj subval och spara
 	aktivtmiljoobjekt=valj_subval(aktivtmiljoobjekt,1);
+	aktivtmiljoobjekt=summera_subval(aktivtmiljoobjekt);
 	rollperson.miljo=clone(aktivtmiljoobjekt);
 	
 	// Summera 
 	rollperson= summerarollperson(rollperson, rollperson.bakgrund);
+	skrivvanstersammanfattning();
+	uppdateravanstersammanfattning();
+	
+	
 	rollperson= summerarollperson(rollperson, rollperson.folkslag);
+	
+	uppdateravanstersammanfattning();
+	
+	
+	
 	rollperson= summerarollperson(rollperson, rollperson.attributtarningar);
+	
+	uppdateravanstersammanfattning();
+	
+	
 	rollperson= summerarollperson(rollperson, rollperson.arketyp);
+	
+	uppdateravanstersammanfattning();
+	
 	rollperson= summerarollperson(rollperson, rollperson.miljo);
+	
+	uppdateravanstersammanfattning();
 	
 	// Händelsetabeller
 	
-	while(rollperson.kvar_handelsetabellslag>0){
-		for (i=0;i<handelsetabellista.length;i++){
+	rollperson.kvar_handelsetabellslag=0;
+	for (i=0;i<handelsetabellista.length;i++){
 		
+		rollperson["kvar_" + handelsetabellista[i]]=rollperson[handelsetabellista[i]];
+		rollperson.kvar_handelsetabellslag+=rollperson["kvar_" + handelsetabellista[i]];
+		
+	}
+	rollperson.kvar_valfriatabellslag=rollperson.valfriatabellslag;
+	rollperson.kvar_handelsetabellslag+=rollperson.kvar_valfriatabellslag;
+	
+	for (i=0;i<handelsetabellista.length;i++){
+			
+		console.log("Antal slag kvar: " + i + ", " + rollperson["kvar_" + handelsetabellista[i]]);
+	}
+	console.log("valfria: " + rollperson.kvar_valfriatabellslag);
+	console.log("totalt: " + rollperson.kvar_handelsetabellslag);
+			
+	
+	/*
+	while(rollperson.kvar_handelsetabellslag>0){
+		console.log("I while, innan for")
+		for (i=0;i<handelsetabellista.length;i++){
+			
+			console.log("forloop i while för händelse: " + i + ", " + rollperson.kvar_handelsetabellslag)
+			
 			aktiv_handelsetabell=handelsetabeller[handelsetabellista[i]];
 			while (rollperson["kvar_" + handelsetabellista[0]] > 0){
 				// Slå på tabellen
@@ -5480,6 +5554,8 @@ function slumparollperson(){
 			// Summerarollperson	
 		}	
 	}
+	*/
+	uppdateravanstersammanfattning();
 	
 	// Färdighetstabeller
 	
@@ -5497,51 +5573,17 @@ function slumparollperson(){
 	
 	
 	
-	rollperson.handelsetabellobjektlista=[];
-	rollperson.ovrigafardigheter={};
-	rollperson.ovrigafardigheter.anvant_expertispoang=0;
-	rollperson.ovrigafardigheter.anvant_hantverkpoang=0;
-	rollperson.ovrigafardigheter.anvant_kanneteckenpoang=0;
-	
-	rollperson.ovrigafardigheter.expertis={};
-	rollperson.ovrigafardigheter.expertis.anvantpoang=0;
-	rollperson.ovrigafardigheter.expertis.lista=[];
-	
-	rollperson.ovrigafardigheter.hantverk={};
-	rollperson.ovrigafardigheter.hantverk.anvantpoang=0;
-	rollperson.ovrigafardigheter.hantverk.lista=[];
-	
-	rollperson.ovrigafardigheter.kannetecken={};
-	rollperson.ovrigafardigheter.kannetecken.anvantpoang=0;
-	rollperson.ovrigafardigheter.kannetecken.lista=[];
-	
-	aktivtrpvalobjekt=arketypobjekt.krigare;
-	aktivtfolkslagobjekt=folkslagobjekt[folkslagobjekt.lista[0]];
-	aktivtarketypobjekt=arketypobjekt[arketypobjekt.lista[0]];
-	aktivtmiljoobjekt=miljoobjekt[miljoobjekt.lista[0]];
-	aktiv_bakgrundstabell=bakgrundstabeller[bakgrundstabeller.lista[0]];
-	aktiv_handelsetabell=handelsetabeller[handelsetabeller.lista[0]];
-	aktiv_fardighetstabell=ovrigafardighetertabeller[ovrigafardighetertabeller.lista[0]];
-	
-	aktiv_ovrigafardigheterkategori="expertis";
 	
 	
 	
-	aktiv_fardighet="simma";
-	aktiv_kategori="kunskapsfardigheter";
 	
-	hantverkattributbonuslista=[];
-	
-	aktivthandelsetabellslag={};
-	skrivbakgrunderkategorier();
-	skrivbakgrunder([0,0]);
 	
 	skrivvanstersammanfattning();
 	uppdateravanstersammanfattning();
 	skrivhogerkategorityper();
 	
 	
-	*/
+	
 }
 
 function raknautattribut(rollperson){
@@ -6241,7 +6283,7 @@ a:active {
 		<a href="PleaseEnableJavascript.html" onclick="location.reload();return false;">Skapa ny rollperson</a>
 		</td>
 		<td id="slumparollperson">
-		<!-- <a href="PleaseEnableJavascript.html" onclick="slumparollperson();return false;">Slumpa rollperson</a> -->
+		<a href="PleaseEnableJavascript.html" onclick="slumparollperson();return false;">Slumpa rollperson</a>
 		</td>
 		<td id="raknautattribut">
 		<!-- <a href="PleaseEnableJavascript.html" onclick="raknautattribut();return false;">Räkna ut attribut</a> -->
