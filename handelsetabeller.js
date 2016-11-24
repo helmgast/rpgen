@@ -1814,13 +1814,9 @@ function hamta_handelsetabeller(){
 	handelsetabeller.farderaventyr[84].subval[0][0][0] = {}; 
 	handelsetabeller.farderaventyr[84].subval[0][0][0].valdasub = []; 
 	handelsetabeller.farderaventyr[84].subval[0][0][0].vald = 0; 
-	handelsetabeller.farderaventyr[84].subval[0][0][0] = {};
 	handelsetabeller.farderaventyr[84].subval[0][0][0].lattlardkunskapsfardigheter=1;
-	handelsetabeller.farderaventyr[84].subval[0][0][0] = {};
 	handelsetabeller.farderaventyr[84].subval[0][0][0].lattlardrorelsefardigheter=1;
-	handelsetabeller.farderaventyr[84].subval[0][0][0] = {};
 	handelsetabeller.farderaventyr[84].subval[0][0][0].lattlardsocialafardigheter=1;
-	handelsetabeller.farderaventyr[84].subval[0][0][0] = {};
 	handelsetabeller.farderaventyr[84].subval[0][0][0].lattlardvildmarksfardigheter=1;
 	
 	
@@ -2063,7 +2059,6 @@ function hamta_handelsetabeller(){
 	handelsetabeller.farderaventyr[99].subval[0][0][0] = {}; 
 	handelsetabeller.farderaventyr[99].subval[0][0][0].valdasub = []; 
 	handelsetabeller.farderaventyr[99].subval[0][0][0].vald = 0; 
-	handelsetabeller.farderaventyr[99].subval[0][0][0] = {};
 	handelsetabeller.farderaventyr[99].subval[0][0][0].lattlardallarorelsefardigheter=1; 
 
 	handelsetabeller.farderaventyr[100] = {}; 
@@ -6008,7 +6003,6 @@ function hamta_handelsetabeller(){
 	handelsetabeller.kunskapmysterier[96].subval[0][0][0].valdasub = []; 
 	handelsetabeller.kunskapmysterier[96].subval[0][0][0].vald = 0; 
 	handelsetabeller.kunskapmysterier[96].subval[0][0][0].resurs="Ett mystiskt föremål som är värt varde1_resultat om man hittar rätt köpare";
-	handelsetabeller.kunskapmysterier[96].subval[0][0][0] = {};
 	handelsetabeller.kunskapmysterier[96].subval[0][0][0].vardeslag=["4T6x50"];
 	handelsetabeller.kunskapmysterier[96].subval[0][0][0].beskrivninghakvaldbas="Föremålet är värt varde1_resultat om man hittar rätt köpare.";
 	
@@ -7156,6 +7150,7 @@ function hamta_handelsetabeller(){
 	handelsetabeller.striderdrabbningar[67].subval[0][1][0].valdasub = []; 
 	handelsetabeller.striderdrabbningar[67].subval[0][1][0].vald = 0; 
 	handelsetabeller.striderdrabbningar[67].subval[0][1][0].antalsubval=1;
+	
 	handelsetabeller.striderdrabbningar[67].subval[0][1][1] = {}; 
 	handelsetabeller.striderdrabbningar[67].subval[0][1][1].valdasub = []; 
 	handelsetabeller.striderdrabbningar[67].subval[0][1][1].vald = 0; 
@@ -7171,7 +7166,7 @@ function hamta_handelsetabeller(){
 	handelsetabeller.striderdrabbningar[67].subval[0][1][2].rorlighet = {};
 	handelsetabeller.striderdrabbningar[67].subval[0][1][2].rorlighet.varde=-2;
 	handelsetabeller.striderdrabbningar[67].subval[0][1][2].rubrik="-2 Rörlighet"
-	handelsetabeller.striderdrabbningar[67].subval[0][1][1].beskrivninghakvaldbas = "–2 Rörlighet. Däremot har rollpersonen lagt tid på att öva upp sin skicklighet för att inte låta armen hejda denne och får därför 4 enheter Stridsfärdigheter. ";
+	handelsetabeller.striderdrabbningar[67].subval[0][1][2].beskrivninghakvaldbas = "–2 Rörlighet. Däremot har rollpersonen lagt tid på att öva upp sin skicklighet för att inte låta armen hejda denne och får därför 4 enheter Stridsfärdigheter. ";
 	
 
 	handelsetabeller.striderdrabbningar[68] = {}; 
@@ -7364,7 +7359,6 @@ function hamta_handelsetabeller(){
 	handelsetabeller.striderdrabbningar[79].subval[0][0][0] = {}; 
 	handelsetabeller.striderdrabbningar[79].subval[0][0][0].valdasub = []; 
 	handelsetabeller.striderdrabbningar[79].subval[0][0][0].vald = 0; 
-	handelsetabeller.striderdrabbningar[79].subval[0][0][0] = {};
 	handelsetabeller.striderdrabbningar[79].subval[0][0][0].lattlardallastridsfardigheter=1; 
 
 	handelsetabeller.striderdrabbningar[80] = {}; 
@@ -7648,7 +7642,6 @@ function hamta_handelsetabeller(){
 	handelsetabeller.striderdrabbningar[96].subval[0][0][0] = {}; 
 	handelsetabeller.striderdrabbningar[96].subval[0][0][0].valdasub = []; 
 	handelsetabeller.striderdrabbningar[96].subval[0][0][0].vald = 0; 
-	handelsetabeller.striderdrabbningar[96].subval[0][0][0] = {};
 	handelsetabeller.striderdrabbningar[96].subval[0][0][0].lattlardstridsfardigheter=1; 
 	handelsetabeller.striderdrabbningar[96].subval[0][0][0].formaga="Alla vapen som är kopplade till stridsfärdigheten som rollpersonen är lättlärd i gör \+1T6 skada.";
 	
