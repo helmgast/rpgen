@@ -2198,11 +2198,12 @@ var utmarkare={};
 	
 	// förmodligen battre med lista av objekt, därav kommentering
 
-
+	folkslagobjekt.rubriker=[];
 	folkslagobjekt.lista=folkslaglista;
 	for (t = 0; t < folkslagobjekt.lista.length; t++){
     	// folkslagobjektlista[folkslaglista[i]] = window[folkslaglista[i]];
 		folkslagobjekt[folkslaglista[t]].aktiverad=0;
+		folkslagobjekt.rubriker[t]=folkslagobjekt[folkslagobjekt.lista[t]].rubrik;
 		
 		// Sätter beskrivningvaldbas till beskrivning om den förra saknas
 		for (i=0;i<folkslagobjekt[folkslaglista[t]].subval.length;i++){

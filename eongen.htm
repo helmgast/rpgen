@@ -1971,7 +1971,7 @@ function skrivhandelsetabeller(){
 		if ("vald" in  aktivthandelsetabellslag){
 			if (aktivthandelsetabellslag.vald ==0){
 		
-				htmlkodrubrik += "<td class=\"center\" width=\"20%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"anropasparahandelsetabellslag();return false;\">Spara " + aktivthandelsetabellslag.rubrik + " &rArr;</a></td>";
+				htmlkodrubrik += "<td class=\"center\" width=\"20%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"anropasparahandelsetabellslag(rollperson, aktivthandelsetabellslag);return false;\">Spara " + aktivthandelsetabellslag.rubrik + " &rArr;</a></td>";
 			}else{
 				htmlkodrubrik += "<td class=\"center\" width=\"20%\"></td>";
 			}
@@ -2001,8 +2001,8 @@ function skrivhandelsetabeller(){
 	
 }
 
-function anropasparahandelsetabellslag(){
-	sparahandelsetabellslag();
+function anropasparahandelsetabellslag(rollperson, aktivthandelsetabellslag){
+	rollperson= sparahandelsetabellslag(rollperson,aktivthandelsetabellslag);
 	
 	uppdateravanstersammanfattning();
 	skrivhandelsetabellerkategorier();
@@ -2010,7 +2010,7 @@ function anropasparahandelsetabellslag(){
 	
 }
 
-function sparahandelsetabellslag(){
+function sparahandelsetabellslag(rollperson, aktivthandelsetabellslag){
 	slump=1;
 	handelsetabellista= handelsetabeller.lista;
 	//window.alert(aktiv_handelsetabell);
@@ -2080,11 +2080,11 @@ function sparahandelsetabellslag(){
 	}
 	rollperson.kvar_handelsetabellslag=kvartotal;
 	if (kvartotal==0){
-		window.alert("Alla händelsetabellslag slagna!");
+		//window.alert("Alla händelsetabellslag slagna!");
 		rollperson.redoforfardighetstabellslag=1;
 		skrivhogerkategorityper();
 	}	
-	
+	 return rollperson
 	
 }
 
@@ -2683,7 +2683,7 @@ function skrivanvandenheter(kategorinamn){
 			console.log("I skrivanvandenheter: rollperson.anvandenheter.sprakskrift: " + rollperson.anvandenheter.sprakskrift);
 			
 			
-			if (listindex(rollperson.anvandenheter.sprakskrift, tempnamn)>=0){
+			if (rollperson.anvandenheter.sprakskrift.indexOf(tempnamn)>=0){
 				// Färdigheten är tillagd och kan slumpas om
 				htmlkod += "<a id=\"anvandenheter_slumpaomsprak_" + tempnamn + "\"";
 				htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
@@ -2756,7 +2756,7 @@ function skrivanvandenheter(kategorinamn){
 		for (i=0;i<rollperson.anvandenheter.allaovrigafardighetermedtarningar.length;i++){
 			tempnamn=rollperson.anvandenheter.allaovrigafardighetermedtarningar[i];
 			htmlkod += "<td class='center'>";
-			if (listindex(rollperson.anvandenheter.ovrigafardighetermedtarningar, tempnamn)>=0){
+			if (rollperson.anvandenheter.ovrigafardighetermedtarningar.indexOf(tempnamn)>=0){
 				// Färdigheten är tillagd och kan slumpas om
 				htmlkod += "<a id=\"anvandenheter_slumpaomovrigfardighet_" + tempnamn + "\"";
 				htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
@@ -2770,11 +2770,11 @@ function skrivanvandenheter(kategorinamn){
 			htmlkod += "</td>";
 			
 			htmlkod += "<td>";
-			if (listindex(fardighetslistaobjekt.expertisfardigheter.lista, tempnamn)>=0){
+			if (fardighetslistaobjekt.expertisfardigheter.lista.indexOf(tempnamn)>=0){
 				htmlkod +="E";
-			}else if(listindex(fardighetslistaobjekt.hantverkfardigheter.lista, tempnamn)>=0){
+			}else if(fardighetslistaobjekt.hantverkfardigheter.lista.indexOf(tempnamn)>=0){
 				htmlkod +="H";
-			}else if(listindex(fardighetslistaobjekt.kanneteckenfardigheter.lista, tempnamn)>=0){
+			}else if(fardighetslistaobjekt.kanneteckenfardigheter.lista.indexOf(tempnamn)>=0){
 				htmlkod +="K";
 			}else{
 				console.log("fel övrig färdighet")
@@ -3580,9 +3580,13 @@ function skrivanvandenheter(kategorinamn){
 	if (kategorinamn=="valfri"){
 		htmlkodrubrik +="";
 		
-		htmlkodrubrik += "<a id=\"anvandenheter_sammanfattning_slumpaenvalfri" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"anropaslumpaenhetvalfri(rollperson);return false;\">";
+		if (rollperson.anvandenheter.kvarvalfriaenheter>0){
+			htmlkodrubrik += "<a id=\"anvandenheter_sammanfattning_slumpaenvalfri" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"anropaslumpaenhetvalfri(rollperson);return false;\">";
+		}
 		htmlkodrubrik += "Slumpa en enhet" + ""; 
-		htmlkodrubrik +="</a>"; 
+		if (rollperson.anvandenheter.kvarvalfriaenheter>0){
+			htmlkodrubrik +="</a>"; 
+		}
 		htmlkodrubrik += "<br>";
 		
 		
@@ -3600,28 +3604,35 @@ function skrivanvandenheter(kategorinamn){
 		htmlkodrubrik += "</a>"
 		
 	}else if(kategorinamn=="ovrigafardigheter"){
-		htmlkodrubrik += "<a id=\"anvandenheter_slumpaexpertis\"";
-		htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
-		htmlkodrubrik += "onclick=\"anropaslumpaovrigfardighet(rollperson,'"  + "expertis" + "');return false;\">";
+		if (rollperson.anvandenheter.kvarvalfriaenheter>0){
+			htmlkodrubrik += "<a id=\"anvandenheter_slumpaexpertis\"";
+			htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
+			htmlkodrubrik += "onclick=\"anropaslumpaovrigfardighet(rollperson,'"  + "expertis" + "');return false;\">";
+		}
 		htmlkodrubrik += "Slumpa Expertis";
-		htmlkodrubrik += "</a>";
-		
+		if (rollperson.anvandenheter.kvarvalfriaenheter>0){
+			htmlkodrubrik += "</a>";
+		}
 		htmlkodrubrik += "<br>";
-		htmlkodrubrik += "<a id=\"anvandenheter_slumpahantverk\"";
-		htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
-		htmlkodrubrik += "onclick=\"anropaslumpaovrigfardighet(rollperson,'"  + "hantverk" + "');return false;\">";
-		
+		if (rollperson.anvandenheter.kvarvalfriaenheter>0){
+			htmlkodrubrik += "<a id=\"anvandenheter_slumpahantverk\"";
+			htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
+			htmlkodrubrik += "onclick=\"anropaslumpaovrigfardighet(rollperson,'"  + "hantverk" + "');return false;\">";
+		}	
 		htmlkodrubrik += "Slumpa Hantverk";
-		htmlkodrubrik += "</a>";
-		
+		if (rollperson.anvandenheter.kvarvalfriaenheter>0){
+			htmlkodrubrik += "</a>";
+		}
 		htmlkodrubrik += "<br>";
-		htmlkodrubrik += "<a id=\"anvandenheter_slumpakannetecken\"";
-		htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
-		htmlkodrubrik += "onclick=\"anropaslumpaovrigfardighet(rollperson,'"  + "kannetecken" + "');return false;\">";
-		
+		if (rollperson.anvandenheter.kvarvalfriaenheter>0){
+			htmlkodrubrik += "<a id=\"anvandenheter_slumpakannetecken\"";
+			htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
+			htmlkodrubrik += "onclick=\"anropaslumpaovrigfardighet(rollperson,'"  + "kannetecken" + "');return false;\">";
+		}	
 		htmlkodrubrik += "Slumpa Kännetecken";
-		htmlkodrubrik += "</a>";
-		
+		if (rollperson.anvandenheter.kvarvalfriaenheter>0){
+			htmlkodrubrik += "</a>";
+		}
 	}else if(kategorinamn=="avtrubbning"){
 		htmlkodrubrik += "<a id=\"anvandenheter_slumpaavtrubbning\"";
 		htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
@@ -3629,21 +3640,27 @@ function skrivanvandenheter(kategorinamn){
 		
 		htmlkodrubrik += "Slumpa ett kryss";
 	}else{
-		htmlkodrubrik += "<a id=\"anvandenheter_slumpaenenhet_" + kategorinamn + "\"";
-		htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
-		htmlkodrubrik += "onclick=\"anropaslumpaenhetkategori(rollperson,'"  + kategorinamn + "');return false;\">";
-			
+		if (rollperson.anvandenheter.kvarvalfriaenheter+rollperson.anvandenheter[kategorinamn].kvarenheter > 0){
+			htmlkodrubrik += "<a id=\"anvandenheter_slumpaenenhet_" + kategorinamn + "\"";
+			htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
+			htmlkodrubrik += "onclick=\"anropaslumpaenhetkategori(rollperson,'"  + kategorinamn + "');return false;\">";
+		}		
 		htmlkodrubrik += "Slumpa en enhet";
-		htmlkodrubrik += "</a>"; 
+		if (rollperson.anvandenheter.kvarvalfriaenheter+rollperson.anvandenheter[kategorinamn].kvarenheter > 0){
+			htmlkodrubrik += "</a>"; 
+		}
 		htmlkodrubrik += "<br>";
 		
-		htmlkodrubrik += "<a id=\"anvandenheter_slumparesten_" + kategorinamn + "\"";
-		htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
-		htmlkodrubrik += "onclick=\"anropaslumparestenkategori(rollperson,'"  + kategorinamn + "');return false;\">";
-		
+		if (rollperson.anvandenheter.kvarvalfriaenheter+rollperson.anvandenheter[kategorinamn].kvarenheter > 0){
+			htmlkodrubrik += "<a id=\"anvandenheter_slumparesten_" + kategorinamn + "\"";
+			htmlkodrubrik += "title=\"\" href=\"PleaseEnableJavascript.html\"";
+			htmlkodrubrik += "onclick=\"anropaslumparestenkategori(rollperson,'"  + kategorinamn + "');return false;\">";
+		}	
 		htmlkodrubrik += "Slumpa resten";
-		htmlkodrubrik += "</a>"; 
 		
+		if (rollperson.anvandenheter.kvarvalfriaenheter+rollperson.anvandenheter[kategorinamn].kvarenheter > 0){
+			htmlkodrubrik += "</a>"; 
+		}
 		htmlkodrubrik += "<br>";
 		
 		if (rollperson.anvandenheter[kategorinamn].kvarlattlarda+rollperson.anvandenheter.kvarvalfrialattlarda>0){
@@ -3720,10 +3737,10 @@ function skrivanvandenheterkategorier(){
 	htmlkod += "<br>";
 	
 	i=6; // Språk
-	//htmlkod += "<a id=\"rpvalkategori_anvandenheter_sprak" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"skrivanvandenheter('" + "sprak" + "');return false;\">";
+	htmlkod += "<a id=\"rpvalkategori_anvandenheter_sprak" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"skrivanvandenheter('" + "sprak" + "');return false;\">";
 	htmlkod += "Språk"; 
 	
-	//htmlkod +=" \(" + rollperson.anvandenheter[fardighetsgrupplista[i]].kvarenheter + "/" + rollperson.sprakenheter + "\) ";
+	htmlkod +=" \(" + rollperson.anvandenheter[fardighetsgrupplista[i]].kvarenheter + "/" + rollperson.sprakenheter + "\) ";
 	htmlkod +="</a>"; 
 	
 	htmlkod += " &#124; ";
@@ -5339,11 +5356,143 @@ function skrivformular(rollperson){
 	doljvansterspalt();
 }
 
+function forberedslumparollperson(){
+
+	bakgrundstabeller=hamta_bakgrundstabeller();
+	
+	vallista=["folkslag","arketyp","miljo"];
+	
+	folkslagobjekt=hamta_folkslaglistor();
+	arketypobjekt=hamta_arketyplistor();
+	miljoobjekt=hamta_miljolistor();
+	
+	
+	vallistaarray=[folkslagobjekt.lista, arketypobjekt.lista, miljoobjekt.lista];
+	vallistarubrikarray=[folkslagobjekt.rubriker, arketypobjekt.rubriker, miljoobjekt.rubriker];
+	
+	
+    bakgrundstabellista=bakgrundstabeller.lista;
+	bakgrundstabellrubriker=bakgrundstabeller.rubriker;
+
+	slumpobjekt={};
+	slumpobjektrubrik={};
+	
+	slumpobjekt.bakgrundstabell="slump";
+	slumpobjektrubrik.bakgrundstabell="Slumpa";
+	
+	slumpobjekt.folkslag="slump";
+	slumpobjektrubrik.folkslag="Slumpa";
+	
+	slumpobjekt.arketyp="slump";
+	slumpobjektrubrik.arketyp="Slumpa";
+	
+	
+	slumpobjekt.miljo="slump";
+	slumpobjektrubrik.miljo="Slumpa";
+	
+	
+
+	htmlkod="";
+	htmlkod+="<table width=\"85%\"><tr>";
+	htmlkod+="<th>Bakgrund</th>";
+	htmlkod+="<th>Folkslag</th>";
+	htmlkod+="<th>Arketyp</th>";
+	htmlkod+="<th>Miljö</th>";
+	htmlkod+="</tr><tr>";
+	htmlkod+="<td class='center'>";
+	htmlkod +="<div class=\"dropdown\">";
+	htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_bakgrundstabellslump" + "\'\)\" class=\"dropbtn\">";
+	htmlkod +="<div id=\"bakgrundstabellslump" + "\">";
+	if (typeof slumpobjekt.bakgrundstabell === 'undefined'){
+		htmlkod +="Välj"
+	}else{
+		htmlkod +=slumpobjektrubrik.bakgrundstabell;
+	}
+	htmlkod +="</div>";
+	htmlkod +="</button>",
+	htmlkod +="<div id=\"dropdown_bakgrundstabellslump" + "\" class=\"dropdown-content\">";
+	htmlkod +="<a href=\"PleaseEnableJavascript.html\" onclick=\"bytslumpval\('" + "bakgrundstabell" + "','"  + "slump" + "','" + "Slumpa" + "'\);return false;\">" + "Slumpa" + "</a>";
+	for (j=0;j<bakgrundstabellista.length;j++){
+		htmlkod +="<a href=\"PleaseEnableJavascript.html\" onclick=\"bytslumpval\('" + "bakgrundstabell" + "','"  + bakgrundstabellista[j] + "','" + bakgrundstabellrubriker[j] + "'\);return false;\">" + bakgrundstabellrubriker[j] + "</a>";
+		
+	}
+	htmlkod +="</div>";
+	htmlkod +="</div>";
+	htmlkod+="</td>";
+	
+	for (i=0;i<vallista.length;i++){
+		htmlkod+="<td class='center'>";
+		htmlkod +="<div class=\"dropdown\">";
+		htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_" + vallista[i] + "slump" + "\'\)\" class=\"dropbtn\">";
+		htmlkod +="<div id=\"" + vallista[i] + "slump" + "\">";
+		if (typeof slumpobjekt[vallista[i]] === 'undefined'){
+			htmlkod +="Välj"
+		}else{
+			htmlkod +=slumpobjektrubrik[vallista[i]];
+		}
+		htmlkod +="</div>";
+		htmlkod +="</button>",
+		htmlkod +="<div id=\"dropdown_" + vallista[i] + "slump" + "\" class=\"dropdown-content\">";
+		htmlkod +="<a href=\"PleaseEnableJavascript.html\" onclick=\"bytslumpval\('" + vallista[i] + "','" + "slump" + "','" + "Slumpa" + "'\);return false;\">" + "Slumpa" + "</a>";
+		for (j=0;j<vallistaarray[i].length;j++){
+			htmlkod +="<a href=\"PleaseEnableJavascript.html\" onclick=\"bytslumpval\('" + vallista[i] + "','" + vallistaarray[i][j] + "','" + vallistarubrikarray[i][j] + "'\);return false;\">" + vallistarubrikarray[i][j] + "</a>";
+			
+		}
+		htmlkod +="</div>";
+		htmlkod +="</div>";
+		htmlkod+="</td>";
+		
+	
+	
+	}
+	
+	htmlkod+="</tr><tr>";
+	htmlkod+="<td colspan=4><br>";
+	htmlkod+="<a href=\"PleaseEnableJavascript.html\" onclick=\"slumparollperson\(\);return false;\">";
+	htmlkod+="Skapa rollperson";
+	htmlkod+="</a>";
+	htmlkod+="<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+	htmlkod+="</tr></table>";
+	document.getElementById("hogerkategorityper").innerHTML = htmlkod;
+	document.getElementById("hogerspalt").height="600";
+	
+	document.getElementById("hogerkategorityper").height="500";
+	
+	document.getElementById("hogerkategorirubrik").innerHTML = "";
+	document.getElementById("hogerkategorirubrik").height = "0";
+	
+	document.getElementById("hogerkategorival").innerHTML = "";
+	document.getElementById("hogerkategorival").height = "0";
+	
+	
+	document.getElementById("hogerkategoritabell").innerHTML = "";
+	document.getElementById("hogerkategoritabell").height = "0";
+	
+	document.getElementById("hogerkategoribeskrivning").innerHTML = "";
+	document.getElementById("hogerkategoribeskrivning").height = "0";
+	
+	
+	
+	
+	
+}
+
+function bytslumpval(kategori,valnamn,valrubrik){
+	slumpobjekt[kategori]=valnamn;
+	slumpobjektrubrik[kategori]=valrubrik;
+	console.log(kategori + "slump");
+	console.log(document.getElementById(kategori + "slump").innerHTML);
+	document.getElementById(kategori + "slump").innerHTML = valrubrik;
+	document.getElementById("dropdown_" + kategori + "slump").classList.remove("show");
+}
+
 function slumparollperson(){
 	// Skapa Fyra dropdown i vänsterspalt:
 	// Bakgrundstabell, folkslag, arketyp, miljö
 	
 	var i;
+	
+	skrivhogerkategorityper();
 	
 	// Förberedelser
 	miljoobjekt=hamta_miljolistor();
@@ -5404,14 +5553,24 @@ function slumparollperson(){
 	}
 	kvarvarandetarningar=10;
 
+	
+	/*
 	slumpobjekt={};
+	slumpobjektrubrik={};
+	
 	slumpobjekt.bakgrundstabell="slump";
+	slumpobjektrubrik.bakgrundstabell="Slumpa";
+	
 	slumpobjekt.folkslag="slump";
+	slumpobjektrubrik.folkslag="Slumpa";
+	
 	slumpobjekt.arketyp="slump";
+	slumpobjektrubrik.arketyp="Slumpa";
+	
 	slumpobjekt.miljo="slump";
+	slumpobjektrubrik.miljo="Slumpa";
 	
-	
-	
+	*/
 	
 	
 	// Bakgrund
@@ -5528,19 +5687,21 @@ function slumparollperson(){
 	console.log("totalt: " + rollperson.kvar_handelsetabellslag);
 			
 	
-	/*
-	while(rollperson.kvar_handelsetabellslag>0){
+	
+	//while(rollperson.kvar_handelsetabellslag>0){
 		console.log("I while, innan for")
 		for (i=0;i<handelsetabellista.length;i++){
 			
-			console.log("forloop i while för händelse: " + i + ", " + rollperson.kvar_handelsetabellslag)
+			console.log("Aktiv tabell: " + handelsetabellista[i]);
+			console.log("forloop i while för händelse: " + i + ", antal slag kvar: " + rollperson.kvar_handelsetabellslag)
 			
 			aktiv_handelsetabell=handelsetabeller[handelsetabellista[i]];
-			while (rollperson["kvar_" + handelsetabellista[0]] > 0){
+			while (rollperson["kvar_" + handelsetabellista[i]] > 0){
 				// Slå på tabellen
 				
 				slapahandelsetabell();
-				sparahandelsetabellslag();
+				console.log("Aktiv händelse: " + aktivthandelsetabellslag.rubrik)
+				rollperson=sparahandelsetabellslag(rollperson,aktivthandelsetabellslag);
 				// Summerarollperson
 			}
 		}	
@@ -5550,11 +5711,11 @@ function slumparollperson(){
 			aktivthandelsetabellslag={};
 			
 			slapahandelsetabell();
-			sparahandelsetabellslag();
+			rollperson=sparahandelsetabellslag(rollperson,aktivthandelsetabellslag);
 			// Summerarollperson	
 		}	
-	}
-	*/
+	//}
+	
 	uppdateravanstersammanfattning();
 	
 	// Färdighetstabeller
@@ -5570,8 +5731,8 @@ function slumparollperson(){
 	}
 	
 	
-	
-	
+	rollperson = borjaenhetsanvandning(rollperson);
+	anropaslumpaallt(rollperson);
 	
 	
 	
@@ -6283,12 +6444,12 @@ a:active {
 		<a href="PleaseEnableJavascript.html" onclick="location.reload();return false;">Skapa ny rollperson</a>
 		</td>
 		<td id="slumparollperson">
-		<a href="PleaseEnableJavascript.html" onclick="slumparollperson();return false;">Slumpa rollperson</a>
+		<a href="PleaseEnableJavascript.html" onclick="forberedslumparollperson();return false;">Slumpa rollperson</a>
 		</td>
 		<td id="raknautattribut">
 		<!-- <a href="PleaseEnableJavascript.html" onclick="raknautattribut();return false;">Räkna ut attribut</a> -->
 		</td>
-		<td id="versionsdatum" style="text-align:right"><i>Testversion 2016-10-31</i></td>
+		<td id="versionsdatum" style="text-align:right"><i>Testversion 2016-12-05</i></td>
 		</tr>
 		</table>
 		</div>
