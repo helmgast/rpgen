@@ -260,7 +260,7 @@ function hamta_fardighetslistaobjekt (){
 	sprakfardigheter.push("rukhnekh");
 	sprakfardigheter.push("tengrim");
 	sprakfardigheter.push("thalaskiskskrift");
-	sprakfardigheter.push("arkipelagiskskirft");
+	sprakfardigheter.push("arkipelagiskskrift");
 	sprakfardigheter.push("aunuriskskrift");
 	sprakfardigheter.push("danarthiskskrift");
 	sprakfardigheter.push("drakrunor");

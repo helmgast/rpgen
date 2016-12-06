@@ -10,17 +10,18 @@
     }
 	return temp;
 }
-
+ 
 function listindex(lista, elementnamn){
 	var i;
+	var j=-1;
 	for(i = 0; i < lista.length; i++){
 		if(lista[i] === elementnamn){
-			return i;
+			j=i;
 		}
 	}
 
-	i=-1;
-	return i; 
+	//i=-1;
+	return j; 
 }
 
 
@@ -98,7 +99,7 @@ function inledandeversal(inputstring){
 function vardetilltarningar(varde){
 	//--- omvandla värde till tärningstextsträng	
 	if (varde <= 4){
-    	tarningar="1T6";
+    	tarningar="1T6" + "\u2002\u2002";
     }else{
     	antalt6=Math.floor(varde/4);
         t6bonus=varde%4;
@@ -106,14 +107,82 @@ function vardetilltarningar(varde){
         if(t6bonus > 0 ){
         
         	tarningar += "\+" + t6bonus.toString();
-        }
+        }else{
+			tarningar +="\u2002\u2002";
+		}
     
     }
     
     return tarningar
 }
 
+function vardetilltarningarfri(varde){
+	//--- omvandla värde till tärningstextsträng
+	var tarningar="";
+	
+	if (varde <= -4){
+    	
+		console.log("varde_a");
+		
+		antalt6=Math.floor(Math.abs(varde)/4);
+        t6avdrag=(Math.abs(varde))%4;
+        tarningar="\u2013" + antalt6.toString() + "T6";
+        if(t6avdrag > 0 ){
+        
+        	tarningar += "\u2013" + t6avdrag.toString() + "";
+        }else{
+			tarningar +="\u2002\u2002";
+		}
+		
+		
+		
+    }else if (varde <=-1){
+		
+		console.log("varde_b");
+		
+		tarningar="\u2013" + Math.abs(varde).toString() + "\u2002\u2002\u2002";
+	}else if (varde==0){
+		
+		
+		tarningar="\u2002" + "0" + "\u2002\u2002\u2002";
+	}else if (varde<=3){
+		
+		console.log("varde_d");
+		
+		tarningar="\+" + varde.toString() + "\u2002\u2002\u2002";
+	}else if (varde>=4){
+		
+		console.log("varde_e");
+		
+    	antalt6=Math.floor(varde/4);
+        t6bonus=varde%4;
+        tarningar="\+" + antalt6.toString() + "T6";
+        if(t6bonus > 0 ){
+        
+        	tarningar += "\+" + t6bonus.toString();
+        }else{
+			tarningar +="\u2002\u2002";
+		}
+    
+    }else{
+		tarningar="0";
+	}
+    
+    return tarningar
+}
 
+function bonustext(inputvarde){
+	if (inputvarde<0){
+		outputtext="\u2013" + Math.abs(inputvarde).toString() + "\u2002\u2002\u2002";
+	}else if(inputvarde==0){
+		outputtext="\u2002" + "0" + "\u2002\u2002\u2002";
+	}else if (inputvarde>0){
+		outputtext="\+" + inputvarde.toString() + "\u2002\u2002\u2002";
+	}
+	
+	return outputtext
+	
+}
 
 
 
