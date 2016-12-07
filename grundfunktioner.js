@@ -359,6 +359,30 @@ function obt6(antaltarningar){
 	return summa;
 }
 
+function raknauthojningssvarighet(rollperson,fardighetsnamn){
+	
+	var hojningssvarighet
+	
+	if (rollperson[fardighetsnamn].varde==0){
+		hojningssvarighet=0;
+	}else{
+		hojningssvarighet=rollperson[fardighetsnamn].varde*2-12;
+		if (rollperson[fardighetsnamn].lattlard==1){
+			hojningssvarighet -=2;
+		}else if(rollperson[fardighetsnamn].svarlard==1){
+			hojningssvarighet +=4;
+		}
+		if ("styrandeattribut" in rollperson[fardighetsnamn]){
+			if (rollperson[fardighetsnamn].varde<rollperson[rollperson[fardighetsnamn].styrandeattribut].varde){
+				hojningssvarighet -=2;
+			}
+		}
+		
+	}
+	
+	return hojningssvarighet
+}
+
 function signum(inputvarde){
 	if (inputvarde < 0){
 		outputvarde=-1;

@@ -4,7 +4,7 @@
 
 function hamta_attributobjekt(){
 	
-    
+    var i;
     
     attributobjekt={};
     
@@ -17,6 +17,13 @@ function hamta_attributobjekt(){
 	grundattributlista[5]="psyke";
 	grundattributlista[6]="visdom";
 	grundattributlista[7]="utstralning";
+	
+	var grundattributforkortningslista=["sty","tål","rör","upp","vil","psy","vis","uts"];
+	
+	attributobjekt.forkortning={};
+	for (i=0; i< grundattributlista.length;i++){
+		attributobjekt.forkortning[grundattributlista[i]]=grundattributforkortningslista[i];
+	}
     
 	var harleddaattributlista=["forflyttning", "intryck", "kroppsbyggnad", "reaktion", "sjalvkontroll", "vaksamhet"];
 	var harleddavardenlista=["grundrustning", "grundskada", "livskraft", "lakningstakt", "grundbelastning"];
@@ -565,6 +572,10 @@ function hamta_fardighetslistaobjekt (){
 	fardighetslistaobjekt.mystikmagilista=mystikmagilista;
 	fardighetslistaobjekt.mystikmagirubriker_sing=mystikmagirubriker_sing;
 	fardighetslistaobjekt.mystikmagirubriker_plur=mystikmagirubriker_plur;
+	
+	for (i=0;i<6;i++){
+		fardighetslistaobjekt[fardighetsgrupplista[i]].rubrik=fardighetsgrupplista_plur[i];
+	}
 	
 	
 	// window.alert(window[fardighetsgrupplista[0]].length)

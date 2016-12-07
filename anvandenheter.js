@@ -43,15 +43,60 @@ function testfunktion_anvandenheter(){
 	console.log("testfunktion_anvandenheter körs");
 }
 
-
+function aterstallrollperson(rollperson){
+	
+	var i;
+	
+	rollperson=nollarollperson(rollperson);
+	if ("bakgund" in rollperson){
+		rollperson= summerarollperson(rollperson, rollperson.bakgrund);
+	}
+	if ("folkslag" in rollperson){
+		rollperson= summerarollperson(rollperson, rollperson.folkslag);
+	}
+	if ("attributtarningar" in rollperson){
+		rollperson= summerarollperson(rollperson, rollperson.attributtarningar);
+	}
+	if ("arketyp" in rollperson){
+		rollperson= summerarollperson(rollperson, rollperson.arketyp);
+	}
+	if ("miljo" in rollperson){
+		rollperson= summerarollperson(rollperson, rollperson.miljo);
+	}
+	if ("handelsetabellobjektlista" in rollperson){
+	
+		for (i=0;i<rollperson.handelsetabellobjektlista.length;i++){
+			rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[i]);
+		}
+	}
+	
+	if(rollperson.ovrigafardigheter.expertis.lista.length>0){
+		
+		rollperson=summerarollperson(rollperson, rollperson.ovrigafardigheter.expertis);
+	}
+	if(rollperson.ovrigafardigheter.hantverk.lista.length>0){
+		rollperson=summerarollperson(rollperson, rollperson.ovrigafardigheter.hantverk);
+	}
+	if(rollperson.ovrigafardigheter.kannetecken.lista.length>0){
+		rollperson=summerarollperson(rollperson, rollperson.ovrigafardigheter.kannetecken);
+	}
+	
+	
+	return rollperson
+}
 
 
 function borjaenhetsanvandning(rollperson){
 	if ("anvandenheter" in rollperson){
 		
+		if (rollperson.anvandenheter.sparad==1){
+			rollperson=aterstallrollperson(rollperson);
+			rollperson.anvandenheter.sparad=0;
+		}
+		
 	}else{
 		rollperson.anvandenheter={};
-		
+		rollperson.anvandenheter.sparad=0;
 		
 	}
 	
@@ -951,6 +996,7 @@ function anropaandralattlard(rollperson, fardighetsnamn, kategori, steg){
 function slumpasprak(rollperson){
 	// Köper ett nytt språk på slump
 	
+	
 	// saknas
 	var fardighetsnamn="";
 	var nyovrigfardighetvald=0;
@@ -962,8 +1008,11 @@ function slumpasprak(rollperson){
 	while (nyovrigfardighetvald==0){
 		k=slumpa(fardighetslistaobjekt["sprakfardigheter"].lista.length)-1;
 		
-		if (listindex(rollperson.anvandenheter.allasprakskrift,fardighetslistaobjekt["sprakfardigheter"].lista[k])>=0){
-			// Den slumpade färdigheten finns redan
+		//if (listindex(rollperson.anvandenheter.allasprakskrift,fardighetslistaobjekt["sprakfardigheter"].lista[k])>=0){
+		if (rollperson.anvandenheter.allasprakskrift.indexOf(fardighetslistaobjekt["sprakfardigheter"].lista[k])>=0){
+
+
+		// Den slumpade färdigheten finns redan
 		}else{
 			fardighetsnamn=fardighetslistaobjekt["sprakfardigheter"].lista[k];
 			nyovrigfardighetvald=1;
@@ -1053,9 +1102,9 @@ function laggtillsprak(rollperson, fardighetsnamn){
 
 function tabortsprak(rollperson, sprak){
 	// Kollar index för språket
-	if (listindex(rollperson.anvandenheter.sprakskrift, sprak)>=0){
+	if (rollperson.anvandenheter.sprakskrift.indexOf(sprak)>=0){
 		// Språket finns och kan tas bort
-		rollperson.anvandenheter.sprakskrift.splice(listindex(rollperson.anvandenheter.sprakskrift, sprak),1);
+		rollperson.anvandenheter.sprakskrift.splice(rollperson.anvandenheter.sprakskrift.indexOf(sprak),1);
 		rollperson.anvandenheter.allasprakskrift=rollperson.sprakskrift.concat(rollperson.anvandenheter.sprakskrift);
 		// Prioordning: betala tillbaka: valfri enhet - kunskapsenhet - språkenhet
 		
@@ -1163,12 +1212,12 @@ function slumpaomsprak(rollperson,fardighetsnamn){
 	fardighetslistaobjekt=hamta_fardighetslistaobjekt();
 	fardighetsgrupplista=fardighetslistaobjekt.fardighetsgrupplista;
 	
-	i=listindex(rollperson.anvandenheter.sprakskrift, fardighetsnamn);
+	i=rollperson.anvandenheter.sprakskrift.indexOf(fardighetsnamn);
 	
 	while (nysprakfardighetvald==0){
 		j=6;
 		k=slumpa(fardighetslistaobjekt[fardighetsgrupplista[j]].lista.length)-1;
-		if (listindex(rollperson.anvandenheter.allasprakskrift,fardighetslistaobjekt[fardighetsgrupplista[j]].lista[k])>=0){
+		if (rollperson.anvandenheter.allasprakskrift.indexOf(fardighetslistaobjekt[fardighetsgrupplista[j]].lista[k])>=0){
 			// Den slumpade färdigheten finns redan
 		}else{
 			nysprakfardighet=fardighetslistaobjekt[fardighetsgrupplista[j]].lista[k];
@@ -1298,7 +1347,7 @@ function slumpanyovrigfardighet(rollperson,kategori){
 	while (nyovrigfardighetvald==0){
 		k=slumpa(fardighetslistaobjekt[kategori + "fardigheter"].lista.length)-1;
 		
-		if (listindex(rollperson.anvandenheter.allaovrigafardighetermedtarningar,fardighetslistaobjekt[kategori + "fardigheter"].lista[k])>=0){
+		if (rollperson.anvandenheter.allaovrigafardighetermedtarningar.indexOf(fardighetslistaobjekt[kategori + "fardigheter"].lista[k])>=0){
 			// Den slumpade färdigheten finns redan
 		}else{
 			fardighetsnamn=fardighetslistaobjekt[kategori + "fardigheter"].lista[k];
@@ -1336,13 +1385,13 @@ function slumpaomovrigfardighet(rollperson,gammalovrigfardighet){
 	fardighetslistaobjekt=hamta_fardighetslistaobjekt();
 	fardighetsgrupplista=fardighetslistaobjekt.fardighetsgrupplista;
 	
-	i=listindex(rollperson.anvandenheter.ovrigafardighetermedtarningar, gammalovrigfardighet);
+	i=rollperson.anvandenheter.ovrigafardighetermedtarningar.indexOf(gammalovrigfardighet);
 	
 	while (nyovrigfardighetvald==0){
 		// Skulle kunna ändras så att ny färdighet slumpas från samma tabell som den gamla
 		j=slumpa(3)+6;
 		k=slumpa(fardighetslistaobjekt[fardighetsgrupplista[j]].lista.length)-1;
-		if (listindex(rollperson.anvandenheter.allaovrigafardighetermedtarningar,fardighetslistaobjekt[fardighetsgrupplista[j]].lista[k])>=0){
+		if (rollperson.anvandenheter.allaovrigafardighetermedtarningar.indexOf(fardighetslistaobjekt[fardighetsgrupplista[j]].lista[k])>=0){
 			// Den slumpade färdigheten finns redan
 		}else{
 			nyovrigfardighet=fardighetslistaobjekt[fardighetsgrupplista[j]].lista[k];
@@ -1362,7 +1411,7 @@ function slumpaomovrigfardighet(rollperson,gammalovrigfardighet){
 function ersattovrigfardighet(rollperson,gammalovrigfardighet,nyovrigfardighet){
 	
 	var i;
-	i=listindex(rollperson.anvandenheter.ovrigafardighetermedtarningar, gammalovrigfardighet);
+	i=rollperson.anvandenheter.ovrigafardighetermedtarningar.indexOf(gammalovrigfardighet);
 	
 	// Växlar enheter
 	rollperson.anvandenheter[nyovrigfardighet].enheter=rollperson.anvandenheter[gammalovrigfardighet].enheter;
@@ -1479,7 +1528,11 @@ function andraavtrubbning(rollperson, kategori, steg){
 	
 	var i;
 	
-	i=listindex(avtrubbningskategorier,kategori);
+	console.log("Testar slump")
+	testtal=slumpa(7);
+	console.log("Testtal: " + testtal);
+	
+	i=avtrubbningskategorier.indexOf(kategori);
 	
 	if (steg==1){
 		// Inte öka över 5
@@ -1871,10 +1924,12 @@ function slumpaallt(rollperson){
 	console.log("I slumpaallt. Avtrubbning klara.");
 	
 	// Språkenheter
+	
 	while(rollperson.anvandenheter.sprakfardigheter.kvarenheter>0){
 		rollperson=slumpasprak(rollperson);
 	
 	}
+	
 	
 	console.log("I slumpaallt. Språk klara.");
 	
@@ -2053,6 +2108,8 @@ function sparaenheter(rollperson){
 }
 
 function anropasparaenheter(rollperson){
+	/*
+	
 	kvarenheterlista=hamta_kvarenheterlista(rollperson);
 	var kvarenhetermeddelande="Följande är kvar att använda:";
 	for (i=0;i<kvarenheterlista.length;i++){
@@ -2069,6 +2126,8 @@ function anropasparaenheter(rollperson){
 	}
 	// Uppdatera gui
 	uppdateravanstersammanfattning();
+	
+	*/
 }
 
 function hamta_kvarenheterlista(rollperson){

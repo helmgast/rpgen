@@ -584,6 +584,8 @@ function summerarollperson(rollperson, rollpersonsvalobjekt) {
 			
 			
 			rollperson[fardighetslista[g][h]].tarningar = raknautfardighetstarningar(rollperson[fardighetslista[g][h]].grundtarningar, heaviside(rollperson[fardighetslista[g][h]].lattlard), rollperson[fardighetslista[g][h]].enheter);
+			rollperson[fardighetslista[g][h]].varde = raknautfardighetsvarde(rollperson[fardighetslista[g][h]].grundtarningar, heaviside(rollperson[fardighetslista[g][h]].lattlard), rollperson[fardighetslista[g][h]].enheter);
+			
 			//console.log(fardighetslista[g][h] + " " + rollperson[fardighetslista[g][h]].tarningar);
 			//console.log([rollperson[fardighetslista[g][h]].grundtarningar, heaviside(rollperson[fardighetslista[g][h]].lattlard), rollperson[fardighetslista[g][h]].enheter]);
 			
@@ -681,6 +683,39 @@ function raknautfardighetstarningar(grundtarningar, lattlard, enheter){
 	
 	return fardighetstarningar
 }
+
+function raknautfardighetsvarde(grundtarningar, lattlard,enheter){
+	lattlard=heaviside(lattlard);
+	var fardighetsvarde;
+	var fardighetsvardearray=[];
+	fardighetsvardearray[0]=0;
+	fardighetsvardearray[1]=8;
+	fardighetsvardearray[2]=12;
+	fardighetsvardearray[3]=14;
+	fardighetsvardearray[4]=16;
+	fardighetsvardearray[5]=17;
+	fardighetsvardearray[6]=18;
+	fardighetsvardearray[7]=19;
+	fardighetsvardearray[8]=20;
+	
+	fardighetsvardesumma= grundtarningar + lattlard + enheter;
+	if (fardighetsvardesumma < 0){
+		fardighetsvardesumma=0;
+	}else if (fardighetsvardesumma > 8){
+		fardighetsvardesumma=8;
+	}
+	fardighetsvarde=fardighetsvardearray[fardighetsvardesumma];
+	
+	if (lattlard==1){
+		if (grundtarningar+enheter==0){
+			//Lättlärd utan enheter och utan grundtärningar ger färdighetstärningar 0
+			fardighetsvarde=0;
+		}
+	}
+	
+	return fardighetsvarde
+}
+
 function kvarhandelsetabellslag(rollperson){
 // Kvarvarande händelsetabellslag
 	handelsetabellista=hamta_handelsetabellista();
