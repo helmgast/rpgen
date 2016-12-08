@@ -92,6 +92,7 @@ function borjaenhetsanvandning(rollperson){
 		if (rollperson.anvandenheter.sparad==1){
 			rollperson=aterstallrollperson(rollperson);
 			rollperson.anvandenheter.sparad=0;
+			console.log("återställer användenheter")
 		}
 		
 	}else{
@@ -584,7 +585,6 @@ function raknaenhetertotal(rollperson, fardighetsnamn){
 function anvandenhetfardighet(rollperson, fardighetsnamn, enhetssteg, kategori){
 	// enhetssteget är 1 för ökning 1 steg och -1 för minskning ett steg
 	
-	console.log()
 	
 	if ("anvandenheter" in rollperson){
 		
@@ -701,7 +701,7 @@ function slumpaenhetkategori(rollperson, fardighetskategori){
 	var fardighetsnamn="";
 	var fardighetvald=0;
 
-	console.log("slumpaenhetkategori körs med fardighetskategori: " + fardighetskategori);
+	//console.log("slumpaenhetkategori körs med fardighetskategori: " + fardighetskategori);
 	
 	
 	if (rollperson.anvandenheter[fardighetskategori].kvarenheter + rollperson.anvandenheter.kvarvalfriaenheter >=1){
@@ -722,7 +722,7 @@ function slumpaenhetkategori(rollperson, fardighetskategori){
 		aktiv_fardighet=fardighetsnamn;
 		anvandenhetfardighet(rollperson, fardighetsnamn, 1, fardighetskategori);
 	}
-	console.log("slumpaenhetkategori är klar med fardighetskategori: " + fardighetskategori);
+	//console.log("slumpaenhetkategori är klar med fardighetskategori: " + fardighetskategori);
 	
 	return rollperson
 	
@@ -1528,9 +1528,9 @@ function andraavtrubbning(rollperson, kategori, steg){
 	
 	var i;
 	
-	console.log("Testar slump")
+	//console.log("Testar slump")
 	testtal=slumpa(7);
-	console.log("Testtal: " + testtal);
+	//console.log("Testtal: " + testtal);
 	
 	i=avtrubbningskategorier.indexOf(kategori);
 	
@@ -1577,8 +1577,8 @@ function andraavtrubbning(rollperson, kategori, steg){
 				rollperson.anvandenheter.avtrubbning[avtrubbningsfardighetsgrupper[i]].anvandaenheter +=2;
 				rollperson.anvandenheter[avtrubbningsfardighetsgrupper[i]].anvandaenheterovrigt +=2;
 				
-				console.log("Använd två kategorienheter" + avtrubbningsfardighetsgrupper[i])
-				console.log("rollperson.anvandenheter.avtrubbning[" + avtrubbningsfardighetsgrupper[i] + "].anvandaenheter" + ": " + rollperson.anvandenheter.avtrubbning[avtrubbningsfardighetsgrupper[i]].anvandaenheter);
+				//console.log("Använd två kategorienheter" + avtrubbningsfardighetsgrupper[i])
+				//console.log("rollperson.anvandenheter.avtrubbning[" + avtrubbningsfardighetsgrupper[i] + "].anvandaenheter" + ": " + rollperson.anvandenheter.avtrubbning[avtrubbningsfardighetsgrupper[i]].anvandaenheter);
 				rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] +=1;
 				rollperson.anvandenheter.avtrubbning[kategori + "krysstotal"] =rollperson.anvandenheter.avtrubbning[kategori + "extrakryss"] + rollperson["avtrubbning" + kategori];
 
@@ -1949,14 +1949,14 @@ function slumpaallt(rollperson){
 	console.log("slumpallalattlarda anropas från slumpa allt")
 	rollperson = slumpaallalattlarda(rollperson);
 	
-	console.log("I slumpaallt. Lättlärda klara.");
+	//console.log("I slumpaallt. Lättlärda klara.");
 	
 	
 	// Valfria enheter
-	console.log("slumpallavalfria anropas från slumpa allt")
+	//console.log("slumpallavalfria anropas från slumpa allt")
 	
 	rollperson = slumpaallavalfria(rollperson);
-	console.log("I slumpaallt. Valfria klara.");
+	//console.log("I slumpaallt. Valfria klara.");
 	
 	aktiv_fardighet="";
 	
@@ -1966,6 +1966,7 @@ function slumpaallt(rollperson){
 function anropanollaallt(rollperson){
 	if ("anvandenheter" in rollperson){
 		rollperson.anvandenheter={};
+		rollperson.anvandenheter.sparad=0;
 		
 	}
 	console.log("här är rollpersonens bakgrund: " + rollperson.bakgrund.rubrik);

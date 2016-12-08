@@ -509,6 +509,7 @@ function summerarollperson(rollperson, rollpersonsvalobjekt) {
 	rollperson.ovrigafardighetermedtarningar=[];
 	rollperson.sprakskrift=[];
 	
+	avtrubbningskategorier=["utsatthet","vald","overnaturligt"];
 	
 	//--- behover fixas ---
 	// Alla attribut satts till 0 om inget annat sags. 4 omvandlas till 1T6.
@@ -557,6 +558,19 @@ function summerarollperson(rollperson, rollpersonsvalobjekt) {
 		}
     
     }
+	
+	// Extrakryss från anvandenheter
+	if ("avtrubbning" in rollpersonsvalobjekt){
+		console.log("avtrubbning finns i objektet" )
+		for (i=0;i<avtrubbningskategorier.length;i++){
+			if (avtrubbningskategorier[i] + "extrakryss" in rollpersonsvalobjekt.avtrubbning){
+				console.log("extrakryss finns i objektet")
+				rollperson["avtrubbning" + avtrubbningskategorier[i]] += rollpersonsvalobjekt.avtrubbning[avtrubbningskategorier[i] + "extrakryss"];
+			}
+		
+		}
+	}
+	
 	
 	// Färdigheter
 	for (g=0;g<fardighetslista.length;g++){

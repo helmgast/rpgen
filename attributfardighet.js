@@ -280,8 +280,11 @@ function hamta_fardighetslistaobjekt (){
     fardighetslistaobjekt.sprakfardigheter.lista=sprakfardigheter;
     
 	var expertisfardigheter = [];
-    expertisfardigheter[0]="akrobatik";
+    expertisfardigheter[0]="adelskontakter";
+	expertisfardigheter.push("akrobatik");
+	expertisfardigheter.push("anatomi");
 	expertisfardigheter.push("astrologi");
+	expertisfardigheter.push("automatskrift");
 	expertisfardigheter.push("barnuppfostran");
 	expertisfardigheter.push("begravningsriter");
 	expertisfardigheter.push("behaga");
@@ -291,11 +294,15 @@ function hamta_fardighetslistaobjekt (){
 	expertisfardigheter.push("bokhallning");
 	expertisfardigheter.push("branschkunskap");
 	expertisfardigheter.push("buktaleri");
+	expertisfardigheter.push("byrakrati");
 	expertisfardigheter.push("chiffer");
 	expertisfardigheter.push("citeralibera");
 	expertisfardigheter.push("detvarbattreforr");
 	expertisfardigheter.push("diplomati");
 	expertisfardigheter.push("djurtraning");
+	expertisfardigheter.push("dodskunskap");
+	expertisfardigheter.push("drakkunskap");	
+	expertisfardigheter.push("daligaideer");
 	expertisfardigheter.push("flagellera");
 	expertisfardigheter.push("flyktvagar");
 	expertisfardigheter.push("florta");
@@ -305,6 +312,7 @@ function hamta_fardighetslistaobjekt (){
 	expertisfardigheter.push("forkladnad");
 	expertisfardigheter.push("forskingra");
 	expertisfardigheter.push("genvagar");
+	expertisfardigheter.push("grata");
 	expertisfardigheter.push("gravplundring");
 	expertisfardigheter.push("grottsystem");
 	expertisfardigheter.push("gapalina");
@@ -334,6 +342,7 @@ function hamta_fardighetslistaobjekt (){
 	expertisfardigheter.push("logistik");
 	expertisfardigheter.push("lova");
 	expertisfardigheter.push("lapplasning");
+	expertisfardigheter.push("magiskgeometri");
 	expertisfardigheter.push("massage");
 	expertisfardigheter.push("meditera");
 	expertisfardigheter.push("monsterkunskap");
@@ -351,7 +360,9 @@ function hamta_fardighetslistaobjekt (){
 	expertisfardigheter.push("seoskyldigut");
 	expertisfardigheter.push("simulant");
 	expertisfardigheter.push("sjomanshistorier");
+	expertisfardigheter.push("sjoslag");
 	expertisfardigheter.push("skidorskridskor");
+	expertisfardigheter.push("skugglandsfard");
 	expertisfardigheter.push("skvaller");
 	expertisfardigheter.push("skyllapaandra");
 	expertisfardigheter.push("skadespel");
@@ -361,6 +372,7 @@ function hamta_fardighetslistaobjekt (){
 	expertisfardigheter.push("spottloskor");
 	expertisfardigheter.push("spraklara");
 	expertisfardigheter.push("stadatvatta");
+	expertisfardigheter.push("sundkost");
 	expertisfardigheter.push("supa");
 	expertisfardigheter.push("supafolkunderbordet");
 	expertisfardigheter.push("takvagar");
@@ -482,6 +494,7 @@ function hamta_fardighetslistaobjekt (){
 	kanneteckenfardigheter.push("charmerandeleende");
 	kanneteckenfardigheter.push("djurvan");
 	kanneteckenfardigheter.push("daligtrykte");
+	kanneteckenfardigheter.push("dodsangest");
 	kanneteckenfardigheter.push("elementkannare");
 	kanneteckenfardigheter.push("empatiskberoring");
 	kanneteckenfardigheter.push("finlemmadehander");
@@ -505,10 +518,14 @@ function hamta_fardighetslistaobjekt (){
 	kanneteckenfardigheter.push("missbildning");
 	kanneteckenfardigheter.push("morkersyn");
 	kanneteckenfardigheter.push("nattsyn");
+	kanneteckenfardigheter.push("obegriplighandstil");
+	kanneteckenfardigheter.push("olycksbadandeuppenbarelse");
 	kanneteckenfardigheter.push("pedant");
 	kanneteckenfardigheter.push("perfekthy");
 	kanneteckenfardigheter.push("proper");
+	kanneteckenfardigheter.push("rastlos");
 	kanneteckenfardigheter.push("romantiker");
+	kanneteckenfardigheter.push("sanndrommar");
 	kanneteckenfardigheter.push("serdumut");
 	kanneteckenfardigheter.push("sersvagheter");
 	kanneteckenfardigheter.push("sjukligtutseende");
@@ -516,6 +533,7 @@ function hamta_fardighetslistaobjekt (){
 	kanneteckenfardigheter.push("skarpaanletsdrag");
 	kanneteckenfardigheter.push("skarptminne");
 	kanneteckenfardigheter.push("struktureratsinne");
+	kanneteckenfardigheter.push("suntfornuft");
 	kanneteckenfardigheter.push("tatuering");
 	kanneteckenfardigheter.push("trollbindandeblick");
 	kanneteckenfardigheter.push("utbrott");
@@ -1170,6 +1188,8 @@ function hamta_fardighetsobjekt () {
 	fardighetsobjekt["missbildning"].rubrik="Missbildning"; 
 	fardighetsobjekt["missbildning"].beskrivning="Personen har någon typ av missbildning. Detta kan röra sig om en puckel, harmynthet, ett extra finger på en hand, en tredje bröstvårta, ett stort avvikande födelsemärke någonstans på kroppen eller något så avvikande såsom klor, päls, ormpupiller eller liknande. "; 
 
+	
+	
 	fardighetsobjekt["pedant"].rubrik="Pedant"; 
 	fardighetsobjekt["pedant"].beskrivning="Rollpersonen har en pedantisk ordning på allt och har en noga koll på var allt är, i vilken ordning saker ska ligga och när det blir för stökigt så tenderar denne till att bli nervös eller irriterad."; 
 
@@ -1250,6 +1270,63 @@ function hamta_fardighetsobjekt () {
 	
 	fardighetsobjekt["daligtrykte"].rubrik="Dåligt rykte";
 	fardighetsobjekt["daligtrykte"].beskrivning="";
+	
+	fardighetsobjekt["obegriplighandstil"].rubrik="Obegriplig handstil"; 
+	fardighetsobjekt["obegriplighandstil"].beskrivning=""; 
+	
+	fardighetsobjekt["sanndrommar"].rubrik="Sanndrömmar"; 
+	fardighetsobjekt["sanndrommar"].beskrivning=""; 
+	
+	fardighetsobjekt["dodskunskap"].rubrik="Dödskunskap"; 
+	fardighetsobjekt["dodskunskap"].beskrivning=""; 
+	
+	fardighetsobjekt["suntfornuft"].rubrik="Sunt förnuft"; 
+	fardighetsobjekt["suntfornuft"].beskrivning=""; 
+	
+	fardighetsobjekt["drakkunskap"].rubrik="Drakkunskap"; 
+	fardighetsobjekt["drakkunskap"].beskrivning=""; 
+	
+	fardighetsobjekt["daligaideer"].rubrik="Dåliga idéer"; 
+	fardighetsobjekt["daligaideer"].beskrivning=""; 
+	
+	fardighetsobjekt["automatskrift"].rubrik="Automatskrift"; 
+	fardighetsobjekt["automatskrift"].beskrivning=""; 
+	
+	fardighetsobjekt["sjoslag"].rubrik="Sjöslag"; 
+	fardighetsobjekt["sjoslag"].beskrivning=""; 
+	
+	fardighetsobjekt["romantiker"].rubrik="Romantiker"; 
+	fardighetsobjekt["romantiker"].beskrivning=""; 
+	
+	fardighetsobjekt["anatomi"].rubrik="Anatomi"; 
+	fardighetsobjekt["anatomi"].beskrivning=""; 
+	
+	fardighetsobjekt["sundkost"].rubrik="Sund kost"; 
+	fardighetsobjekt["sundkost"].beskrivning=""; 
+	
+	fardighetsobjekt["rastlos"].rubrik="Rastlös"; 
+	fardighetsobjekt["rastlos"].beskrivning=""; 
+	
+	fardighetsobjekt["magiskgeometri"].rubrik="Magisk geometri"; 
+	fardighetsobjekt["magiskgeometri"].beskrivning=""; 
+	
+	fardighetsobjekt["adelskontakter"].rubrik="Adelskontakter"; 
+	fardighetsobjekt["adelskontakter"].beskrivning=""; 
+	
+	fardighetsobjekt["grata"].rubrik="Gråta"; 
+	fardighetsobjekt["grata"].beskrivning=""; 
+	
+	fardighetsobjekt["olycksbadandeuppenbarelse"].rubrik="Olycksbådande uppenbarelse"; 
+	fardighetsobjekt["olycksbadandeuppenbarelse"].beskrivning=""; 
+	
+	fardighetsobjekt["byrakrati"].rubrik="Byråkrati"; 
+	fardighetsobjekt["byrakrati"].beskrivning=""; 
+	
+	fardighetsobjekt["dodsangest"].rubrik="Dödsångest"; 
+	fardighetsobjekt["dodsangest"].beskrivning=""; 
+	
+	fardighetsobjekt["skugglandsfard"].rubrik="Skugglandsfard"; 
+	fardighetsobjekt["skugglandsfard"].beskrivning=""; 
 	
 	fardighetsobjekt["filosofi"].rubrik="Filosofi"; 
 	fardighetsobjekt["filosofi"].styrandeattribut="visdom"; 

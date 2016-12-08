@@ -1750,6 +1750,35 @@ function skrivhandelsetabellerkategorier(){
 			htmlkod += " &#124; ";
 		}
 	}
+	
+	// Övriga händelsetabeller
+	for (i=0;i<handelsetabeller.listaovrig.length;i++){
+		
+		if (handelsetabeller[handelsetabeller.listaovrig[i]][0].folkslag.indexOf(rollperson.folkslag.namn)>=0){
+			kvarslag=0;
+			if (handelsetabeller[handelsetabeller.listaovrig[i]][0].vald < handelsetabeller[handelsetabeller.listaovrig[i]][0].maxslag){
+				for (j=0;j<handelsetabeller[handelsetabeller.listaovrig[i]][0].tabellslag.length;j++){
+					kvarslag += rollperson["kvar_" + handelsetabeller[handelsetabeller.listaovrig[i]][0].tabellslag[j]];
+					kvarslag += rollperson.kvar_valfriatabellslag;
+				}
+			}
+			if (rollperson.redoforhandelsetabellslag==1){
+				
+				if (kvarslag>0){
+					htmlkod += "<a id=\"rpvalkategori_" + handelsetabeller[handelsetabeller.listaovrig[i]][0].namn + "\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"bythandelsetabell('" + handelsetabeller[handelsetabeller.listaovrig[i]][0].namn + "');return false;\">";  
+					
+				}
+			}
+			htmlkod += handelsetabeller[handelsetabeller.listaovrig[i]][0].rubrik;
+			
+			if (rollperson.redoforhandelsetabellslag==1){
+				if (kvarslag>0){
+					htmlkod +="</a>";
+				}
+			}
+		}
+	}
+	
 	htmlkod += "</td>";
 	htmlkod += "<td class=\"center\" width=\"18%\">Valfria tabell&shy;slag";
 	if ("valfriatabellslag" in rollperson){
@@ -1816,6 +1845,11 @@ function slapahandelsetabell(){
 	var saknadeobjekt=[];
 	var i;
 	var omslag;
+	var kvarslag;
+	var anvandtabell;
+	
+	handelsetabellista=hamta_handelsetabellista();
+	handelsetabellista_ovrig=hamta_handelsetabellista_ovrig();
 	
 	omslag=1;
 	
@@ -1827,60 +1861,104 @@ function slapahandelsetabell(){
 	//slumptal=startnummer;
 	
 	if (saknadeobjekt.length==0){
-	
-		if (rollperson["kvar_" + aktiv_handelsetabell[0].namn] > 0){
-			/*
-			if ("nummer" in aktivthandelsetabellslag){
-				if (aktivthandelsetabellslag.nummer<=0){
+		// Vanlig händelsetabell
+		if (handelsetabellista.indexOf(aktiv_handelsetabell[0].namn)>=0){
+			console.log("Slag slås på vanlig tabell");
+			if (rollperson["kvar_" + aktiv_handelsetabell[0].namn] > 0){
+				/*
+				if ("nummer" in aktivthandelsetabellslag){
+					if (aktivthandelsetabellslag.nummer<=0){
+						slumptal=startnummer;
+					}else if(aktivthandelsetabellslag.nummer<=99){
+						slumptal=aktivthandelsetabellslag.nummer+1;
+					}else if(aktivthandelsetabellslag.nummer>=100){
+						slumptal=1;
+					}
+				}else{
 					slumptal=startnummer;
-				}else if(aktivthandelsetabellslag.nummer<=99){
-					slumptal=aktivthandelsetabellslag.nummer+1;
-				}else if(aktivthandelsetabellslag.nummer>=100){
-					slumptal=1;
 				}
-			}else{
-				slumptal=startnummer;
-			}
-			*/
-			
-			while(omslag==1){
-				slumptal=window.parent.slumpa(aktiv_handelsetabell.length-1);
+				*/
 				
-				//slumptal+=1;
-				if(aktiv_handelsetabell[slumptal].vald==1){
-				}else{
-					omslag=0;
+				while(omslag==1){
+					slumptal=window.parent.slumpa(aktiv_handelsetabell.length-1);
+					
+					//slumptal+=1;
+					if(aktiv_handelsetabell[slumptal].vald==1){
+					}else{
+						omslag=0;
+					}
 				}
-			}
+				
+				aktivthandelsetabellslag=aktiv_handelsetabell[slumptal];
+				skrivhandelsetabeller();
 			
-			aktivthandelsetabellslag=aktiv_handelsetabell[slumptal];
-			skrivhandelsetabeller();
-		}else if (rollperson["kvar_valfriatabellslag"] > 0){
-			/*
-			if ("nummer" in aktivthandelsetabellslag){
-				if (aktivthandelsetabellslag.nummer<=0){
+			}else if (rollperson["kvar_valfriatabellslag"] > 0){
+				/*
+				if ("nummer" in aktivthandelsetabellslag){
+					if (aktivthandelsetabellslag.nummer<=0){
+						slumptal=startnummer;
+					}else if(aktivthandelsetabellslag.nummer<=99){
+						slumptal=aktivthandelsetabellslag.nummer+1;
+					}else if(aktivthandelsetabellslag.nummer>=100){
+						slumptal=1;
+					}
+				}else{
 					slumptal=startnummer;
-				}else if(aktivthandelsetabellslag.nummer<=99){
-					slumptal=aktivthandelsetabellslag.nummer+1;
-				}else if(aktivthandelsetabellslag.nummer>=100){
-					slumptal=1;
 				}
+				*/
+				
+				while(omslag==1){
+					slumptal=window.parent.slumpa(aktiv_handelsetabell.length-1);
+					if(aktiv_handelsetabell[slumptal].vald==1){
+					}else{
+						omslag=0;
+					}
+				}
+				
+				aktivthandelsetabellslag=aktiv_handelsetabell[slumptal];
+				skrivhandelsetabeller();
 			}else{
-				slumptal=startnummer;
 			}
-			*/
+		}else if(handelsetabellista_ovrig.indexOf(aktiv_handelsetabell[0].namn)>=0){
 			
-			while(omslag==1){
-				slumptal=window.parent.slumpa(aktiv_handelsetabell.length-1);
-				if(aktiv_handelsetabell[slumptal].vald==1){
-				}else{
-					omslag=0;
+			console.log("Slag slås på övrig tabell");
+			
+			kvarslag=0;
+			anvandtabell="";
+			for (i=0;i<aktiv_handelsetabell[0].tabellslag.length;i++){
+				if (rollperson["kvar_" + aktiv_handelsetabell[0].tabellslag[i]]>0){
+					anvandtabell=aktiv_handelsetabell[0].tabellslag[i];
+					kvarslag +=rollperson["kvar_" + aktiv_handelsetabell[0].tabellslag[i]];
 				}
 			}
 			
-			aktivthandelsetabellslag=aktiv_handelsetabell[slumptal];
-			skrivhandelsetabeller();
-		}else{
+			if (kvarslag>0){
+				while(omslag==1){
+					slumptal=window.parent.slumpa(aktiv_handelsetabell.length-1);
+					
+					//slumptal+=1;
+					if(aktiv_handelsetabell[slumptal].vald==1){
+					}else{
+						omslag=0;
+					}
+				}
+				
+				aktivthandelsetabellslag=aktiv_handelsetabell[slumptal];
+				skrivhandelsetabeller();
+				
+			}else if (rollperson["kvar_valfriatabellslag"] > 0){
+				
+				while(omslag==1){
+					slumptal=window.parent.slumpa(aktiv_handelsetabell.length-1);
+					if(aktiv_handelsetabell[slumptal].vald==1){
+					}else{
+						omslag=0;
+					}
+				}
+				
+				aktivthandelsetabellslag=aktiv_handelsetabell[slumptal];
+				skrivhandelsetabeller();
+			}
 		}
 	}else{
 		saknadeobjektstrang=saknadeobjekt[0];
@@ -1895,12 +1973,16 @@ function slapahandelsetabell(){
 function skrivhandelsetabeller(){
 
 	var saknadeobjekt=[];
-	
+	var kvarslag;
 	saknadeobjekt=hamta_saknadeobjekt(rollperson);
 	//slumptal=window.parent.slumpa(100);
 	
 	// Slumpa alla subval
 	// Summera alla subval
+	
+	handelsetabellista=hamta_handelsetabellista();
+	handelsetabellista_ovrig=hamta_handelsetabellista_ovrig();
+	
 	var htmlkod = "<div class=\"garald\">";
 	
 	
@@ -1926,6 +2008,8 @@ function skrivhandelsetabeller(){
 		
 		htmlkod +="</p>";
 		
+	}else{
+		console.log("nummer saknas i aktivthandelsetabellslag");
 	}
 	htmlkod += "</div>";
 	
@@ -1950,14 +2034,45 @@ function skrivhandelsetabeller(){
 	htmlkodrubrik += "<td class=\"center\" width=\"20%\">";
 	if (saknadeobjekt.length>0){
 	}else{
-		if(rollperson["kvar_" + aktiv_handelsetabell[0].namn]+rollperson.kvar_valfriatabellslag>0){
+		if (handelsetabellista.indexOf(aktiv_handelsetabell[0].namn)>=0){
+			console.log("i skrivhandelsetabeller: slag slås på vanlig tabell");
+			if(rollperson["kvar_" + aktiv_handelsetabell[0].namn]+rollperson.kvar_valfriatabellslag>0){
+			
+				htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slapahandelsetabell();return false;\">"
+			}
+		}else if(handelsetabellista_ovrig.indexOf(aktiv_handelsetabell[0].namn)>=0){
+			kvarslag=0;
+			anvandtabell="";
+			for (i=0;i<aktiv_handelsetabell[0].tabellslag.length;i++){
+				if (rollperson["kvar_" + aktiv_handelsetabell[0].tabellslag[i]]>0){
+					anvandtabell=aktiv_handelsetabell[0].tabellslag[i];
+					kvarslag +=rollperson["kvar_" + aktiv_handelsetabell[0].tabellslag[i]];
+				}
+			}
+			if (kvarslag+rollperson.kvar_valfriatabellslag>0){
+				if (aktiv_handelsetabell[0].vald < aktiv_handelsetabell[0].maxslag){
+					htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slapahandelsetabell();return false;\">"
+				}
+				
+			}
 		
-			htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slapahandelsetabell();return false;\">"
 		}
-		htmlkodrubrik +="Slå på tabellen";
-		if(rollperson["kvar_" + aktiv_handelsetabell[0].namn]+rollperson.kvar_valfriatabellslag>0){
 		
-			htmlkodrubrik +="</a>";
+		htmlkodrubrik +="Slå på tabellen";
+		if (handelsetabellista.indexOf(aktiv_handelsetabell[0].namn)>=0){
+		
+			if(rollperson["kvar_" + aktiv_handelsetabell[0].namn]+rollperson.kvar_valfriatabellslag>0){
+		
+				htmlkodrubrik +="</a>";
+			}
+		}else if(handelsetabellista_ovrig.indexOf(aktiv_handelsetabell[0].namn)>=0){
+		
+			if (kvarslag+rollperson.kvar_valfriatabellslag>0){
+				if (aktiv_handelsetabell[0].vald < aktiv_handelsetabell[0].maxslag){
+				
+					htmlkodrubrik +="</a>";
+				}
+			}
 		}
 	}
 	htmlkodrubrik +="</td>";
@@ -2013,6 +2128,9 @@ function anropasparahandelsetabellslag(rollperson, aktivthandelsetabellslag){
 function sparahandelsetabellslag(rollperson, aktivthandelsetabellslag){
 	slump=1;
 	handelsetabellista= handelsetabeller.lista;
+	handelsetabellista_ovrig=hamta_handelsetabellista_ovrig();
+	
+	var kvarslag;
 	//window.alert(aktiv_handelsetabell);
 	//window.alert(handelsetabellslag);
 	
@@ -2021,57 +2139,116 @@ function sparahandelsetabellslag(rollperson, aktivthandelsetabellslag){
 	//--- Om omslag=1 ska handelsetabellslag och kvarhandelsetabellslag uppdateras
 	
 	var arraylangd=rollperson.handelsetabellobjektlista.length;
-	if (rollperson["kvar_" + aktiv_handelsetabell[0].namn] > 0){
+	if (handelsetabellista.indexOf(aktiv_handelsetabell[0].namn)>=0){
 		
-		
-		
-		//window.alert("pushen");
-		//rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]=clone(aktiv_handelsetabell[handelsetabellslag]);
-		aktivthandelsetabellslag=summera_subval(aktivthandelsetabellslag);
-		aktivthandelsetabellslag.vald=1;
-		
-		if (aktivthandelsetabellslag.valfriatabellslag==1){
-			rollperson.kvar_valfriatabellslag +=1;
-		}else{
-			rollperson["kvar_" + aktiv_handelsetabell[0].namn] = rollperson["kvar_" + aktiv_handelsetabell[0].namn] - 1;
+		if (rollperson["kvar_" + aktiv_handelsetabell[0].namn] > 0){
+			
+			
+			
+			//window.alert("pushen");
+			//rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]=clone(aktiv_handelsetabell[handelsetabellslag]);
+			aktivthandelsetabellslag=summera_subval(aktivthandelsetabellslag);
+			aktivthandelsetabellslag.vald=1;
+			aktiv_handelsetabell[0].vald +=1;
+			
+			if (aktivthandelsetabellslag.valfriatabellslag==1){
+				rollperson.kvar_valfriatabellslag +=1;
+			}else{
+				rollperson["kvar_" + aktiv_handelsetabell[0].namn] = rollperson["kvar_" + aktiv_handelsetabell[0].namn] - 1;
+			}
+			
+			
+			rollperson.handelsetabellobjektlista[arraylangd]=clone(aktivthandelsetabellslag);
+			
+			
+			arraylangd=rollperson.handelsetabellobjektlista.length;
+			
+			//rollperson.handelsetabellobjektlista[arraylangd-1]=valj_subval(rollperson.handelsetabellobjektlista[arraylangd-1], slump);
+			
+			//window.alert("subval gjort");
+			//rollperson.handelsetabellobjektlista[arraylangd-1]=summera_subval(rollperson.handelsetabellobjektlista[arraylangd-1]);
+			
+			rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]);
+		}else if (rollperson["kvar_valfriatabellslag"] > 0){
+			
+			//window.alert("pushen");
+			//rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]=clone(aktiv_handelsetabell[handelsetabellslag]);
+			aktivthandelsetabellslag=summera_subval(aktivthandelsetabellslag);
+			aktivthandelsetabellslag.vald=1;
+			aktiv_handelsetabell[0].vald +=1;
+			rollperson.handelsetabellobjektlista[arraylangd]=clone(aktivthandelsetabellslag);
+			arraylangd=rollperson.handelsetabellobjektlista.length;
+			
+			if (aktivthandelsetabellslag.valfriatabellslag==1){
+				rollperson.kvar_valfriatabellslag +=1;
+			}else{
+				rollperson["kvar_valfriatabellslag"] = rollperson["kvar_valfriatabellslag"] - 1;
+			
+			}
+			
+			//rollperson.handelsetabellobjektlista[arraylangd-1]=valj_subval(rollperson.handelsetabellobjektlista[arraylangd-1], slump);
+			
+			//window.alert("subval gjort");
+			//rollperson.handelsetabellobjektlista[arraylangd-1]=summera_subval(rollperson.handelsetabellobjektlista[arraylangd-1]);
+			
+			rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]);
+		}
+	}else if (handelsetabellista_ovrig.indexOf(aktiv_handelsetabell[0].namn)>=0){	
+		kvarslag=0;
+		anvandtabell="";
+		for (i=0;i<aktiv_handelsetabell[0].tabellslag.length;i++){
+			if (rollperson["kvar_" + aktiv_handelsetabell[0].tabellslag[i]]>0){
+				anvandtabell=aktiv_handelsetabell[0].tabellslag[i];
+				kvarslag +=rollperson["kvar_" + aktiv_handelsetabell[0].tabellslag[i]];
+			}
 		}
 		
-		
-		rollperson.handelsetabellobjektlista[arraylangd]=clone(aktivthandelsetabellslag);
-		
-		
-		arraylangd=rollperson.handelsetabellobjektlista.length;
-		
-		//rollperson.handelsetabellobjektlista[arraylangd-1]=valj_subval(rollperson.handelsetabellobjektlista[arraylangd-1], slump);
-		
-		//window.alert("subval gjort");
-		//rollperson.handelsetabellobjektlista[arraylangd-1]=summera_subval(rollperson.handelsetabellobjektlista[arraylangd-1]);
-		
-		rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]);
-	}else if (rollperson["kvar_valfriatabellslag"] > 0){
-		
-		//window.alert("pushen");
-		//rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]=clone(aktiv_handelsetabell[handelsetabellslag]);
-		aktivthandelsetabellslag=summera_subval(aktivthandelsetabellslag);
-		aktivthandelsetabellslag.vald=1;
-		rollperson.handelsetabellobjektlista[arraylangd]=clone(aktivthandelsetabellslag);
-		arraylangd=rollperson.handelsetabellobjektlista.length;
-		
-		if (aktivthandelsetabellslag.valfriatabellslag==1){
-			rollperson.kvar_valfriatabellslag +=1;
-		}else{
-			rollperson["kvar_valfriatabellslag"] = rollperson["kvar_valfriatabellslag"] - 1;
-		
+		if (kvarslag>0){
+			aktivthandelsetabellslag=summera_subval(aktivthandelsetabellslag);
+			aktivthandelsetabellslag.vald=1;
+			aktiv_handelsetabell[0].vald +=1;
+			
+			if (aktivthandelsetabellslag.valfriatabellslag==1){
+				rollperson.kvar_valfriatabellslag +=1;
+			}else{
+				rollperson["kvar_" + anvandtabell] = rollperson["kvar_" + anvandtabell] - 1;
+			}
+			
+			
+			rollperson.handelsetabellobjektlista[arraylangd]=clone(aktivthandelsetabellslag);
+			
+			
+			arraylangd=rollperson.handelsetabellobjektlista.length;
+			
+			//rollperson.handelsetabellobjektlista[arraylangd-1]=valj_subval(rollperson.handelsetabellobjektlista[arraylangd-1], slump);
+			
+			//window.alert("subval gjort");
+			//rollperson.handelsetabellobjektlista[arraylangd-1]=summera_subval(rollperson.handelsetabellobjektlista[arraylangd-1]);
+			
+			rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]);
+		}else if(rollperson["kvar_valfriatabellslag"] > 0){
+			aktivthandelsetabellslag=summera_subval(aktivthandelsetabellslag);
+			aktivthandelsetabellslag.vald=1;
+			aktiv_handelsetabell[0].vald +=1;
+			rollperson.handelsetabellobjektlista[arraylangd]=clone(aktivthandelsetabellslag);
+			arraylangd=rollperson.handelsetabellobjektlista.length;
+			
+			if (aktivthandelsetabellslag.valfriatabellslag==1){
+				rollperson.kvar_valfriatabellslag +=1;
+			}else{
+				rollperson["kvar_valfriatabellslag"] = rollperson["kvar_valfriatabellslag"] - 1;
+			
+			}
+			
+			//rollperson.handelsetabellobjektlista[arraylangd-1]=valj_subval(rollperson.handelsetabellobjektlista[arraylangd-1], slump);
+			
+			//window.alert("subval gjort");
+			//rollperson.handelsetabellobjektlista[arraylangd-1]=summera_subval(rollperson.handelsetabellobjektlista[arraylangd-1]);
+			
+			rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]);
 		}
-		
-		//rollperson.handelsetabellobjektlista[arraylangd-1]=valj_subval(rollperson.handelsetabellobjektlista[arraylangd-1], slump);
-		
-		//window.alert("subval gjort");
-		//rollperson.handelsetabellobjektlista[arraylangd-1]=summera_subval(rollperson.handelsetabellobjektlista[arraylangd-1]);
-		
-		rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]);;
-	}
 	
+	}
 	
 	kvartotal=rollperson["kvar_valfriatabellslag"];
 	
@@ -3778,6 +3955,10 @@ function skrivanvandenheterkategorier(){
 	
 	htmlkod += "<br>";
 	
+	htmlkod += "<a id=\"anvandenheter_formularsvy" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"formularsvy(rollperson);return false;\">";
+	htmlkod += "Visa formulär" + ""; 
+	htmlkod +="</a>"; 
+	htmlkod += " &#124; ";
 	htmlkod += "<a id=\"anvandenheter_sparaenheter" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"anropasparaenheter(rollperson);return false;\">";
 	htmlkod += "Spara enhetsköp" + ""; 
 	htmlkod +="</a>"; 
@@ -3790,6 +3971,848 @@ function skrivanvandenheterkategorier(){
 	
 	document.getElementById("hogerkategorival").innerHTML = htmlkod;
 
+}
+
+function formularsvy(rollperson){
+
+	doljvansterspalt();
+	
+	if ("anvandenheter" in rollperson){
+		if (rollperson.anvandenheter.sparad==0){
+			rollperson=summerarollperson(rollperson, rollperson.anvandenheter);
+			rollperson.anvandenheter.sparad=1;
+		}
+	}
+	
+	hojsank=0;
+	styr=0;
+	hojsvar=0;
+	
+	attributobjekt=hamta_attributobjekt();
+	
+	grundattributrubriker=["Styrka", "Tålighet", "Rörlighet", "Uppfattning", "Vilja", "Psyke", "Visdom", "Utstrålning"];
+	 var grundattributlista=[];
+	grundattributlista[0]="styrka";
+	grundattributlista[1]="talighet";
+	grundattributlista[2]="rorlighet";
+	grundattributlista[3]="uppfattning";
+	grundattributlista[4]="vilja";
+	grundattributlista[5]="psyke";
+	grundattributlista[6]="visdom";
+	grundattributlista[7]="utstralning";
+	
+	
+	harleddaattributlista=attributobjekt.harleddaattributlista;
+	harleddaattributrubriker=attributobjekt.harleddaattributrubriker
+	harleddavardenlista=attributobjekt.harleddavardenlista;
+	harleddavardenrubriker=attributobjekt.harleddavardenrubriker;
+	
+	avtrubbningskategorier=["utsatthet", "vald","overnaturligt"];
+	avtrubbningsrubriker=["Utsatthet", "Våld","Övernaturligt"];
+	
+	
+	htmlkod="";
+	htmlkod += "<a id=\"anvandenheter_enhetsvy" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"enhetsvy(rollperson);return false;\">";
+	htmlkod += "Visa enhetsköp" + ""; 
+	htmlkod +="</a>"; 
+	htmlkod += " &#124; ";
+	htmlkod += "<a id=\"anvandenheter_sparaenheter" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"anropasparaenheter(rollperson);return false;\">";
+	htmlkod += "Spara enhetsköp" + ""; 
+	htmlkod +="</a>"; 
+	
+	formkod="";
+	formkod+="<div class='garald'>";
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	formkod +="<td class='center'> <h1>EON</h1></td>";
+	formkod +="</tr>";
+	formkod +="</table>";
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	
+	// Table runt grundinfo, grundattribut, fokus, karaktärsdrag
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	formkod +="<td style='vertical-align: top;width:20%'>";
+	formkod +="&nbsp;";
+	formkod +="</td>";
+	formkod +="<td style='vertical-align: top;width:40%'>";
+	
+	
+	// Grundläggande info
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	formkod +="<th class='left' colspan='2'>Namn</th><td colspan='3'>&nbsp;</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<th class='left' colspan='2'>Folkslag</th><td colspan='3'>";
+	if ("folkslag" in rollperson){
+	
+		formkod+=rollperson.folkslag.rubrik;
+	}
+	formkod+="</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<th class='left'>Kön</th><td colspan='1'>&nbsp;</td><th class='left'>Ålder</th><td>&nbsp;</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<th class='left' colspan='2'>Religion</th><td colspan='3'>&nbsp;</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<th class='left' colspan='2'>Värv</th><td colspan='3'>&nbsp;</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<th class='left' colspan='2'>Arketyp</th><td colspan='3'>";
+	if ("arketyp" in rollperson){
+		formkod += rollperson.arketyp.rubrik 
+	}
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<th class='left' colspan='2'>Miljö</th><td colspan='3'>";
+	if ("miljo" in rollperson){
+	
+		formkod+=rollperson.miljo.rubrik;
+	}
+	formkod+="</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<th class='left' colspan='2'>Bakgrund</th><td colspan='3'>"
+	if ("bakgrund" in rollperson){
+	
+		formkod+=rollperson.bakgrund.rubrik
+	}
+	formkod+="</td>";
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	
+	formkod +="</td>";
+	
+	formkod +="<td rowspan='2' style='vertical-align: top;width:40%'>";
+	// Fokus och karaktärsdrag
+	
+	// Table runt fokus och karaktärsdrag
+	formkod +="<table>";
+	
+	
+	
+	//Fokus
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	formkod +="<th colspan='2'>Fokus</th>";
+	formkod +="</tr>";
+	
+	formkod +="<td>";
+	// Fokusringar och Välmående
+	formkod +="<table>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	
+	// Fokusringar
+	formkod +="<table>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod +="OOOOO" + "<br>" + "OOOOO";
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	
+	// Välmående
+	formkod +="<table>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod +="Välmående";
+	formkod +="</td>";
+	formkod +="<td>";
+	// Infoga välmående
+	formkod +="&nbsp;";
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	formkod +="</td>";
+	formkod +="</tr>";
+	
+	formkod +="</table>";
+	formkod +="</td>";
+	formkod +="<td>";
+	
+	// Infotext om fokus
+	formkod +="<table>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod +="\+1T6 kostar 1 Fokus <br>";
+	formkod +="\+2T6 kostar 3 Fokus <br>";
+	formkod +="\+3T6 kostar 6 Fokus <br>";
+	formkod +="\+4T6 kostar 10 Fokus";
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	
+	
+	// Karaktärsdrag
+	formkod +="<table style='width:100%'>";
+	
+	// Primärt
+	formkod +="<tr>";
+	formkod +="<th colspan='3'>Primärt karaktärsdrag</td><td colspan='1'>&nbsp;</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<td colspan='4'>&nbsp;</td>";
+	formkod +="</tr>";
+	
+	// Nivå I-II-III
+	formkod +="<tr>";
+	formkod +="<td>&nbsp;</td><td>&nbsp;</td><td colspan='2'>&nbsp;</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<td>&nbsp;</td><td>&nbsp;</td><td colspan='2'>&nbsp;</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<td>&nbsp;</td><td>&nbsp;</td><td colspan='2'>&nbsp;</td>";
+	formkod +="</tr>";
+	
+	// Låst och svaghet
+	formkod +="<tr>";
+	formkod +="<td colspan='2'>&nbsp;</td><td>Låst</td><td>Svaghet</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<td colspan='4'>&nbsp;</td>";
+	formkod +="</tr>";
+	
+	// Sekundärt
+	formkod +="<tr>";
+	formkod +="<th colspan='3'>Sekundärt karaktärsdrag</td><td colspan='1'>&nbsp;</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<td colspan='4'>&nbsp;</td>";
+	formkod +="</tr>";
+	
+	// Nivå I-II-III
+	formkod +="<tr>";
+	formkod +="<td>&nbsp;</td><td>&nbsp;</td><td colspan='2'>&nbsp;</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<td>&nbsp;</td><td>&nbsp;</td><td colspan='2'>&nbsp;</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<td>&nbsp;</td><td>&nbsp;</td><td colspan='2'>&nbsp;</td>";
+	formkod +="</tr>";
+	
+	// Låst och svaghet
+	formkod +="<tr>";
+	formkod +="<td colspan='2'>&nbsp;</td><td>Låst</td><td>Svaghet</td>";
+	formkod +="</tr>";
+		
+	formkod +="</table>";
+	
+	
+	
+	
+	formkod +="</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	
+	formkod +="<td colspan='2' style='vertical-align:bottom'>";
+	
+	// Grundattribut
+	formkod +="<table style='width:100%;vertical-align:bottom'>";
+	formkod +="<tr>";
+	formkod +="<th colspan='4'>";
+	formkod +="Grundattribut";
+	formkod +="</th></tr>";
+	
+	
+	for (i=0;i<4; i++){
+		formkod +="<tr>";
+		formkod +="<td>";
+		formkod += grundattributrubriker[i];
+		formkod +="</td>";
+		formkod +="<td>"
+		formkod +=rollperson[grundattributlista[i]].tarningar;
+		//formkod += "XT6";
+		formkod +="</td>";
+		formkod +="<td>";
+		formkod += grundattributrubriker[i+4];
+		formkod +="</td>";
+		formkod +="<td>"
+		formkod +=rollperson[grundattributlista[i+4]].tarningar;
+		//formkod += "YT6+Z";
+		formkod +="</td>";
+		formkod +="</tr>";
+	}
+	
+	
+	
+	
+	formkod +="</table>";
+	
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<td colspan='2' style='vertical-align: bottom'>";
+	
+	
+	formkod +="</td>";
+	
+	
+	//formkod +="</table>";
+	//formkod +="</td>";
+	//formkod +="</tr>";
+	
+	formkod +="</td>";
+	
+	formkod +="<td style='width:40%'>";
+	
+	
+	//formkod +="</td>";
+	
+	formkod +="</tr>";
+	formkod +="<tr>";
+	
+	
+	
+	formkod +="</tr>";
+	formkod +="</table>";
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	formkod +="<br>";
+
+	// Tabell runt färdigheter
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	
+	// Spalt 1
+	formkod +="<td style='vertical-align:top;width:33%'>";
+	formkod +="<table style='width:100%'>";
+	katkod=formular_fardighetskategori(rollperson,"stridsfardigheter",hojsank,styr,hojsvar);
+	formkod+=katkod;
+	
+	formkod +="<tr><td colspan='6'>&nbsp;</td></tr>";
+	
+	katkod=formular_fardighetskategori(rollperson,"rorelsefardigheter",hojsank,styr,hojsvar);
+	formkod+=katkod;
+	
+	formkod +="<tr><td colspan='6'>&nbsp;</td></tr>";
+	
+	
+	katkod=formular_fardighetskategori(rollperson,"mystikfardigheter",hojsank,styr,hojsvar);
+	formkod+=katkod;
+	
+	formkod +="</table>";
+	formkod +="</td>";
+	
+	// Spalt 2
+	formkod +="<td style='vertical-align:top;width:33%'>";
+	formkod +="<table style='width:100%'>";
+	katkod=formular_fardighetskategori(rollperson,"socialafardigheter",hojsank,styr,hojsvar);
+	formkod+=katkod;
+	
+	formkod +="<tr><td colspan='6'>&nbsp;</td></tr>";
+	
+	
+	katkod=formular_fardighetskategori(rollperson,"kunskapsfardigheter",hojsank,styr,hojsvar);
+	formkod+=katkod;
+	
+	
+	formkod +="</table>";
+	formkod +="</td>";
+	
+	// Spalt 3
+	formkod +="<td style='vertical-align:top;width:33%'>";
+	formkod +="<table style='width:100%'>";
+	katkod=formular_fardighetskategori(rollperson,"vildmarksfardigheter",hojsank,styr,hojsvar);
+	formkod+=katkod;
+	
+	formkod +="<tr><td colspan='7'>&nbsp;</td></tr>";
+	
+	// Övriga färdigheter
+	
+	formkod +="<tr><th colspan='7'>Expertiser, Hantverk \& Kännetecken</th></tr>"
+	for (i=0; i<rollperson.ovrigafardighetermedtarningar.length;i++){
+		formkod+="<tr><td>&nbsp;</td><td>&nbsp;</td>";
+		formkod+="<td>";
+		formkod+= rollperson[rollperson.ovrigafardighetermedtarningar[i]].rubrik;
+		formkod+="</td>";
+		formkod+="<td>";
+		formkod+= rollperson[rollperson.ovrigafardighetermedtarningar[i]].tarningar;
+		formkod+="</td>";
+		formkod+="<td>&nbsp;</td>";
+		formkod+="<td>&nbsp;</td>";
+		formkod+="</tr>";
+	}
+	
+	formkod +="<tr><td colspan='7'>&nbsp;</td></tr>";
+	
+	formkod +="<tr><th colspan='7'>Språk \& skrift</th></tr>"
+	for (i=0; i<rollperson.sprakskrift.length;i++){
+		formkod+="<tr><td>&nbsp;</td><td>&nbsp;</td>";
+		formkod+="<td>";
+		formkod+= rollperson[rollperson.sprakskrift[i]].rubrik;
+		formkod+="</td>";
+		formkod+="<td>";
+		formkod+= "&nbsp;";
+		formkod+="</td>";
+		formkod+="<td>&nbsp;</td>";
+		formkod+="<td>&nbsp;</td>";
+		formkod+="</tr>";
+	}
+
+	
+	
+	
+	formkod +="</table>";
+	formkod +="</td>";
+	
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	// Härledda attribut och avtrubbning
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	formkod +="<td style='width:66%'>";
+	// Härledda attribut och värden
+	formkod +="<table style='width:100%'>";
+	
+	formkod +="<tr>";
+	formkod +="<th colspan='3'>Härledda attribut och värden</th>";
+	formkod +="</tr>";
+	
+	for (i=0;i<harleddaattributlista.length;i++){
+		formkod +="<tr>";
+		formkod +="<td>";
+		formkod += harleddaattributrubriker[i];
+		formkod +="</td>";
+		formkod +="<td>";
+		formkod+=rollperson[harleddaattributlista[i]].tarningar;
+		formkod +="</td>";
+		formkod +="<td>";
+		
+		for (j=0;j<rollperson[harleddaattributlista[i]].egenskapslista.length;j++){
+			if (j>=1){
+				formkod += "<br>";
+			}
+			formkod+=rollperson[harleddaattributlista[i]].egenskapslista[j];
+			
+		}
+		formkod +="</td>"
+		formkod +="</tr>"
+	}
+	for (i=0;i<harleddavardenlista.length;i++){
+		formkod +="<tr>";
+		formkod +="<td>";
+		formkod += harleddavardenrubriker[i];
+		formkod +="</td>";
+		formkod +="<td>";
+		if (i==1 || i==2){
+			formkod+=rollperson[harleddavardenlista[i]].tarningar;
+		}else{
+			formkod+=rollperson[harleddavardenlista[i]].varde.toString();
+		}
+		formkod +="</td>";
+		formkod +="<td>";
+		
+		for (j=0;j<rollperson[harleddavardenlista[i]].egenskapslista.length;j++){
+			if (j>=1){
+				formkod += "<br>";
+			}
+			formkod+=rollperson[harleddavardenlista[i]].egenskapslista[j];
+			
+		}
+		formkod +="</td>"
+		formkod +="</tr>"
+	}
+	formkod +="</table>";
+	formkod +="</td>";
+	
+	// Avtrubbning
+	formkod +="<td style='vertical-align:top'>"; 
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	formkod +="<th colspan='6'>";
+	formkod +="Avtrubbning";
+	formkod +="</th>";
+	formkod +="</tr>";
+	for (i=0;i<avtrubbningskategorier.length;i++){
+		formkod +="<tr>";
+		formkod +="<td>";
+		formkod +=avtrubbningsrubriker[i];
+		for (j=0;j<5;j++){
+			formkod +="<td class='center'>";
+			if (rollperson["avtrubbning" + avtrubbningskategorier[i]]>j){
+				formkod +="&#8864;";
+				
+			}else{
+				//formkod +="&#9633;";
+				formkod +="&#9723;";
+			}
+			formkod +="</td>";
+		}
+		formkod+="</tr>";
+	}
+	
+	
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod +="</td>";
+	
+	for (j=0;j<5;j++){
+		formkod +="<td>";
+		formkod +="&#43;" + ((j+1)*5).toString();
+		formkod +="</td>";
+		
+	}
+	formkod+="</tr>";
+	
+	formkod +="</table>";
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	// Egenskaper och resurser
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	formkod +="<td style='width:50%'>";
+	
+	vansterlista=["utseende","formaga","kontakt","ovrigt"];
+	vansterlistarubrik=["Utseende","Förmågor","Kontakter","Övrigt"];
+	hogerlista=["resurser","vapen","rustning"];
+	hogerlistarubrik=["Resurser","Vapen","Rustning"];
+	
+	// Utseende, Förmågor, Kontakter, Övrigt
+	formkod +="<table style='width:100%'>";
+	
+	for (i=0;i<vansterlista.length;i++){
+		formkod +="<tr>";
+		formkod +="<th class='left'>";
+		formkod +=vansterlistarubrik[i];
+		formkod +="</th>";
+		formkod +="</tr>";
+		
+		formkod +="<tr>";
+		formkod +="<td>";
+		
+		
+		for (j=0;j<rollperson[vansterlista[i] + "_lista"].length;j++){
+			if (j>0){
+				formkod += "<br>";
+			}
+			formkod += rollperson[vansterlista[i] + "_lista"][j];
+		}
+		formkod +="&nbsp;";
+		formkod +="</td>";
+		formkod +="</tr>";
+		formkod +="<tr>";
+		formkod +="<td>";
+		formkod+="&nbsp;";
+		formkod +="</td>";
+		formkod +="</tr>";
+		
+	}
+	
+	
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod +="&nbsp;";
+	formkod +="</td>";
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	formkod +="</td>";
+	formkod +="<td style='vertical-align:top'>";
+	
+	// Resurser och utrustning
+	formkod +="<table style='width:100%'>";
+	formkod +="<tr>";
+	formkod +="<th class='left'>";
+	formkod +="Pengar";
+	formkod +="</th>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod +=rollperson.pengar.toString() + " silver";
+	formkod +="</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod+="&nbsp;";
+	formkod +="</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<th class='left'>";
+	formkod +="Resurser";
+	formkod +="</th>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	for (j=0;j<rollperson["resurs_lista"].length;j++){
+		if (j>0){
+			formkod += "<br>";
+		}
+		formkod += rollperson["resurs_lista"][j];
+	}
+	formkod +="&nbsp;";
+	formkod +="</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod+="&nbsp;";
+	formkod +="</td>";
+	formkod +="</tr>";
+	
+	
+	formkod +="<tr>";
+	formkod +="<th class='left'>";
+	formkod +="Vapen";
+	formkod +="</th>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	vapenkod="";
+	
+	if (rollperson.vanligtvapen ==0){
+			// 
+	}else if (rollperson.vanligtvapen ==1){
+		vapenkod += rollperson.vanligtvapen + " vanligt vapen<br>";
+	}else if (rollperson.vanligtvapen >= 2){
+		vapenkod += rollperson.vanligtvapen + " vanliga vapen<br>";
+	}
+	
+	// Ovanliga vapen
+	if (rollperson.ovanligtvapen ==0){
+		// 
+	}else if (rollperson.ovanligtvapen ==1){
+		vapenkod += rollperson.ovanligtvapen + " ovanligt vapen<br>";
+	}else if (rollperson.vanligtvapen >= 2){
+		vapenkod += rollperson.ovanligtvapen + " ovanliga vapen<br>";
+	}
+	
+	// Sällsynta vapen
+	if (rollperson.sallsyntvapen ==0){
+		// 
+	}else if (rollperson.sallsyntvapen ==1){
+		vapenkod += rollperson.sallsyntvapen + " sällsynt vapen<br>";
+	}else if (rollperson.sallsyntvapen >= 2){
+		vapenkod += rollperson.sallsyntvapen + " sällsynta vapen<br>";
+	}
+	
+	// Vapenlista
+	for (i=0;i<rollperson.vapen_lista.length;i++){
+		
+		if (i<rollperson.vapen_lista.length-1){
+			vapenkod += rollperson.vapen_lista[i] + "<br>";
+		}else{
+			vapenkod += rollperson.vapen_lista[i];
+		}
+	}
+	
+	formkod += vapenkod;
+	
+	formkod +="</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<td>";
+	formkod+="&nbsp;";
+	formkod +="</td>";
+	formkod +="</tr>";
+	
+	formkod +="<tr>";
+	formkod +="<th class='left'>";
+	formkod +="Rustning";
+	formkod +="</th>";
+	formkod +="</tr>";
+	formkod +="<tr>";
+	formkod +="<td>";
+	// Rustning
+	rustningskod="";
+	// Mycket lätta rustningar
+	if (rollperson.mycketlattrustning ==0){
+		// 
+	}else if (rollperson.mycketlattrustning ==1){
+		rustningskod += rollperson.mycketlattrustning + " mycket lätt rustning<br>";
+	}else if (rollperson.mycketlattrustning >= 2){
+		rustningskod += rollperson.mycketlattrustning + " mycket lätta rustningar<br>";
+	}
+	
+	// Lätta rustningar
+	if (rollperson.lattrustning ==0){
+		// 
+	}else if (rollperson.lattrustning ==1){
+		rustningskod += rollperson.lattrustning + "  lätt rustning<br>";
+	}else if (rollperson.lattrustning >= 2){
+		rustningskod += rollperson.lattrustning + "  lätta rustningar<br>";
+	}
+	
+	// Medeltunga rustningar
+	if (rollperson.medelrustning ==0){
+		// 
+	}else if (rollperson.medelrustning ==1){
+		rustningskod += rollperson.medelrustning + "  medeltung rustning<br>";
+	}else if (rollperson.medelrustning >= 2){
+		rustningskod += rollperson.medelrustning + "  medeltunga rustningar<br>";
+	}
+	
+	// Tunga rustningar
+	if (rollperson.tungrustning ==0){
+		// 
+	}else if (rollperson.tungrustning ==1){
+		rustningskod += rollperson.tungrustning + "  tung rustning<br>";
+	}else if (rollperson.tungrustning >= 2){
+		rustningskod += rollperson.tungrustning + "  tunga rustningar<br>";
+	}
+	
+	// Rustninglista
+	for (i=0;i<rollperson.rustning_lista.length;i++){
+		
+		if (i<rollperson.rustning_lista.length-1){
+			rustningskod += rollperson.rustning_lista[i] + "<br>";
+		}else{
+			rustningskod += rollperson.rustning_lista[i];
+		}
+	}
+	
+	formkod +=rustningskod;
+	
+	formkod +="</td>";
+	formkod +="</tr>";
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	formkod +="</table>";
+	
+	formkod +="</td>";
+	
+	formkod +="</tr>";
+	formkod +="</table>";
+	
+	formkod +="</div>";
+	
+	document.getElementById("hogerkategorival").innerHTML = htmlkod;
+	document.getElementById("hogerkategorirubrik").innerHTML = "";
+	document.getElementById("hogerkategoribeskrivning").innerHTML = formkod;
+}
+function formular_fardighetskategori(rollperson,kategorinamn,hojsank,styr,hojsvar){
+	// Hojsank=1 innebär att användaren kan styra över höjningar, vilka som ska vara lättlärda osv.
+	// Styr anger om styrande attribut ska skrivas ut
+	// hojsvar anger om höjningssvårigheten ska skrivas ut
+	
+	fardighetslistaobjekt=hamta_fardighetslistaobjekt();
+	fardighetsobjekt=hamta_fardighetsobjekt();
+	attributobjekt=hamta_attributobjekt();
+	var i;
+	var fardighetsnamn;
+	var katkod="";
+	katkod+="<tr>";
+	katkod+="<th colspan='7'>";
+	katkod+=fardighetslistaobjekt[kategorinamn].rubrik;
+	katkod+="</th>";
+	katkod+="</tr>";
+	
+	//console.log(kategorinamn);
+	//console.log(fardighetslistaobjekt[kategorinamn].lista.length);
+	for (i=0;i<fardighetslistaobjekt[kategorinamn].lista.length;i++){
+		//console.log(kategorinamn + " " + i)
+		fardighetsnamn=fardighetslistaobjekt[kategorinamn].lista[i];
+		katkod+="<tr>";
+		katkod+="<td>";
+		if (hojsank==1){
+			
+			// saknas
+			//Plusminus lättlärd
+			
+		}
+		katkod+="</td>";
+		katkod+="<td>";
+		if (rollperson[fardighetsnamn].svarlard==1){
+			katkod += "\(S\)";
+		}else if (rollperson[fardighetsnamn].lattlard==1){
+			katkod += "\(L\)";
+		}
+		katkod+="</td>";
+		katkod+="<td>";
+		katkod+=fardighetsobjekt[fardighetsnamn].rubrik;
+		katkod+="</td>";
+		katkod+="<td>";
+		katkod+=rollperson[fardighetsnamn].tarningar;
+		katkod+="</td>";
+		katkod+="<td>";
+		if (hojsank==1){
+			// saknas
+			//Plusminus färdighetstärningar			
+		}
+		katkod+="</td>";
+		
+		katkod+="<td>";
+		if (styr==1){
+			
+			// Styrattribut-TBF
+			if ("styrandeattribut" in rollperson[fardighetsnamn]){
+				katkod+="\(" + attributobjekt.forkortning[rollperson[fardighetsnamn].styrandeattribut] + "\)";
+			}
+			
+			
+		}
+		katkod+="</td>";
+		katkod+="<td>";
+		if (hojsvar==1){
+			
+			// saknas
+			if ("hojningssvarighet" in rollperson[fardighetsnamn]){
+				katkod+="\(" + rollperson[fardighetsnamn].hojningssvarighet.toString() + "\)";
+			}
+			
+			
+		}
+		katkod+="</td>";
+		katkod+="</tr>";
+	}
+	// Hämta färdighetsobjekt
+	// Höjningssvårighet anger visning av styrande attribut eller höjningssvårighet
+	
+	//console.log("Katkod: " + katkod)
+	return katkod
+
+}
+function enhetsvy(rollperson){
+	visavansterspalt();
+	rpvalkategori('anvandenheter');
 }
 
 
@@ -5009,7 +6032,7 @@ function uppdateravanstersammanfattning(){
 			// Svårlärda
 			if (rollperson["svarlard" + fardighetsgrupplista[i]] == 1){
 				svarlardgrupplista.push(rollperson["svarlard" + fardighetsgrupplista[i]].toString() + " svårlärd " + fardighetsgrupplista_sing[i]);
-			}else if (rollperson[rpvalmatris[4][i]] > 1){
+			}else if (rollperson["svarlard" + fardighetsgrupplista[i]] > 1){
 				svarlardgrupplista.push(rollperson["svarlard" + fardighetsgrupplista[i]].toString() + " svårlärda " + fardighetsgrupplista_plur[i]);
 			}else{
 			
@@ -6581,6 +7604,14 @@ body {
 	
 	margin-right:auto;
 	
+}
+
+table {
+   border: 0px solid black;
+}
+
+th, td {
+   border: 0px solid red;
 }
 
 th.left{
