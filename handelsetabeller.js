@@ -8799,9 +8799,9 @@ function hamta_handelsetabeller(){
 	handelsetabeller.taupiskaforfader[64].subval[0][0][0] = {};
 	handelsetabeller.taupiskaforfader[64].subval[0][0][0].valdasub = [];
 	handelsetabeller.taupiskaforfader[64].subval[0][0][0].vald = 0;
-	handelsetabeller.taupiskaforfader[64].subval[0][0][0].
-	handelsetabeller.taupiskaforfader[64].subval[0][0][0].={};
-	handelsetabeller.taupiskaforfader[64].subval[0][0][0]..enheter=3;
+	handelsetabeller.taupiskaforfader[64].subval[0][0][0].mystikfardigheterenheter=4;
+	handelsetabeller.taupiskaforfader[64].subval[0][0][0].skamta={};
+	handelsetabeller.taupiskaforfader[64].subval[0][0][0].skamta.enheter=3;
 
 	handelsetabeller.taupiskaforfader[65] = {};
 	handelsetabeller.taupiskaforfader[65].subval=[[[]]]
@@ -8813,10 +8813,10 @@ function hamta_handelsetabeller(){
 	handelsetabeller.taupiskaforfader[65].subval[0][0][0] = {};
 	handelsetabeller.taupiskaforfader[65].subval[0][0][0].valdasub = [];
 	handelsetabeller.taupiskaforfader[65].subval[0][0][0].vald = 0;
-	handelsetabeller.taupiskaforfader[65].subval[0][0][0].={};
-	handelsetabeller.taupiskaforfader[65].subval[0][0][0]..enheter=3;
-	handelsetabeller.taupiskaforfader[65].subval[0][0][0].={};
-	handelsetabeller.taupiskaforfader[65].subval[0][0][0]..enheter=3;
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0].behaga={};
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0].behaga.enheter=3;
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0].metallurg={};
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0].metallurg.enheter=3;
 
 	handelsetabeller.taupiskaforfader[66] = {};
 	handelsetabeller.taupiskaforfader[66].subval=[[[]]]
