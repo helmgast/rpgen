@@ -115,6 +115,28 @@ function hamta_fardighetslistaobjekt (){
 	mystikfardigheter.push("fornimma");
 	mystikfardigheter.push("forvranga");
 	mystikfardigheter.push("kanalisera");
+	mystikfardigheter.push("astrotropi");
+	mystikfardigheter.push("kosmotropi");
+	mystikfardigheter.push("heliotropi");
+	mystikfardigheter.push("selenotropi");
+	mystikfardigheter.push("ataxotropi");
+	mystikfardigheter.push("nomotropi");
+	mystikfardigheter.push("topotropi");
+	mystikfardigheter.push("kronotropi");
+	mystikfardigheter.push("geotropi");
+	mystikfardigheter.push("hydrotropi");
+	mystikfardigheter.push("pyrotropi");
+	mystikfardigheter.push("pneumotropi");
+	mystikfardigheter.push("semotropi");
+	mystikfardigheter.push("ikonotropi");
+	mystikfardigheter.push("nekrotropi");
+	mystikfardigheter.push("biotropi");
+	mystikfardigheter.push("termotropi");
+	mystikfardigheter.push("kryotropi");
+	mystikfardigheter.push("fototropi");
+	mystikfardigheter.push("skototropi");
+	mystikfardigheter.push("psykotropi");
+	mystikfardigheter.push("oneirotropi");
 	
 	
     fardighetslistaobjekt.mystikfardigheter={};
@@ -1422,6 +1444,131 @@ function hamta_fardighetsobjekt () {
 	fardighetsobjekt["kanalisera"].styrandeattribut="visdom"; 
 	fardighetsobjekt["kanalisera"].grundtarningar=0; 
 	fardighetsobjekt["kanalisera"].beskrivning="Personen har lärt sig att öppna sitt sinne och kan när denne koncentrerar sig känna och använda sig av de krafter som håller världen samman och de energier som strömmar mellan troende, gudar och demoner. Kanalisera används dels i heliga riter tillsammans med färdigheten Ceremoni och dels ensamt i böner."; 
+	
+	fardighetsobjekt["astrotropi"].rubrik="Astrotropi"; 
+	fardighetsobjekt["astrotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["astrotropi"].grundtarningar=0; 
+	fardighetsobjekt["astrotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["kosmotropi"].rubrik="Kosmotropi"; 
+	fardighetsobjekt["kosmotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["kosmotropi"].grundtarningar=0; 
+	fardighetsobjekt["kosmotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["heliotropi"].rubrik="Heliotropi"; 
+	fardighetsobjekt["heliotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["heliotropi"].grundtarningar=0; 
+	fardighetsobjekt["heliotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["selenotropi"].rubrik="Selenotropi"; 
+	fardighetsobjekt["selenotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["selenotropi"].grundtarningar=0; 
+	fardighetsobjekt["selenotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["ataxotropi"].rubrik="Ataxotropi"; 
+	fardighetsobjekt["ataxotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["ataxotropi"].grundtarningar=0; 
+	fardighetsobjekt["ataxotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["nomotropi"].rubrik="Nomotropi"; 
+	fardighetsobjekt["nomotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["nomotropi"].grundtarningar=0; 
+	fardighetsobjekt["nomotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["topotropi"].rubrik="Topotropi"; 
+	fardighetsobjekt["topotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["topotropi"].grundtarningar=0; 
+	fardighetsobjekt["topotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["kronotropi"].rubrik="Kronotropi"; 
+	fardighetsobjekt["kronotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["kronotropi"].grundtarningar=0; 
+	fardighetsobjekt["kronotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["geotropi"].rubrik="Geotropi"; 
+	fardighetsobjekt["geotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["geotropi"].grundtarningar=0; 
+	fardighetsobjekt["geotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["hydrotropi"].rubrik="Hydrotropi"; 
+	fardighetsobjekt["hydrotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["hydrotropi"].grundtarningar=0; 
+	fardighetsobjekt["hydrotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["pneumotropi"].rubrik="Pneumotropi"; 
+	fardighetsobjekt["pneumotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["pneumotropi"].grundtarningar=0; 
+	fardighetsobjekt["pneumotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["pyrotropi"].rubrik="Pyrotropi"; 
+	fardighetsobjekt["pyrotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["pyrotropi"].grundtarningar=0; 
+	fardighetsobjekt["pyrotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["semotropi"].rubrik="Semotropi"; 
+	fardighetsobjekt["semotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["semotropi"].grundtarningar=0; 
+	fardighetsobjekt["astrotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["ikonotropi"].rubrik="Ikonotropi"; 
+	fardighetsobjekt["ikonotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["ikonotropi"].grundtarningar=0; 
+	fardighetsobjekt["ikonotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["biotropi"].rubrik="Biotropi"; 
+	fardighetsobjekt["biotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["biotropi"].grundtarningar=0; 
+	fardighetsobjekt["biotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["nekrotropi"].rubrik="Nekrotropi"; 
+	fardighetsobjekt["nekrotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["nekrotropi"].grundtarningar=0; 
+	fardighetsobjekt["nekrotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["astrotropi"].rubrik="Termotropi"; 
+	fardighetsobjekt["termotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["termotropi"].grundtarningar=0; 
+	fardighetsobjekt["termotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["kryotropi"].rubrik="Kryotropi"; 
+	fardighetsobjekt["kryotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["kryotropi"].grundtarningar=0; 
+	fardighetsobjekt["kryotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["fototropi"].rubrik="Fototropi"; 
+	fardighetsobjekt["fototropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["fototropi"].grundtarningar=0; 
+	fardighetsobjekt["fototropi"].beskrivning=""; 
+	
+	fardighetsobjekt["skototropi"].rubrik="Skototropi"; 
+	fardighetsobjekt["skototropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["skototropi"].grundtarningar=0; 
+	fardighetsobjekt["skototropi"].beskrivning=""; 
+	
+	fardighetsobjekt["psykotropi"].rubrik="Psykotropi"; 
+	fardighetsobjekt["psykotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["psykotropi"].grundtarningar=0; 
+	fardighetsobjekt["psykotropi"].beskrivning=""; 
+	
+	fardighetsobjekt["oneirotropi"].rubrik="Oneirotropi"; 
+	fardighetsobjekt["oneirotropi"].styrandeattribut="psyke"; 
+	fardighetsobjekt["oneirotropi"].grundtarningar=0; 
+	fardighetsobjekt["oneirotropi"].beskrivning=""; 
+	
+	
+	/*
+	mystikfardigheter.push("semotropi");
+	mystikfardigheter.push("ikonotropi");
+	mystikfardigheter.push("nekrotropi");
+	mystikfardigheter.push("biotropi");
+	mystikfardigheter.push("termotropi");
+	mystikfardigheter.push("kryotropi");
+	mystikfardigheter.push("fototropi");
+	mystikfardigheter.push("skototropi");
+	mystikfardigheter.push("psykotropi");
+	mystikfardigheter.push("oneirotropi");
+	*/
+	
 
 	fardighetsobjekt["dansa"].rubrik="Dansa"; 
 	fardighetsobjekt["dansa"].styrandeattribut="rorlighet"; 

@@ -7931,7 +7931,7 @@ function hamta_handelsetabeller(){
 	handelsetabeller.taupiskaforfader[11].rubrik = "Haskimarys"
 	handelsetabeller.taupiskaforfader[11].beskrivningvaldbas = "Haskimarys var en vandrande historieskrivare som efterlämnade många dagböcker på ett språk som ingen lyckats tyda men många låtit kopiera.";
 	handelsetabeller.taupiskaforfader[11].beskrivning = "Taupens förfader är Haskimarys, en vandrande historieskrivare som efterlämnade många dagböcker på ett språk som ingen lyckats tyda men många låtit kopiera. "
-	handelsetabeller.taupiskaforfader[11].beskrivninghak = "Historia är lättlärd, Expertisen Chiffer 4T6, kännetecknet Obegriplig handstil 5T6 ";
+	handelsetabeller.taupiskaforfader[11].beskrivninghak = "Historia är lättlärd, Expertisen Chiffer 4T6, kännetecknet Obegriplig handstil 5T6. ";
 	handelsetabeller.taupiskaforfader[11].subval[0][0][0] = {}; 
 	handelsetabeller.taupiskaforfader[11].subval[0][0][0].valdasub = []; 
 	handelsetabeller.taupiskaforfader[11].subval[0][0][0].vald = 0; 
@@ -7941,151 +7941,1079 @@ function hamta_handelsetabeller(){
 	handelsetabeller.taupiskaforfader[11].subval[0][0][0].chiffer.enheter=3;
 	handelsetabeller.taupiskaforfader[11].subval[0][0][0].obegriplighandstil={};
 	handelsetabeller.taupiskaforfader[11].subval[0][0][0].obegriplighandstil.enheter=7;
-	avtrubbningovernaturligt=1;
 	
-	/*
-	12.23: Zolok, en krönikör i Akpilos som i febriga visioner sägs ha förutspått rikets fall.  [Lättlärd i Historia, ett avtrubbningskryss mot utsatthet, kännetecknet Sanndrömmar 4T6]
-
-13.24: Ekhimankar, en balsamerare i Akpilos. Efter en i kungaättens ögon osmickrande balsamering av en död drottningmoder föll Ekhimankar i onåd och sökte sig istället till hoven i Ziu, där han blev en framstående skulptör vars morbida gestalter i vittrad sandsten fortfarande kan beskådas i ruinerna av Västlandens svunna städer. [3 poäng hantverk, expertisen Dödskunskap 4T6].
-
-14 & 15.25-26: Dayi och Aulõ, en syster och bror som var firade tempeldansare i landet Kao på Zenslätten. Kungen själv förälskade sig i dem, och tvingade dem att få barn med varandra för att bevara deras skönhet till framtiden. De räknas till De elva skönheterna i forntidens Ebhron, och danser de påstås ha lärt sig i gudomlig extas finns fortfarande bevarade, trots att gudarna de vördade är glömda sedan tusentals år. [Intryck +2, Dansa och Ockultism är lättlärda]. 
-
-16.27: Dośu den Rättrådige, Amdo-rikets tredje konung. Han är känd från Keśar-eposet, där han försvarar riket mot många faror, men slutligen abdikerar till förmån för sin dotter, och blir en munk i Sung. [+2 Utstrålning, lättlärd i Lagkunskap]. 
-
-17.28-29: Bezandirys av Rhodarion, en hänsynslös men klok handelskvinna som lade grunderna för ramoriternas handelsnätverk. [+1 Visdom, Lättlärd i Handel och Skumraskaffärer.] 	
-
-18.30: Melpome, en besvärjerska som verkade under Udanar Ärkemagikern, despot av Maulio, och framställde många mäktiga artefakter, däribland Udanars krona, som sägs finnas kvar än idag i glömda gravvalv. Hon var känd för sin fingertoppskänsla för det mystiska i allt hon företog sig. [Lättlärd i Fingerfärdighet, när taupen använder Fokus för att ge bonus till Mystikfärdigheter får hon ytterligare +2 bonus.]
-
-19.31: Parahypos av Apax, en framstående bokälskare och portalmagiker i Colonan. [4T6 i Bibliotekskunskap, 3T6 i Monsterkunskap, 1 avtrubbningskryss mot övernaturligt]. 
-
-20.32: Tanmyradh av Doletar, den förste som framlade teorin att Mundana är ett klot. [Geografi lättlärd, 4T6 i Sunt förnuft.] 
-
-21.33: Shanrenmenos, en folkfientlig filosof och naturmystiker i Colonan, som hade för vana att klättra upp på obscent höga berg för att få grubbla i fred. Shanrenmenos excentriska filosofi inspirerade senare Antilogos och andra stora colonisk-taupiska tänkare. [+1 Vilja, -2 Utstrålning, lättlärd i Filosofi och Klättra, 4T6 i Utskällningar]. 
-
-22.34: Tuõya Draktämjerskan, som i sin ungdom fick en heavédrake präglad på sig i Vadanabergen bortom Blå havet, och senare tämjde otaliga bestar åt Västlandens furstar. Hon gick sitt öde till mötes när hon försökte blidka Rathoxit, en oresonlig mortuachdrake som sedermera brände staden Umma till grunden. [4T6 i expertiserna Djurträning, Drakkunskap och Dåliga idéer]. 
-
-23.35: Eresai Vi-ashrek Reum, en mäktig magiker och lärd i det fornstora Akpilos. Stal minneskristallernas hemlighet från kamorferna, och påstås än idag förestå det väldiga biblioteket i ruinerna av Darasgata. [2 enheter mystikfärdigheter, 4T6 i Bibliotekskunskap, 3T6 i Kulturkännedom: Kamorfer]. 
-
-24.36: Nitiokris, som började som slav åt en colonisk general, men genom målmedvetenhet och intelligens slog sig upp till en post som ståthållare av Kronodycle, där hon sedermera gick förlorad i en kronotropisk magistorm. [+2 Självkontroll. Taupen åldras hälften så långsamt som andra, och tar hälften så mycket påfrestningsskada av uttorkning, svält och andra umbäranden. Det rör sig dock om en fältstörning, och taupen blir 1T6 lättare att förnimma för magiker och hypotetiska kronotropiska väsen.] 
-
-25.37: Veos av Zo, en ebhronitisk kaosmagiker vars esoteriska skrifter tros ha inspirerat både Thatiz Conjungor och Rotrax-kulterna. [Lättlärd i Ataxotropi, Svårlärd i Nomotropi, på alla dagar vars datum motsvarar primtal i den äldre ebhronitiska kalendern får taupen +1T6 på slag för Ataxotropi och Teoretisk magi.] 
-
-26.38: Dynamenys av Domharath, en ebhronitisk elementarmagiker som var känd för sin bittra rivalitet med Veos av Zo, och bland annat frammanade en legion av undiner för att underminera dennes fäste, Kashaksera. [Alstra hydrotropi lättlärd, kännetecknet Elementkännare 4T6, +1T6 på alla slag för sociala färdigheter mot besjälade vattenväsen, till exempel melusiner, coomaror, menader, morgider och apsaror.] 
-
-27.39: Soevys, ständig underhuggare och misstänkt halvsyster till Veos av Zo, och vanlig försökskanin i dennes bisarra experiment. [+2 på alla motståndsslag mot magi och 2 avtrubbningskryss mot övernaturligt, men lider även av den mentala störningen Personlighetsklyvning.]
-
-28.40: Dynamenys den fagra, dotterdotter till Dynamenys av Domharath, som slutligen besegrade Veos av Zo och fängslade honom i åtta äggformade stenar . Dynamenys blev dock i sin tur utplånad av Domharaths kaoskult, och stenarna skingrades för vinden. [+2 Vilja och Utstrålning, Förvränga lättlärd och +1T6 på slag för att Förvränga ataxotropi, 1 avtrubbningskryss mot övernaturligt, men svårlärd i Spel & Dobbel och Sång & musik och var åttonde natt hemsökt av ataxotropiska odjur som liknar små garnnystan, och äter upp all utrustning som inte är levande, stålhård, eller noggrant nedstuvad i blåfärgade behållare av något slag.] 
-
-29.41-42: Ciam, en mystisk vandrare som nämns i många gamla skrifter, och tycks ha vandrat över världen för att ge goda råd åt härskare i desperat behov av vägledning. Under dessa resor lär han även ha ynglat av sig anmärkningsvärt flitigt. [+2 Visdom, 4T6 i Förklädnad.]
-
-30.43: Raderhan, aktad läromästare som skrev “Ramorianska förkunnelsen” i 16 hymner, ett semi-religiöst verk som betonar vikten av att välja mellan ont och gott, sanning och lögn. Raderhan var länge nästan bortglömd, men har på senare år studerats flitigt inom Allvetandets brödraskap, och även av gurgitiska filosofer. [Lättlärd i Teologi och Genomskåda, 4T6 i expertisen Automatskrift   .]		 					
-
-31.44: Virazdi den Dödlösa, livvakt åt Lalastas impopuläre ståthållare Eigaz Idomitherah, som ska ha skadats vid 25 tillfällen när hon räddade sin skyddsling. [+1 Livskraft, Lättlärd i Genomsöka.] 
-
-32.45: Nimrod av Kao, en hänsynslös krigarmagiker och fältherre som ödelade Stora arkipelagen för 2500 år sedan. Enligt legenderna seglar hans vredgade spöke ännu på Skugglandets hav. 
-
-[Injaga fruktan lättlärd, 4T6 i expertisen Sjöslag, kännetecknet Genomträngande blick 4T6.] 
-
-
-
-33.46: Antilogos, en legendarisk colonisk debattmästare, känd för sina märkliga teser, som sedermera sökte sig till torget i Zharashapur, och kanske sitter där än. [Lättlärd i Filosofi och Argumentera, 4T6 i Käfta emot.] 
-
-34.47: Irothenes, Antilogos ärkerival, som tillhörde rakt motsatt skola av filosofi. När Antilogos begav sig till Västlanden färdades Irothenes istället till fjärran östern, för att de skulle komma så långt bort från varandra som överhuvudtaget var fysiskt möjligt. Han hoppades hitta Mästarna från öster i Khosala, men hördes aldrig mera av. [Lättlärd i Filosofi och Argumentera, 4T6 i Logik.]
-
-35.48: Phorusmene, den tredje av de stora taupiska filosoferna i Colonan. Hon hade ett avsevärt mer handfast sätt än sina rivaler, och var den enda vars tänkande fick ett bestående inflytande på colonisk politik. [Lättlärd i Filosofi och Slagsmål, 4T6 i Perversiteter.]
-
-36.49-50: Intigvala Mirapata, ebhronitisk mästersmed och krigare som deltog i många expeditioner mot österlandet. Hon räddade två stycken egendomliga svärd undan riket Khosala     Dehos fall, och från dessa förlagor skapade hon de första varianterna av det svärd som numera bär hennes namn, och än idag är taupernas mest berömda vapen. Suspekt många arkaiska mirapata-svärd som påstås vara smidda av Intigvala cirkulerar än idag i världen; vad som hände med urtyperna från Khosala vet man inte.  [+1 Styrka, hantverket Vapensmed 3T6, Lättlärd i Svärd.]
-
-
-
-37.51: Okalam den Starke, en legendarisk hjälte i det fjärran Ansale-Idon. Han hade en himlastormande romans och otaliga äventyr ihop med drakrytterskan Puershardokt, som dock omkom i Brännandet av Edron. En vemodig Okalam seglade då för att finna ett mystiskt sydligt land som beskrevs i dåtidens edronitiska krönikor, befolkat av en förlorad taupisk stam. Han återvände aldrig, men Puanam, hans son med Puershardokt, blev omsider en mäktig krigarprins, och kanske styr Okalams halvblodslinje fortfarande i Jondishur bortom Blå havet. [Styrka +1T6, kännetecknet Romantiker 4T6, men sätter taupen någonsin sin fot väster om Mûhad kommer hon bli föremål för intensiv uppmärksamhet från illvilliga primalväsen; dessa får +1T6 på alla försök att förnimma taupen]. 
-
-38.52-53: Letehab Hy'mas, en krigare och filosof som började sin bana i einosdalen, men vandrade mellan otaliga riken. Han utvecklade en filosofisk idé om att anlag naturligt eftersträvar att förädlas, och att tauperna därför borde beblanda sig med övriga folkslag, för att både förädla sina egna anlag och stärka andras genom Tauvas vita blod. Han avrättades med gift, enligt krönikorna av ståthållaren av Illymion i Colonan, men många tror än idag att andra tauper låg bakom. [Lättlärd i Kulturkännedom, Krigföring och Filosofi.]
-
-39.54: Antinotos Ekogaster, en glasblåsare i Colonan. Han tog sin konst till aldrig förr skådade nivåer, och fick även beställningar från kejsarhovet, men hans kultivering ändades abrupt i ett slagsmål med förbittrade gesäller, där den späde glasblåsaren fick halsen uppskuren med en av sina karaffer. [Ledarskap och Slagsmål svårlärda, Handel och Hovliv lättlärda, 4T6 i Glasblåsare.] 
-
-40.55-56: Galran Birzes, en jargisk geograf som spenderade det mesta av sin tid med att rita kartor över allt mellan himmel och jord. Många av kartorna finns fortfarande bevarade, och tycks märkligt ofta visa vägen till svunna städer fulla av skatter. [Lättlärd i Dupera, 4T6 i Kartritare.]
-
-41.57: Iov Arogorna, en eremit som ägnade hundra år åt andlig odling. Han bodde i en hydda vid Ringbergens sjöar, och debatterade ofta med en gigantisk valfisk som i skymningen kom upp ur djupen. [1 enhet vildmarksfärdigheter, behärskar merman, vattenfolkens språk, 4T6 i Käfta emot.] 
-
-42.58: Sankt Quirinus, ett malgoahritiskt helgon från Taxilan i Karanthos, född år 1111. På grund av sina visioner blev han bländad och stympad av stadens illvillige borgmästare, men detta hindrade inte Quirinus från att upptäcka heliga skrifter som på mystisk väg dolts i världsalltet, och på andra sätt tjäna Daaks avsikt i världen. [+2 Vilja, Teologi lättlärd, men blotta tanken på ett taupiskt helgon kan anses hädisk i vissa kretsar]. 
-
-43.59-60: Kerios Xenov, en (enligt somliga traditioner rättrådig) colonisk byråkrat som anklagades för att ha stulit Kejsarstaven, men lyckades skylla på ett brett spektrum av andra tauper, vars skuld och oskuld än idag är föremål för debatt. Många familjer avrättades, men Kerios ätt lever än. [Skumraskaffärer lättlärd, 5T6 i Peka ut syndabockar]. 
-
-44.61: Emelianni den vita, rådgivare och älskarinna åt Drunoks ökände despot Narnak Kjolskrämma. Emelianni genomförde ett stort antal hårdhänta reformer för att förbättra Drunoks svaga ställning i världen, men har i efterhand rentvåtts av många krönikörer. [4T6 i Bokhållning, ett avtrubbningskryss mot våld]. 
-
-
-
-45.62: Arames ûl-Eyna, en trollkarl i Mûhad som under sin långa bana hann verka som hovmagiker vid ett flertal furstehov. Han dog hastigt under sina försök att stoppa en pestepidemi i staden Quaran. Berömd för besvärjelsen “Arames motverkande miasma”. [Lättlärd i Läkekonst, 3 enheter mystikfärdigheter, 4T6 i expertisen Anatomi. Taupen har dock även ärvt en bräcklig hälsa och får -1T6 på motståndsslag mot sjukdomar]. 
-
-46.63: Liancemus, en musikalisk aevtor som vandrade land och rike runt; bland många bedrifter sägs han ha lärt sig flöjtspel av haukstarer i Skugglandet, och vunnit en mûhadinsk prinsessas hjärta. Det senare ledde till hans långsamma och plågsamma död, men den zhaniske trubaduren Sayat Novak lade beslag både på prinsessan och på Liantsemus magiska flöjt, som fortfarande lär samla damm i något furstehov i Västlanden. [+2 Utstrålning, Lättlärd i Sång & musik och Låsdyrkning, karaktärsdraget Förälskelse som svaghet (låst).] 
-
-47.64: Kanibyov, en bonde från norra Maulio som dog år 1721 e. D. vid en påstådd ålder av 194 år. [+2 Tålighet, Expertisen Sund kost 4T6.] 
-
-48.65: Armendys, en ebhronitisk medikus som experimenterade mycket med olika motgifter - ibland, sägs det, genom att förgifta sig själv för att inspirera sig till hastigt arbete. [Lättlärd i Läkekonst och Gifter & droger, +1T6 Livskraft för att motstå gifter.] 
-
-49.66: Ymir do’Yfaluk, en flitig men dyster munk som producerade ett gigantiskt korpus av skrifter inom allehanda ämnen, men ständigt överträffades i berömmelse av sina ärkerivaler, illuminatörerna. [Lättlärd i Geografi och Ockultism, 4T6 i Författa och Det var bättre förr, men drabbas även av den mentala störningen Deprimerad]. 
-
-50.67: Ynoc Estocius, en av få i omvärlden berömda tauper från einosdalen. Ynoc var en autor som vandrade över världen för att samla fjärilar, men slutade som slav, och blev härdad i blod på Mûhads och Jargiens gladiatorarenor. En oväntat framgångsrik karriär, där Ynoc bland annat ensam nedkämpat åtta dvärgar, ändades till slut av ett grottroll. [Kännetecknet Pedant 3T6, ett avtrubbningskryss för våld, och taupen får +1T6 på gruppanfall om minst en av motståndarna är en dvärg.] 
-
-51.68-69: Durmuzzo, berömd filosof, verksam i Ziu, Jargien, Ansale-Idon, Forion, Arkipelagen och Ebhron. Bland många intellektuella storverk uppfann han eirov-skriften. [Lättlärd i Kulturkännedom, 4T6 i Språklära, kännetecknet Rastlös 4T6]. 
-
-52.70: Kaoradel Stjärnskådaren, en känd astrolog som brändes på bål i Orno 2275 e. D. [Expertisen Astrologi 4T6, 3 enheter Mystikfärdigheter.] 			 
-
-53.71: Averkes do’Kyra, en mystiker som var inflytelserik inom Den skimrande vägen, men senare även ägnade sig åt nekromanti och påstås ha studerat hos sagitauren Eb av Sha. Hon har efterlämnat artefakten Liber Averica, som dock försvunnit spårlöst i Rampor, samt besvärjelsen Kyras kalla karbunkel. [+2 Psyke, lättlärd i Alstra nekrotropi, och två enheter mystikfärdigheter, men Averkes fältstörningar gör sig även påminda i hennes ättlingar genom ett särskilt gulblekt och skelettartat utseende; -2 Intryck och kännetecknet Olycksbådande uppenbarelse 4T6.] 
-
-54.72: Asis av Khamox, en adjutant åt den berömde lemiriske generalen Raxarales. Asis är relativt okänd i jargisk historieskrivning, men tauperna vet att hon i själva verket var hjärnan bakom flera av Raxarales framgångar, i synnerhet Slaget om Lorno, där hon applicerade lärdomar från ebhronitiska flodbataljer tusentals år tidigare. Hon försvann spårlöst när Lemira föll, men flera av hennes barn benådades av jargierna och fick poster i de kejserliga legionerna. [+2 Vilja, Krigföring lättlärd]. 
-
-
-
-55.73: Zoron av Omeraithos, geomantiker och arkitekt i Ebhron, och ansvarig för många fantastiska byggnadsverk. [Lättlärd i Kalkylera, 4T6 i Magisk geometri, 1 poäng hantverk]. 
-
-56.74: Atolkes Ayurzeon, Navigator inom Navare-kulten i Rampor, sedermera ihjälslagen av tirakiska pirater. [Sjömannaskap lättlärd, 1 avtrubbningskryss mot våld]. 
-
-57.75: Zoa-ukir Borogorna, ebhronitisk lärd som tillbringade mycket tid i Arkipelagen, där han försökte underminera Imay-kultens inflytande och ersätta det med rationella filosofiska idéer. Han omkom under mystiska omständigheter när hans skepp gick i kvav. [Lättlärd i Filosofi, svårlärd i Sjömannaskap, 4T6 i Häda och Undergräva självförtroende]. 
-
-58.76: Teugetyrov av Loam, den ende taup som adlats i Nermada (och senare gav upp sin titel för att meditera i Ikamriska bergen). [Hovliv är lättlärd. Expertisen Adelskontakter i Nermada 4T6.]	
-
-59.77: Reukaran Strupöppnaren, taupernas skam, en beryktad seriemördare som härjade i Zhirim Mian på 2580-talet. [Smyga är lättlärd. +1T6 skada med alla Dolkar, Kännetecknet Dåligt rykte 4T6].  		
-
-60.78: Halibus Harpolekaren, även känd som “Den store förringaren”. Gjorde stor framgång vid hoven ute i världen med dråpliga historier som framställde det taupiska folket som idioter och sägs ha sålts sitt eget folks uråldriga hemligheter. Överlevde otaliga förgiftningsförsök innan han höggs ned och dränktes av cirzariddare. [Sång & Musik lättlärd, +1T6 livskraft för att motstå gifter]. 
-
-61.79: Opei do’Trivana, en framstående gråterska i Ebhron. Opei var oöverträffad i att gråta hjärtskärande vid begravningar, och Kabalordens ledare tävlade om att hyra in henne när de kände sig sentimentala inför någon minneshögtid. Hon levde därför i överflöd, var enligt uppgift mycket lycklig, och fällde aldrig en äkta tår. [Charm är lättlärd, expertisen Gråta 4T6)
-
-62.80: Sigyan Hammare, ledaren för ett drunokiskt hantverkarsällskap som sökte bemästra smideskonsten och skapade otaliga opraktiska men fascinerande konstverk. [2 poäng Hantverk samt ett imponerande föremål som härstammar från förfadern.]
-
-63.81-82: Kankian do'Ythales, mästaren inom hjärtats konst och de sensuella njutningarnas apostel. En notorisk sol-och-vårare som i synnerhet hemsökte Jargien och Melorion. Efterlämnade en mängd barn och ett flertal nedskrivna erotiska anekdoter, varav många blivit klassiker i mindre rumsrena sammanhang. [+2 Intryck och 4T6 i Expertisen Behaga.] 		
-
-64.83: Vexeria Calas, framstående magiteoretiker i Ebhron, även känd för sin sardoniska humor och en mångfald satirisk poesi. [4 enheter mystikfärdigheter, 4T6 i Skämta]. 
-
-65.84-85: Yakom Depon, en mystiker i det avlägsna Menon-Aun. Han påstås ha skapat en vildsint tjur av levande metall åt fursten av Tsan, och gavs i belöning en position vid hovet samt ett helt harem att förlusta sig med, vilket resulterade i talrika barn vars ättlingar idag utgör i stort den enda taupiska befolkningen i fjärran västern. [4T6 i Behaga och hantverket Metallurg.]
-
-66.86: Aramzoan Talok-ka Pria, inflytelserik principus orbis för Kabalorden. [Hovliv lättlärd, 3 enheter mystikfärdigheter]. 
-
-67.87: Antonius Charomes, en framstående bostadsmogul i Daval, som spenderade en inte oansenlig del av sin inte oansenliga förmögenhet med att sponsra expeditioner för att leta efter ett odödlighetselixir som sades ha överlevt från det sjunkna riket Kivam. Han gick emellertid bet, och dog slutligen när ett av hans fuskbyggen kollapsade över honom. [Handel lättlärd, 4T6 i Byråkrati samt Skylla på andra, kännetecknet Dödsångest 4T6.] 
-
-
-
-68.88-89: Ysmanes ûl-Jahna, språkrör för de taupiska familjerna i Jahna i Mûhad, vilka utsattes för en lång serie övergrepp sedan en sinnesrubbad kefal fått för sig att de kidnappat och ritualmördat hans söner (som i själva verket var på krigarträning i Tarkas). Ysmanes klarade sig dock oskadd, och ledde en stor taupisk exodus till Jargien. [Ledarskap och Marsch lättlärda, 4T6 i Se oskyldig ut]. 
-
-69.90-91: Ytemus den äldste, alkemist i Arlon, även kortvarig skattmästare åt Drunoks drottning Rianna av Valdus, som blev mycket bitter när Ytemus inte kunde trolla fram guld. Däremot trollade han fram en långlivad dynasti av barn och barnbarn, och ett oräkneligt antal översättningar av annars förlorade raunländska skrifter, som han menade förmedlats av andar från ett annat plan. [Kalkylera är svårlärd, Ockultism lättlärd, 4T6 i Barnuppfostran, 3T6 i Automatskrift]. 
-
-70.92: Ravargys Vältalaren, en lärd i Ciremelo som fick äran att undervisa många cirefalier i konsten att hålla tal timmar i sträck. [+2 Tålighet, Argumentera är lättlärd.] 
-
-71.93: Aranhezeviukes do’Delev, berömd segtastor som vandrade från Jargien till Gordrion och einosdalen i jakt på krigisk perfektion. [+2 Reaktion, och arvegods i form av ett utsökt bevarat Mirapata-svärd med +2 bonus i hugg- och stickskada]. 	
-
-72.94: Yidanov do’Skaco, en gåtmästare och vandrare som försvann på jakt efter den förlorade staden Zharashapur. [3 enheter vildmarksfärdigheter, 4T6 i Gåtor]. 
-
-73.95: Antonius Taupes Major, en kontroversiell filosofi vid universitetet i Erat, känd för sin integritet; bränd på bål 2856 e.D. [+1 Vilja, Filosofi lättlärd, 4T6 i Häda]. 	
-
-74.96: Yava Yarmilas, en ebhronitisk magiteoretiker, inflytelserik för sina teorier om idévärlden Hyperuranion. När hon drabbades av borttoning vid 390 års ålder hade hon gjort ett namn för sig dels på grund av sin oefterhärmliga skicklighet i att kontra andras magi, och dels för sin spektakulära hybris. [+1 Vilja, Förvränga lättlärd, 4T6 i Författa, karaktärsdraget Makt som svaghet (låst)].  
-
-75.97-98: Ytemus den äldre, extremt produktiv ikonmålare (och hemlig magiker och schaman) i Randarro. Även känd för sina tolv namnkunniga söner, och ritualen Ytemus ikonomantiska åkallan. Enligt vissa rykten lever han ännu vidare som primod av Sankt Kira. [3 enheter mystikfärdigheter, Lättlärd i Dupera]. 
-
-76.99: Ytemus den yngre, visir åt Voroman Tero under dennes extremt misslyckade försök att grunda kungariket Voromanien. Hur mycket Ytemus själv hade med travestin att göra är oklart; senare i livet bodde han hur som helst i en stuga i Skuggskogen, där han fullbordade ett flertal skrifter, och hade en stormig kärleksaffär med en rimur från Månskenshovet. [2 enheter kunskapsfärdigheter, 3T6 i expertisen Skugglandsfärd, Kännetecknet Dåliga idéer 4T6]. 	
-
-77.100: Heeros, som uppfann stridskonsten Naturens styrka, och dedikerade sitt liv åt att stävja all ondska. Han påstås fortfarande vara i livet och föra en eremitisk existens på Asha-slätten. [Lättlärd i Slagsmål och Naturlära, +2T6 skada med obeväpnade attacker].
-*/
+	handelsetabeller.taupiskaforfader[12] = {}; 
+	handelsetabeller.taupiskaforfader[12].subval = [[[]]]; 
+	handelsetabeller.taupiskaforfader[12].vald = 0; 
+	handelsetabeller.taupiskaforfader[12].rubrik = "Zolok"
+	handelsetabeller.taupiskaforfader[12].beskrivningvaldbas = "Zolok var en krönikör i Akpilos som i febriga visioner sägs ha förutspått rikets fall.";
+	handelsetabeller.taupiskaforfader[12].beskrivning = "Taupens förfader är Zolok, en krönikör i Akpilos som i febriga visioner sägs ha förutspått rikets fall. "
+	handelsetabeller.taupiskaforfader[12].beskrivninghak = "Lättlärd i Historia, ett avtrubbningskryss mot utsatthet, kännetecknet Sanndrömmar 4T6. ";
+	handelsetabeller.taupiskaforfader[12].subval[0][0][0] = {}; 
+	handelsetabeller.taupiskaforfader[12].subval[0][0][0].valdasub = []; 
+	handelsetabeller.taupiskaforfader[12].subval[0][0][0].vald = 0; 
+	handelsetabeller.taupiskaforfader[12].subval[0][0][0].historia={};
+	handelsetabeller.taupiskaforfader[12].subval[0][0][0].historia.lattlard=1;
+	handelsetabeller.taupiskaforfader[12].subval[0][0][0].avtrubbningutsatthet=1
+	handelsetabeller.taupiskaforfader[12].subval[0][0][0].sanndrommar={};
+	handelsetabeller.taupiskaforfader[12].subval[0][0][0].sanndrommar.enheter=3;
+
+	handelsetabeller.taupiskaforfader[13] = {}; 
+	handelsetabeller.taupiskaforfader[13].subval = [[[]]]; 
+	handelsetabeller.taupiskaforfader[13].vald = 0; 
+	handelsetabeller.taupiskaforfader[13].rubrik = "Ekhimankar"
+	handelsetabeller.taupiskaforfader[13].beskrivningvaldbas = "Ekhimankar var en balsamerare i Akpilos. Efter en i kungaättens ögon osmickrande balsamering av en död drottningmoder föll Ekhimankar i onåd och sökte sig istället till hoven i Ziu, där han blev en framstående skulptör vars morbida gestalter i vittrad sandsten fortfarande kan beskådas i ruinerna av Västlandens svunna städer.";
+	handelsetabeller.taupiskaforfader[13].beskrivning = "Taupens förfader är Ekhimankar, en balsamerare i Akpilos. Efter en i kungaättens ögon osmickrande balsamering av en död drottningmoder föll Ekhimankar i onåd och sökte sig istället till hoven i Ziu, där han blev en framstående skulptör vars morbida gestalter i vittrad sandsten fortfarande kan beskådas i ruinerna av Västlandens svunna städer. "
+	handelsetabeller.taupiskaforfader[13].beskrivninghak = "3 poäng hantverk, expertisen Dödskunskap 4T6.";
+	handelsetabeller.taupiskaforfader[13].subval[0][0][0] = {}; 
+	handelsetabeller.taupiskaforfader[13].subval[0][0][0].valdasub = []; 
+	handelsetabeller.taupiskaforfader[13].subval[0][0][0].vald = 0; 
+	handelsetabeller.taupiskaforfader[13].subval[0][0][0].hantverkpoang=2;
+	handelsetabeller.taupiskaforfader[13].subval[0][0][0].dodskunskap={};
+	handelsetabeller.taupiskaforfader[13].subval[0][0][0].dodskunskap.enheter=3;
+
+	handelsetabeller.taupiskaforfader[14] = {}; 
+	handelsetabeller.taupiskaforfader[14].subval = [[[]]]; 
+	handelsetabeller.taupiskaforfader[14].vald = 0; 
+	handelsetabeller.taupiskaforfader[14].rubrik = "Ekhimankar"
+	handelsetabeller.taupiskaforfader[14].beskrivningvaldbas = "Ekhimankar var en balsamerare i Akpilos. Efter en i kungaättens ögon osmickrande balsamering av en död drottningmoder föll Ekhimankar i onåd och sökte sig istället till hoven i Ziu, där han blev en framstående skulptör vars morbida gestalter i vittrad sandsten fortfarande kan beskådas i ruinerna av Västlandens svunna städer.";
+	handelsetabeller.taupiskaforfader[14].beskrivning = "Taupens förfader är Ekhimankar, en balsamerare i Akpilos. Efter en i kungaättens ögon osmickrande balsamering av en död drottningmoder föll Ekhimankar i onåd och sökte sig istället till hoven i Ziu, där han blev en framstående skulptör vars morbida gestalter i vittrad sandsten fortfarande kan beskådas i ruinerna av Västlandens svunna städer. "
+	handelsetabeller.taupiskaforfader[14].beskrivninghak = "3 poäng hantverk, expertisen Dödskunskap 4T6.";
+	handelsetabeller.taupiskaforfader[14].subval[0][0][0] = {}; 
+	handelsetabeller.taupiskaforfader[14].subval[0][0][0].valdasub = []; 
+	handelsetabeller.taupiskaforfader[14].subval[0][0][0].vald = 0; 
+	handelsetabeller.taupiskaforfader[14].subval[0][0][0].hantverkpoang=2;
+	handelsetabeller.taupiskaforfader[14].subval[0][0][0].dodskunskap={};
+	handelsetabeller.taupiskaforfader[14].subval[0][0][0].dodskunskap.enheter=3;
+	
+	handelsetabeller.taupiskaforfader[15] = {};
+	handelsetabeller.taupiskaforfader[15].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[15].vald = 0;
+	handelsetabeller.taupiskaforfader[15].rubrik = "Dayi och Aulõ"
+	handelsetabeller.taupiskaforfader[15].beskrivningvaldbas = "Dayi och Aulõ var en syster och bror som var firade tempeldansare i landet Kao på Zenslätten. Kungen själv förälskade sig i dem, och tvingade dem att få barn med varandra för att bevara deras skönhet till framtiden. De räknas till De elva skönheterna i forntidens Ebhron, och danser de påstås ha lärt sig i gudomlig extas finns fortfarande bevarade, trots att gudarna de vördade är glömda sedan tusentals år. "
+	handelsetabeller.taupiskaforfader[15].beskrivning = "Taupens förfäder är Dayi och Aulõ, en syster och bror som var firade tempeldansare i landet Kao på Zenslätten. Kungen själv förälskade sig i dem, och tvingade dem att få barn med varandra för att bevara deras skönhet till framtiden. De räknas till De elva skönheterna i forntidens Ebhron, och danser de påstås ha lärt sig i gudomlig extas finns fortfarande bevarade, trots att gudarna de vördade är glömda sedan tusentals år. "
+	handelsetabeller.taupiskaforfader[15].beskrivninghak = "Intryck \+2, Dansa och Ockultism är lättlärda";
+	handelsetabeller.taupiskaforfader[15].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[15].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[15].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[15].subval[0][0][0].intryck={};
+	handelsetabeller.taupiskaforfader[15].subval[0][0][0].intryck.bonus=2;
+	handelsetabeller.taupiskaforfader[15].subval[0][0][0].dansa={};
+	handelsetabeller.taupiskaforfader[15].subval[0][0][0].dansa.lattlard=1;
+	handelsetabeller.taupiskaforfader[15].subval[0][0][0].ockultism={};
+	handelsetabeller.taupiskaforfader[15].subval[0][0][0].ockultism.lattlard=1;
+
+	handelsetabeller.taupiskaforfader[16] = {};
+	handelsetabeller.taupiskaforfader[16].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[16].vald = 0;
+	handelsetabeller.taupiskaforfader[16].rubrik = "Dośu den Rättrådige"
+	handelsetabeller.taupiskaforfader[16].beskrivningvaldbas = "Dośu den Rättrådige var Amdo-rikets tredje konung. Han är känd från Keśar-eposet, där han försvarar riket mot många faror, men slutligen abdikerar till förmån för sin dotter, och blir en munk i Sung. "
+	handelsetabeller.taupiskaforfader[16].beskrivning = "Taupens förfader är Dośu den Rättrådige, Amdo-rikets tredje konung. Han är känd från Keśar-eposet, där han försvarar riket mot många faror, men slutligen abdikerar till förmån för sin dotter, och blir en munk i Sung. "
+	handelsetabeller.taupiskaforfader[16].beskrivninghak = "\+2 Utstrålning, lättlärd i Lagkunskap";
+	handelsetabeller.taupiskaforfader[16].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[16].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[16].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[16].subval[0][0][0].utstralning={};
+	handelsetabeller.taupiskaforfader[16].subval[0][0][0].utstralning.varde=2;
+	handelsetabeller.taupiskaforfader[16].subval[0][0][0].lagkunskap={};
+	handelsetabeller.taupiskaforfader[16].subval[0][0][0].lagkunskap.lattlard=1;
+
+	handelsetabeller.taupiskaforfader[17] = {};
+	handelsetabeller.taupiskaforfader[17].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[17].vald = 0;
+	handelsetabeller.taupiskaforfader[17].rubrik = "Bezandirys av Rhodarion"
+	handelsetabeller.taupiskaforfader[17].beskrivningvaldbas = "Bezandirys av Rhodarion var en hänsynslös men klok handelskvinna som lade grunderna för ramoriternas handelsnätverk. "
+	handelsetabeller.taupiskaforfader[17].beskrivning = "Taupens förfader är Bezandirys av Rhodarion, en hänsynslös men klok handelskvinna som lade grunderna för ramoriternas handelsnätverk. "
+	handelsetabeller.taupiskaforfader[17].beskrivninghak = "\+1 Visdom, Lättlärd i Handel och Skumraskaffärer.";
+	handelsetabeller.taupiskaforfader[17].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[17].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[17].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[17].subval[0][0][0].visdom={};
+	handelsetabeller.taupiskaforfader[17].subval[0][0][0].visdom.varde=1;
+	handelsetabeller.taupiskaforfader[17].subval[0][0][0].handel={};
+	handelsetabeller.taupiskaforfader[17].subval[0][0][0].handel.lattlard=1;
+	handelsetabeller.taupiskaforfader[17].subval[0][0][0].skumraskaffarer={};
+	handelsetabeller.taupiskaforfader[17].subval[0][0][0].skumraskaffarer.lattlard=1;
+	
+	handelsetabeller.taupiskaforfader[18] = {};
+	handelsetabeller.taupiskaforfader[18].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[18].vald = 0;
+	handelsetabeller.taupiskaforfader[18].rubrik = "Melpome"
+	handelsetabeller.taupiskaforfader[18].beskrivningvaldbas = "Melpome var en besvärjerska som verkade under Udanar Ärkemagikern, despot av Maulio, och framställde många mäktiga artefakter, däribland Udanars krona, som sägs finnas kvar än idag i glömda gravvalv. Hon var känd för sin fingertoppskänsla för det mystiska i allt hon företog sig. "
+	handelsetabeller.taupiskaforfader[18].beskrivning = "Taupens förfader är Melpome, en besvärjerska som verkade under Udanar Ärkemagikern, despot av Maulio, och framställde många mäktiga artefakter, däribland Udanars krona, som sägs finnas kvar än idag i glömda gravvalv. Hon var känd för sin fingertoppskänsla för det mystiska i allt hon företog sig. "
+	handelsetabeller.taupiskaforfader[18].beskrivninghak = "Lättlärd i Fingerfärdighet, när taupen använder Fokus för att ge bonus till Mystikfärdigheter får hon ytterligare \+2 bonus.";
+	handelsetabeller.taupiskaforfader[18].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[18].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[18].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[18].subval[0][0][0].fingerfardighet={};
+	handelsetabeller.taupiskaforfader[18].subval[0][0][0].fingerfardighet.lattlard=1;
+	handelsetabeller.taupiskaforfader[18].subval[0][0][0].formaga="När rollpersonen använder Fokus för att ge bonus till Mystikfärdigheter får denne ytterligare \+2 bonus.";
+	
+
+	handelsetabeller.taupiskaforfader[19] = {};
+	handelsetabeller.taupiskaforfader[19].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[19].vald = 0;
+	handelsetabeller.taupiskaforfader[19].rubrik = "Parahypos av Apax"
+	handelsetabeller.taupiskaforfader[19].beskrivningvaldbas = "Parahypos av Apax var en framstående bokälskare och portalmagiker i Colonan. "
+	handelsetabeller.taupiskaforfader[19].beskrivning = "Taupens förfader är Parahypos av Apax, en framstående bokälskare och portalmagiker i Colonan. "
+	handelsetabeller.taupiskaforfader[19].beskrivninghak = "4T6 i Bibliotekskunskap, 3T6 i Monsterkunskap, 1 avtrubbningskryss mot övernaturligt";
+	handelsetabeller.taupiskaforfader[19].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[19].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[19].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[19].subval[0][0][0].bibliotekskunskap={};
+	handelsetabeller.taupiskaforfader[19].subval[0][0][0].bibliotekskunskap.enheter=3;
+	handelsetabeller.taupiskaforfader[19].subval[0][0][0].monsterkunskap={};
+	handelsetabeller.taupiskaforfader[19].subval[0][0][0].monsterkunskap.enheter=1;
+	handelsetabeller.taupiskaforfader[19].subval[0][0][0].avtrubbningovernaturligt=1;
+
+	handelsetabeller.taupiskaforfader[20] = {};
+	handelsetabeller.taupiskaforfader[20].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[20].vald = 0;
+	handelsetabeller.taupiskaforfader[20].rubrik = "Tanmyradh av Doletar"
+	handelsetabeller.taupiskaforfader[20].beskrivningvaldbas = "Tanmyradh av Doletar var den förste som framlade teorin att Mundana är ett klot. "
+	handelsetabeller.taupiskaforfader[20].beskrivning = "Taupens förfader är Tanmyradh av Doletar, den förste som framlade teorin att Mundana är ett klot. "
+	handelsetabeller.taupiskaforfader[20].beskrivninghak = "Geografi lättlärd, 4T6 i Sunt förnuft.";
+	handelsetabeller.taupiskaforfader[20].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[20].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[20].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[20].subval[0][0][0].geografi={};
+	handelsetabeller.taupiskaforfader[20].subval[0][0][0].geografi.lattlard=1;
+	handelsetabeller.taupiskaforfader[20].subval[0][0][0].suntfornuft={};
+	handelsetabeller.taupiskaforfader[20].subval[0][0][0].suntfornuft.enheter=3;
+
+	handelsetabeller.taupiskaforfader[21] = {};
+	handelsetabeller.taupiskaforfader[21].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[21].vald = 0;
+	handelsetabeller.taupiskaforfader[21].rubrik = "Shanrenmenos"
+	handelsetabeller.taupiskaforfader[21].beskrivningvaldbas = "Shanrenmenos var en folkfientlig filosof och naturmystiker i Colonan, som hade för vana att klättra upp på obscent höga berg för att få grubbla i fred. Shanrenmenos excentriska filosofi inspirerade senare Antilogos och andra stora colonisk-taupiska tänkare. "
+	handelsetabeller.taupiskaforfader[21].beskrivning = "Taupens förfader är Shanrenmenos, en folkfientlig filosof och naturmystiker i Colonan, som hade för vana att klättra upp på obscent höga berg för att få grubbla i fred. Shanrenmenos excentriska filosofi inspirerade senare Antilogos och andra stora colonisk-taupiska tänkare. "
+	handelsetabeller.taupiskaforfader[21].beskrivninghak = "\+1 Vilja, -2 Utstrålning, lättlärd i Filosofi och Klättra, 4T6 i Utskällningar";
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].vilja={};
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].vilja.varde=1;
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].utstralning={};
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].utstralning=-2;
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].filosofi={};
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].filosofi.lattlard=1;
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].klattra={};
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].klattra.lattlard=1;
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].utskallningar={};
+	handelsetabeller.taupiskaforfader[21].subval[0][0][0].utskallningar.enheter=3;
+
+	
+	handelsetabeller.taupiskaforfader[22] = {};
+	handelsetabeller.taupiskaforfader[22].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[22].vald = 0;
+	handelsetabeller.taupiskaforfader[22].rubrik = "Tuõya Draktämjerskan"
+	handelsetabeller.taupiskaforfader[22].beskrivningvaldbas = "Tuõya Draktämjerskan var som i sin ungdom fick en heavédrake präglad på sig i Vadanabergen bortom Blå havet, och senare tämjde otaliga bestar åt Västlandens furstar. Hon gick sitt öde till mötes när hon försökte blidka Rathoxit, en oresonlig mortuachdrake som sedermera brände staden Umma till grunden. "
+	handelsetabeller.taupiskaforfader[22].beskrivning = "Taupens förfader är Tuõya Draktämjerskan, som i sin ungdom fick en heavédrake präglad på sig i Vadanabergen bortom Blå havet, och senare tämjde otaliga bestar åt Västlandens furstar. Hon gick sitt öde till mötes när hon försökte blidka Rathoxit, en oresonlig mortuachdrake som sedermera brände staden Umma till grunden. "
+	handelsetabeller.taupiskaforfader[22].beskrivninghak = "4T6 i expertiserna Djurträning, Drakkunskap och Dåliga idéer";
+	handelsetabeller.taupiskaforfader[22].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[22].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[22].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[22].subval[0][0][0].djurtraning={};
+	handelsetabeller.taupiskaforfader[22].subval[0][0][0].djurtraning.enheter=3;
+	handelsetabeller.taupiskaforfader[22].subval[0][0][0].drakkunskap={};
+	handelsetabeller.taupiskaforfader[22].subval[0][0][0].drakkunskap.enheter=3;
+	handelsetabeller.taupiskaforfader[22].subval[0][0][0].daligaideer={};
+	handelsetabeller.taupiskaforfader[22].subval[0][0][0].daligaideer.enheter=3;
+
+	handelsetabeller.taupiskaforfader[23] = {};
+	handelsetabeller.taupiskaforfader[23].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[23].vald = 0;
+	handelsetabeller.taupiskaforfader[23].rubrik = "Eresai Vi-ashrek Reum"
+	handelsetabeller.taupiskaforfader[23].beskrivningvaldbas = "Eresai Vi-ashrek Reum var en mäktig magiker och lärd i det fornstora Akpilos. Stal minneskristallernas hemlighet från kamorferna, och påstås än idag förestå det väldiga biblioteket i ruinerna av Darasgata. "
+	handelsetabeller.taupiskaforfader[23].beskrivning = "Taupens förfader är Eresai Vi-ashrek Reum, en mäktig magiker och lärd i det fornstora Akpilos. Stal minneskristallernas hemlighet från kamorferna, och påstås än idag förestå det väldiga biblioteket i ruinerna av Darasgata. "
+	handelsetabeller.taupiskaforfader[23].beskrivninghak = "2 enheter mystikfärdigheter, 4T6 i Bibliotekskunskap, 3T6 i Kulturkännedom.";
+	handelsetabeller.taupiskaforfader[23].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[23].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[23].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[23].subval[0][0][0].mystikfardigheterenheter=2;
+	handelsetabeller.taupiskaforfader[23].subval[0][0][0].bibliotekskunskap={};
+	handelsetabeller.taupiskaforfader[23].subval[0][0][0].bibliotekskunskap.enheter=3;
+	handelsetabeller.taupiskaforfader[23].subval[0][0][0].kulturkannedom={};
+	handelsetabeller.taupiskaforfader[23].subval[0][0][0].kulturkannedom.enheter=1;
+
+	handelsetabeller.taupiskaforfader[24] = {};
+	handelsetabeller.taupiskaforfader[24].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[24].vald = 0;
+	handelsetabeller.taupiskaforfader[24].rubrik = "Nitiokris"
+	handelsetabeller.taupiskaforfader[24].beskrivningvaldbas = "Nitiokris var som började som slav åt en colonisk general, men genom målmedvetenhet och intelligens slog sig upp till en post som ståthållare av Kronodycle, där hon sedermera gick förlorad i en kronotropisk magistorm. "
+	handelsetabeller.taupiskaforfader[24].beskrivning = "Taupens förfader är Nitiokris, som började som slav åt en colonisk general, men genom målmedvetenhet och intelligens slog sig upp till en post som ståthållare av Kronodycle, där hon sedermera gick förlorad i en kronotropisk magistorm. "
+	handelsetabeller.taupiskaforfader[24].beskrivninghak = "\+2 Självkontroll. Taupen åldras hälften så långsamt som andra, och tar hälften så mycket påfrestningsskada av uttorkning, svält och andra umbäranden. Det rör sig dock om en fältstörning, och taupen blir 1T6 lättare att förnimma för magiker och hypotetiska kronotropiska väsen.";
+	handelsetabeller.taupiskaforfader[24].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[24].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[24].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[24].subval[0][0][0].sjalvkontroll={};
+	handelsetabeller.taupiskaforfader[24].subval[0][0][0].sjalvkontroll.bonus=2;
+	handelsetabeller.taupiskaforfader[24].subval[0][0][0].formaga="Är 1T6 lättare att förnimma för magiker och hypotetiska kronotropiska väsen.";
+
+	handelsetabeller.taupiskaforfader[25] = {};
+	handelsetabeller.taupiskaforfader[25].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[25].vald = 0;
+	handelsetabeller.taupiskaforfader[25].rubrik = "Veos av Zo"
+	handelsetabeller.taupiskaforfader[25].beskrivningvaldbas = "Veos av Zo var en ebhronitisk kaosmagiker vars esoteriska skrifter tros ha inspirerat både Thatiz Conjungor och Rotrax-kulterna. "
+	handelsetabeller.taupiskaforfader[25].beskrivning = "Taupens förfader är Veos av Zo, en ebhronitisk kaosmagiker vars esoteriska skrifter tros ha inspirerat både Thatiz Conjungor och Rotrax-kulterna. "
+	handelsetabeller.taupiskaforfader[25].beskrivninghak = "Lättlärd i Ataxotropi, Svårlärd i Nomotropi, på alla dagar vars datum motsvarar primtal i den äldre ebhronitiska kalendern får taupen \+1T6 på slag för Ataxotropi och Teoretisk magi.";
+	handelsetabeller.taupiskaforfader[25].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[25].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[25].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[25].subval[0][0][0].ataxotropi={};
+	handelsetabeller.taupiskaforfader[25].subval[0][0][0].ataxotropi.lattlard=1;
+	handelsetabeller.taupiskaforfader[25].subval[0][0][0].nomotropi={};
+	handelsetabeller.taupiskaforfader[25].subval[0][0][0].nomotropi.svarlard=1;
+	handelsetabeller.taupiskaforfader[25].subval[0][0][0].formaga="På alla dagar vars datum motsvarar primtal i den äldre ebhronitiska kalendern får personen \+1T6 på slag för Ataxotropi och Teoretisk magi.";
+
+	handelsetabeller.taupiskaforfader[26] = {};
+	handelsetabeller.taupiskaforfader[26].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[26].vald = 0;
+	handelsetabeller.taupiskaforfader[26].rubrik = "Dynamenys av Domharath"
+	handelsetabeller.taupiskaforfader[26].beskrivningvaldbas = "Dynamenys av Domharath var en ebhronitisk elementarmagiker som var känd för sin bittra rivalitet med Veos av Zo, och bland annat frammanade en legion av undiner för att underminera dennes fäste, Kashaksera. "
+	handelsetabeller.taupiskaforfader[26].beskrivning = "Taupens förfader är Dynamenys av Domharath, en ebhronitisk elementarmagiker som var känd för sin bittra rivalitet med Veos av Zo, och bland annat frammanade en legion av undiner för att underminera dennes fäste, Kashaksera. "
+	handelsetabeller.taupiskaforfader[26].beskrivninghak = "Alstra hydrotropi lättlärd, kännetecknet Elementkännare 4T6, \+1T6 på alla slag för sociala färdigheter mot besjälade vattenväsen, till exempel melusiner, coomaror, menader, morgider och apsaror.";
+	handelsetabeller.taupiskaforfader[26].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[26].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[26].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[26].subval[0][0][0].hydrotropi={};
+	handelsetabeller.taupiskaforfader[26].subval[0][0][0].hydrotropi.lattlard=1;
+	handelsetabeller.taupiskaforfader[26].subval[0][0][0].elementkannare={};
+	handelsetabeller.taupiskaforfader[26].subval[0][0][0].elementkannare.enheter=3;
+	handelsetabeller.taupiskaforfader[26].subval[0][0][0].formaga="\+1T6 på alla slag för sociala färdigheter mot besjälade vattenväsen, till exempel melusiner, coomaror, menader, morgider och apsaror."
+
+	handelsetabeller.taupiskaforfader[27] = {};
+	handelsetabeller.taupiskaforfader[27].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[27].vald = 0;
+	handelsetabeller.taupiskaforfader[27].rubrik = "Soevys"
+	handelsetabeller.taupiskaforfader[27].beskrivningvaldbas = "Soevys var ständig underhuggare och misstänkt halvsyster till Veos av Zo, och vanlig försökskanin i dennes bisarra experiment. "
+	handelsetabeller.taupiskaforfader[27].beskrivning = "Taupens förfader är Soevys, ständig underhuggare och misstänkt halvsyster till Veos av Zo, och vanlig försökskanin i dennes bisarra experiment. "
+	handelsetabeller.taupiskaforfader[27].beskrivninghak = "\+2 på alla motståndsslag mot magi och 2 avtrubbningskryss mot övernaturligt, men lider även av den mentala störningen Personlighetsklyvning.";
+	handelsetabeller.taupiskaforfader[27].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[27].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[27].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[27].subval[0][0][0].formaga="\+2 på alla motståndsslag mot magi.";
+	handelsetabeller.taupiskaforfader[27].subval[0][0][0].avtrubbningovernaturligt=2;
+	handelsetabeller.taupiskaforfader[27].subval[0][0][0].ovrigt="Lider  av den mentala störningen Personlighetsklyvning.";
+
+	handelsetabeller.taupiskaforfader[28] = {};
+	handelsetabeller.taupiskaforfader[28].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[28].vald = 0;
+	handelsetabeller.taupiskaforfader[28].rubrik = "Dynamenys den fagra"
+	handelsetabeller.taupiskaforfader[28].beskrivningvaldbas = "Dynamenys den fagra var dotterdotter till Dynamenys av Domharath, som slutligen besegrade Veos av Zo och fängslade honom i åtta äggformade stenar . Dynamenys blev dock i sin tur utplånad av Domharaths kaoskult, och stenarna skingrades för vinden. "
+	handelsetabeller.taupiskaforfader[28].beskrivning = "Taupens förfader är Dynamenys den fagra, dotterdotter till Dynamenys av Domharath, som slutligen besegrade Veos av Zo och fängslade honom i åtta äggformade stenar . Dynamenys blev dock i sin tur utplånad av Domharaths kaoskult, och stenarna skingrades för vinden. "
+	handelsetabeller.taupiskaforfader[28].beskrivninghak = "\+2 Vilja och Utstrålning, Förvränga lättlärd och +1T6 på slag för att Förvränga ataxotropi, 1 avtrubbningskryss mot övernaturligt, men svårlärd i Spel \& dobbel och Sång \& musik och var åttonde natt hemsökt av ataxotropiska odjur som liknar små garnnystan, och äter upp all utrustning som inte är levande, stålhård, eller noggrant nedstuvad i blåfärgade behållare av något slag.";
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].vilja={};
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].vilja.varde=2;
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].utstralning={};
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].utstralning.varde=2;
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].forvranga={};
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].forvranga.lattlard=1;
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].speldobbel={};
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].speldobbel.svarlard=1;
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].sangmusik={};
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].sangmusik.svarlard=1;
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].formaga="\+1T6 på slag för att Förvränga ataxotropi.";
+	handelsetabeller.taupiskaforfader[28].subval[0][0][0].ovrigt="Personen blir var åttonde natt hemsökt av ataxotropiska odjur som liknar små garnnystan, och äter upp all utrustning som inte är levande, stålhård, eller noggrant nedstuvad i blåfärgade behållare av något slag.";
+	
+	
+	handelsetabeller.taupiskaforfader[29] = {};
+	handelsetabeller.taupiskaforfader[29].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[29].vald = 0;
+	handelsetabeller.taupiskaforfader[29].rubrik = "Ciam"
+	handelsetabeller.taupiskaforfader[29].beskrivningvaldbas = "Ciam var en mystisk vandrare som nämns i många gamla skrifter, och tycks ha vandrat över världen för att ge goda råd åt härskare i desperat behov av vägledning. Under dessa resor lär han även ha ynglat av sig anmärkningsvärt flitigt. "
+	handelsetabeller.taupiskaforfader[29].beskrivning = "Taupens förfader är Ciam, en mystisk vandrare som nämns i många gamla skrifter, och tycks ha vandrat över världen för att ge goda råd åt härskare i desperat behov av vägledning. Under dessa resor lär han även ha ynglat av sig anmärkningsvärt flitigt. "
+	handelsetabeller.taupiskaforfader[29].beskrivninghak = "\+2 Visdom, 4T6 i Förklädnad.";
+	handelsetabeller.taupiskaforfader[29].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[29].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[29].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[29].subval[0][0][0].visdom={};
+	handelsetabeller.taupiskaforfader[29].subval[0][0][0].visdom.varde=2;
+	handelsetabeller.taupiskaforfader[29].subval[0][0][0].forkladnad={};
+	handelsetabeller.taupiskaforfader[29].subval[0][0][0].forkladnad.enheter=3;
+	
+	handelsetabeller.taupiskaforfader[30] = {};
+	handelsetabeller.taupiskaforfader[30].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[30].vald = 0;
+	handelsetabeller.taupiskaforfader[30].rubrik = "Raderhan"
+	handelsetabeller.taupiskaforfader[30].beskrivningvaldbas = "Raderhan var aktad läromästare som skrev “Ramorianska förkunnelsen” i 16 hymner, ett semi-religiöst verk som betonar vikten av att välja mellan ont och gott, sanning och lögn. Raderhan var länge nästan bortglömd, men har på senare år studerats flitigt inom Allvetandets brödraskap, och även av gurgitiska filosofer. "
+	handelsetabeller.taupiskaforfader[30].beskrivning = "Taupens förfader är Raderhan, aktad läromästare som skrev “Ramorianska förkunnelsen” i 16 hymner, ett semi-religiöst verk som betonar vikten av att välja mellan ont och gott, sanning och lögn. Raderhan var länge nästan bortglömd, men har på senare år studerats flitigt inom Allvetandets brödraskap, och även av gurgitiska filosofer. "
+	handelsetabeller.taupiskaforfader[30].beskrivninghak = "Lättlärd i Teologi och Genomskåda, 4T6 i expertisen Automatskrift   .";
+	handelsetabeller.taupiskaforfader[30].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[30].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[30].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[30].subval[0][0][0].teologi={};
+	handelsetabeller.taupiskaforfader[30].subval[0][0][0].teologi.lattlard=1;
+	handelsetabeller.taupiskaforfader[30].subval[0][0][0].genomskada={};
+	handelsetabeller.taupiskaforfader[30].subval[0][0][0].genomskada.lattlard=1;
+	handelsetabeller.taupiskaforfader[30].subval[0][0][0].automatskrift={};
+	handelsetabeller.taupiskaforfader[30].subval[0][0][0].automatskrift.enheter=3;
+
+	handelsetabeller.taupiskaforfader[31] = {};
+	handelsetabeller.taupiskaforfader[31].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[31].vald = 0;
+	handelsetabeller.taupiskaforfader[31].rubrik = "Virazdi den Dödlösa"
+	handelsetabeller.taupiskaforfader[31].beskrivningvaldbas = "Virazdi den Dödlösa var livvakt åt Lalastas impopuläre ståthållare Eigaz Idomitherah, som ska ha skadats vid 25 tillfällen när hon räddade sin skyddsling. "
+	handelsetabeller.taupiskaforfader[31].beskrivning = "Taupens förfader är Virazdi den Dödlösa, livvakt åt Lalastas impopuläre ståthållare Eigaz Idomitherah, som ska ha skadats vid 25 tillfällen när hon räddade sin skyddsling. "
+	handelsetabeller.taupiskaforfader[31].beskrivninghak = "\+1 Livskraft, Lättlärd i Genomsöka.";
+	handelsetabeller.taupiskaforfader[31].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[31].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[31].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[31].subval[0][0][0].livskraft={};
+	handelsetabeller.taupiskaforfader[31].subval[0][0][0].livskraft.bonus=1;
+	handelsetabeller.taupiskaforfader[31].subval[0][0][0].genomsoka={};
+	handelsetabeller.taupiskaforfader[31].subval[0][0][0].genomsoka.lattlard=1;
+
+	handelsetabeller.taupiskaforfader[32] = {};
+	handelsetabeller.taupiskaforfader[32].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[32].vald = 0;
+	handelsetabeller.taupiskaforfader[32].rubrik = "Nimrod av Kao"
+	handelsetabeller.taupiskaforfader[32].beskrivningvaldbas = "Nimrod av Kao var en hänsynslös krigarmagiker och fältherre som ödelade Stora arkipelagen för 2500 år sedan. Enligt legenderna seglar hans vredgade spöke ännu på Skugglandets hav. "
+	handelsetabeller.taupiskaforfader[32].beskrivning = "Taupens förfader är Nimrod av Kao, en hänsynslös krigarmagiker och fältherre som ödelade Stora arkipelagen för 2500 år sedan. Enligt legenderna seglar hans vredgade spöke ännu på Skugglandets hav. "
+	handelsetabeller.taupiskaforfader[32].beskrivninghak = "Injaga fruktan lättlärd, 4T6 i expertisen Sjöslag, kännetecknet Genomträngande blick 4T6.";
+	handelsetabeller.taupiskaforfader[32].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[32].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[32].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[32].subval[0][0][0].injagafruktan={};
+	handelsetabeller.taupiskaforfader[32].subval[0][0][0].injagafruktan.lattlard=1;
+	handelsetabeller.taupiskaforfader[32].subval[0][0][0].sjoslag={};
+	handelsetabeller.taupiskaforfader[32].subval[0][0][0].sjoslag.enheter=3;
+	handelsetabeller.taupiskaforfader[32].subval[0][0][0].genomtrangandeblick={};
+	handelsetabeller.taupiskaforfader[32].subval[0][0][0].genomtrangandeblick.enheter=3;
+
+	handelsetabeller.taupiskaforfader[33] = {};
+	handelsetabeller.taupiskaforfader[33].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[33].vald = 0;
+	handelsetabeller.taupiskaforfader[33].rubrik = "Antilogos"
+	handelsetabeller.taupiskaforfader[33].beskrivningvaldbas = "Antilogos var en legendarisk colonisk debattmästare, känd för sina märkliga teser, som sedermera sökte sig till torget i Zharashapur, och kanske sitter där än. "
+	handelsetabeller.taupiskaforfader[33].beskrivning = "Taupens förfader är Antilogos, en legendarisk colonisk debattmästare, känd för sina märkliga teser, som sedermera sökte sig till torget i Zharashapur, och kanske sitter där än. "
+	handelsetabeller.taupiskaforfader[33].beskrivninghak = "Lättlärd i Filosofi och Argumentera, 4T6 i Käfta emot.";
+	handelsetabeller.taupiskaforfader[33].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[33].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[33].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[33].subval[0][0][0].filosofi={};
+	handelsetabeller.taupiskaforfader[33].subval[0][0][0].filosofi.lattlard=1;
+	handelsetabeller.taupiskaforfader[33].subval[0][0][0].argumentera={};
+	handelsetabeller.taupiskaforfader[33].subval[0][0][0].argumentera.lattlard=1;
+	handelsetabeller.taupiskaforfader[33].subval[0][0][0].kaftaemot={};
+	handelsetabeller.taupiskaforfader[33].subval[0][0][0].kaftaemot.enheter=3;
+
+	handelsetabeller.taupiskaforfader[34] = {};
+	handelsetabeller.taupiskaforfader[34].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[34].vald = 0;
+	handelsetabeller.taupiskaforfader[34].rubrik = "Irothenes"
+	handelsetabeller.taupiskaforfader[34].beskrivningvaldbas = "Irothenes var Antilogos ärkerival, som tillhörde rakt motsatt skola av filosofi. När Antilogos begav sig till Västlanden färdades Irothenes istället till fjärran östern, för att de skulle komma så långt bort från varandra som överhuvudtaget var fysiskt möjligt. Han hoppades hitta Mästarna från öster i Khosala, men hördes aldrig mera av. "
+	handelsetabeller.taupiskaforfader[34].beskrivning = "Taupens förfader är Irothenes, Antilogos ärkerival, som tillhörde rakt motsatt skola av filosofi. När Antilogos begav sig till Västlanden färdades Irothenes istället till fjärran östern, för att de skulle komma så långt bort från varandra som överhuvudtaget var fysiskt möjligt. Han hoppades hitta Mästarna från öster i Khosala, men hördes aldrig mera av. "
+	handelsetabeller.taupiskaforfader[34].beskrivninghak = "Lättlärd i Filosofi och Argumentera, 4T6 i Logik.";
+	handelsetabeller.taupiskaforfader[34].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[34].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[34].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[34].subval[0][0][0].filosofi={};
+	handelsetabeller.taupiskaforfader[34].subval[0][0][0].filosofi.lattlard=1;
+	handelsetabeller.taupiskaforfader[34].subval[0][0][0].argumentera={};
+	handelsetabeller.taupiskaforfader[34].subval[0][0][0].argumentera.lattlard=1;
+	handelsetabeller.taupiskaforfader[34].subval[0][0][0].logik={};
+	handelsetabeller.taupiskaforfader[34].subval[0][0][0].logik.enheter=3;
+
+	handelsetabeller.taupiskaforfader[35] = {};
+	handelsetabeller.taupiskaforfader[35].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[35].vald = 0;
+	handelsetabeller.taupiskaforfader[35].rubrik = "Phorusmene"
+	handelsetabeller.taupiskaforfader[35].beskrivningvaldbas = "Phorusmene var den tredje av de stora taupiska filosoferna i Colonan. Hon hade ett avsevärt mer handfast sätt än sina rivaler, och var den enda vars tänkande fick ett bestående inflytande på colonisk politik. "
+	handelsetabeller.taupiskaforfader[35].beskrivning = "Taupens förfader är Phorusmene, den tredje av de stora taupiska filosoferna i Colonan. Hon hade ett avsevärt mer handfast sätt än sina rivaler, och var den enda vars tänkande fick ett bestående inflytande på colonisk politik. "
+	handelsetabeller.taupiskaforfader[35].beskrivninghak = "Lättlärd i Filosofi och Slagsmål, 4T6 i Perversiteter.";
+	handelsetabeller.taupiskaforfader[35].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[35].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[35].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[35].subval[0][0][0].filosofi={};
+	handelsetabeller.taupiskaforfader[35].subval[0][0][0].filosofi.lattlard=1;
+	handelsetabeller.taupiskaforfader[35].subval[0][0][0].slagsmal={};
+	handelsetabeller.taupiskaforfader[35].subval[0][0][0].slagsmal.lattlard=1;
+	handelsetabeller.taupiskaforfader[35].subval[0][0][0].perversiteter={};
+	handelsetabeller.taupiskaforfader[35].subval[0][0][0].perversiteter.enheter=3;
+
+	handelsetabeller.taupiskaforfader[36] = {};
+	handelsetabeller.taupiskaforfader[36].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[36].vald = 0;
+	handelsetabeller.taupiskaforfader[36].rubrik = "Intigvala Mirapata"
+	handelsetabeller.taupiskaforfader[36].beskrivningvaldbas = "Intigvala Mirapata var ebhronitisk mästersmed och krigare som deltog i många expeditioner mot österlandet. Hon räddade två stycken egendomliga svärd undan riket Khosala Dehos fall, och från dessa förlagor skapade hon de första varianterna av det svärd som numera bär hennes namn, och än idag är taupernas mest berömda vapen. Suspekt många arkaiska mirapata-svärd som påstås vara smidda av Intigvala cirkulerar än idag i världen; vad som hände med urtyperna från Khosala vet man inte.  "
+	handelsetabeller.taupiskaforfader[36].beskrivning = "Taupens förfader är Intigvala Mirapata, ebhronitisk mästersmed och krigare som deltog i många expeditioner mot österlandet. Hon räddade två stycken egendomliga svärd undan riket Khosala Dehos fall, och från dessa förlagor skapade hon de första varianterna av det svärd som numera bär hennes namn, och än idag är taupernas mest berömda vapen. Suspekt många arkaiska mirapata-svärd som påstås vara smidda av Intigvala cirkulerar än idag i världen; vad som hände med urtyperna från Khosala vet man inte.  "
+	handelsetabeller.taupiskaforfader[36].beskrivninghak = "\+1 Styrka, hantverket Vapensmed 3T6, Lättlärd i Svärd.";
+	handelsetabeller.taupiskaforfader[36].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[36].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[36].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[36].subval[0][0][0].styrka={};
+	handelsetabeller.taupiskaforfader[36].subval[0][0][0].styrka.varde=1;
+	handelsetabeller.taupiskaforfader[36].subval[0][0][0].vapensmed={};
+	handelsetabeller.taupiskaforfader[36].subval[0][0][0].vapensmed.enheter=1;
+	handelsetabeller.taupiskaforfader[36].subval[0][0][0].svard={};
+	handelsetabeller.taupiskaforfader[36].subval[0][0][0].svard.lattlard=1;
+
+	handelsetabeller.taupiskaforfader[37] = {};
+	handelsetabeller.taupiskaforfader[37].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[37].vald = 0;
+	handelsetabeller.taupiskaforfader[37].rubrik = "Okalam den Starke"
+	handelsetabeller.taupiskaforfader[37].beskrivningvaldbas = "Okalam den Starke var en legendarisk hjälte i det fjärran Ansale-Idon. Han hade en himlastormande romans och otaliga äventyr ihop med drakrytterskan Puershardokt, som dock omkom i Brännandet av Edron. En vemodig Okalam seglade då för att finna ett mystiskt sydligt land som beskrevs i dåtidens edronitiska krönikor, befolkat av en förlorad taupisk stam. Han återvände aldrig, men Puanam, hans son med Puershardokt, blev omsider en mäktig krigarprins, och kanske styr Okalams halvblodslinje fortfarande i Jondishur bortom Blå havet. "
+	handelsetabeller.taupiskaforfader[37].beskrivning = "Taupens förfader är Okalam den Starke, en legendarisk hjälte i det fjärran Ansale-Idon. Han hade en himlastormande romans och otaliga äventyr ihop med drakrytterskan Puershardokt, som dock omkom i Brännandet av Edron. En vemodig Okalam seglade då för att finna ett mystiskt sydligt land som beskrevs i dåtidens edronitiska krönikor, befolkat av en förlorad taupisk stam. Han återvände aldrig, men Puanam, hans son med Puershardokt, blev omsider en mäktig krigarprins, och kanske styr Okalams halvblodslinje fortfarande i Jondishur bortom Blå havet. "
+	handelsetabeller.taupiskaforfader[37].beskrivninghak = "Styrka \+1T6, kännetecknet Romantiker 4T6, men sätter taupen någonsin sin fot väster om Mûhad kommer hon bli föremål för intensiv uppmärksamhet från illvilliga primalväsen; dessa får \+1T6 på alla försök att förnimma taupen";
+	handelsetabeller.taupiskaforfader[37].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[37].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[37].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[37].subval[0][0][0].styrka={};
+	handelsetabeller.taupiskaforfader[37].subval[0][0][0].styrka.varde=4;
+	handelsetabeller.taupiskaforfader[37].subval[0][0][0].romantiker={};
+	handelsetabeller.taupiskaforfader[37].subval[0][0][0].romantiker.enheter=3;
+	handelsetabeller.taupiskaforfader[37].subval[0][0][0].ovrigt="Sätter taupen någonsin sin fot väster om Mûhad kommer denne bli föremål för intensiv uppmärksamhet från illvilliga primalväsen; dessa får \+1T6 på alla försök att förnimma taupen."
+
+	handelsetabeller.taupiskaforfader[38] = {};
+	handelsetabeller.taupiskaforfader[38].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[38].vald = 0;
+	handelsetabeller.taupiskaforfader[38].rubrik = "Letehab Hy'mas"
+	handelsetabeller.taupiskaforfader[38].beskrivningvaldbas = "Letehab Hy'mas var en krigare och filosof som började sin bana i einosdalen, men vandrade mellan otaliga riken. Han utvecklade en filosofisk idé om att anlag naturligt eftersträvar att förädlas, och att tauperna därför borde beblanda sig med övriga folkslag, för att både förädla sina egna anlag och stärka andras genom Tauvas vita blod. Han avrättades med gift, enligt krönikorna av ståthållaren av Illymion i Colonan, men många tror än idag att andra tauper låg bakom. "
+	handelsetabeller.taupiskaforfader[38].beskrivning = "Taupens förfader är Letehab Hy'mas, en krigare och filosof som började sin bana i einosdalen, men vandrade mellan otaliga riken. Han utvecklade en filosofisk idé om att anlag naturligt eftersträvar att förädlas, och att tauperna därför borde beblanda sig med övriga folkslag, för att både förädla sina egna anlag och stärka andras genom Tauvas vita blod. Han avrättades med gift, enligt krönikorna av ståthållaren av Illymion i Colonan, men många tror än idag att andra tauper låg bakom. "
+	handelsetabeller.taupiskaforfader[38].beskrivninghak = "Lättlärd i Kulturkännedom, Krigföring och Filosofi.";
+	handelsetabeller.taupiskaforfader[38].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[38].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[38].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[38].subval[0][0][0].kulturkannedom={};
+	handelsetabeller.taupiskaforfader[38].subval[0][0][0].kulturkannedom.lattlard=1;
+	handelsetabeller.taupiskaforfader[38].subval[0][0][0].krigforing={};
+	handelsetabeller.taupiskaforfader[38].subval[0][0][0].krigforing.lattlard=1;
+	handelsetabeller.taupiskaforfader[38].subval[0][0][0].filosofi={};
+	handelsetabeller.taupiskaforfader[38].subval[0][0][0].filosofi.lattlard=1;
+
+	handelsetabeller.taupiskaforfader[39] = {};
+	handelsetabeller.taupiskaforfader[39].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[39].vald = 0;
+	handelsetabeller.taupiskaforfader[39].rubrik = "Antinotos Ekogaster"
+	handelsetabeller.taupiskaforfader[39].beskrivningvaldbas = "Antinotos Ekogaster var en glasblåsare i Colonan. Han tog sin konst till aldrig förr skådade nivåer, och fick även beställningar från kejsarhovet, men hans kultivering ändades abrupt i ett slagsmål med förbittrade gesäller, där den späde glasblåsaren fick halsen uppskuren med en av sina karaffer. "
+	handelsetabeller.taupiskaforfader[39].beskrivning = "Taupens förfader är Antinotos Ekogaster, en glasblåsare i Colonan. Han tog sin konst till aldrig förr skådade nivåer, och fick även beställningar från kejsarhovet, men hans kultivering ändades abrupt i ett slagsmål med förbittrade gesäller, där den späde glasblåsaren fick halsen uppskuren med en av sina karaffer. "
+	handelsetabeller.taupiskaforfader[39].beskrivninghak = "Ledarskap och Slagsmål svårlärda, Handel och Hovliv lättlärda, 4T6 i Glasblåsare.";
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].ledarskap={};
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].ledarskap.svarlard=1;
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].slagsmal={};
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].slagsmal.svarlard=1;
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].handel={};
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].handel.lattlard=1;
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].hovliv={};
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].hovliv.lattlard=1;
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].glasblasare={};
+	handelsetabeller.taupiskaforfader[39].subval[0][0][0].glasblasare.enheter=3;
+
+	
+	handelsetabeller.taupiskaforfader[40] = {};
+	handelsetabeller.taupiskaforfader[40].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[40].vald = 0;
+	handelsetabeller.taupiskaforfader[40].rubrik = "Galran Birzes"
+	handelsetabeller.taupiskaforfader[40].beskrivningvaldbas = "Galran Birzes var en jargisk geograf som spenderade det mesta av sin tid med att rita kartor över allt mellan himmel och jord. Många av kartorna finns fortfarande bevarade, och tycks märkligt ofta visa vägen till svunna städer fulla av skatter. "
+	handelsetabeller.taupiskaforfader[40].beskrivning = "Taupens förfader är Galran Birzes, en jargisk geograf som spenderade det mesta av sin tid med att rita kartor över allt mellan himmel och jord. Många av kartorna finns fortfarande bevarade, och tycks märkligt ofta visa vägen till svunna städer fulla av skatter. "
+	handelsetabeller.taupiskaforfader[40].beskrivninghak = "Lättlärd i Dupera, 4T6 i Kartritare.";
+	handelsetabeller.taupiskaforfader[40].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[40].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[40].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[40].subval[0][0][0].dupera={};
+	handelsetabeller.taupiskaforfader[40].subval[0][0][0].dupera.lattlard=1;
+	handelsetabeller.taupiskaforfader[40].subval[0][0][0].kartritare={};
+	handelsetabeller.taupiskaforfader[40].subval[0][0][0].kartritare.enheter=3;
+
+	handelsetabeller.taupiskaforfader[41] = {};
+	handelsetabeller.taupiskaforfader[41].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[41].vald = 0;
+	handelsetabeller.taupiskaforfader[41].rubrik = "Iov Arogorna"
+	handelsetabeller.taupiskaforfader[41].beskrivningvaldbas = "Iov Arogorna var en eremit som ägnade hundra år åt andlig odling. Han bodde i en hydda vid Ringbergens sjöar, och debatterade ofta med en gigantisk valfisk som i skymningen kom upp ur djupen. "
+	handelsetabeller.taupiskaforfader[41].beskrivning = "Taupens förfader är Iov Arogorna, en eremit som ägnade hundra år åt andlig odling. Han bodde i en hydda vid Ringbergens sjöar, och debatterade ofta med en gigantisk valfisk som i skymningen kom upp ur djupen. "
+	handelsetabeller.taupiskaforfader[41].beskrivninghak = "1 enhet vildmarksfärdigheter, behärskar merman, vattenfolkens språk, 4T6 i Käfta emot.";
+	handelsetabeller.taupiskaforfader[41].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[41].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[41].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[41].subval[0][0][0].vildmarksfardigheterenheter=1;
+	handelsetabeller.taupiskaforfader[41].subval[0][0][0].merman={};
+	handelsetabeller.taupiskaforfader[41].subval[0][0][0].merman.enheter=2;
+	handelsetabeller.taupiskaforfader[41].subval[0][0][0].kaftaemot={};
+	handelsetabeller.taupiskaforfader[41].subval[0][0][0].kaftaemot.enheter=3;
+
+	handelsetabeller.taupiskaforfader[42] = {};
+	handelsetabeller.taupiskaforfader[42].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[42].vald = 0;
+	handelsetabeller.taupiskaforfader[42].rubrik = "Sankt Quirinus"
+	handelsetabeller.taupiskaforfader[42].beskrivningvaldbas = "Sankt Quirinus var ett malgoahritiskt helgon från Taxilan i Karanthos, född år 1111. På grund av sina visioner blev han bländad och stympad av stadens illvillige borgmästare, men detta hindrade inte Quirinus från att upptäcka heliga skrifter som på mystisk väg dolts i världsalltet, och på andra sätt tjäna Daaks avsikt i världen. "
+	handelsetabeller.taupiskaforfader[42].beskrivning = "Taupens förfader är Sankt Quirinus, ett malgoahritiskt helgon från Taxilan i Karanthos, född år 1111. På grund av sina visioner blev han bländad och stympad av stadens illvillige borgmästare, men detta hindrade inte Quirinus från att upptäcka heliga skrifter som på mystisk väg dolts i världsalltet, och på andra sätt tjäna Daaks avsikt i världen. "
+	handelsetabeller.taupiskaforfader[42].beskrivninghak = "\+2 Vilja, Teologi lättlärd, men blotta tanken på ett taupiskt helgon kan anses hädisk i vissa kretsar";
+	handelsetabeller.taupiskaforfader[42].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[42].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[42].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[42].subval[0][0][0].vilja={};
+	handelsetabeller.taupiskaforfader[42].subval[0][0][0].vilja.varde=2;
+	handelsetabeller.taupiskaforfader[42].subval[0][0][0].teologi={};
+	handelsetabeller.taupiskaforfader[42].subval[0][0][0].teologi.lattlard=1;
+
+	handelsetabeller.taupiskaforfader[43] = {};
+	handelsetabeller.taupiskaforfader[43].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[43].vald = 0;
+	handelsetabeller.taupiskaforfader[43].rubrik = "Kerios Xenov"
+	handelsetabeller.taupiskaforfader[43].beskrivningvaldbas = "Kerios Xenov var en (enligt somliga traditioner rättrådig) colonisk byråkrat som anklagades för att ha stulit Kejsarstaven, men lyckades skylla på ett brett spektrum av andra tauper, vars skuld och oskuld än idag är föremål för debatt. Många familjer avrättades, men Kerios ätt lever än. "
+	handelsetabeller.taupiskaforfader[43].beskrivning = "Taupens förfader är Kerios Xenov, en (enligt somliga traditioner rättrådig) colonisk byråkrat som anklagades för att ha stulit Kejsarstaven, men lyckades skylla på ett brett spektrum av andra tauper, vars skuld och oskuld än idag är föremål för debatt. Många familjer avrättades, men Kerios ätt lever än. "
+	handelsetabeller.taupiskaforfader[43].beskrivninghak = "Skumraskaffärer lättlärd, 5T6 i Peka ut syndabockar";
+	handelsetabeller.taupiskaforfader[43].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[43].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[43].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[43].subval[0][0][0].skumraskaffarer={};
+	handelsetabeller.taupiskaforfader[43].subval[0][0][0].skumraskaffarer.lattlard=1;
+	handelsetabeller.taupiskaforfader[43].subval[0][0][0].pekautsyndabockar={};
+	handelsetabeller.taupiskaforfader[43].subval[0][0][0].pekautsyndabockar.enheter=7;
+
+	handelsetabeller.taupiskaforfader[44] = {};
+	handelsetabeller.taupiskaforfader[44].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[44].vald = 0;
+	handelsetabeller.taupiskaforfader[44].rubrik = "Emelianni den vita"
+	handelsetabeller.taupiskaforfader[44].beskrivningvaldbas = "Emelianni den vita var rådgivare och älskarinna åt Drunoks ökände despot Narnak Kjolskrämma. Emelianni genomförde ett stort antal hårdhänta reformer för att förbättra Drunoks svaga ställning i världen, men har i efterhand rentvåtts av många krönikörer. "
+	handelsetabeller.taupiskaforfader[44].beskrivning = "Taupens förfader är Emelianni den vita, rådgivare och älskarinna åt Drunoks ökände despot Narnak Kjolskrämma. Emelianni genomförde ett stort antal hårdhänta reformer för att förbättra Drunoks svaga ställning i världen, men har i efterhand rentvåtts av många krönikörer. "
+	handelsetabeller.taupiskaforfader[44].beskrivninghak = "4T6 i Bokhållning, ett avtrubbningskryss mot våld";
+	handelsetabeller.taupiskaforfader[44].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[44].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[44].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[44].subval[0][0][0].bokhallning={};
+	handelsetabeller.taupiskaforfader[44].subval[0][0][0].bokhallning.enheter=3;
+	handelsetabeller.taupiskaforfader[44].subval[0][0][0].avtrubbningvald=1;
+
+	handelsetabeller.taupiskaforfader[45] = {};
+	handelsetabeller.taupiskaforfader[45].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[45].vald = 0;
+	handelsetabeller.taupiskaforfader[45].rubrik = "Arames ûl-Eyna"
+	handelsetabeller.taupiskaforfader[45].beskrivningvaldbas = "Arames ûl-Eyna var en trollkarl i Mûhad som under sin långa bana hann verka som hovmagiker vid ett flertal furstehov. Han dog hastigt under sina försök att stoppa en pestepidemi i staden Quaran. Berömd för besvärjelsen “Arames motverkande miasma”. "
+	handelsetabeller.taupiskaforfader[45].beskrivning = "Taupens förfader är Arames ûl-Eyna, en trollkarl i Mûhad som under sin långa bana hann verka som hovmagiker vid ett flertal furstehov. Han dog hastigt under sina försök att stoppa en pestepidemi i staden Quaran. Berömd för besvärjelsen “Arames motverkande miasma”. "
+	handelsetabeller.taupiskaforfader[45].beskrivninghak = "Lättlärd i Läkekonst, 3 enheter mystikfärdigheter, 4T6 i expertisen Anatomi. Taupen har dock även ärvt en bräcklig hälsa och får -1T6 på motståndsslag mot sjukdomar";
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0].lakekonst={};
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0].lakekonst.lattlard=1;
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0].mystikfardigheterenheter=3;
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0].anatomi={};
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0].anatomi.enheter=3;
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0].livskraft={};
+	handelsetabeller.taupiskaforfader[45].subval[0][0][0].livskraft.egenskap="-1T6 på motståndsslag mot sjukdomar.";
+
+	handelsetabeller.taupiskaforfader[46] = {};
+	handelsetabeller.taupiskaforfader[46].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[46].vald = 0;
+	handelsetabeller.taupiskaforfader[46].rubrik = "Liancemus"
+	handelsetabeller.taupiskaforfader[46].beskrivningvaldbas = "Liancemus var en musikalisk aevtor som vandrade land och rike runt; bland många bedrifter sägs han ha lärt sig flöjtspel av haukstarer i Skugglandet, och vunnit en mûhadinsk prinsessas hjärta. Det senare ledde till hans långsamma och plågsamma död, men den zhaniske trubaduren Sayat Novak lade beslag både på prinsessan och på Liantsemus magiska flöjt, som fortfarande lär samla damm i något furstehov i Västlanden. "
+	handelsetabeller.taupiskaforfader[46].beskrivning = "Taupens förfader är Liancemus, en musikalisk aevtor som vandrade land och rike runt; bland många bedrifter sägs han ha lärt sig flöjtspel av haukstarer i Skugglandet, och vunnit en mûhadinsk prinsessas hjärta. Det senare ledde till hans långsamma och plågsamma död, men den zhaniske trubaduren Sayat Novak lade beslag både på prinsessan och på Liantsemus magiska flöjt, som fortfarande lär samla damm i något furstehov i Västlanden. "
+	handelsetabeller.taupiskaforfader[46].beskrivninghak = "\+2 Utstrålning, Lättlärd i Sång & musik och Låsdyrkning, karaktärsdraget Förälskelse som svaghet (låst).";
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0].utstralning={};
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0].utstralning.varde=2;
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0].sangmusik={};
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0].sangmusik.lattlard=1;
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0].lasdyrkning={};
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0].lasdyrkning.lattlard=1;
+	handelsetabeller.taupiskaforfader[46].subval[0][0][0].karaktarsdrag="Förälskelse är svaghet och låst";
+
+	handelsetabeller.taupiskaforfader[47] = {};
+	handelsetabeller.taupiskaforfader[47].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[47].vald = 0;
+	handelsetabeller.taupiskaforfader[47].rubrik = "Kanibyov"
+	handelsetabeller.taupiskaforfader[47].beskrivningvaldbas = "Kanibyov var en bonde från norra Maulio som dog år 1721 e.D. vid en påstådd ålder av 194 år. "
+	handelsetabeller.taupiskaforfader[47].beskrivning = "Taupens förfader är Kanibyov, en bonde från norra Maulio som dog år 1721 e.D. vid en påstådd ålder av 194 år. "
+	handelsetabeller.taupiskaforfader[47].beskrivninghak = "\+2 Tålighet, Expertisen Sund kost 4T6.";
+	handelsetabeller.taupiskaforfader[47].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[47].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[47].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[47].subval[0][0][0].talighet={};
+	handelsetabeller.taupiskaforfader[47].subval[0][0][0].talighet.varde=2;
+	handelsetabeller.taupiskaforfader[47].subval[0][0][0].sundkost={};
+	handelsetabeller.taupiskaforfader[47].subval[0][0][0].sundkost.enheter=3;
+
+	handelsetabeller.taupiskaforfader[48] = {};
+	handelsetabeller.taupiskaforfader[48].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[48].vald = 0;
+	handelsetabeller.taupiskaforfader[48].rubrik = "Armendys"
+	handelsetabeller.taupiskaforfader[48].beskrivningvaldbas = "Armendys var en ebhronitisk medikus som experimenterade mycket med olika motgifter - ibland, sägs det, genom att förgifta sig själv för att inspirera sig till hastigt arbete. "
+	handelsetabeller.taupiskaforfader[48].beskrivning = "Taupens förfader är Armendys, en ebhronitisk medikus som experimenterade mycket med olika motgifter - ibland, sägs det, genom att förgifta sig själv för att inspirera sig till hastigt arbete. "
+	handelsetabeller.taupiskaforfader[48].beskrivninghak = "Lättlärd i Läkekonst och Gifter & droger, \+1T6 Livskraft för att motstå gifter.";
+	handelsetabeller.taupiskaforfader[48].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[48].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[48].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[48].subval[0][0][0].lakekonst={};
+	handelsetabeller.taupiskaforfader[48].subval[0][0][0].lakekonst.lattlard=1;
+	handelsetabeller.taupiskaforfader[48].subval[0][0][0].gifterdroger={};
+	handelsetabeller.taupiskaforfader[48].subval[0][0][0].gifterdroger.lattlard=1;
+	handelsetabeller.taupiskaforfader[48].subval[0][0][0].livskraft={};
+	handelsetabeller.taupiskaforfader[48].subval[0][0][0].livskraft.egenskap="\+1T6 för att motstå gifter.";
+
+	handelsetabeller.taupiskaforfader[49] = {};
+	handelsetabeller.taupiskaforfader[49].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[49].vald = 0;
+	handelsetabeller.taupiskaforfader[49].rubrik = "Ymir do’Yfaluk"
+	handelsetabeller.taupiskaforfader[49].beskrivningvaldbas = "Ymir do’Yfaluk var en flitig men dyster munk som producerade ett gigantiskt korpus av skrifter inom allehanda ämnen, men ständigt överträffades i berömmelse av sina ärkerivaler, illuminatörerna. "
+	handelsetabeller.taupiskaforfader[49].beskrivning = "Taupens förfader är Ymir do’Yfaluk, en flitig men dyster munk som producerade ett gigantiskt korpus av skrifter inom allehanda ämnen, men ständigt överträffades i berömmelse av sina ärkerivaler, illuminatörerna. "
+	handelsetabeller.taupiskaforfader[49].beskrivninghak = "Lättlärd i Geografi och Ockultism, 4T6 i Författa och Det var bättre förr, men drabbas även av den mentala störningen Deprimerad";
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].geografi={};
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].geografi.lattlard=1;
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].ockultism={};
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].ockultism.lattlard=1;
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].forfatta={};
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].forfatta.enheter=3;
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].detvarbattreforr={};
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].detvarbattreforr.enheter=3;
+	handelsetabeller.taupiskaforfader[49].subval[0][0][0].ovrigt="Drabbad av den mentala störningen Deprimerad";
+
+	handelsetabeller.taupiskaforfader[50] = {};
+	handelsetabeller.taupiskaforfader[50].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[50].vald = 0;
+	handelsetabeller.taupiskaforfader[50].rubrik = "Ynoc Estocius"
+	handelsetabeller.taupiskaforfader[50].beskrivningvaldbas = "Ynoc Estocius var en av få i omvärlden berömda tauper från Einosdalen. Ynoc var en autor som vandrade över världen för att samla fjärilar, men slutade som slav, och blev härdad i blod på Mûhads och Jargiens gladiatorarenor. En oväntat framgångsrik karriär, där Ynoc bland annat ensam nedkämpat åtta dvärgar, ändades till slut av ett grottroll. "
+	handelsetabeller.taupiskaforfader[50].beskrivning = "Taupens förfader är Ynoc Estocius, en av få i omvärlden berömda tauper från Einosdalen. Ynoc var en autor som vandrade över världen för att samla fjärilar, men slutade som slav, och blev härdad i blod på Mûhads och Jargiens gladiatorarenor. En oväntat framgångsrik karriär, där Ynoc bland annat ensam nedkämpat åtta dvärgar, ändades till slut av ett grottroll. "
+	handelsetabeller.taupiskaforfader[50].beskrivninghak = "Kännetecknet Pedant 3T6, ett avtrubbningskryss för våld, och taupen får \+1T6 på gruppanfall om minst en av motståndarna är en dvärg.";
+	handelsetabeller.taupiskaforfader[50].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[50].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[50].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[50].subval[0][0][0].pedant={};
+	handelsetabeller.taupiskaforfader[50].subval[0][0][0].pedant.enheter=1;
+	handelsetabeller.taupiskaforfader[50].subval[0][0][0].avtrubbningvald=1;
+	handelsetabeller.taupiskaforfader[50].subval[0][0][0].formaga="Får \+1T6 på gruppanfall om minst en av motståndarna är en dvärg.";
+
+	handelsetabeller.taupiskaforfader[51] = {};
+	handelsetabeller.taupiskaforfader[51].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[51].vald = 0;
+	handelsetabeller.taupiskaforfader[51].rubrik = "Durmuzzo"
+	handelsetabeller.taupiskaforfader[51].beskrivningvaldbas = "Durmuzzo var berömd filosof, verksam i Ziu, Jargien, Ansale-Idon, Forion, Arkipelagen och Ebhron. Bland många intellektuella storverk uppfann han eirov-skriften. "
+	handelsetabeller.taupiskaforfader[51].beskrivning = "Taupens förfader är Durmuzzo, berömd filosof, verksam i Ziu, Jargien, Ansale-Idon, Forion, Arkipelagen och Ebhron. Bland många intellektuella storverk uppfann han eirov-skriften. "
+	handelsetabeller.taupiskaforfader[51].beskrivninghak = "Lättlärd i Kulturkännedom, 4T6 i Språklära, kännetecknet Rastlös 4T6";
+	handelsetabeller.taupiskaforfader[51].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[51].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[51].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[51].subval[0][0][0].kulturkannedom={};
+	handelsetabeller.taupiskaforfader[51].subval[0][0][0].kulturkannedom.lattlard=1;
+	handelsetabeller.taupiskaforfader[51].subval[0][0][0].spraklara={};
+	handelsetabeller.taupiskaforfader[51].subval[0][0][0].spraklara.enheter=3;
+	handelsetabeller.taupiskaforfader[51].subval[0][0][0].rastlos={};
+	handelsetabeller.taupiskaforfader[51].subval[0][0][0].rastlos.enheter=3;
+
+	handelsetabeller.taupiskaforfader[52] = {};
+	handelsetabeller.taupiskaforfader[52].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[52].vald = 0;
+	handelsetabeller.taupiskaforfader[52].rubrik = "Kaoradel Stjärnskådaren"
+	handelsetabeller.taupiskaforfader[52].beskrivningvaldbas = "Kaoradel Stjärnskådaren var en känd astrolog som brändes på bål i Orno 2275 e.D. "
+	handelsetabeller.taupiskaforfader[52].beskrivning = "Taupens förfader är Kaoradel Stjärnskådaren, en känd astrolog som brändes på bål i Orno 2275 e.D. "
+	handelsetabeller.taupiskaforfader[52].beskrivninghak = "Expertisen Astrologi 4T6, 3 enheter Mystikfärdigheter.";
+	handelsetabeller.taupiskaforfader[52].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[52].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[52].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[52].subval[0][0][0].astrologi={};
+	handelsetabeller.taupiskaforfader[52].subval[0][0][0].astrologi.enheter=3;
+	handelsetabeller.taupiskaforfader[52].subval[0][0][0].mystikfardigheterenheter=3;
+
+	handelsetabeller.taupiskaforfader[53] = {};
+	handelsetabeller.taupiskaforfader[53].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[53].vald = 0;
+	handelsetabeller.taupiskaforfader[53].rubrik = "Averkes do’Kyra"
+	handelsetabeller.taupiskaforfader[53].beskrivningvaldbas = "Averkes do’Kyra var en mystiker som var inflytelserik inom Den skimrande vägen, men senare även ägnade sig åt nekromanti och påstås ha studerat hos sagitauren Eb av Sha. Hon har efterlämnat artefakten Liber Averica, som dock försvunnit spårlöst i Rampor, samt besvärjelsen Kyras kalla karbunkel. "
+	handelsetabeller.taupiskaforfader[53].beskrivning = "Taupens förfader är Averkes do’Kyra, en mystiker som var inflytelserik inom Den skimrande vägen, men senare även ägnade sig åt nekromanti och påstås ha studerat hos sagitauren Eb av Sha. Hon har efterlämnat artefakten Liber Averica, som dock försvunnit spårlöst i Rampor, samt besvärjelsen Kyras kalla karbunkel. "
+	handelsetabeller.taupiskaforfader[53].beskrivninghak = "\+2 Psyke, lättlärd i Alstra nekrotropi, och två enheter mystikfärdigheter, men Averkes fältstörningar gör sig även påminda i hennes ättlingar genom ett särskilt gulblekt och skelettartat utseende; -2 Intryck och kännetecknet Olycksbådande uppenbarelse 4T6.";
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].psyke={};
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].psyke.varde=2;
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].nekrotropi={};
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].nekrotropi.lattlard=1;
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].mystikfardigheterenheter=2;
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].intryck={};
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].intryck.bonus=-2;
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].olycksbadandeuppenbarelse={};
+	handelsetabeller.taupiskaforfader[53].subval[0][0][0].olycksbadandeuppenbarelse.enheter=3;
+	
+	handelsetabeller.taupiskaforfader[54] = {};
+	handelsetabeller.taupiskaforfader[54].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[54].vald = 0;
+	handelsetabeller.taupiskaforfader[54].rubrik = "Asis av Khamox"
+	handelsetabeller.taupiskaforfader[54].beskrivningvaldbas = "Asis av Khamox var en adjutant åt den berömde lemiriske generalen Raxarales. Asis är relativt okänd i jargisk historieskrivning, men tauperna vet att hon i själva verket var hjärnan bakom flera av Raxarales framgångar, i synnerhet Slaget om Lorno, där hon applicerade lärdomar från ebhronitiska flodbataljer tusentals år tidigare. Hon försvann spårlöst när Lemira föll, men flera av hennes barn benådades av jargierna och fick poster i de kejserliga legionerna. "
+	handelsetabeller.taupiskaforfader[54].beskrivning = "Taupens förfader är Asis av Khamox, en adjutant åt den berömde lemiriske generalen Raxarales. Asis är relativt okänd i jargisk historieskrivning, men tauperna vet att hon i själva verket var hjärnan bakom flera av Raxarales framgångar, i synnerhet Slaget om Lorno, där hon applicerade lärdomar från ebhronitiska flodbataljer tusentals år tidigare. Hon försvann spårlöst när Lemira föll, men flera av hennes barn benådades av jargierna och fick poster i de kejserliga legionerna. "
+	handelsetabeller.taupiskaforfader[54].beskrivninghak = "\+2 Vilja, Krigföring lättlärd";
+	handelsetabeller.taupiskaforfader[54].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[54].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[54].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[54].subval[0][0][0].vilja={};
+	handelsetabeller.taupiskaforfader[54].subval[0][0][0].vilja.varde=2;
+	handelsetabeller.taupiskaforfader[54].subval[0][0][0].krigforing={};
+	handelsetabeller.taupiskaforfader[54].subval[0][0][0].krigforing.lattlard=1;
+	
+	handelsetabeller.taupiskaforfader[55] = {};
+	handelsetabeller.taupiskaforfader[55].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[55].vald = 0;
+	handelsetabeller.taupiskaforfader[55].rubrik = "Zoron av Omeraithos"
+	handelsetabeller.taupiskaforfader[55].beskrivningvaldbas = "Zoron av Omeraithos var geomantiker och arkitekt i Ebhron, och ansvarig för många fantastiska byggnadsverk. "
+	handelsetabeller.taupiskaforfader[55].beskrivning = "Taupens förfader är Zoron av Omeraithos, geomantiker och arkitekt i Ebhron, och ansvarig för många fantastiska byggnadsverk. "
+	handelsetabeller.taupiskaforfader[55].beskrivninghak = "Lättlärd i Kalkylera, 4T6 i Magisk geometri, 1 poäng hantverk";
+	handelsetabeller.taupiskaforfader[55].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[55].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[55].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[55].subval[0][0][0].kalkylera={};
+	handelsetabeller.taupiskaforfader[55].subval[0][0][0].kalkylera.lattlard=1;
+	handelsetabeller.taupiskaforfader[55].subval[0][0][0].magiskgeometri={};
+	handelsetabeller.taupiskaforfader[55].subval[0][0][0].magiskgeometri.enheter=3;
+	handelsetabeller.taupiskaforfader[55].subval[0][0][0].hantverkpoang=1;
+
+	handelsetabeller.taupiskaforfader[56] = {};
+	handelsetabeller.taupiskaforfader[56].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[56].vald = 0;
+	handelsetabeller.taupiskaforfader[56].rubrik = "Atolkes Ayurzeon"
+	handelsetabeller.taupiskaforfader[56].beskrivningvaldbas = "Atolkes Ayurzeon var Navigator inom Navare-kulten i Rampor, sedermera ihjälslagen av tirakiska pirater. "
+	handelsetabeller.taupiskaforfader[56].beskrivning = "Taupens förfader är Atolkes Ayurzeon, Navigator inom Navare-kulten i Rampor, sedermera ihjälslagen av tirakiska pirater. "
+	handelsetabeller.taupiskaforfader[56].beskrivninghak = "Sjömannaskap lättlärd, 1 avtrubbningskryss mot våld";
+	handelsetabeller.taupiskaforfader[56].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[56].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[56].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[56].subval[0][0][0].sjomannaskap={};
+	handelsetabeller.taupiskaforfader[56].subval[0][0][0].sjomannaskap.lattlard=1;
+	handelsetabeller.taupiskaforfader[56].subval[0][0][0].avtrubbningvald=1;
+
+	handelsetabeller.taupiskaforfader[57] = {};
+	handelsetabeller.taupiskaforfader[57].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[57].vald = 0;
+	handelsetabeller.taupiskaforfader[57].rubrik = "Zoa-ukir Borogorna"
+	handelsetabeller.taupiskaforfader[57].beskrivningvaldbas = "Zoa-ukir Borogorna var ebhronitisk lärd som tillbringade mycket tid i Arkipelagen, där han försökte underminera Imay-kultens inflytande och ersätta det med rationella filosofiska idéer. Han omkom under mystiska omständigheter när hans skepp gick i kvav. "
+	handelsetabeller.taupiskaforfader[57].beskrivning = "Taupens förfader är Zoa-ukir Borogorna, ebhronitisk lärd som tillbringade mycket tid i Arkipelagen, där han försökte underminera Imay-kultens inflytande och ersätta det med rationella filosofiska idéer. Han omkom under mystiska omständigheter när hans skepp gick i kvav. "
+	handelsetabeller.taupiskaforfader[57].beskrivninghak = "Lättlärd i Filosofi, svårlärd i Sjömannaskap, 4T6 i Häda och Undergräva självförtroende";
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].filosofi={};
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].filosofi.lattlard=1;
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].sjomannaskap={};
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].sjomannaskap.svarlard=1;
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].hada={};
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].hada.enheter=3;
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].undergravasjalvfortroende={};
+	handelsetabeller.taupiskaforfader[57].subval[0][0][0].undergravasjalvfortroende.enheter=3;
+
+	handelsetabeller.taupiskaforfader[58] = {};
+	handelsetabeller.taupiskaforfader[58].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[58].vald = 0;
+	handelsetabeller.taupiskaforfader[58].rubrik = "Teugetyrov av Loam"
+	handelsetabeller.taupiskaforfader[58].beskrivningvaldbas = "Teugetyrov av Loam var den ende taup som adlats i Nermada (och senare gav upp sin titel för att meditera i Ikamriska bergen). "
+	handelsetabeller.taupiskaforfader[58].beskrivning = "Taupens förfader är Teugetyrov av Loam, den ende taup som adlats i Nermada (och senare gav upp sin titel för att meditera i Ikamriska bergen). "
+	handelsetabeller.taupiskaforfader[58].beskrivninghak = "Hovliv är lättlärd. Expertisen Adelskontakter 4T6.";
+	handelsetabeller.taupiskaforfader[58].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[58].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[58].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[58].subval[0][0][0].hovliv={};
+	handelsetabeller.taupiskaforfader[58].subval[0][0][0].hovliv.lattlard=1;
+	handelsetabeller.taupiskaforfader[58].subval[0][0][0].adelskontakter={};
+	handelsetabeller.taupiskaforfader[58].subval[0][0][0].adelskontakter.enheter=3;
+
+	handelsetabeller.taupiskaforfader[59] = {};
+	handelsetabeller.taupiskaforfader[59].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[59].vald = 0;
+	handelsetabeller.taupiskaforfader[59].rubrik = "Reukaran Strupöppnaren"
+	handelsetabeller.taupiskaforfader[59].beskrivningvaldbas = "Reukaran Strupöppnaren var taupernas skam, en beryktad seriemördare som härjade i Zhirim Mian på 2580-talet. "
+	handelsetabeller.taupiskaforfader[59].beskrivning = "Taupens förfader är Reukaran Strupöppnaren, taupernas skam, en beryktad seriemördare som härjade i Zhirim Mian på 2580-talet. "
+	handelsetabeller.taupiskaforfader[59].beskrivninghak = "Smyga är lättlärd. \+1T6 skada med alla dolkar, Kännetecknet Dåligt rykte 4T6";
+	handelsetabeller.taupiskaforfader[59].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[59].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[59].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[59].subval[0][0][0].smyga={};
+	handelsetabeller.taupiskaforfader[59].subval[0][0][0].smyga.lattlard=1;
+	handelsetabeller.taupiskaforfader[59].subval[0][0][0].formaga="\+1T6 skada med alla dolkar";
+	handelsetabeller.taupiskaforfader[59].subval[0][0][0].daligtrykte={};
+	handelsetabeller.taupiskaforfader[59].subval[0][0][0].daligtrykte.enheter=3;
+
+	handelsetabeller.taupiskaforfader[60] = {};
+	handelsetabeller.taupiskaforfader[60].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[60].vald = 0;
+	handelsetabeller.taupiskaforfader[60].rubrik = "Halibus Harpolekaren"
+	handelsetabeller.taupiskaforfader[60].beskrivningvaldbas = "Halibus Harpolekaren var även känd som ”Den store förringaren”. Gjorde stor framgång vid hoven ute i världen med dråpliga historier som framställde det taupiska folket som idioter och sägs ha sålts sitt eget folks uråldriga hemligheter. Överlevde otaliga förgiftningsförsök innan han höggs ned och dränktes av cirzariddare. "
+	handelsetabeller.taupiskaforfader[60].beskrivning = "Taupens förfader är Halibus Harpolekaren, även känd som ”Den store förringaren”. Gjorde stor framgång vid hoven ute i världen med dråpliga historier som framställde det taupiska folket som idioter och sägs ha sålts sitt eget folks uråldriga hemligheter. Överlevde otaliga förgiftningsförsök innan han höggs ned och dränktes av cirzariddare. "
+	handelsetabeller.taupiskaforfader[60].beskrivninghak = "Sång \& musik lättlärd, \+1T6 livskraft för att motstå gifter";
+	handelsetabeller.taupiskaforfader[60].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[60].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[60].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[60].subval[0][0][0].sangmusik={};
+	handelsetabeller.taupiskaforfader[60].subval[0][0][0].sangmusik.lattlard=1;
+	handelsetabeller.taupiskaforfader[60].subval[0][0][0].livskraft={};
+	handelsetabeller.taupiskaforfader[60].subval[0][0][0].livskraft.bonus="\+1T6 för att motstå gifter";
+	
+	handelsetabeller.taupiskaforfader[61] = {};
+	handelsetabeller.taupiskaforfader[61].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[61].vald = 0;
+	handelsetabeller.taupiskaforfader[61].rubrik = "Opei do’Trivana"
+	handelsetabeller.taupiskaforfader[61].beskrivningvaldbas = "Opei do’Trivana var en framstående gråterska i Ebhron. Opei var oöverträffad i att gråta hjärtskärande vid begravningar, och Kabalordens ledare tävlade om att hyra in henne när de kände sig sentimentala inför någon minneshögtid. Hon levde därför i överflöd, var enligt uppgift mycket lycklig, och fällde aldrig en äkta tår. "
+	handelsetabeller.taupiskaforfader[61].beskrivning = "Taupens förfader är Opei do’Trivana, en framstående gråterska i Ebhron. Opei var oöverträffad i att gråta hjärtskärande vid begravningar, och Kabalordens ledare tävlade om att hyra in henne när de kände sig sentimentala inför någon minneshögtid. Hon levde därför i överflöd, var enligt uppgift mycket lycklig, och fällde aldrig en äkta tår. "
+	handelsetabeller.taupiskaforfader[61].beskrivninghak = "Charm är lättlärd, expertisen Gråta 4T6.";
+	handelsetabeller.taupiskaforfader[61].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[61].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[61].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[61].subval[0][0][0].charm={};
+	handelsetabeller.taupiskaforfader[61].subval[0][0][0].charm.lattlard=1;
+	handelsetabeller.taupiskaforfader[61].subval[0][0][0].grata={};
+	handelsetabeller.taupiskaforfader[61].subval[0][0][0].grata.enheter=3;
+
+	handelsetabeller.taupiskaforfader[62] = {};
+	handelsetabeller.taupiskaforfader[62].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[62].vald = 0;
+	handelsetabeller.taupiskaforfader[62].rubrik = "Sigyan Hammare"
+	handelsetabeller.taupiskaforfader[62].beskrivningvaldbas = "Sigyan Hammare var ledaren för ett drunokiskt hantverkarsällskap som sökte bemästra smideskonsten och skapade otaliga opraktiska men fascinerande konstverk. "
+	handelsetabeller.taupiskaforfader[62].beskrivning = "Taupens förfader är Sigyan Hammare, ledaren för ett drunokiskt hantverkarsällskap som sökte bemästra smideskonsten och skapade otaliga opraktiska men fascinerande konstverk. "
+	handelsetabeller.taupiskaforfader[62].beskrivninghak = "2 poäng Hantverk samt ett imponerande föremål som härstammar från förfadern.";
+	handelsetabeller.taupiskaforfader[62].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[62].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[62].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[62].subval[0][0][0].hantverkpoang=2;
+	handelsetabeller.taupiskaforfader[62].subval[0][0][0].foremal="Eett imponerande föremål som härstammar från förfadern Sigyan Hammare.";
+
+	handelsetabeller.taupiskaforfader[63] = {};
+	handelsetabeller.taupiskaforfader[63].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[63].vald = 0;
+	handelsetabeller.taupiskaforfader[63].rubrik = "Kankian do'Ythales"
+	handelsetabeller.taupiskaforfader[63].beskrivningvaldbas = "Kankian do'Ythales var mästaren inom hjärtats konst och de sensuella njutningarnas apostel. En notorisk sol-och-vårare som i synnerhet hemsökte Jargien och Melorion. Efterlämnade en mängd barn och ett flertal nedskrivna erotiska anekdoter, varav många blivit klassiker i mindre rumsrena sammanhang. "
+	handelsetabeller.taupiskaforfader[63].beskrivning = "Taupens förfader är Kankian do'Ythales, mästaren inom hjärtats konst och de sensuella njutningarnas apostel. En notorisk sol-och-vårare som i synnerhet hemsökte Jargien och Melorion. Efterlämnade en mängd barn och ett flertal nedskrivna erotiska anekdoter, varav många blivit klassiker i mindre rumsrena sammanhang. "
+	handelsetabeller.taupiskaforfader[63].beskrivninghak = "\+2 Intryck och 4T6 i Expertisen Behaga.";
+	handelsetabeller.taupiskaforfader[63].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[63].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[63].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[63].subval[0][0][0].intryck={};
+	handelsetabeller.taupiskaforfader[63].subval[0][0][0].intryck.bonus=2;
+	handelsetabeller.taupiskaforfader[63].subval[0][0][0].behaga={};
+	handelsetabeller.taupiskaforfader[63].subval[0][0][0].behaga.enheter=3;
+
+	handelsetabeller.taupiskaforfader[64] = {};
+	handelsetabeller.taupiskaforfader[64].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[64].vald = 0;
+	handelsetabeller.taupiskaforfader[64].rubrik = "Vexeria Calas"
+	handelsetabeller.taupiskaforfader[64].beskrivningvaldbas = "Vexeria Calas var framstående magiteoretiker i Ebhron, även känd för sin sardoniska humor och en mångfald satirisk poesi. "
+	handelsetabeller.taupiskaforfader[64].beskrivning = "Taupens förfader är Vexeria Calas, framstående magiteoretiker i Ebhron, även känd för sin sardoniska humor och en mångfald satirisk poesi. "
+	handelsetabeller.taupiskaforfader[64].beskrivninghak = "4 enheter mystikfärdigheter, 4T6 i Skämta";
+	handelsetabeller.taupiskaforfader[64].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[64].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[64].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[64].subval[0][0][0].
+	handelsetabeller.taupiskaforfader[64].subval[0][0][0].={};
+	handelsetabeller.taupiskaforfader[64].subval[0][0][0]..enheter=3;
+
+	handelsetabeller.taupiskaforfader[65] = {};
+	handelsetabeller.taupiskaforfader[65].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[65].vald = 0;
+	handelsetabeller.taupiskaforfader[65].rubrik = "Yakom Depon"
+	handelsetabeller.taupiskaforfader[65].beskrivningvaldbas = "Yakom Depon var en mystiker i det avlägsna Menon-Aun. Han påstås ha skapat en vildsint tjur av levande metall åt fursten av Tsan, och gavs i belöning en position vid hovet samt ett helt harem att förlusta sig med, vilket resulterade i talrika barn vars ättlingar idag utgör i stort den enda taupiska befolkningen i fjärran västern. "
+	handelsetabeller.taupiskaforfader[65].beskrivning = "Taupens förfader är Yakom Depon, en mystiker i det avlägsna Menon-Aun. Han påstås ha skapat en vildsint tjur av levande metall åt fursten av Tsan, och gavs i belöning en position vid hovet samt ett helt harem att förlusta sig med, vilket resulterade i talrika barn vars ättlingar idag utgör i stort den enda taupiska befolkningen i fjärran västern. "
+	handelsetabeller.taupiskaforfader[65].beskrivninghak = "4T6 i Behaga och hantverket Metallurg.";
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0].={};
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0]..enheter=3;
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0].={};
+	handelsetabeller.taupiskaforfader[65].subval[0][0][0]..enheter=3;
+
+	handelsetabeller.taupiskaforfader[66] = {};
+	handelsetabeller.taupiskaforfader[66].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[66].vald = 0;
+	handelsetabeller.taupiskaforfader[66].rubrik = "Aramzoan Talok-ka Pria"
+	handelsetabeller.taupiskaforfader[66].beskrivningvaldbas = "Aramzoan Talok-ka Pria var inflytelserik principus orbis för Kabalorden. "
+	handelsetabeller.taupiskaforfader[66].beskrivning = "Taupens förfader är Aramzoan Talok-ka Pria, inflytelserik principus orbis för Kabalorden. "
+	handelsetabeller.taupiskaforfader[66].beskrivninghak = "Hovliv lättlärd, 3 enheter mystikfärdigheter";
+	handelsetabeller.taupiskaforfader[66].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[66].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[66].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[66].subval[0][0][0].hovliv={};
+	handelsetabeller.taupiskaforfader[66].subval[0][0][0].hovliv.lattlard=1;
+	handelsetabeller.taupiskaforfader[66].subval[0][0][0].mystikfardigheterenheter=3;
+
+	handelsetabeller.taupiskaforfader[67] = {};
+	handelsetabeller.taupiskaforfader[67].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[67].vald = 0;
+	handelsetabeller.taupiskaforfader[67].rubrik = "Antonius Charomes"
+	handelsetabeller.taupiskaforfader[67].beskrivningvaldbas = "Antonius Charomes var en framstående bostadsmogul i Daval, som spenderade en inte oansenlig del av sin inte oansenliga förmögenhet med att sponsra expeditioner för att leta efter ett odödlighetselixir som sades ha överlevt från det sjunkna riket Kivam. Han gick emellertid bet, och dog slutligen när ett av hans fuskbyggen kollapsade över honom. "
+	handelsetabeller.taupiskaforfader[67].beskrivning = "Taupens förfader är Antonius Charomes, en framstående bostadsmogul i Daval, som spenderade en inte oansenlig del av sin inte oansenliga förmögenhet med att sponsra expeditioner för att leta efter ett odödlighetselixir som sades ha överlevt från det sjunkna riket Kivam. Han gick emellertid bet, och dog slutligen när ett av hans fuskbyggen kollapsade över honom. "
+	handelsetabeller.taupiskaforfader[67].beskrivninghak = "Handel lättlärd, 4T6 i Byråkrati samt Skylla på andra, kännetecknet Dödsångest 4T6.";
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].handel={};
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].handel.lattlard=1;
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].byrakrati={};
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].byrakrati.enheter=3;
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].skyllapaandra={};
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].skyllapaandra.enheter=3;
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].dodsangest={};
+	handelsetabeller.taupiskaforfader[67].subval[0][0][0].dodsangest.enheter=3;
+
+	handelsetabeller.taupiskaforfader[68] = {};
+	handelsetabeller.taupiskaforfader[68].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[68].vald = 0;
+	handelsetabeller.taupiskaforfader[68].rubrik = "Ysmanes ûl-Jahna"
+	handelsetabeller.taupiskaforfader[68].beskrivningvaldbas = "Ysmanes ûl-Jahna var språkrör för de taupiska familjerna i Jahna i Mûhad, vilka utsattes för en lång serie övergrepp sedan en sinnesrubbad kefal fått för sig att de kidnappat och ritualmördat hans söner (som i själva verket var på krigarträning i Tarkas). Ysmanes klarade sig dock oskadd, och ledde en stor taupisk exodus till Jargien. "
+	handelsetabeller.taupiskaforfader[68].beskrivning = "Taupens förfader är Ysmanes ûl-Jahna, språkrör för de taupiska familjerna i Jahna i Mûhad, vilka utsattes för en lång serie övergrepp sedan en sinnesrubbad kefal fått för sig att de kidnappat och ritualmördat hans söner (som i själva verket var på krigarträning i Tarkas). Ysmanes klarade sig dock oskadd, och ledde en stor taupisk exodus till Jargien. "
+	handelsetabeller.taupiskaforfader[68].beskrivninghak = "Ledarskap och Marsch lättlärda, 4T6 i Se oskyldig ut";
+	handelsetabeller.taupiskaforfader[68].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[68].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[68].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[68].subval[0][0][0].ledarskap={};
+	handelsetabeller.taupiskaforfader[68].subval[0][0][0].ledarskap.lattlard=1;
+	handelsetabeller.taupiskaforfader[68].subval[0][0][0].marsch={};
+	handelsetabeller.taupiskaforfader[68].subval[0][0][0].marsch.lattlard=1;
+	handelsetabeller.taupiskaforfader[68].subval[0][0][0].seoskyldigut={};
+	handelsetabeller.taupiskaforfader[68].subval[0][0][0].seoskyldigut.enheter=3;
+
+	handelsetabeller.taupiskaforfader[69] = {};
+	handelsetabeller.taupiskaforfader[69].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[69].vald = 0;
+	handelsetabeller.taupiskaforfader[69].rubrik = "Ytemus den äldste"
+	handelsetabeller.taupiskaforfader[69].beskrivningvaldbas = "Ytemus den äldste var alkemist i Arlon, även kortvarig skattmästare åt Drunoks drottning Rianna av Valdus, som blev mycket bitter när Ytemus inte kunde trolla fram guld. Däremot trollade han fram en långlivad dynasti av barn och barnbarn, och ett oräkneligt antal översättningar av annars förlorade raunländska skrifter, som han menade förmedlats av andar från ett annat plan. "
+	handelsetabeller.taupiskaforfader[69].beskrivning = "Taupens förfader är Ytemus den äldste, alkemist i Arlon, även kortvarig skattmästare åt Drunoks drottning Rianna av Valdus, som blev mycket bitter när Ytemus inte kunde trolla fram guld. Däremot trollade han fram en långlivad dynasti av barn och barnbarn, och ett oräkneligt antal översättningar av annars förlorade raunländska skrifter, som han menade förmedlats av andar från ett annat plan. "
+	handelsetabeller.taupiskaforfader[69].beskrivninghak = "Kalkylera är svårlärd, Ockultism lättlärd, 4T6 i Barnuppfostran, 3T6 i Automatskrift";
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].kalkylera={};
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].kalkylera.svarlard=1;
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].ockultism={};
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].ockultism.lattlard=1;
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].barnuppfostran={};
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].barnuppfostran.enheter=3;
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].automatskrift={};
+	handelsetabeller.taupiskaforfader[69].subval[0][0][0].automatskrift.enheter=1;
+
+	handelsetabeller.taupiskaforfader[70] = {};
+	handelsetabeller.taupiskaforfader[70].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[70].vald = 0;
+	handelsetabeller.taupiskaforfader[70].rubrik = "Ravargys Vältalaren"
+	handelsetabeller.taupiskaforfader[70].beskrivningvaldbas = "Ravargys Vältalaren var en lärd i Ciremelo som fick äran att undervisa många cirefalier i konsten att hålla tal timmar i sträck. "
+	handelsetabeller.taupiskaforfader[70].beskrivning = "Taupens förfader är Ravargys Vältalaren, en lärd i Ciremelo som fick äran att undervisa många cirefalier i konsten att hålla tal timmar i sträck. "
+	handelsetabeller.taupiskaforfader[70].beskrivninghak = "\+2 Tålighet, Argumentera är lättlärd.";
+	handelsetabeller.taupiskaforfader[70].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[70].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[70].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[70].subval[0][0][0].talighet={};
+	handelsetabeller.taupiskaforfader[70].subval[0][0][0].talighet.varde=2;
+	handelsetabeller.taupiskaforfader[70].subval[0][0][0].argumentera={};
+	handelsetabeller.taupiskaforfader[70].subval[0][0][0].argumentera.lattlard=1;
+
+	handelsetabeller.taupiskaforfader[71] = {};
+	handelsetabeller.taupiskaforfader[71].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[71].vald = 0;
+	handelsetabeller.taupiskaforfader[71].rubrik = "Aranhezeviukes do’Delev"
+	handelsetabeller.taupiskaforfader[71].beskrivningvaldbas = "Aranhezeviukes do’Delev var berömd segtastor som vandrade från Jargien till Gordrion och einosdalen i jakt på krigisk perfektion. "
+	handelsetabeller.taupiskaforfader[71].beskrivning = "Taupens förfader är Aranhezeviukes do’Delev, berömd segtastor som vandrade från Jargien till Gordrion och einosdalen i jakt på krigisk perfektion. "
+	handelsetabeller.taupiskaforfader[71].beskrivninghak = "\+2 Reaktion, och arvegods i form av ett utsökt bevarat Mirapata-svärd med \+2 bonus i hugg- och stickskada";
+	handelsetabeller.taupiskaforfader[71].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[71].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[71].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[71].subval[0][0][0].reaktion={};
+	handelsetabeller.taupiskaforfader[71].subval[0][0][0].reaktion.bonus=2;
+	handelsetabeller.taupiskaforfader[71].subval[0][0][0].foremal="Ett arvegods i form av ett utsökt bevarat Mirapata-svärd med \+2 bonus i hugg- och stickskada."; 
+
+	handelsetabeller.taupiskaforfader[72] = {};
+	handelsetabeller.taupiskaforfader[72].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[72].vald = 0;
+	handelsetabeller.taupiskaforfader[72].rubrik = "Yidanov do’Skaco"
+	handelsetabeller.taupiskaforfader[72].beskrivningvaldbas = "Yidanov do’Skaco var en gåtmästare och vandrare som försvann på jakt efter den förlorade staden Zharashapur. "
+	handelsetabeller.taupiskaforfader[72].beskrivning = "Taupens förfader är Yidanov do’Skaco, en gåtmästare och vandrare som försvann på jakt efter den förlorade staden Zharashapur. "
+	handelsetabeller.taupiskaforfader[72].beskrivninghak = "3 enheter vildmarksfärdigheter, 4T6 i Gåtor";
+	handelsetabeller.taupiskaforfader[72].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[72].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[72].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[72].subval[0][0][0].vildmarksfardigheterenheter=3;
+	handelsetabeller.taupiskaforfader[72].subval[0][0][0].gator={};
+	handelsetabeller.taupiskaforfader[72].subval[0][0][0].gator.enheter=3;
+
+	handelsetabeller.taupiskaforfader[73] = {};
+	handelsetabeller.taupiskaforfader[73].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[73].vald = 0;
+	handelsetabeller.taupiskaforfader[73].rubrik = "Antonius Taupes Major"
+	handelsetabeller.taupiskaforfader[73].beskrivningvaldbas = "Antonius Taupes Major var en kontroversiell filosofi vid universitetet i Erat, känd för sin integritet; bränd på bål 2856 e.D. "
+	handelsetabeller.taupiskaforfader[73].beskrivning = "Taupens förfader är Antonius Taupes Major, en kontroversiell filosofi vid universitetet i Erat, känd för sin integritet; bränd på bål 2856 e.D. "
+	handelsetabeller.taupiskaforfader[73].beskrivninghak = "\+1 Vilja, Filosofi lättlärd, 4T6 i Häda";
+	handelsetabeller.taupiskaforfader[73].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[73].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[73].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[73].subval[0][0][0].vilja={};
+	handelsetabeller.taupiskaforfader[73].subval[0][0][0].vilja.varde=1;
+	handelsetabeller.taupiskaforfader[73].subval[0][0][0].filosofi={};
+	handelsetabeller.taupiskaforfader[73].subval[0][0][0].filosofi.lattlard=1;
+	handelsetabeller.taupiskaforfader[73].subval[0][0][0].hada={};
+	handelsetabeller.taupiskaforfader[73].subval[0][0][0].hada.enheter=3;
+
+	handelsetabeller.taupiskaforfader[74] = {};
+	handelsetabeller.taupiskaforfader[74].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[74].vald = 0;
+	handelsetabeller.taupiskaforfader[74].rubrik = "Yava Yarmilas"
+	handelsetabeller.taupiskaforfader[74].beskrivningvaldbas = "Yava Yarmilas var en ebhronitisk magiteoretiker, inflytelserik för sina teorier om idévärlden Hyperuranion. När hon drabbades av borttoning vid 390 års ålder hade hon gjort ett namn för sig dels på grund av sin oefterhärmliga skicklighet i att kontra andras magi, och dels för sin spektakulära hybris. "
+	handelsetabeller.taupiskaforfader[74].beskrivning = "Taupens förfader är Yava Yarmilas, en ebhronitisk magiteoretiker, inflytelserik för sina teorier om idévärlden Hyperuranion. När hon drabbades av borttoning vid 390 års ålder hade hon gjort ett namn för sig dels på grund av sin oefterhärmliga skicklighet i att kontra andras magi, och dels för sin spektakulära hybris. "
+	handelsetabeller.taupiskaforfader[74].beskrivninghak = "\+1 Vilja, Förvränga lättlärd, 4T6 i Författa, karaktärsdraget Makt som svaghet (låst)";
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0].vilja={};
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0].vilja.varde=1;
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0].forvranga={};
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0].forvranga.lattlard=1;
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0].forfatta={};
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0].forfatta.enheter=3;
+	handelsetabeller.taupiskaforfader[74].subval[0][0][0].karaktarsdrag="Makt är låst och svaghet.";
+
+	handelsetabeller.taupiskaforfader[75] = {};
+	handelsetabeller.taupiskaforfader[75].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[75].vald = 0;
+	handelsetabeller.taupiskaforfader[75].rubrik = "Ytemus den äldre"
+	handelsetabeller.taupiskaforfader[75].beskrivningvaldbas = "Ytemus den äldre var extremt produktiv ikonmålare (och hemlig magiker och schaman) i Randarro. Även känd för sina tolv namnkunniga söner, och ritualen Ytemus ikonomantiska åkallan. Enligt vissa rykten lever han ännu vidare som primod av Sankt Kira. "
+	handelsetabeller.taupiskaforfader[75].beskrivning = "Taupens förfader är Ytemus den äldre, extremt produktiv ikonmålare (och hemlig magiker och schaman) i Randarro. Även känd för sina tolv namnkunniga söner, och ritualen Ytemus ikonomantiska åkallan. Enligt vissa rykten lever han ännu vidare som primod av Sankt Kira. "
+	handelsetabeller.taupiskaforfader[75].beskrivninghak = "3 enheter mystikfärdigheter, Lättlärd i Dupera";
+	handelsetabeller.taupiskaforfader[75].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[75].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[75].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[75].subval[0][0][0].mystikfardigheterenheter=3;
+	handelsetabeller.taupiskaforfader[75].subval[0][0][0].dupera={};
+	handelsetabeller.taupiskaforfader[75].subval[0][0][0].dupera.lattlard=1;
+
+	handelsetabeller.taupiskaforfader[76] = {};
+	handelsetabeller.taupiskaforfader[76].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[76].vald = 0;
+	handelsetabeller.taupiskaforfader[76].rubrik = "Ytemus den yngre"
+	handelsetabeller.taupiskaforfader[76].beskrivningvaldbas = "Ytemus den yngre var visir åt Voroman Tero under dennes extremt misslyckade försök att grunda kungariket Voromanien. Hur mycket Ytemus själv hade med travestin att göra är oklart; senare i livet bodde han hur som helst i en stuga i Skuggskogen, där han fullbordade ett flertal skrifter, och hade en stormig kärleksaffär med en rimur från Månskenshovet. "
+	handelsetabeller.taupiskaforfader[76].beskrivning = "Taupens förfader är Ytemus den yngre, visir åt Voroman Tero under dennes extremt misslyckade försök att grunda kungariket Voromanien. Hur mycket Ytemus själv hade med travestin att göra är oklart; senare i livet bodde han hur som helst i en stuga i Skuggskogen, där han fullbordade ett flertal skrifter, och hade en stormig kärleksaffär med en rimur från Månskenshovet. "
+	handelsetabeller.taupiskaforfader[76].beskrivninghak = "2 enheter kunskapsfärdigheter, 3T6 i expertisen Skugglandsfärd, Kännetecknet Dåliga idéer 4T6";
+	handelsetabeller.taupiskaforfader[76].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[76].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[76].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[76].subval[0][0][0].kunskapsfardigheterenheter=2;
+	handelsetabeller.taupiskaforfader[76].subval[0][0][0].skugglandsfard={};
+	handelsetabeller.taupiskaforfader[76].subval[0][0][0].skugglandsfard.enheter=1;
+	handelsetabeller.taupiskaforfader[76].subval[0][0][0].daligaideer={};
+	handelsetabeller.taupiskaforfader[76].subval[0][0][0].daligaideer.enheter=3;
+
+	handelsetabeller.taupiskaforfader[77] = {};
+	handelsetabeller.taupiskaforfader[77].subval=[[[]]]
+	handelsetabeller.taupiskaforfader[77].vald = 0;
+	handelsetabeller.taupiskaforfader[77].rubrik = "Heeros"
+	handelsetabeller.taupiskaforfader[77].beskrivningvaldbas = "Heeros var som uppfann stridskonsten Naturens styrka, och dedikerade sitt liv åt att stävja all ondska. Han påstås fortfarande vara i livet och föra en eremitisk existens på Asha-slätten. "
+	handelsetabeller.taupiskaforfader[77].beskrivning = "Taupens förfader är Heeros, som uppfann stridskonsten Naturens styrka, och dedikerade sitt liv åt att stävja all ondska. Han påstås fortfarande vara i livet och föra en eremitisk existens på Asha-slätten. "
+	handelsetabeller.taupiskaforfader[77].beskrivninghak = "Lättlärd i Slagsmål och Naturlära, \+2T6 skada med obeväpnade attacker";
+	handelsetabeller.taupiskaforfader[77].subval[0][0][0] = {};
+	handelsetabeller.taupiskaforfader[77].subval[0][0][0].valdasub = [];
+	handelsetabeller.taupiskaforfader[77].subval[0][0][0].vald = 0;
+	handelsetabeller.taupiskaforfader[77].subval[0][0][0].slagsmal={};
+	handelsetabeller.taupiskaforfader[77].subval[0][0][0].slagsmal.lattlard=1;
+	handelsetabeller.taupiskaforfader[77].subval[0][0][0].naturlara={};
+	handelsetabeller.taupiskaforfader[77].subval[0][0][0].naturlara.lattlard=1;
+	handelsetabeller.taupiskaforfader[77].subval[0][0][0].formaga="\+2T6 skada med obeväpnade attacker.";
+	
+	
+	
+	
 	
 	
 	
