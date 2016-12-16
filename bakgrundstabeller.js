@@ -7,7 +7,7 @@
 	var bakgrundstabeller = {};
 	var i;
 	bakgrundstabeller.lista=bakgrundstabellista;
-    
+    bakgrundstabeller.rubriker=["Jargiens befolkning", "Vildmark", "Nermadas befolkning"];
     // --- //
     
     bakgrundstabeller.jargiensbefolkning = [];
