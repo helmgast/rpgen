@@ -101,6 +101,11 @@ function borjaenhetsanvandning(rollperson){
 		
 	}
 	
+	// Visningsbool för formulär
+	rollperson.anvandenheter.visahojningssvarighet=0;
+	rollperson.anvandenheter.visastyrandeattribut=0;
+	rollperson.anvandenheter.visahojsank=0;
+	
 	//console.log("borjaenhetsanvandning, objekt skapas");
 	
 	

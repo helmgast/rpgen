@@ -1751,29 +1751,32 @@ function skrivhandelsetabellerkategorier(){
 		}
 	}
 	
+	
+	
 	// Övriga händelsetabeller
 	for (i=0;i<handelsetabeller.listaovrig.length;i++){
-		
-		if (handelsetabeller[handelsetabeller.listaovrig[i]][0].folkslag.indexOf(rollperson.folkslag.namn)>=0){
-			kvarslag=0;
-			if (handelsetabeller[handelsetabeller.listaovrig[i]][0].vald < handelsetabeller[handelsetabeller.listaovrig[i]][0].maxslag){
-				for (j=0;j<handelsetabeller[handelsetabeller.listaovrig[i]][0].tabellslag.length;j++){
-					kvarslag += rollperson["kvar_" + handelsetabeller[handelsetabeller.listaovrig[i]][0].tabellslag[j]];
-					kvarslag += rollperson.kvar_valfriatabellslag;
+		if ("folkslag" in rollperson){
+			if (handelsetabeller[handelsetabeller.listaovrig[i]][0].folkslag.indexOf(rollperson.folkslag.namn)>=0){
+				kvarslag=0;
+				if (handelsetabeller[handelsetabeller.listaovrig[i]][0].vald < handelsetabeller[handelsetabeller.listaovrig[i]][0].maxslag){
+					for (j=0;j<handelsetabeller[handelsetabeller.listaovrig[i]][0].tabellslag.length;j++){
+						kvarslag += rollperson["kvar_" + handelsetabeller[handelsetabeller.listaovrig[i]][0].tabellslag[j]];
+						kvarslag += rollperson.kvar_valfriatabellslag;
+					}
 				}
-			}
-			if (rollperson.redoforhandelsetabellslag==1){
-				
-				if (kvarslag>0){
-					htmlkod += "<a id=\"rpvalkategori_" + handelsetabeller[handelsetabeller.listaovrig[i]][0].namn + "\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"bythandelsetabell('" + handelsetabeller[handelsetabeller.listaovrig[i]][0].namn + "');return false;\">";  
+				if (rollperson.redoforhandelsetabellslag==1){
 					
+					if (kvarslag>0){
+						htmlkod += "<a id=\"rpvalkategori_" + handelsetabeller[handelsetabeller.listaovrig[i]][0].namn + "\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"bythandelsetabell('" + handelsetabeller[handelsetabeller.listaovrig[i]][0].namn + "');return false;\">";  
+						
+					}
 				}
-			}
-			htmlkod += handelsetabeller[handelsetabeller.listaovrig[i]][0].rubrik;
-			
-			if (rollperson.redoforhandelsetabellslag==1){
-				if (kvarslag>0){
-					htmlkod +="</a>";
+				htmlkod += handelsetabeller[handelsetabeller.listaovrig[i]][0].rubrik;
+				
+				if (rollperson.redoforhandelsetabellslag==1){
+					if (kvarslag>0){
+						htmlkod +="</a>";
+					}
 				}
 			}
 		}
@@ -4020,6 +4023,25 @@ function formularsvy(rollperson){
 	htmlkod += "Spara enhetsköp" + ""; 
 	htmlkod +="</a>"; 
 	
+	
+	/*
+	htmlkod +="<br>";
+	htmlkod +="<span id=\"visadoljhojningssvarighet\">";
+	htmlkod += "<a id=\"visahojningssvarighet" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"visahojningssvarighet(rollperson);return false;\">";
+	htmlkod += "Visa höjningssvårigheter" + ""; 
+	htmlkod +="</a>"; 
+	htmlkod +="</span>";
+	
+	htmlkod += " &#124; ";
+	
+	htmlkod +="<span id=\"visadoljstyrandeattribut\">";
+	htmlkod += "<a id=\"visastyrandeattribut" + "\" title=\"\" href=\"PleaseEnableJavascript.html\" onclick=\"visastyrandeattribut(rollperson);return false;\">";
+	htmlkod += "Visa styrande attribut" + ""; 
+	htmlkod +="</a>"; 
+	htmlkod +="</span>";
+	
+	*/
+	
 	formkod="";
 	formkod+="<div class='garald'>";
 	formkod +="<table style='width:100%'>";
@@ -4311,18 +4333,18 @@ function formularsvy(rollperson){
 	// Spalt 1
 	formkod +="<td style='vertical-align:top;width:33%'>";
 	formkod +="<table style='width:100%'>";
-	katkod=formular_fardighetskategori(rollperson,"stridsfardigheter",hojsank,styr,hojsvar);
+	katkod=formular_fardighetskategori(rollperson,"stridsfardigheter");
 	formkod+=katkod;
 	
 	formkod +="<tr><td colspan='6'>&nbsp;</td></tr>";
 	
-	katkod=formular_fardighetskategori(rollperson,"rorelsefardigheter",hojsank,styr,hojsvar);
+	katkod=formular_fardighetskategori(rollperson,"rorelsefardigheter");
 	formkod+=katkod;
 	
 	formkod +="<tr><td colspan='6'>&nbsp;</td></tr>";
 	
 	
-	katkod=formular_fardighetskategori(rollperson,"mystikfardigheter",hojsank,styr,hojsvar);
+	katkod=formular_fardighetskategori(rollperson,"mystikfardigheter");
 	formkod+=katkod;
 	
 	formkod +="</table>";
@@ -4331,13 +4353,13 @@ function formularsvy(rollperson){
 	// Spalt 2
 	formkod +="<td style='vertical-align:top;width:33%'>";
 	formkod +="<table style='width:100%'>";
-	katkod=formular_fardighetskategori(rollperson,"socialafardigheter",hojsank,styr,hojsvar);
+	katkod=formular_fardighetskategori(rollperson,"socialafardigheter");
 	formkod+=katkod;
 	
 	formkod +="<tr><td colspan='6'>&nbsp;</td></tr>";
 	
 	
-	katkod=formular_fardighetskategori(rollperson,"kunskapsfardigheter",hojsank,styr,hojsvar);
+	katkod=formular_fardighetskategori(rollperson,"kunskapsfardigheter");
 	formkod+=katkod;
 	
 	
@@ -4347,7 +4369,7 @@ function formularsvy(rollperson){
 	// Spalt 3
 	formkod +="<td style='vertical-align:top;width:33%'>";
 	formkod +="<table style='width:100%'>";
-	katkod=formular_fardighetskategori(rollperson,"vildmarksfardigheter",hojsank,styr,hojsvar);
+	katkod=formular_fardighetskategori(rollperson,"vildmarksfardigheter");
 	formkod+=katkod;
 	
 	formkod +="<tr><td colspan='7'>&nbsp;</td></tr>";
@@ -4728,10 +4750,15 @@ function formularsvy(rollperson){
 	document.getElementById("hogerkategorirubrik").innerHTML = "";
 	document.getElementById("hogerkategoribeskrivning").innerHTML = formkod;
 }
-function formular_fardighetskategori(rollperson,kategorinamn,hojsank,styr,hojsvar){
+function formular_fardighetskategori(rollperson,kategorinamn){
 	// Hojsank=1 innebär att användaren kan styra över höjningar, vilka som ska vara lättlärda osv.
 	// Styr anger om styrande attribut ska skrivas ut
 	// hojsvar anger om höjningssvårigheten ska skrivas ut
+	
+	var hojsank=rollperson.anvandenheter.visahojsank;
+	var styr=rollperson.anvandenheter.visastyrandeattribut;
+	var hojsvar=rollperson.anvandenheter.visahojningssvarighet;
+	
 	
 	fardighetslistaobjekt=hamta_fardighetslistaobjekt();
 	fardighetsobjekt=hamta_fardighetsobjekt();
@@ -4744,6 +4771,8 @@ function formular_fardighetskategori(rollperson,kategorinamn,hojsank,styr,hojsva
 	katkod+=fardighetslistaobjekt[kategorinamn].rubrik;
 	katkod+="</th>";
 	katkod+="</tr>";
+	
+	
 	
 	//console.log(kategorinamn);
 	//console.log(fardighetslistaobjekt[kategorinamn].lista.length);
@@ -4784,9 +4813,10 @@ function formular_fardighetskategori(rollperson,kategorinamn,hojsank,styr,hojsva
 			
 			// Styrattribut-TBF
 			if ("styrandeattribut" in rollperson[fardighetsnamn]){
-				katkod+="\(" + attributobjekt.forkortning[rollperson[fardighetsnamn].styrandeattribut] + "\)";
+				if (rollperson[fardighetsnamn].styrandeattribut.length>1){
+					katkod+="\(" + attributobjekt.forkortning[rollperson[fardighetsnamn].styrandeattribut] + "\)";
+				}
 			}
-			
 			
 		}
 		katkod+="</td>";
@@ -4798,7 +4828,6 @@ function formular_fardighetskategori(rollperson,kategorinamn,hojsank,styr,hojsva
 				katkod+="\(" + rollperson[fardighetsnamn].hojningssvarighet.toString() + "\)";
 			}
 			
-			
 		}
 		katkod+="</td>";
 		katkod+="</tr>";
@@ -4808,8 +4837,15 @@ function formular_fardighetskategori(rollperson,kategorinamn,hojsank,styr,hojsva
 	
 	//console.log("Katkod: " + katkod)
 	return katkod
-
 }
+
+function formular_visakategori(kategorinamn){
+}
+
+function formular_doljkategori(kategorinamn){
+}
+
+
 function enhetsvy(rollperson){
 	visavansterspalt();
 	rpvalkategori('anvandenheter');
@@ -4840,6 +4876,7 @@ function rpvalkategori(kategorinamn){
 		document.getElementById("hogerkategoribeskrivning").scrollTop=0;
 		skrivarketypmiljo("miljo");
 	}else if (kategorinamn =="handelsetabeller"){
+		console.log("I rpvalkategori, handelsetabeller skrivs.")
 		skrivhandelsetabeller(0);
 		document.getElementById("hogerkategoribeskrivning").scrollTop=0;
 		skrivhandelsetabellerkategorier();
@@ -6389,16 +6426,14 @@ function forberedslumparollperson(){
 	arketypobjekt=hamta_arketyplistor();
 	miljoobjekt=hamta_miljolistor();
 	
-	arketypobjekt.rubriker = ["Donare", "Krigare", "Ledare", "Lärd", "Mystiker", "Skugga", "Underhållare"];
-	miljoobjekt.rubriker=["Hav","Hov","Landsbygd","Lärosäte","Stad","Undre världen","Vildmark"];
+	
 	vallistaarray=[folkslagobjekt.lista, arketypobjekt.lista, miljoobjekt.lista];
 	vallistarubrikarray=[folkslagobjekt.rubriker, arketypobjekt.rubriker, miljoobjekt.rubriker];
 	
 	
-    	bakgrundstabellista=bakgrundstabeller.lista;
-	//bakgrundstabellrubriker=bakgrundstabeller.rubriker;
-	bakgrundstabellrubriker=["Jargiens befolkning", "Vildmark", "Nermadas befolkning"];
-	console.log(bakgrundstabellrubriker);
+    bakgrundstabellista=bakgrundstabeller.lista;
+	bakgrundstabellrubriker=bakgrundstabeller.rubriker;
+
 	slumpobjekt={};
 	slumpobjektrubrik={};
 	
@@ -7910,7 +7945,7 @@ a:active {
 		<td id="raknautattribut">
 		<!-- <a href="PleaseEnableJavascript.html" onclick="raknautattribut();return false;">Räkna ut attribut</a> -->
 		</td>
-		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2016-12-06</i></td>
+		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2016-12-22</i></td>
 		</tr>
 		</table>
 		</div>
