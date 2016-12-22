@@ -27,7 +27,8 @@
 	//var folkslaglista = ["zolod"];
 	var folkslagobjekt={};
 	folkslagobjekt.lista=folkslaglista;
-	
+	folkslagobjekt.rubriker=["adasier", "cermirier", "cirefalier", "fedaki", "genver", "jahann", "jargier", "kamorian", "marnakhtirak", "missla", "pyar", "taup", "utmarkare", "zolod"];
+
 	fardighetslistaobjekt = hamta_fardighetslistaobjekt(); // Behövs för zolods 5T6 Hantverksfärdighet
 	hantverkfardigheter=fardighetslistaobjekt.hantverkfardigheter.lista;
 	fardighetsobjekt=hamta_fardighetsobjekt();
