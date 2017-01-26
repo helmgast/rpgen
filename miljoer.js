@@ -480,7 +480,7 @@
 	stad.subval[1][4][0].vald = 0;
 	stad.subval[1][4][0].rubrik="Hantverk";
 	stad.subval[1][4][0].beskrivning="1 poäng Hantverk";
-	stad.subval[1][4][0].hantverkpoangpoang=1;
+	stad.subval[1][4][0].hantverkpoang=1;
 	
 	stad.subval[1].push([]);
 	stad.subval[1][5][0] = {};
