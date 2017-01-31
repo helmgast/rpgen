@@ -1326,7 +1326,7 @@
 	bakgrundstabeller.nermadasbefolkning[1].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[1].hantverkpoang=2;
 	bakgrundstabeller.nermadasbefolkning[1].beskrivning="Konsten att planera såväl hus som broar och andra byggen är såväl viktig som uppskattad, och dess utövare är ofta välbetalda. På detta område anses nermadierna tillhöra Mundanas allra främsta.";
-	bakgrundstabeller.nermadasbefolkning[1].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 2 poäng Hantverk.";
+	//bakgrundstabeller.nermadasbefolkning[1].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[2] = {};
@@ -1337,7 +1337,7 @@
 	bakgrundstabeller.nermadasbefolkning[2].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[2].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[2].beskrivning="Den som kan underhålla med musik och medryckande berättelser blir väl mottagen vart han än vandrar.";
-	bakgrundstabeller.nermadasbefolkning[2].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
+	//bakgrundstabeller.nermadasbefolkning[2].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[3] = {};
@@ -1348,7 +1348,7 @@
 	bakgrundstabeller.nermadasbefolkning[3].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[3].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[3].beskrivning="Baroner och baronessor är inflytelserika länsherrar som styr ett län i utbyte mot en trohetsed till en av de sju grevarna och glatt intrigerar sinsemellan för att öka sin makt.";
-	bakgrundstabeller.nermadasbefolkning[3].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
+	//bakgrundstabeller.nermadasbefolkning[3].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[4] = {};
@@ -1359,7 +1359,7 @@
 	bakgrundstabeller.nermadasbefolkning[4].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[4].hantverkpoang=2;
 	bakgrundstabeller.nermadasbefolkning[4].beskrivning="Även i ett samhälle som det nermadiska, där bödeln inte befinner sig på botten av samhället, rör det sig om en fruktad och mytomspunnen person.";
-	bakgrundstabeller.nermadasbefolkning[4].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Hantverk.";
+	//bakgrundstabeller.nermadasbefolkning[4].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[5] = {};
@@ -1370,7 +1370,7 @@
 	bakgrundstabeller.nermadasbefolkning[5].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[5].stridsfardigheterenheter=4
 	bakgrundstabeller.nermadasbefolkning[5].beskrivning="Såväl i städerna som på landsbygden finns det folk som använder sig av allehanda ohederliga och inte sällan våldsamma metoder för att försöka bli rika eller bara överleva till nästa dag.";
-	bakgrundstabeller.nermadasbefolkning[5].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
+	//bakgrundstabeller.nermadasbefolkning[5].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[6] = {};
@@ -1381,7 +1381,7 @@
 	bakgrundstabeller.nermadasbefolkning[6].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[6].kanneteckenpoang=2;
 	bakgrundstabeller.nermadasbefolkning[6].beskrivning="Uråldriga traditioner från det coloniska imperiet förvaltas av de skickligaste underhållare, som framför fantastiska berättelser med sina akrobatiska danser.";
-	bakgrundstabeller.nermadasbefolkning[6].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken."
+	//bakgrundstabeller.nermadasbefolkning[6].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.nermadasbefolkning[7] = {};
@@ -1392,7 +1392,7 @@
 	bakgrundstabeller.nermadasbefolkning[7].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[7].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[7].beskrivning="Vare sig de tjänar vid furstehov inom landet eller som Nermadas ambassadörer i fjärran länder är diplomaterna aktade för sina insatser och fruktade för sina lena tungor och slipade intellekt. ";
-	bakgrundstabeller.nermadasbefolkning[7].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter."
+	//bakgrundstabeller.nermadasbefolkning[7].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter."
 
 
 	bakgrundstabeller.nermadasbefolkning[8] = {};
@@ -1403,7 +1403,7 @@
 	bakgrundstabeller.nermadasbefolkning[8].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[8].expertispoang=2;
 	bakgrundstabeller.nermadasbefolkning[8].beskrivning="Döden tar alla, och alla måste tas om hand när livet är slut. Att gräva gravar och hantera de döda anses ofta vara en av samhällets lägsta sysslor, men deras täta kontakter med prästerskapet gör många dödgrävare förvånansvärt kunniga på allehanda områden.";
-	bakgrundstabeller.nermadasbefolkning[8].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Rörelsefärdigheter, 2 poäng Expertiser.";
+	//bakgrundstabeller.nermadasbefolkning[8].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Rörelsefärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[9] = {};
@@ -1415,7 +1415,7 @@
 	bakgrundstabeller.nermadasbefolkning[9].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[9].expertispoang=2;
 	bakgrundstabeller.nermadasbefolkning[9].beskrivning="Havet skänker nermadierna en stor del av deras föda, och det anses vara ett rejält och hederligt arbete att med envishet och skicklighet skörda dess frukter.";
-	bakgrundstabeller.nermadasbefolkning[9].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 2 poäng Expertiser.";
+	//bakgrundstabeller.nermadasbefolkning[9].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[10] = {};
@@ -1426,7 +1426,7 @@
 	bakgrundstabeller.nermadasbefolkning[10].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[10].expertispoang=2;
 	bakgrundstabeller.nermadasbefolkning[10].beskrivning="De lärda fyller mångahanda roller i samhället, och deras kunskaper kan vara av de mest skiftande slag. För många är en tjänst där man undervisar och rådger vid hoven den mest önskade sysslan, men lärda arbetar också inom handelsbolag eller på lägre poster inom administrationen.";
-	bakgrundstabeller.nermadasbefolkning[10].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 2 poäng Expertiser.";
+	//bakgrundstabeller.nermadasbefolkning[10].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[11] = {};
@@ -1841,18 +1841,62 @@
 	bakgrundstabeller.nermadasbefolkning[50].beskrivning="Kanske finns det inget mer typiskt nermadiskt yrke än den nobla sysselsättningen att förhandla fram äktenskap.";
 	bakgrundstabeller.nermadasbefolkning[50].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter."
 	
-
+	handelsetabellista=hamta_handelsetabellista();
+	fardighetslistaobjekt=hamta_fardighetslistaobjekt();
+	fardighetsgrupplista=fardighetslistaobjekt.fardighetsgrupplista;
+	fardighetsgrupplista_plur=fardighetslistaobjekt.fardighetsgrupplista_plur;
+	ovrigafardighetergrupplista_namn=fardighetslistaobjekt.ovrigafardighetergrupplista_namn;
+	ovrigafardighetergrupplista_plur=fardighetslistaobjekt.ovrigafardighetergrupplista_plur;
+	// Nummer
+	
+	console.log("handelsetabellista.namn: " + handelsetabellista.namn);
+	console.log("handelsetabellista.rubrik: " + handelsetabellista.rubrik);
 	
 	for (i=0;i<bakgrundstabeller.lista.length;i++){
 		// Lägger till nummer på bakgrundstabell för att senare sparas under rollpersonsobjektet.
 		bakgrundstabeller[bakgrundstabeller.lista[i]][0].nummer=i;
+	
+	
 	}
 	
-
 	for (m=0; m < bakgrundstabeller.lista.length; m++){
 	
     	for (n=1;n < bakgrundstabeller[bakgrundstabeller.lista[m]].length; n++){
-    		//bakgrundstabeller[bakgrundstabeller.lista[m]][n].tabellresultat = n;
+			//Tabellnamn
+			bakgrundstabeller[bakgrundstabeller.lista[m]][n].tabellnamn=bakgrundstabeller[bakgrundstabeller.lista[m]][0].namn;
+			bakgrundstabeller[bakgrundstabeller.lista[m]][n].tabellrubrik=bakgrundstabeller[bakgrundstabeller.lista[m]][0].rubrik;
+			// Beskrivninghak
+			if ("beskrivninghak" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
+				// Skapa inget om det redan finns
+			}else{
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak="";
+				for (i=0;i<handelsetabellista.namn.length;i++){
+					if (handelsetabellista.namn[i] in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
+						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += "1 slag på " + handelsetabellista.rubrik[i];
+					}
+				}
+				if ("valfriatabellslag" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
+					bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += "1 slag på valfri tabell, ";
+				}
+				
+				for (i=0;i<7;i++){ // De sex vanliga kategorierna plus språk
+					if (fardighetsgrupplista[i] + "enheter" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
+						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += ", 4 enheter " + fardighetsgrupplista_plur[i];
+					}
+				}
+				
+				for (i=0;i<ovrigafardighetergrupplista_namn.length;i++){
+					if (ovrigafardighetergrupplista_namn[i] + "poang" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
+						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak +=", 2 poäng " + ovrigafardighetergrupplista_plur[i];
+					}
+				}
+				
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += ".";
+			}
+			
+			// Plural och bestämd form
+	
+			//bakgrundstabeller[bakgrundstabeller.lista[m]][n].tabellresultat = n;
         	bakgrundstabeller[bakgrundstabeller.lista[m]][n].tabellnamn = bakgrundstabeller.lista[m];  
         	
 			if ("obestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){

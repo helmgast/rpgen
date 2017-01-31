@@ -29,6 +29,8 @@ function valj_bakgrund(rollperson, slump){
 		
 	}else if (slump == 1){
 		rollperson.bakgrund = clone(bakgrundstabellslag(slump));
+	
+		
 	}
 	return rollperson
 }
@@ -1901,8 +1903,8 @@ function rpval () {
     
 	// Variabeln kvar_[handelsetabellnamn] används vid tabellslagen för att skilja på totala antalet slag och kvarvarande slag
 	handelsetabellista=hamta_handelsetabellista();
-	for (i=0; i<handelsetabellista.length;i++){
-		this["kvar_" + handelsetabellista[i]]=0;
+	for (i=0; i<handelsetabellista.namn.length;i++){
+		this["kvar_" + handelsetabellista.namn[i]]=0;
 	}
 	this["kvar_valfriatabellslag"]=0;
 }
@@ -1935,7 +1937,7 @@ function hamta_rpvalmatris(){
 	// handelsetabellista=handelsetabeller.lista;
 	
 	handelsetabellista=hamta_handelsetabellista();
-	//handelsetabellista=["farderaventyr", "intrigerillgarningar", "kunskapmysterier", "striderdrabbningar"];
+	//handelsetabellista.namn=["farderaventyr", "intrigerillgarningar", "kunskapmysterier", "striderdrabbningar"];
 
 	
 	
@@ -2053,10 +2055,10 @@ function hamta_rpvalmatris(){
     
 	rpvalmatris.push([]);
     
-    for (i = 0; i < handelsetabellista.length; i++) { 
-       	rpvalmatris[12][i] = handelsetabellista[i];
+    for (i = 0; i < handelsetabellista.namn.length; i++) { 
+       	rpvalmatris[12][i] = handelsetabellista.namn[i];
     } 
-    rpvalmatris[11][handelsetabellista.length] = "valfriatabellslag";
+    rpvalmatris[11][handelsetabellista.namn.length] = "valfriatabellslag";
     
     rpvalmatris.push([]);
     

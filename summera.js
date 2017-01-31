@@ -733,8 +733,8 @@ function raknautfardighetsvarde(grundtarningar, lattlard,enheter){
 function kvarhandelsetabellslag(rollperson){
 // Kvarvarande händelsetabellslag
 	handelsetabellista=hamta_handelsetabellista();
-	for (i=0; i<handelsetabellista.length;i++){
-		rollperson["kvar_" + handelsetabellista[i]]=rollperson[handelsetabellista[i]];
+	for (i=0; i<handelsetabellista.namn.length;i++){
+		rollperson["kvar_" + handelsetabellista.namn[i]]=rollperson[handelsetabellista.namn[i]];
 	}
 	rollperson["kvar_valfriatabellslag"]=rollperson["valfriatabellslag"]
 	return rollperson
@@ -811,8 +811,8 @@ function nollarollperson(rollperson) {
 	
 	// Kvarvarande händelsetabellslag
 	handelsetabellista=hamta_handelsetabellista();
-	for (i=0; i<handelsetabellista.length;i++){
-		rollperson["kvar_" + handelsetabellista[i]]=rollperson[handelsetabellista[i]];
+	for (i=0; i<handelsetabellista.namn.length;i++){
+		rollperson["kvar_" + handelsetabellista.namn[i]]=rollperson[handelsetabellista.namn[i]];
 	}
 	rollperson["kvar_valfriatabellslag"]=rollperson["valfriatabellslag"]
     return rollperson
@@ -917,6 +917,30 @@ function raknauthojningssvarighet(rollperson, fardighet){
     return rollperson
 }
 
+function nollaextraenheter(rollperson){
+	
+	var i;
+	
+	rollperson.extraenheter={};
+	
+    fardighetslistaobjekt=clone(hamta_fardighetslistaobjekt());
+	
+	ovrigafardigheterpoanglista=fardighetslistaobjekt.ovrigafardigheterpoanglista;
+	
+	for (i = 0; i < 6; i++) {
+		rollperson["extraenheter"][fardighetsgrupplista[i] + "enheter"]=0;
+	}
+	
+	for (i=0; i<ovrigafardigheterpoanglista.length;i++){
+		rollperson.extraenheter[ovrigafardigheterpoanglista[i]]=0;
+	}
+	
+	rollperson.extraenheter.sprakenheter=0;
+	rollperson.extraenheter.valfriaenheter=0;
+	
+	return rollperson
+}
+
 function extraenheter(rollperson){
 	
     rpvalmatris=hamta_rpvalmatris();
@@ -1015,14 +1039,14 @@ function extraenheter(rollperson){
     }
     
     
-    if (rollperson["avtrubbning" + avtrubbningskategorier[0]] + rollperson["avtrubbning" + avtrubbningskategorier[1]] + this["avtrubbning" + avtrubbningskategorier[2]] + this.avtrubbningvalfria >= 15){
+    if (rollperson["avtrubbning" + avtrubbningskategorier[0]] + rollperson["avtrubbning" + avtrubbningskategorier[1]] + rollperson["avtrubbning" + avtrubbningskategorier[2]] + rollperson.avtrubbningvalfria >= 15){
     	// om summan av antalet avtrubbningskryss är femton får alla kategorier 5. Är den mer än så blir överskottet till valfria enheter.
         
         rollperson.extraenheter.valfriaenheter += (rollperson["avtrubbning" + avtrubbningskategorier[0]] + rollperson["avtrubbning" + avtrubbningskategorier[1]] + this["avtrubbning" + avtrubbningskategorier[2]] + this.avtrubbningvalfria - 15);
         rollperson["avtrubbning" + avtrubbningskategorier[0]] = 5;
         rollperson["avtrubbning" + avtrubbningskategorier[1]] = 5;
         rollperson["avtrubbning" + avtrubbningskategorier[2]] = 5;
-    
+		rollperson.avtrubbningvalfria=0;
     		
     }    
     

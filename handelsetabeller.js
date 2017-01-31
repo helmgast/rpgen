@@ -1,10 +1,14 @@
 ﻿function hamta_handelsetabellista(){
-	handelsetabellista=["farderaventyr", "intrigerillgarningar", "kunskapmysterier", "striderdrabbningar"];
+	handelsetabellista={};
+	handelsetabellista.namn=["farderaventyr", "intrigerillgarningar", "kunskapmysterier", "striderdrabbningar"];
+	handelsetabellista.rubrik=["Färder \& äventyr", "Intriger \& illgärningar", "Kunskap \& mysterier", "Strider \& drabbningar"];
 	return handelsetabellista
 }
 
 function hamta_handelsetabellista_ovrig(){
-	handelsetabellista_ovrig=["taupiskaforfader"];
+	handelsetabellista_ovrig={};
+	handelsetabellista_ovrig.namn=["taupiskaforfader"];
+	handelsetabellista_ovrig.rubrik=["Taupiska förfäder"]
 	return handelsetabellista_ovrig
 }
 
@@ -68,8 +72,8 @@ function hamta_handelsetabeller(){
 
 	var handelsetabeller = {};
 	
-    handelsetabeller.lista=handelsetabellista;
-	handelsetabeller.listaovrig=handelsetabellista_ovrig;
+    handelsetabeller.lista=handelsetabellista.namn;
+	handelsetabeller.listaovrig=handelsetabellista_ovrig.namn;
 	
 	
 	
