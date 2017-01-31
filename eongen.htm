@@ -5641,8 +5641,26 @@ function skrivvanstersammanfattning(){
 	htmlkod+="</p>";
 	htmlkod +="</div>";
 	
+	// Bakgrund
+	htmlkod +="<div id=\"rollperson_bakgrundsinfo\">";
+	htmlkod+="<p>";
+	htmlkod += "<table style=\"width:100%\">";
+	htmlkod += "<tr>";
+	htmlkod +="<th class=\"left\">Bakgrund</th>";
+	htmlkod += "</tr>";
+	//for (i=0; i<formaga_lista.length;i++){
+		
+		htmlkod += "<tr>";
+		htmlkod +="<td width=\"100%\"><div class=\"inline\" id=\"rollperson_bakgrundtabell\"></div>: <div class=\"inline\" id=\"rollperson_bakgrundrubrik\"></div></td>";  
+		htmlkod += "</tr>";
+		htmlkod += "<tr>";
+		htmlkod +="<td width=\"100%\"><div class=\"inline\" id=\"rollperson_bakgrundbeskrivning\"></div></td>";  
+		htmlkod += "</tr>";
+	//}
+	htmlkod += "</table>";
+	
 	// Händelsetabeller
-	htmlkod +="<div id=\"rollperson_ovrigt\">";
+	htmlkod +="<div id=\"rollperson_handelsetabeller\">";
 	htmlkod+="<p>";
 	htmlkod += "<table style=\"width:100%\">";
 	htmlkod += "<tr>";
@@ -5848,6 +5866,12 @@ function uppdateravanstersammanfattning(){
 			document.getElementById("rollperson_" + handelsetabellista.namn[i]).innerHTML=rollperson[handelsetabellista.namn[i]];
 		}
 		document.getElementById("rollperson_valfriatabellslag").innerHTML=rollperson.valfriatabellslag;
+		
+		document.getElementById("rollperson_bakgrundrubrik").innerHTML=rollperson.bakgrund.rubrik;
+		document.getElementById("rollperson_bakgrundtabell").innerHTML=rollperson.bakgrund.tabellrubrik;
+		
+		document.getElementById("rollperson_bakgrundbeskrivning").innerHTML=rollperson.bakgrund.beskrivning;
+		
 		
 		for (i=0;i<fardighetsgrupplista_plur.length-1;i++){
 			
@@ -7951,7 +7975,7 @@ a:active {
 		<td id="raknautattribut">
 		<!-- <a href="PleaseEnableJavascript.html" onclick="raknautattribut();return false;">Räkna ut attribut</a> -->
 		</td>
-		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2016-12-22</i></td>
+		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-01-31</i></td>
 		</tr>
 		</table>
 		</div>
