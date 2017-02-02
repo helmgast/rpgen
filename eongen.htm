@@ -503,6 +503,8 @@ function sparabakgrund(bakgrundtabellnamn, bakgrundindex){
 			if ("miljo" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.miljo);
 			}
+			
+			
 		}else{
 		
 		}
@@ -515,6 +517,11 @@ function sparabakgrund(bakgrundtabellnamn, bakgrundindex){
 		//rollperson=valj_subval(rollperson, "bakgrund", slump);
 		//rollperson=summera_subval(rollperson, "bakgrund");
 		rollperson= summerarollperson(rollperson, rollperson.bakgrund);
+		
+		// Extraenheter
+		rollperson=nollaextraenheter(rollperson);
+		rollperson=extraenheter(rollperson);
+		
 		rollperson=kvarhandelsetabellslag(rollperson);
 		uppdateravanstersammanfattning();
 		skrivhogerkategorityper();
@@ -903,6 +910,10 @@ function sparafolkslag(){
 		
 		
 		rollperson= summerarollperson(rollperson, rollperson.folkslag);
+		
+		// Extraenheter
+		rollperson=nollaextraenheter(rollperson);
+		rollperson=extraenheter(rollperson);
 		
 		
 		rollperson=kvarhandelsetabellslag(rollperson);
@@ -1638,6 +1649,12 @@ function sparaarketyp(){
 		//rollperson.arketyp=valj_subval(rollperson.arketyp, slump);
 		rollperson.arketyp=summera_subval(rollperson.arketyp);
 		rollperson= summerarollperson(rollperson, rollperson.arketyp);
+		
+		// Extraenheter
+		rollperson=nollaextraenheter(rollperson);
+		rollperson=extraenheter(rollperson);
+		
+		
 		rollperson=kvarhandelsetabellslag(rollperson);
 		uppdateravanstersammanfattning();
 		skrivhogerkategorityper();
@@ -1689,6 +1706,11 @@ function sparamiljo(){
 		//rollperson.miljo=valj_subval(rollperson.miljo, slump);
 		rollperson.miljo=summera_subval(rollperson.miljo);
 		rollperson= summerarollperson(rollperson, rollperson.miljo);
+		
+		// Extraenheter
+		rollperson=nollaextraenheter(rollperson);
+		rollperson=extraenheter(rollperson);
+		
 		rollperson=kvarhandelsetabellslag(rollperson);
 		uppdateravanstersammanfattning();
 		skrivhogerkategorityper();
@@ -1869,7 +1891,7 @@ function slapahandelsetabell(){
 	if (saknadeobjekt.length==0){
 		// Vanlig händelsetabell
 		if (handelsetabellista.namn.indexOf(aktiv_handelsetabell[0].namn)>=0){
-			console.log("Slag slås på vanlig tabell");
+			//console.log("Slag slås på vanlig tabell");
 			if (rollperson["kvar_" + aktiv_handelsetabell[0].namn] > 0){
 				/*
 				if ("nummer" in aktivthandelsetabellslag){
@@ -2041,7 +2063,7 @@ function skrivhandelsetabeller(){
 	if (saknadeobjekt.length>0){
 	}else{
 		if (handelsetabellista.namn.indexOf(aktiv_handelsetabell[0].namn)>=0){
-			console.log("i skrivhandelsetabeller: slag slås på vanlig tabell");
+			//console.log("i skrivhandelsetabeller: slag slås på vanlig tabell");
 			if(rollperson["kvar_" + aktiv_handelsetabell[0].namn]+rollperson.kvar_valfriatabellslag>0){
 			
 				htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slapahandelsetabell();return false;\">"
@@ -2175,6 +2197,10 @@ function sparahandelsetabellslag(rollperson, aktivthandelsetabellslag){
 			//rollperson.handelsetabellobjektlista[arraylangd-1]=summera_subval(rollperson.handelsetabellobjektlista[arraylangd-1]);
 			
 			rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]);
+			
+			// Extraenheter
+			rollperson=nollaextraenheter(rollperson);
+			rollperson=extraenheter(rollperson);
 		}else if (rollperson["kvar_valfriatabellslag"] > 0){
 			
 			//window.alert("pushen");
@@ -2198,6 +2224,11 @@ function sparahandelsetabellslag(rollperson, aktivthandelsetabellslag){
 			//rollperson.handelsetabellobjektlista[arraylangd-1]=summera_subval(rollperson.handelsetabellobjektlista[arraylangd-1]);
 			
 			rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]);
+			
+			// Extraenheter
+			rollperson=nollaextraenheter(rollperson);
+			rollperson=extraenheter(rollperson);
+			
 		}
 	}else if (handelsetabellista_ovrig.namn.indexOf(aktiv_handelsetabell[0].namn)>=0){	
 		kvarslag=0;
@@ -2252,6 +2283,10 @@ function sparahandelsetabellslag(rollperson, aktivthandelsetabellslag){
 			//rollperson.handelsetabellobjektlista[arraylangd-1]=summera_subval(rollperson.handelsetabellobjektlista[arraylangd-1]);
 			
 			rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[rollperson.handelsetabellobjektlista.length-1]);
+			
+			// Extraenheter
+			rollperson=nollaextraenheter(rollperson);
+			rollperson=extraenheter(rollperson);
 		}
 	
 	}
@@ -2730,6 +2765,7 @@ function sparaovrigafardigheter(){
 			
 			// Nollar rollperson inför summering
 			rollperson=nollarollperson(rollperson);
+			rollperson=nollaextraenheter(rollperson);
 			
 			// Summerar rollperson		
 			if ("bakgrund" in rollperson){
@@ -2752,6 +2788,10 @@ function sparaovrigafardigheter(){
 					rollperson= summerarollperson(rollperson, rollperson.handelsetabellobjektlista[j]);
 				}
 			}
+			rollperson=nollaextraenheter(rollperson);
+			rollperson=extraenheter(rollperson);
+			rollperson=nollaextraenheterpoang(rollperson);
+			//rollperson= summerarollperson(rollperson, rollperson.extraenheter);
 			
 			if(rollperson.ovrigafardigheter.expertis.lista.length>0){
 				
@@ -2765,25 +2805,31 @@ function sparaovrigafardigheter(){
 			}
 			
 			
+			console.log("I ovrigafardigheter innan forloop, i: " + i);
+			
 			for (j=0;j<fardighetslistaobjekt.ovrigafardighetergrupplista_namn.length;j++){
 				if (rollperson[fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j] + "poang"]==0){
-					console.log(fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j]);
-					console.log(rollperson[fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j] + "poang"]);
+					//console.log(fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j]);
+					//console.log(rollperson[fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j] + "poang"]);
 				}else{
 					if(rollperson.ovrigafardigheter[fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j]].lista.length==0){
 						
-						console.log(fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j]);
+						//console.log(fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j]);
 						
 						rollperson.ovrigafardigheter.allavalda=0;
 					}else{
-						console.log(rollperson.ovrigafardigheter[fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j]].lista);
+						//console.log(rollperson.ovrigafardigheter[fardighetslistaobjekt.ovrigafardighetergrupplista_namn[j]].lista);
 						
 					}
 				}
 			}
 			
+			//console.log("I ovrigafardigheter, efter forloop i: " + i);
+			
 			
 		}
+		
+		
 		
 		// uppdatera vänstersammanfattning
 		uppdateravanstersammanfattning();
@@ -6031,10 +6077,11 @@ function uppdateravanstersammanfattning(){
 		for (i=0; i < fardighetslista.length -4; i++){
 			for (j=0; j < fardighetslista[i].length; j++){
 				if (rollperson[fardighetslista[i][j]].lattlard == 1){
-					//if (rollperson[rpvalmatris[5][i]] == 0){ 	// lista endast om man inte är lättlärd i hela kategorin
+					if (rollperson["lattlardalla" + fardighetsgrupplista[i]] == 0){ 	
+						// lista endast om man inte är lättlärd i hela kategorin
 				
-					lattlardlista.push(fardighetsobjekt[fardighetslista[i][j]].rubrik);
-					
+						lattlardlista.push(fardighetsobjekt[fardighetslista[i][j]].rubrik);
+					}
 					//}
 					
 				}else if (rollperson[fardighetslista[i][j]].lattlard == -1){
@@ -6772,26 +6819,26 @@ function slumparollperson(){
 	
 	for (i=0;i<handelsetabellista.namn.length;i++){
 			
-		console.log("Antal slag kvar: " + i + ", " + rollperson["kvar_" + handelsetabellista.namn[i]]);
+		//console.log("Antal slag kvar: " + i + ", " + rollperson["kvar_" + handelsetabellista.namn[i]]);
 	}
-	console.log("valfria: " + rollperson.kvar_valfriatabellslag);
-	console.log("totalt: " + rollperson.kvar_handelsetabellslag);
+	//console.log("valfria: " + rollperson.kvar_valfriatabellslag);
+	//console.log("totalt: " + rollperson.kvar_handelsetabellslag);
 			
 	
 	
 	//while(rollperson.kvar_handelsetabellslag>0){
-		console.log("I while, innan for")
+		//console.log("I while, innan for")
 		for (i=0;i<handelsetabellista.namn.length;i++){
 			
-			console.log("Aktiv tabell: " + handelsetabellista.namn[i]);
-			console.log("forloop i while för händelse: " + i + ", antal slag kvar: " + rollperson.kvar_handelsetabellslag)
+			//console.log("Aktiv tabell: " + handelsetabellista.namn[i]);
+			//console.log("forloop i while för händelse: " + i + ", antal slag kvar: " + rollperson.kvar_handelsetabellslag)
 			
 			aktiv_handelsetabell=handelsetabeller[handelsetabellista.namn[i]];
 			while (rollperson["kvar_" + handelsetabellista.namn[i]] > 0){
 				// Slå på tabellen
 				
 				slapahandelsetabell();
-				console.log("Aktiv händelse: " + aktivthandelsetabellslag.rubrik)
+				//console.log("Aktiv händelse: " + aktivthandelsetabellslag.rubrik)
 				rollperson=sparahandelsetabellslag(rollperson,aktivthandelsetabellslag);
 				// Summerarollperson
 			}
@@ -6807,6 +6854,14 @@ function slumparollperson(){
 		}	
 	//}
 	
+	//console.log("Innan anrop av extraenheter. Rollpersonen har x enheter mystik: " + rollperson.mystikfardigheterenheter)
+	
+	rollperson=nollaextraenheter(rollperson);
+	rollperson=extraenheter(rollperson);
+	
+	//console.log("Efter anrop av extraenheter. Rollpersonen har x enheter mystik: " + rollperson.mystikfardigheterenheter)
+	
+	
 	uppdateravanstersammanfattning();
 	
 	// Färdighetstabeller
@@ -6820,6 +6875,9 @@ function slumparollperson(){
 		}
 		
 	}
+	
+	//console.log("Efter sparaovrigafardigheter. Rollpersonen har x enheter mystik: " + rollperson.mystikfardigheterenheter)
+	
 	
 	
 	rollperson = borjaenhetsanvandning(rollperson);
@@ -7975,7 +8033,7 @@ a:active {
 		<td id="raknautattribut">
 		<!-- <a href="PleaseEnableJavascript.html" onclick="raknautattribut();return false;">Räkna ut attribut</a> -->
 		</td>
-		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-01-31</i></td>
+		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-02-02</i></td>
 		</tr>
 		</table>
 		</div>

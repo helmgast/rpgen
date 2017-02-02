@@ -89,6 +89,9 @@
 	adasier.subval[0][3][0].simma = {};
 	adasier.subval[0][3][0].simma.lattlard=1;
 	adasier.subval[0][3][0].simma.enheter=7;
+
+	
+	
 	adasier.subval[0][3][0].formaga="Bonus \+3T6 för att hålla andan";
 
 	adasier.subval[0].push([]);

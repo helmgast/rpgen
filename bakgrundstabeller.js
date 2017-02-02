@@ -1849,8 +1849,6 @@
 	ovrigafardighetergrupplista_plur=fardighetslistaobjekt.ovrigafardighetergrupplista_plur;
 	// Nummer
 	
-	console.log("handelsetabellista.namn: " + handelsetabellista.namn);
-	console.log("handelsetabellista.rubrik: " + handelsetabellista.rubrik);
 	
 	for (i=0;i<bakgrundstabeller.lista.length;i++){
 		// Lägger till nummer på bakgrundstabell för att senare sparas under rollpersonsobjektet.

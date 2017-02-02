@@ -72,6 +72,7 @@
 	krigare.subval[0][3][0].medelrustning = 1;
 	krigare.subval[0][3][0].rubrik = "Rustning";
 	krigare.subval[0][3][0].beskrivning = "En helrustning i något av följande material: fjällpansar \(Belastning 24, Pansar 10/8/6\), lamellpansar \(Belastning 24, Pansar 10/6/8\) eller ringbrynja \(Belastning 24, Pansar 12/4/8\).";
+	
 
     
     

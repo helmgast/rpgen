@@ -809,9 +809,10 @@ function slumpaenlattlard(rollperson, fardighetsgrupp){
 	rpvalmatris = hamta_rpvalmatris();
 	fardighetsgrupplista = fardighetslistaobjekt.fardighetsgrupplista;
 	
-	valdkategori =0;
-	valdfardighet=0;
-	raknavanliga =0;
+	var valdkategori =0;
+	var valdfardighet=0;
+	var raknavanliga =0;
+	var loopfel=0;
 	var k=0;
 	var m=0;
 	
@@ -834,52 +835,59 @@ function slumpaenlattlard(rollperson, fardighetsgrupp){
 				fardighetsgrupp=fardighetsgrupplista[k];
 				valdkategori=1;	
 			}
+			
+			if (p>50){
+				loopfel=1;
+				console.log("I slumpaenlattlard, loopfel");
+				valdkategori=1;
+			}
 		}
 	}else{
 		valdkategori==1;
 	}
 	
 	
-	for (m=0; m< fardighetslistaobjekt[fardighetsgrupplista[k]].lista.length;m++){
-		if (rollperson[fardighetslistaobjekt[fardighetsgrupplista[k]].lista[m]].lattlard == 0){
-			raknavanliga = raknavanliga+1;
-		}
-	}
-	if (raknavanliga ==0){
-			// Om raknavanliga är noll kan kategorin inte väljas
-	}else if(raknavanliga >= 1){
-		valdkategori=1;	
-	}
-	if (valdkategori==1){
-		while (valdfardighet == 0){
-			// Slumpar en fardighet till att bli lattlard inom kateforin
-			m=slumpa(fardighetslistaobjekt[fardighetsgrupp].lista.length-1);
-		
-			if (rollperson[fardighetslistaobjekt[fardighetsgrupp].lista[m]].lattlard == 0){
-				//if (rollperson[fardighetslistaobjekt[fardighetsgrupp].lista[m]].svarlard == 0){
-					if (rollperson.anvandenheter[fardighetslistaobjekt[fardighetsgrupp].lista[m]].lattlard == 0){
-						
-						/*
-						if (rollperson.anvandenheter[fardighetsgrupp].kvarlattlarda>0){
-							rollperson.anvandenheter[fardighetsgrupp].kvarlattlarda -=1;
-						}else{
-							rollperson.anvandenheter.kvarvalfrialattlarda -=1;
-						}
-						*/
-						valdfardighet=1;
-						
-						rollperson=andralattlard(rollperson, fardighetslistaobjekt[fardighetsgrupp].lista[m], fardighetsgrupp, 1);
-						aktiv_fardighet=fardighetslistaobjekt[fardighetsgrupp].lista[m];
-						
-					
-						
-					}
-					
+	if (loopfel==0){
+		for (m=0; m< fardighetslistaobjekt[fardighetsgrupplista[k]].lista.length;m++){
+			if (rollperson[fardighetslistaobjekt[fardighetsgrupplista[k]].lista[m]].lattlard == 0){
+				raknavanliga = raknavanliga+1;
 			}
 		}
-	
+		if (raknavanliga ==0){
+				// Om raknavanliga är noll kan kategorin inte väljas
+		}else if(raknavanliga >= 1){
+			valdkategori=1;	
+		}
+		if (valdkategori==1){
+			while (valdfardighet == 0){
+				// Slumpar en fardighet till att bli lattlard inom kateforin
+				m=slumpa(fardighetslistaobjekt[fardighetsgrupp].lista.length-1);
+			
+				if (rollperson[fardighetslistaobjekt[fardighetsgrupp].lista[m]].lattlard == 0){
+					//if (rollperson[fardighetslistaobjekt[fardighetsgrupp].lista[m]].svarlard == 0){
+						if (rollperson.anvandenheter[fardighetslistaobjekt[fardighetsgrupp].lista[m]].lattlard == 0){
+							
+							/*
+							if (rollperson.anvandenheter[fardighetsgrupp].kvarlattlarda>0){
+								rollperson.anvandenheter[fardighetsgrupp].kvarlattlarda -=1;
+							}else{
+								rollperson.anvandenheter.kvarvalfrialattlarda -=1;
+							}
+							*/
+							valdfardighet=1;
+							
+							rollperson=andralattlard(rollperson, fardighetslistaobjekt[fardighetsgrupp].lista[m], fardighetsgrupp, 1);
+							aktiv_fardighet=fardighetslistaobjekt[fardighetsgrupp].lista[m];
+							
+						
+							
+						}
+						
+				}
+			}
+		
+		}
 	}
-	
 	return rollperson
 	
 }
@@ -1870,7 +1878,7 @@ function slumpaallalattlarda(rollperson){
 	// Skapar temporär variabel för att for-loopen inte ska påverkas av att de lättlärda färdigheterna används
 	//var temp_kvarlattlarda=[];
 	
-	console.log("slumpaallalattlarda körs, innan while_kategori");
+	//console.log("slumpaallalattlarda körs, innan while_kategori");
 	for (i = 0; i < 6; i++) {
 		while (rollperson.anvandenheter[fardighetsgrupplista[i]].kvarlattlarda>0){
 			rollperson = slumpaenlattlard(rollperson, fardighetsgrupplista[i]);	
@@ -1883,7 +1891,7 @@ function slumpaallalattlarda(rollperson){
 		 	
    	}
 	i=6;
-	console.log("slumpaallalattlarda körs, innan while_valfri");
+	//console.log("slumpaallalattlarda körs, innan while_valfri");
 	while (rollperson.anvandenheter.kvarvalfrialattlarda>0){
 		rollperson = slumpaenlattlard(rollperson,"valfri");
 	}
@@ -1918,7 +1926,7 @@ function slumpaallt(rollperson){
 		
 	}
 	
-	console.log("I slumpaallt. Kategorienheter klara.");
+	//console.log("I slumpaallt. Kategorienheter klara.");
 	
 	// Avtrubbningskryss
 	while(rollperson.anvandenheter.kvarvalfriakryss>0){
@@ -1926,7 +1934,7 @@ function slumpaallt(rollperson){
 	
 	}
 	
-	console.log("I slumpaallt. Avtrubbning klara.");
+	//console.log("I slumpaallt. Avtrubbning klara.");
 	
 	// Språkenheter
 	
@@ -1951,7 +1959,7 @@ function slumpaallt(rollperson){
 	*/
 	
 	// Lättlärda
-	console.log("slumpallalattlarda anropas från slumpa allt")
+	//console.log("slumpallalattlarda anropas från slumpa allt")
 	rollperson = slumpaallalattlarda(rollperson);
 	
 	//console.log("I slumpaallt. Lättlärda klara.");
@@ -1974,7 +1982,7 @@ function anropanollaallt(rollperson){
 		rollperson.anvandenheter.sparad=0;
 		
 	}
-	console.log("här är rollpersonens bakgrund: " + rollperson.bakgrund.rubrik);
+	//console.log("här är rollpersonens bakgrund: " + rollperson.bakgrund.rubrik);
 	
 	rollperson=borjaenhetsanvandning(rollperson);
 	// Uppdatera gui

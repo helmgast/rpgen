@@ -145,7 +145,7 @@ function valj_miljo(rollperson, miljoobjekt, slump){
 function valj_subval(rollpersonsvalobjekt, slump){
 	
 	
-    console.log("Rollpersonens bakgrundtabellnamn är: " + rollperson.bakgrundtabellnamn);
+    //console.log("Rollpersonens bakgrundtabellnamn är: " + rollperson.bakgrundtabellnamn);
 	
 	
     // --- funktionalitet för att välja kontakter
@@ -192,7 +192,7 @@ function valj_subval(rollpersonsvalobjekt, slump){
 	
 	
 	if ("beskrivninghakvald" in rollpersonsvalobjekt){
-		console.log("beskrivninghakvald innan subval för " + rollpersonsvalobjekt.rubrik + " är: " + rollpersonsvalobjekt.beskrivninghakvald);
+		//console.log("beskrivninghakvald innan subval för " + rollpersonsvalobjekt.rubrik + " är: " + rollpersonsvalobjekt.beskrivninghakvald);
 	
 	}else{ 
 		//Saknas
@@ -525,14 +525,14 @@ function valj_subval(rollpersonsvalobjekt, slump){
 																			
 																			nyord=kontaktordobjekt["new" + kontaktord[x]];
 																			
-																			console.log("gammalsupord är: " + gammalsupord);
-																			console.log("nyord är: " + nyord);
+																			//console.log("gammalsupord är: " + gammalsupord);
+																			//console.log("nyord är: " + nyord);
 																			
-																			console.log("beskrivninghakvald innan: " + rollpersonsvalobjekt.subval[s][t][w].beskrivninghakvald)
+																			//console.log("beskrivninghakvald innan: " + rollpersonsvalobjekt.subval[s][t][w].beskrivninghakvald)
 																			
 																			rollpersonsvalobjekt.subval[s][t][w][ovrigaprop[v]] = rollpersonsvalobjekt.subval[s][t][w][ovrigaprop[v]].replace(gammalsupord, nyord);
 																			
-																			console.log("beskrivninghakvald efter: " + rollpersonsvalobjekt.subval[s][t][w].beskrivninghakvald)
+																			//console.log("beskrivninghakvald efter: " + rollpersonsvalobjekt.subval[s][t][w].beskrivninghakvald)
 																			
 																			
 																		}
@@ -622,15 +622,15 @@ function valj_subval(rollpersonsvalobjekt, slump){
 					if ("valdasubsubtotal" in rollpersonsvalobjekt.subval[i][j][0]){
 						for (r=0; r < rollpersonsvalobjekt.subval[i][j][0].valdasubsubtotal.length;r++){
 							p= rollpersonsvalobjekt.subval[i][j][0].valdasubsubtotal[r];
-							console.log("valdasubsubtotal för " + i.toString() + j.toString() + "0 är: " + rollpersonsvalobjekt.subval[i][j][0].valdasubsubtotal);
-							console.log("summerar beskrivningvald för subval " + i.toString() + j.toString() + p.toString());
+							//console.log("valdasubsubtotal för " + i.toString() + j.toString() + "0 är: " + rollpersonsvalobjekt.subval[i][j][0].valdasubsubtotal);
+							//console.log("summerar beskrivningvald för subval " + i.toString() + j.toString() + p.toString());
 							if ("beskrivningvald" in rollpersonsvalobjekt.subval[i][j][p]){
 								rollpersonsvalobjekt["beskrivningvald"] += rollpersonsvalobjekt.subval[i][j][p]["beskrivningvald"];
-								console.log("beskrivningvald för subval " + i.toString() + j.toString() + p.toString() + " är " + rollpersonsvalobjekt.subval[i][j][p]["beskrivningvald"]);
+								//console.log("beskrivningvald för subval " + i.toString() + j.toString() + p.toString() + " är " + rollpersonsvalobjekt.subval[i][j][p]["beskrivningvald"]);
 							}
 							if ("beskrivninghakvald" in rollpersonsvalobjekt.subval[i][j][p]){
 								rollpersonsvalobjekt["beskrivninghakvald"] += rollpersonsvalobjekt.subval[i][j][p]["beskrivninghakvald"];
-								console.log("beskrivninghakvald för subval " + i.toString() + j.toString() + p.toString() + " är " + rollpersonsvalobjekt.subval[i][j][p]["beskrivninghakvald"]);
+								//console.log("beskrivninghakvald för subval " + i.toString() + j.toString() + p.toString() + " är " + rollpersonsvalobjekt.subval[i][j][p]["beskrivninghakvald"]);
 							}
 						}
 					}
@@ -1341,7 +1341,7 @@ function valjkontakt(slump){
 	
 	bakgrundstabeller = hamta_bakgrundstabeller();
 	
-	console.log("I valjkontakt(slump) är rollpersonens bakgrundtabellnamn: " + rollperson.bakgrundtabellnamn);
+	//console.log("I valjkontakt(slump) är rollpersonens bakgrundtabellnamn: " + rollperson.bakgrundtabellnamn);
     // välj bakgrundstabell
     if (bakgrundstabeller.lista.length==1){
         // Finns det bara en bakgrundstabell behövs inget val
@@ -1356,7 +1356,7 @@ function valjkontakt(slump){
     
 	if ("bakgrundtabellnummer" in rollperson){
 		listindex=rollperson.bakgrundtabellnummer;
-		console.log("I valjkontakt, rollpersonens bakgrundtabellnummer är: " +listindex);
+		//console.log("I valjkontakt, rollpersonens bakgrundtabellnummer är: " +listindex);
 	}
 	
     

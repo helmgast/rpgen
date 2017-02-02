@@ -11,6 +11,10 @@ function summera_subval(rollpersonsvalobjekt){
 	// Första blocket är fixat, men det gäller endast i=0. Strukturera om så att första blocket funkar för alla subval (minskar mängden kod, risk för fel och förenklar dessutom framtida förändringar
 	
 	
+	var fardighetslistaobjekt=hamta_fardighetslistaobjekt();
+	var fardighetsgrupplista=fardighetslistaobjekt.fardighetsgrupplista;
+	var fardighetslista=fardighetslistaobjekt.fardighetslista;
+	
 	replaceprop=["beskrivningvald", "beskrivninghakvald"];
 	
 	
@@ -220,6 +224,20 @@ function summera_subval(rollpersonsvalobjekt){
 									}
 										
 										
+								}
+							}
+						}
+						//Lättlärd i hel kategori
+						if ("lattlardalla" + fardighetsgrupplista[g] in rollpersonsvalobjekt.subval[i][j][p]){
+							console.log("I summera subval. Lättlärd i alla " + fardighetsgrupplista[g])
+							if (rollpersonsvalobjekt.subval[i][j][p]["lattlardalla" + fardighetsgrupplista[g]]==1){
+								for(h=0;h<fardighetslista[g].length;h++){
+									if (fardighetslista[g][h] in rollpersonsvalobjekt){
+										rollpersonsvalobjekt[fardighetslista[g][h]].lattlard += 1;
+									}else{
+										rollpersonsvalobjekt[fardighetslista[g][h]]={};
+										rollpersonsvalobjekt[fardighetslista[g][h]].lattlard = 1;
+									}
 								}
 							}
 						}
@@ -917,6 +935,17 @@ function raknauthojningssvarighet(rollperson, fardighet){
     return rollperson
 }
 
+function nollaextraenheterpoang(rollperson){
+	var i
+	ovrigafardigheterpoanglista=fardighetslistaobjekt.ovrigafardigheterpoanglista;
+	
+	for (i=0; i<ovrigafardigheterpoanglista.length;i++){
+		rollperson.extraenheter[ovrigafardigheterpoanglista[i]]=0;
+	}
+	
+	return rollperson
+}
+
 function nollaextraenheter(rollperson){
 	
 	var i;
@@ -935,6 +964,7 @@ function nollaextraenheter(rollperson){
 		rollperson.extraenheter[ovrigafardigheterpoanglista[i]]=0;
 	}
 	
+	
 	rollperson.extraenheter.sprakenheter=0;
 	rollperson.extraenheter.valfriaenheter=0;
 	
@@ -943,16 +973,27 @@ function nollaextraenheter(rollperson){
 
 function extraenheter(rollperson){
 	
+	//console.log("extraenheter körs");
+	
+	var i
+	var j
+	
     rpvalmatris=hamta_rpvalmatris();
     
-    fardighetsobjekt=clone(hamta_fardighetsobjekt());
     fardighetslistaobjekt=clone(hamta_fardighetslistaobjekt());
     
 	var fardighetslista=fardighetslistaobjekt.fardighetslista;
     var fardighetsgrupplista=fardighetslistaobjekt.fardighetsgrupplista;
 	var avtrubbningskategorier=["utsatthet","vald","overnaturligt"];
+    var ovrigafardighetergrupplista_namn=fardighetslistaobjekt.ovrigafardighetergrupplista_namn;
     
-    
+	for (i = 0; i < 6; i++) {
+    	rollperson.extraenheter[fardighetsgrupplista[i] + "enheter"]=0;
+	}
+	rollperson.extraenheter.valfriaenheter=0;
+	rollperson.extraenheter.expertispoang=0;
+	rollperson.extraenheter.hantverkpoang=0;
+	rollperson.extraenheter.kanneteckenpoang=0;
 	
 	// beräknar extra enheter från dubbelt lättlärd eller mer än fem avtrubbningskryss i en kategori
 	// var fardighetsgrupplista = ["kunskapsfardigheter", "mystikfardigheter", "rorelsefardigheter", "sociala_fardigheter", "stridsfardigheter", "vildmarksfardigheter", "sprakfardigheter", "expertisfardigheter", "hantverksfardigheter", "kanneteckensfardigheter"];
@@ -964,10 +1005,7 @@ function extraenheter(rollperson){
         	rollperson["extraenheter"][fardighetsgrupplista[i] + "enheter"] += 5 * (rollperson["lattlardalla" + fardighetsgrupplista[i]] - 1) 
         	rollperson["lattlardalla" + fardighetsgrupplista[i]]=1;
             
-            // omvandlar lattlardalla så att alla färdigheter i kategorin blir lättlärda
-            for (j = 0; j < window[fardighetsgrupplista[i]].length; j++) {
-            	rollperson[fardighetslista[i][j]].lattlard +=1;
-            }
+            
             
         }
         // om rollpersonen är lättlärd i alla färdigheter i en kategori och dessutom 
@@ -976,6 +1014,7 @@ function extraenheter(rollperson){
         
         if (rollperson["lattlardalla" + fardighetsgrupplista[i]] >= 1){
         	
+			
     		if (rollperson["lattlard" + fardighetsgrupplista[i]] >= 1){
         		rollperson["extraenheter"][fardighetsgrupplista[i] + "enheter"] += (rollperson["lattlard" + fardighetsgrupplista[i]]);
         		// nollar extraenheterna så att dessa ej tas i beaktan vid val av lättlärda färdigheter
@@ -983,22 +1022,36 @@ function extraenheter(rollperson){
             }
         }
 		for (j = 0; j < fardighetslista[i].length; j++) {
-        	// ger en extra enhet i kategorin per lättlärd färdighet
+        	// ger en extra enhet i kategorin per dubbellättlärd färdighet 
+			// (både som resultat av att färdigheten i sig har fått dubbelt lättlärd och att den är lättlärd plus att kategorin är lättlärd)
             if(rollperson[fardighetslista[i][j]].lattlard > 1){
-        		rollperson["extraenheter"][fardighetsgrupplista[i] + "enheter"] += (rollperson[fardighetslista[i][j]].lattlard-1);
-            	rollperson[fardighetslista[i][j]].lattlard=1;
+				//console.log("Rollpersonen är lättlärd x" + rollperson[fardighetslista[i][j]].lattlard + " i: " + fardighetslista[i][j])
+        		//console.log("innan: rollperson[\"extraenheter\"][fardighetsgrupplista[i] + \"enheter\"]" + rollperson["extraenheter"][fardighetsgrupplista[i] + "enheter"])
+				//console.log("innan: rollperson[fardighetsgrupplista[i] + \"enheter\"]" + rollperson[fardighetsgrupplista[i] + "enheter"])
+				
+				rollperson["extraenheter"][fardighetsgrupplista[i] + "enheter"] += (rollperson[fardighetslista[i][j]].lattlard-1);
+            	
+				//console.log("efter: rollperson[\"extraenheter\"][fardighetsgrupplista[i] + \"enheter\"]" + rollperson["extraenheter"][fardighetsgrupplista[i] + "enheter"])
+				//console.log("efter: rollperson[fardighetsgrupplista[i] + \"enheter\"]" + rollperson[fardighetsgrupplista[i] + "enheter"])
+				
+				
+				rollperson[fardighetslista[i][j]].lattlard=1;
             }
         }
         
         // kolla om det finns fler lättlärda inom en kategori än antalet färdigheter
     	// händer extremt sällan, men bra för att undvika att det hänger sig vid utplacering av valfria lättlärda
     
-        if (this["lattlardalla" + fardighetsgrupplista[i]] ==0){
+        if (rollperson["lattlardalla" + fardighetsgrupplista[i]] ==0){
         	antalneutrala=0;
-        	for (j = 0; j < window[fardighetsgrupplista[i]].length; j++) {
-        		if (rollperson[fardighetslista[i][j]].lattlard == 0){
-            		antalneutrala++;
-            	}
+        	for (j = 0; j < fardighetsgrupplista[i].length; j++) {
+				if (fardighetslista[i][j] in rollperson){
+					if (rollperson[fardighetslista[i][j]].lattlard == 0){
+						antalneutrala++;
+					}
+				}else{
+					antalneutrala++;
+				}
         	}
         	if (rollperson["lattlard" + fardighetsgrupplista[i]] >= antalneutrala){
         		// finns fler eller lika valfria lättlärda inom kategorin som det finns neutrala färdigheter
@@ -1006,9 +1059,9 @@ function extraenheter(rollperson){
         		rollperson["extraenheter"][fardighetsgrupplista[i] + "enheter"] += (rollperson["lattlard" + fardighetsgrupplista[i]] - antalneutrala);
             	
                 // Letar upp alla neutrala och gör dessa till lättlärda
-                for (j = 0; j < window[fardighetsgrupplista[i]].length; j++){
+                for (j = 0; j < fardighetsgrupplista[i].length; j++){
             		if(rollperson[fardighetslista[i][j]].lattlard == 0){
-                    	rollperson[fardighetslista[i][j]].lattlard == 1;
+                    	rollperson[fardighetslista[i][j]].lattlard = 1;
                     }
                 }
             }
@@ -1040,7 +1093,7 @@ function extraenheter(rollperson){
     
     
     if (rollperson["avtrubbning" + avtrubbningskategorier[0]] + rollperson["avtrubbning" + avtrubbningskategorier[1]] + rollperson["avtrubbning" + avtrubbningskategorier[2]] + rollperson.avtrubbningvalfria >= 15){
-    	// om summan av antalet avtrubbningskryss är femton får alla kategorier 5. Är den mer än så blir överskottet till valfria enheter.
+    	// om summan av antalet avtrubbningskryss (både inom kategori och valfria) är femton får alla kategorier 5. Är den mer än så blir överskottet till valfria enheter.
         
         rollperson.extraenheter.valfriaenheter += (rollperson["avtrubbning" + avtrubbningskategorier[0]] + rollperson["avtrubbning" + avtrubbningskategorier[1]] + this["avtrubbning" + avtrubbningskategorier[2]] + this.avtrubbningvalfria - 15);
         rollperson["avtrubbning" + avtrubbningskategorier[0]] = 5;
@@ -1054,24 +1107,42 @@ function extraenheter(rollperson){
     // summera expertis, hantverk, kännetecken
    	for (i = 7; i <= 9; i++) {
    		for (j = 0; j < fardighetslista[i].length; j++) {
-        	if (rollperson[fardighetslista[i][j]].enheter > 7) {
-            	// om antalet enheter för en övrig färdighet är mer än 7 (vilket motsvarar 5T6)
-                // omvandlas överskottet till valfria enheter, och antalet enheter för färdigheten sätts till 7
-                rollperson.extraenheter.valfriaenheter += (rollperson[fardighetslista[i][j]].enheter - 7);
-                rollperson[fardighetslista[i][j]].enheter = 7;
-            }
+        	
+			if (fardighetslista[i][j] in rollperson){
+				if (rollperson[fardighetslista[i][j]].enheter > 7) {
+					// om antalet enheter för en övrig färdighet är mer än 7 (vilket motsvarar 5T6)
+					// omvandlas överskottet till poäng, och antalet enheter för färdigheten sätts till 7
+					
+					// 1,2,3,4,5,6,7 överskridande enheter ger 1,1,2,2,3,3,4 extra poäng
+					rollperson.extraenheter[ovrigafardighetergrupplista_namn[i-7] + "poang"] += Math.ceil((rollperson[fardighetslista[i][j]].enheter - 7)/2);
+					rollperson[fardighetslista[i][j]].enheter = 7;
+				}
+			}
         }
     }
    
    	// summera enheter till specifik färdighet (sällsynt)
     
-    //for (i = 0; i < 6; i++) {
-    //	for (j = 0; j < window[fardighetsgrupplista[i]].length; j++) {
-    //		if (rollperson[fardighetslista[i][j]].lattlard + rollperson[fardighetslista[i][j]].enheter + window[fardighetslista){
-    //    	}
-    //	}
-    //}
+    for (i = 0; i < 6; i++) {
+    	for (j = 0; j < fardighetsgrupplista[i].length; j++) {
+    		if (fardighetslista[i][j] in rollperson){
+				if (rollperson[fardighetslista[i][j]].lattlard + rollperson[fardighetslista[i][j]].enheter + rollperson[fardighetslista[i][j]].grundtarningar>8){
+					
+					console.log("För många enheter på färdighet: " + fardighetslista[i][j])
+					
+					// Färdigheten kan ha max 8 enheter inklusive lättlärd och grundtärningar, detta motsvarar 5T6.
+					rollperson[fardighetsgrupplista[i] + "enheter"]+=rollperson[fardighetslista[i][j]].lattlard + rollperson[fardighetslista[i][j]].enheter + rollperson[fardighetslista[i][j]].grundtarningar-8;
+					
+					
+					rollperson[fardighetslista[i][j]].enheter=8-rollperson[fardighetslista[i][j]].lattlard-rollperson[fardighetslista[i][j]].grundtarningar;
+					
+				}
+			}
+    	}
+    }
     
+	//console.log("Efter forloop i extraenheter")
+	
     // summera alla extraenheter till rollpersonens properties
     for (i = 0; i < 6; i++) {
     	rollperson[fardighetsgrupplista[i] + "enheter"] += rollperson.extraenheter[fardighetsgrupplista[i] + "enheter"];
@@ -1079,6 +1150,12 @@ function extraenheter(rollperson){
     
     rollperson.valfriaenheter += rollperson.extraenheter.valfriaenheter;
     
+	for (i = 0; i <ovrigafardighetergrupplista_namn.length; i++) {
+		rollperson[ovrigafardighetergrupplista_namn[i] + "poang"] += rollperson.extraenheter[ovrigafardighetergrupplista_namn[i] + "poang"]
+   	}
+	
+	//console.log("Efter summering i extraenheter. Rollpersonen har x enheter mystik: " + rollperson.mystikfardigheterenheter)
+	
     return rollperson
     
 
