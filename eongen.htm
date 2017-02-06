@@ -2457,9 +2457,11 @@ function skrivfardighetstabeller(){
 					// Knapp för att välja Hantverk
 					htmlkod +="<br>";
 					htmlkod +="<div class=\"dropdown\">";
+					htmlkod +="<div id=\"valjhantverk\">";
 					htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_valjhantverk_" + i.toString() + "\'\)\" class=\"dropbtn\">";
 					htmlkod +="Välj:"
-					htmlkod +="</button>",
+					htmlkod +="</button>";
+					htmlkod +="</div>";
 					htmlkod +="<div id=\"dropdown_valjhantverk_" + i.toString() + "\" class=\"dropdown-content\">";
 					for (j=0;j<fardighetslistaobjekt.hantverkfardigheter.lista.length;j++){
 						
@@ -6539,15 +6541,18 @@ function forberedslumparollperson(){
 	htmlkod+="</tr><tr>";
 	htmlkod+="<td class='center'>";
 	htmlkod +="<div class=\"dropdown\">";
-	htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_bakgrundstabellslump" + "\'\)\" class=\"dropbtn\">";
 	htmlkod +="<div id=\"bakgrundstabellslump" + "\">";
+	
+					
+	htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_bakgrundstabellslump" + "\'\)\" class=\"dropbtn\">";
 	if (typeof slumpobjekt.bakgrundstabell === 'undefined'){
 		htmlkod +="Välj"
 	}else{
 		htmlkod +=slumpobjektrubrik.bakgrundstabell;
 	}
-	htmlkod +="</div>";
 	htmlkod +="</button>",
+	htmlkod +="</div>";
+	
 	htmlkod +="<div id=\"dropdown_bakgrundstabellslump" + "\" class=\"dropdown-content\">";
 	htmlkod +="<a href=\"PleaseEnableJavascript.html\" onclick=\"bytslumpval\('" + "bakgrundstabell" + "','"  + "slump" + "','" + "Slumpa" + "'\);return false;\">" + "Slumpa" + "</a>";
 	for (j=0;j<bakgrundstabellista.length;j++){
@@ -6561,15 +6566,15 @@ function forberedslumparollperson(){
 	for (i=0;i<vallista.length;i++){
 		htmlkod+="<td class='center'>";
 		htmlkod +="<div class=\"dropdown\">";
-		htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_" + vallista[i] + "slump" + "\'\)\" class=\"dropbtn\">";
 		htmlkod +="<div id=\"" + vallista[i] + "slump" + "\">";
+		htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_" + vallista[i] + "slump" + "\'\)\" class=\"dropbtn\">";
 		if (typeof slumpobjekt[vallista[i]] === 'undefined'){
 			htmlkod +="Välj"
 		}else{
 			htmlkod +=slumpobjektrubrik[vallista[i]];
 		}
+		htmlkod +="</button>";
 		htmlkod +="</div>";
-		htmlkod +="</button>",
 		htmlkod +="<div id=\"dropdown_" + vallista[i] + "slump" + "\" class=\"dropdown-content\">";
 		htmlkod +="<a href=\"PleaseEnableJavascript.html\" onclick=\"bytslumpval\('" + vallista[i] + "','" + "slump" + "','" + "Slumpa" + "'\);return false;\">" + "Slumpa" + "</a>";
 		for (j=0;j<vallistaarray[i].length;j++){
@@ -7101,8 +7106,9 @@ function raknautattribut(){
 	htmlkod+="</th>";
 	htmlkod+="<th colspan='1' class='center'>";
 	htmlkod +="<div class=\"dropdown\">";
-	htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_attributfolkslag" +  "\'\)\" class=\"dropbtn\">";
 	htmlkod +="<div id=\"attributfolkslag\">";
+	
+	htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_attributfolkslag" +  "\'\)\" class=\"dropbtn\">";
 	
 	if (typeof rollperson.folkslag.rubrik === 'undefined'){
 		htmlkod +="Övrig";
@@ -7110,8 +7116,9 @@ function raknautattribut(){
 		htmlkod +=rollperson.folkslag.rubrik;
 	}
 	
-	htmlkod +="</div>";
 	htmlkod +="</button>",
+	htmlkod +="</div>";
+	
 	htmlkod +="<div id=\"dropdown_attributfolkslag" + "\" class=\"dropdown-content\">";
 		for (j=0;j<folkslaglista.length;j++){
 		htmlkod +="<a href=\"PleaseEnableJavascript.html\" onclick=\"bytattributfolkslag\('" + folkslaglista[j] + "'\);return false;\">" + folkslagobjekt[folkslaglista[j]].rubrik + "</a>";
@@ -7127,8 +7134,9 @@ function raknautattribut(){
 		
 		htmlkod +="<div class=\"dropdown\">";
 		
-		htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_attributfolkslag_subkategori" +  "\'\)\" class=\"dropbtn\">";
 		htmlkod +="<div id=\"attributfolkslag\">";
+		
+		htmlkod +="<button onclick=\"dropdownFunction\(\'dropdown_attributfolkslag_subkategori" +  "\'\)\" class=\"dropbtn\">";
 		
 		if (typeof rollperson.folkslag.rubrik === 'undefined'){
 			htmlkod +="Övrig";
@@ -7136,8 +7144,9 @@ function raknautattribut(){
 			htmlkod +=rollperson.folkslag.subval[1][rollperson.folkslag.subval[1][0][0].valdasub[0]][0].rubrik;
 		}
 		
-		htmlkod +="</div>";
 		htmlkod +="</button>",
+		
+		htmlkod +="</div>";
 		htmlkod +="<div id=\"dropdown_attributfolkslag_subkategori" + "\" class=\"dropdown-content\">";
 			for (j=1;j<rollperson.folkslag.subval[1].length;j++){
 			htmlkod +="<a href=\"PleaseEnableJavascript.html\" onclick=\"bytattributfolkslagsubkategori\('" + j + "'\);return false;\">" + rollperson.folkslag.subval[1][j][0].rubrik + "</a>";
@@ -7968,9 +7977,21 @@ a:active {
 .dropbtn {
     background-color: #f9f9f9;
     color: black;
-    padding: 4px 6px;
+    padding: 4px 4px;
+	margin: 2px 2px
     font-size: 16px;
-    border: none;
+    border: 1px;
+    cursor: pointer;
+	z-index: 1;
+}
+
+.dropbtnmargin {
+    background-color: #f9f9f9;
+    color: black;
+    padding: 40px 40px;
+	margin: 20px 20px
+    font-size: 16px;
+    border: 10px;
     cursor: pointer;
 	z-index: 1;
 }
@@ -8033,7 +8054,7 @@ a:active {
 		<td id="raknautattribut">
 		<!-- <a href="PleaseEnableJavascript.html" onclick="raknautattribut();return false;">Räkna ut attribut</a> -->
 		</td>
-		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-02-02</i></td>
+		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-02-06</i></td>
 		</tr>
 		</table>
 		</div>
