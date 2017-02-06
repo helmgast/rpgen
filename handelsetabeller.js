@@ -4882,7 +4882,9 @@ function hamta_handelsetabeller(){
 	handelsetabeller.kunskapmysterier[40].vald = 0; 
 	handelsetabeller.kunskapmysterier[40].rubrik = "Hängiven följeslagare"
 	handelsetabeller.kunskapmysterier[40].beskrivning = "Rollpersonen har haft en hängiven följeslagare som har försökt göra allt för att bevisa sig för denne. Rollpersonen har försökt lära följeslagaren hur man klarar sig själv då denne är mer hängiven än klok. Vad som har hänt med följeslagaren är upp till spelaren."
-	handelsetabeller.kunskapmysterier[40].beskrivninghak = "Lättlärd i Undervisa. 2 enheter Sociala färdigheter, 2 enheter Kunskapsfärdigheter. Slå två gånger på bakgrundstabellen och välj en som visar vilken typ av följeslagare det rörde sig om"
+	handelsetabeller.kunskapmysterier[40].beskrivninghak = "Lättlärd i Undervisa. 2 enheter Sociala färdigheter, 2 enheter Kunskapsfärdigheter. Slå två gånger på bakgrundstabellen och välj en som visar vilken typ av följeslagare det rörde sig om."
+	handelsetabeller.kunskapmysterier[40].beskrivninghakvaldbas = "Lättlärd i Undervisa. 2 enheter Sociala färdigheter, 2 enheter Kunskapsfärdigheter."
+	
 	handelsetabeller.kunskapmysterier[40].subval[0][0][0] = {}; 
 	handelsetabeller.kunskapmysterier[40].subval[0][0][0].valdasub = []; 
 	handelsetabeller.kunskapmysterier[40].subval[0][0][0].vald = 0; 
@@ -4891,8 +4893,10 @@ function hamta_handelsetabeller(){
 	handelsetabeller.kunskapmysterier[40].subval[0][0][0].socialafardigheterenheter=2;
 	handelsetabeller.kunskapmysterier[40].subval[0][0][0].kunskapsfardigheterenheter=2;
 	handelsetabeller.kunskapmysterier[40].subval[0][0][0].kontaktbas="Har en hängiven följeslagare som är kontakt1_rubrikliten.";
+	handelsetabeller.kunskapmysterier[40].subval[0][0][0].kontaktenhetbool=[0];
+	handelsetabeller.kunskapmysterier[40].subval[0][0][0].beskrivningvaldbas = "Rollpersonen har haft en hängiven följeslagare som är kontakt1_rubrikliten som har försökt göra allt för att bevisa sig för rollpersonen. Rollpersonen har försökt lära följeslagaren hur man klarar sig själv då denne är mer hängiven än klok. Vad som har hänt med följeslagaren är upp till spelaren."
 	
-
+	
 	handelsetabeller.kunskapmysterier[41] = {}; 
 	handelsetabeller.kunskapmysterier[41].subval = [[[]]]; 
 	handelsetabeller.kunskapmysterier[41].vald = 0; 
