@@ -984,14 +984,15 @@ function slumpagrundattribut(){
     var slumpindex;
     var summabonusar=0;
     
+	var m
+	
     var antalbonustarningar=10;
-    for (m=0;m < antalbonustarningar;m++) {
+    while (summabonusar<antalbonustarningar*4){
 		slumpindex = slumpa(tempindexarray.length)-1;
     	tempattributbonusar[tempindexarray[slumpindex]] += 4;
        	if (tempattributbonusar[tempindexarray[slumpindex]] >=12){
        		tempindexarray.splice(slumpindex);
-       	}
-	
+		}	
         summabonusar+=4;
     }
     
