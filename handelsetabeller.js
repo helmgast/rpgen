@@ -1281,6 +1281,8 @@ function hamta_handelsetabeller(){
 	handelsetabeller.farderaventyr[54].subval[0][0][0].vald = 0; 
 	handelsetabeller.farderaventyr[54].subval[0][0][0].nattsyn = {};
 	handelsetabeller.farderaventyr[54].subval[0][0][0].nattsyn.enheter = 3; 
+	handelsetabeller.farderaventyr[54].subval[0][0][0].uppfattning = {};
+	handelsetabeller.farderaventyr[54].subval[0][0][0].uppfattning.varde = 3; 
 	handelsetabeller.farderaventyr[54].subval[0][0][0].formaga="Ser mycket bra under ljussvaga förhållanden."
 	
 	handelsetabeller.farderaventyr[55] = {}; 
@@ -6940,6 +6942,8 @@ function hamta_handelsetabeller(){
 	handelsetabeller.striderdrabbningar[53].subval[0][0][0] = {}; 
 	handelsetabeller.striderdrabbningar[53].subval[0][0][0].valdasub = []; 
 	handelsetabeller.striderdrabbningar[53].subval[0][0][0].vald = 0; 
+	handelsetabeller.striderdrabbningar[53].subval[0][0][0].talighet = {};
+	handelsetabeller.striderdrabbningar[53].subval[0][0][0].talighet.varde =3; 
 	handelsetabeller.striderdrabbningar[53].subval[0][0][0].rustning="En medeltung rustning med \+2 i pansarvärden.";
 
 	handelsetabeller.striderdrabbningar[54] = {}; 
