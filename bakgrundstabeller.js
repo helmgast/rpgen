@@ -633,7 +633,7 @@
 	bakgrundstabeller.jargiensbefolkning[60] = {};
 	bakgrundstabeller.jargiensbefolkning[60].rubrik="Ordensriddare";
 	bakgrundstabeller.jargiensbefolkning[60].kunskapmysterier=1;
-	bakgrundstabeller.jargiensbefolkning[60].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.jargiensbefolkning[60].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[60].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[60].beskrivning="Svurna till Daak och omgärdade av riter och mystik axlar ordensriddarna manteln som rikets beskyddare och Daaks förkämpar. De är respekterade och fruktade av folket då deras makt ofta gör dem onåbara för anklagelser vilket gör att vissa inte drar sig för att använda sitt inflytande för att ta det de vill utan rädsla för repressalier. Många är fanatiskt trogna den orden de tillhör och att försvara sin och dess ära tar upp all deras tid.";
 	bakgrundstabeller.jargiensbefolkning[60].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";

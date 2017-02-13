@@ -1886,7 +1886,7 @@ function slapahandelsetabell(){
 	
 	//--- Om ett val redan är gjort ska slumptal slås om
 	
-	//startnummer=66;
+	//startnummer=18;
 	//slumptal=startnummer;
 	
 	if (saknadeobjekt.length==0){
@@ -1938,6 +1938,7 @@ function slapahandelsetabell(){
 				
 				while(omslag==1){
 					slumptal=window.parent.slumpa(aktiv_handelsetabell.length-1);
+					//slumptal+=1;
 					if(aktiv_handelsetabell[slumptal].vald==1){
 					}else{
 						omslag=0;
@@ -8055,7 +8056,7 @@ a:active {
 		<td id="raknautattribut">
 		<!-- <a href="PleaseEnableJavascript.html" onclick="raknautattribut();return false;">Räkna ut attribut</a> -->
 		</td>
-		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-02-06</i></td>
+		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-02-13</i></td>
 		</tr>
 		</table>
 		</div>

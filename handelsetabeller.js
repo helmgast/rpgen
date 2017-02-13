@@ -4346,11 +4346,14 @@ function hamta_handelsetabeller(){
 	handelsetabeller.kunskapmysterier[19].subval[0][0][0].valdasub = []; 
 	handelsetabeller.kunskapmysterier[19].subval[0][0][0].vald = 0; 
 	handelsetabeller.kunskapmysterier[19].subval[0][0][0].ovrigt="Har experimenterat med (eller blivit utsatt för) olika preparat som på något sätt förvridit dennes sinne och kropp.";
+	handelsetabeller.kunskapmysterier[19].subval[0][0][0].antalsubval=1;
 	
 	handelsetabeller.kunskapmysterier[19].subval.push([[]]); 
 	handelsetabeller.kunskapmysterier[19].subval[1][0][0] = {}; 
 	handelsetabeller.kunskapmysterier[19].subval[1][0][0].valdasub = []; 
 	handelsetabeller.kunskapmysterier[19].subval[1][0][0].vald = 0; 
+	handelsetabeller.kunskapmysterier[19].subval[1][0][0].antalsubval=1;
+	handelsetabeller.kunskapmysterier[19].subval[1][0][0].beskrivninghakvaldbas = "";
 	
 	handelsetabeller.kunskapmysterier[19].subval[1].push([]); 
 	handelsetabeller.kunskapmysterier[19].subval[1][1][0] = {}; 
@@ -4385,6 +4388,8 @@ function hamta_handelsetabeller(){
 	handelsetabeller.kunskapmysterier[19].subval[2][0][0] = {}; 
 	handelsetabeller.kunskapmysterier[19].subval[2][0][0].valdasub = []; 
 	handelsetabeller.kunskapmysterier[19].subval[2][0][0].vald = 0; 
+	handelsetabeller.kunskapmysterier[19].subval[2][0][0].antalsubval=1;
+	handelsetabeller.kunskapmysterier[19].subval[2][0][0].beskrivninghakvaldbas = "";
 	handelsetabeller.kunskapmysterier[19].subval[2].push([]); 
 	
 	handelsetabeller.kunskapmysterier[19].subval[2][1][0] = {}; 
@@ -4400,10 +4405,10 @@ function hamta_handelsetabeller(){
 	handelsetabeller.kunskapmysterier[19].subval[2][2][0] = {}; 
 	handelsetabeller.kunskapmysterier[19].subval[2][2][0].valdasub = []; 
 	handelsetabeller.kunskapmysterier[19].subval[2][2][0].vald = 0; 
-	handelsetabeller.kunskapmysterier[19].subval[2][1][0].psyke = {};
-	handelsetabeller.kunskapmysterier[19].subval[2][1][0].psyke.varde=4;
-	handelsetabeller.kunskapmysterier[19].subval[2][1][0].rubrik="\+1T6 Psyke";	
-	handelsetabeller.kunskapmysterier[19].subval[2][1][0].beskrivninghakvaldbas="\+1T6 Psyke.";	
+	handelsetabeller.kunskapmysterier[19].subval[2][2][0].psyke = {};
+	handelsetabeller.kunskapmysterier[19].subval[2][2][0].psyke.varde=4;
+	handelsetabeller.kunskapmysterier[19].subval[2][2][0].rubrik="\+1T6 Psyke";	
+	handelsetabeller.kunskapmysterier[19].subval[2][2][0].beskrivninghakvaldbas="\+1T6 Psyke.";	
 	
 
 	handelsetabeller.kunskapmysterier[20] = {}; 
@@ -4571,7 +4576,7 @@ function hamta_handelsetabeller(){
 	handelsetabeller.kunskapmysterier[28].rubrik = "Förbjuden sammanslutning"
 	handelsetabeller.kunskapmysterier[28].beskrivning = "Rollpersonen är eller har varit medlem i en sammanslutning som är bannlyst av de styrande. Detta kan röra sig om en politisk sammansvärjning eller en grupp personer som gått samman för att komma över kunskap eller uppnå ett mål."
 	handelsetabeller.kunskapmysterier[28].beskrivninghak = "\+2 Psyke, \+1 Visdom. Välj mellan 4 enheter Kunskapsfärdigheter och 4 enheter Mystikfärdigheter"
-	handelsetabeller.kunskapmysterier[28].beskrivninghak = "\+2 Psyke, \+1 Visdom. ";
+	handelsetabeller.kunskapmysterier[28].beskrivninghakvaldbas = "\+2 Psyke, \+1 Visdom. ";
 	
 	handelsetabeller.kunskapmysterier[28].subval[0][0][0] = {}; 
 	handelsetabeller.kunskapmysterier[28].subval[0][0][0].valdasub = []; 

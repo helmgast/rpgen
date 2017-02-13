@@ -42,8 +42,8 @@
 	hav.subval[0][0][0].kunskapsfardigheterenheter = 1;
 	hav.subval[0][0][0].rorelsefardigheterenheter = 4;
 	hav.subval[0][0][0].stridsfardigheterenheter = 2;
-	hav.subval[0][0][0].vildmarksfardigheterenheter = 8;
-	hav.subval[0][0][0].beskrivningenheter=[["1 enhet Kunskapsfärdigheter"],["4 enheter Rörelsefärdigheter"],["2 enheter Stridsfärdigheter"],["8 enheter Vildmarksfärdigheter"]];
+	hav.subval[0][0][0].vildmarksfardigheterenheter = 5;
+	hav.subval[0][0][0].beskrivningenheter=[["1 enhet Kunskapsfärdigheter"],["4 enheter Rörelsefärdigheter"],["2 enheter Stridsfärdigheter"],["5 enheter Vildmarksfärdigheter"]];
 	
 	hav.subval[0].push([]);
 	hav.subval[0][1][0] = {};
@@ -325,9 +325,9 @@
 	larosate.subval[0][0][0].beskrivningtabeller = [["2 slag på Kunskap \& mysterier"], ["1 slag på valfri tabell"]];
 	
 	larosate.subval[0][0][0].kunskapsfardigheterenheter = 8;
-	larosate.subval[0][0][0].socialafardigheterenheter = 3;
+	larosate.subval[0][0][0].socialafardigheterenheter = 2;
 	larosate.subval[0][0][0].valfriaenheter = 2;
-	larosate.subval[0][0][0].beskrivningenheter=[["8 enheter Kunskapsfärdigheter"],["3 enheter Sociala färdigheter"],["2 valfria enheter"]];
+	larosate.subval[0][0][0].beskrivningenheter=[["8 enheter Kunskapsfärdigheter"],["2 enheter Sociala färdigheter"],["2 valfria enheter"]];
 	
 	
 	larosate.subval[0].push([]);
