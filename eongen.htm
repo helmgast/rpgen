@@ -2153,28 +2153,33 @@ function skrivhandelsetabeller(){
 	htmlkodrubrik +="</td>";
 	htmlkodrubrik += "</tr>";
 	htmlkodrubrik += "<tr>";
+	if (saknadeobjekt.length>0){
+	htmlkodrubrik +="<td class=\"center\" colspan=4>";
+	htmlkodrubrik +="&nbsp;";
+	htmlkodrubrik +="</td>";
+	}else{
 	
-	htmlkodrubrik +="<td class=\"center\" rowspan=1>";
-	htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(-10);return false;\">";
-	htmlkodrubrik +="&#8211;10"; 
-	htmlkodrubrik += "</a>";
-	htmlkodrubrik +="</td>";
-	htmlkodrubrik +="<td class=\"center\"  rowspan=1>";
-	htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(-1);return false;\">";
-	htmlkodrubrik +="&#8211;1"; 
-	htmlkodrubrik += "</a>";
-	htmlkodrubrik +="</td>";
-	htmlkodrubrik +="<td class=\"center\" rowspan=1>";
-	htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(1);return false;\">";
-	htmlkodrubrik +="&#43;1"; 
-	htmlkodrubrik += "</a>";
-	htmlkodrubrik +="</td>";
-	htmlkodrubrik +="<td class=\"center\"  rowspan=1>";
-	htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(10);return false;\">";
-	htmlkodrubrik +="&#43;10"; 
-	htmlkodrubrik += "</a>";
-	htmlkodrubrik +="</td>";
-	
+		htmlkodrubrik +="<td class=\"center\" rowspan=1>";
+		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(-10);return false;\">";
+		htmlkodrubrik +="&#8211;10"; 
+		htmlkodrubrik += "</a>";
+		htmlkodrubrik +="</td>";
+		htmlkodrubrik +="<td class=\"center\"  rowspan=1>";
+		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(-1);return false;\">";
+		htmlkodrubrik +="&#8211;1"; 
+		htmlkodrubrik += "</a>";
+		htmlkodrubrik +="</td>";
+		htmlkodrubrik +="<td class=\"center\" rowspan=1>";
+		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(1);return false;\">";
+		htmlkodrubrik +="&#43;1"; 
+		htmlkodrubrik += "</a>";
+		htmlkodrubrik +="</td>";
+		htmlkodrubrik +="<td class=\"center\"  rowspan=1>";
+		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(10);return false;\">";
+		htmlkodrubrik +="&#43;10"; 
+		htmlkodrubrik += "</a>";
+		htmlkodrubrik +="</td>";
+	}
 	htmlkodrubrik += "</tr>";
 	htmlkodrubrik += "</table>";
 	htmlkodrubrik += "</div>";
@@ -8106,7 +8111,7 @@ a:active {
 		<td id="raknautattribut">
 		<!-- <a href="PleaseEnableJavascript.html" onclick="raknautattribut();return false;">Räkna ut attribut</a> -->
 		</td>
-		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-02-13</i></td>
+		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-02-14</i></td>
 		</tr>
 		</table>
 		</div>
