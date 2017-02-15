@@ -379,7 +379,8 @@ function skrivbakgrunderkategorier(){
 		}
 	}
 	htmlkod += "</td>";
-	htmlkod += "<td class=\"center\" width=\"18%\"></td></tr></table>";
+	htmlkod += "<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td>";
+	htmlkod += "</tr></table>";
 	htmlkod += "</div>";
 	document.getElementById("hogerkategorival").innerHTML=htmlkod;
 }
@@ -565,7 +566,9 @@ function skrivfolkslagkategorier(){
 	}
 
 	htmlkod += "</td>";
-	htmlkod += "<td class=\"center\" width=\"18%\"></td></tr></table>";
+	htmlkod += "<td class=\"center\" width=\"18%\">";
+	htmlkod += "<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td>";
+	htmlkod += "</td></tr></table>";
 	htmlkod += "</div>";
 	document.getElementById("hogerkategorival").innerHTML = htmlkod;
 }
@@ -1195,7 +1198,7 @@ function skrivarketypkategorier(){
 	}
 
 	htmlkod +="</td>";
-	htmlkod +="<td class=\"center\" width=\"18%\"></td></tr></table>";
+	htmlkod +="<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td></tr></table>";
 	htmlkod +="</div>";
 	document.getElementById("hogerkategorival").innerHTML = htmlkod;
 }
@@ -1231,7 +1234,7 @@ function skrivmiljokategorier(){
 		}
 	}
 	htmlkod += "</td>";
-	htmlkod += "<td class=\"center\" width=\"18%\"></td></tr></table>";
+	htmlkod += "<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td></tr></table>";
 	htmlkod += "</div>";
 	document.getElementById("hogerkategorival").innerHTML = htmlkod;
 }
@@ -2161,22 +2164,22 @@ function skrivhandelsetabeller(){
 	
 		htmlkodrubrik +="<td class=\"center\" rowspan=1>";
 		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(-10);return false;\">";
-		htmlkodrubrik +="&#8211;10"; 
+		htmlkodrubrik +="<span style=\"white-space: nowrap\">&#8211;10</span>"; 
 		htmlkodrubrik += "</a>";
 		htmlkodrubrik +="</td>";
 		htmlkodrubrik +="<td class=\"center\"  rowspan=1>";
 		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(-1);return false;\">";
-		htmlkodrubrik +="&#8211;1"; 
+		htmlkodrubrik +="<span style=\"white-space: nowrap\">&#8211;1</span>"; 
 		htmlkodrubrik += "</a>";
 		htmlkodrubrik +="</td>";
 		htmlkodrubrik +="<td class=\"center\" rowspan=1>";
 		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(1);return false;\">";
-		htmlkodrubrik +="&#43;1"; 
+		htmlkodrubrik +="<span style=\"white-space: nowrap\">&#43;1</span>"; 
 		htmlkodrubrik += "</a>";
 		htmlkodrubrik +="</td>";
 		htmlkodrubrik +="<td class=\"center\"  rowspan=1>";
 		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrahandelsetabellslag(10);return false;\">";
-		htmlkodrubrik +="&#43;10"; 
+		htmlkodrubrik +="<span style=\"white-space: nowrap\">&#43;10</span>"; 
 		htmlkodrubrik += "</a>";
 		htmlkodrubrik +="</td>";
 	}
@@ -6954,6 +6957,115 @@ function slumparollperson(){
 	
 }
 
+function slumparesterandeval(rollperson){
+	
+	var i
+	var vallista=["folkslag","arketyp","miljo"];
+	if ("bakgrund" in rollperson){
+	}else{
+		// Bakgrund
+		bakgrundstabellindex=slumpa(bakgrundstabeller.lista.length);
+			
+		aktiv_bakgrundstabell=bakgrundstabeller[bakgrundstabeller.lista[bakgrundstabellindex-1]];
+		
+		// Slumpa resultat på bakgrundstabell
+		
+		slumptal=slumpa(aktiv_bakgrundstabell.length-1);
+		rollperson.bakgrund=clone(aktiv_bakgrundstabell[slumptal]);
+		rollperson.bakgrundtabellnamn=rollperson.bakgrund.tabellnamn;
+	}
+	
+	// folkslag
+	
+	if ("folkslag" in rollperson){
+	}else{
+		folkslagindex=slumpa(folkslagobjekt.lista.length);
+		aktivtfolkslagobjekt=folkslagobjekt[folkslagobjekt.lista[folkslagindex-1]];
+	
+		
+		// Välj subval och spara
+		aktivtfolkslagobjekt=valj_subval(aktivtfolkslagobjekt,1);
+		aktivtfolkslagobjekt=summera_subval(aktivtfolkslagobjekt);
+		rollperson.folkslag=clone(aktivtfolkslagobjekt);
+	}
+
+	if ("attributtarningar" in rollperson){
+	}else{	
+		// Grundattribut
+		slumpagrundattribut();
+		rollperson.attributtarningar={};
+		for (i=0;i<grundattributlista.length;i++){
+			rollperson.attributtarningar[grundattributlista[i]]={};
+			rollperson.attributtarningar[grundattributlista[i]].varde=extratarningar[grundattributlista[i]]*4;
+			
+		}
+	}
+	
+	if ("arketyp" in rollperson){
+	}else{
+	
+		// arketyp
+		arketypindex=slumpa(arketypobjekt.lista.length);
+		aktivtarketypobjekt=arketypobjekt[arketypobjekt.lista[arketypindex-1]];
+	
+		
+		// Välj subval och spara
+		aktivtarketypobjekt=valj_subval(aktivtarketypobjekt,1);
+		aktivtarketypobjekt=summera_subval(aktivtarketypobjekt);
+		rollperson.arketyp=clone(aktivtarketypobjekt);
+	}	
+	// miljo
+	if ("miljo" in rollperson){
+	}else{	
+		miljoindex=slumpa(miljoobjekt.lista.length);
+		aktivtmiljoobjekt=miljoobjekt[miljoobjekt.lista[miljoindex-1]];
+		// Välj subval och spara
+	aktivtmiljoobjekt=valj_subval(aktivtmiljoobjekt,1);
+	aktivtmiljoobjekt=summera_subval(aktivtmiljoobjekt);
+	rollperson.miljo=clone(aktivtmiljoobjekt);
+	
+	
+	}
+	
+	rollperson=nollarollperson(rollperson);
+	
+	// Summera 
+	rollperson= summerarollperson(rollperson, rollperson.bakgrund);
+	skrivvanstersammanfattning();
+	uppdateravanstersammanfattning();
+	
+	
+	rollperson= summerarollperson(rollperson, rollperson.folkslag);
+	uppdateravanstersammanfattning();
+	
+	
+	
+	rollperson= summerarollperson(rollperson, rollperson.attributtarningar);
+	uppdateravanstersammanfattning();
+	
+	
+	rollperson= summerarollperson(rollperson, rollperson.arketyp);
+	uppdateravanstersammanfattning();
+	
+	rollperson= summerarollperson(rollperson, rollperson.miljo);
+	uppdateravanstersammanfattning();
+	
+	skrivhogerkategorityper();
+	
+	rollperson=nollaextraenheter(rollperson);
+	rollperson=extraenheter(rollperson);
+		
+	rollperson=kvarhandelsetabellslag(rollperson);
+	
+	skrivhandelsetabellerkategorier();
+	skrivhandelsetabeller();
+	return rollperson
+}
+/*
+function slumparesterandehandelser(rollperson){
+	return rollperson
+}
+*/
 function bytattributfolkslag(folkslagnamn){
 	folkslagobjekt=hamta_folkslaglistor();
 	rollperson.folkslag=clone(folkslagobjekt[folkslagnamn]);
@@ -7216,7 +7328,7 @@ function raknautattribut(){
 	}
 	htmlkod+="</th>";
 	htmlkod+="<th colspan='3' class='center'>";
-	htmlkod+="Extra attributtärningar";
+	htmlkod+="Extra attribut&shy;tärningar";
 	htmlkod+="</th>";
 	htmlkod+="<th colspan='3' class='center'>";
 	htmlkod+="Bonus från <br>hantverk och händelser";
@@ -7251,7 +7363,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_folkslag_" + grundattributlista[i] + "m1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "folkslag" + "','" + grundattributlista[i] + "',-1);return false;\">";
-		htmlkod +="&#8211;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#8211;" + "1" + "</span>";
 		htmlkod+="</a>";
 		htmlkod+="</td>";
 		
@@ -7263,7 +7375,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_folkslag_" + grundattributlista[i] + "p1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "folkslag" + "','" + grundattributlista[i] + "',1);return false;\">";
-		htmlkod +="&#43;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#43;" + "1" + "</span>";
 		htmlkod+="</a>";
 		/*
 		htmlkod +="&nbsp;";
@@ -7281,7 +7393,7 @@ function raknautattribut(){
 			htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 			htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "attributtarningar" + "','" + grundattributlista[i] + "',-4);return false;\">";
 		}
-		htmlkod +="&#8211;" + "1T6";
+		htmlkod +="<span style=\"white-space: nowrap\">&#8211;" + "1T6" + "</span>";
 		if (rollperson.attributtarningar[grundattributlista[i]].varde > 0){
 			htmlkod+="</a>";
 		}
@@ -7307,7 +7419,7 @@ function raknautattribut(){
 				htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "attributtarningar" + "','" + grundattributlista[i] + "',4);return false;\">";
 			}
 		}
-		htmlkod +="&#43;" + "1T6";
+		htmlkod +="<span style=\"white-space: nowrap\">&#43;" + "1T6" +"</span>";
 		if (rollperson.attributtarningar[grundattributlista[i]].varde < 12){
 			if (rollperson.attributtarningar.kvarvarandetarningar>0){
 				htmlkod+="</a>";
@@ -7329,7 +7441,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_hantverkhandelse_" + grundattributlista[i] + "m1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "hantverkhandelse" + "','" + grundattributlista[i] + "',-1);return false;\">";
-		htmlkod +="&#8211;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#8211;" + "1" + "</span>";;
 		htmlkod+="</a>";
 		htmlkod+="</td>"
 		
@@ -7341,7 +7453,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_hantverkhandelse" + grundattributlista[i] + "p1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "hantverkhandelse" + "','" + grundattributlista[i] + "',1);return false;\">";
-		htmlkod +="&#43;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#43;" + "1" + "</span>";
 		htmlkod+="</a>";
 		/*
 		htmlkod +="&nbsp;";
@@ -7421,7 +7533,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_folkslag_" + harleddaattributlista[i] + "m1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "folkslag" + "','" + harleddaattributlista[i] + "',-1);return false;\">";
-		htmlkod +="&#8211;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#8211;" + "1" + "</span>";
 		htmlkod+="</a>";
 		htmlkod+="</td>";
 		
@@ -7439,7 +7551,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_folkslag_" + harleddaattributlista[i] + "p1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "folkslag" + "','" + harleddaattributlista[i] + "',1);return false;\">";
-		htmlkod +="&#43;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#43;" + "1" + "</span>";
 		htmlkod+="</a>";
 		/*
 		htmlkod +="&nbsp;";
@@ -7468,7 +7580,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_hantverkhandelse_" + harleddaattributlista[i] + "m1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "hantverkhandelse" + "','" + harleddaattributlista[i] + "',-1);return false;\">";
-		htmlkod +="&#8211;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#8211;" + "1" + "</span>";
 		htmlkod+="</a>";
 		htmlkod+="</td>"
 		
@@ -7481,7 +7593,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_hantverkhandelse" + harleddaattributlista[i] + "p1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "hantverkhandelse" + "','" + harleddaattributlista[i] + "',1);return false;\">";
-		htmlkod +="&#43;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#43;" + "1" + "</span>";
 		htmlkod+="</a>";
 		/*
 		htmlkod +="&nbsp;";
@@ -7533,7 +7645,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_folkslag_" + harleddavardenlista[i] + "m1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "folkslag" + "','" + harleddavardenlista[i] + "',-1);return false;\">";
-		htmlkod +="&#8211;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#8211;" + "1" + "</span>";
 		htmlkod+="</a>";
 		htmlkod+="</td>";
 		
@@ -7557,7 +7669,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_folkslag_" + harleddavardenlista[i] + "p1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "folkslag" + "','" + harleddavardenlista[i] + "',1);return false;\">";
-		htmlkod +="&#43;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#43;" + "1" + "</span>";
 		htmlkod+="</a>";
 		/*
 		htmlkod +="&nbsp;";
@@ -7586,7 +7698,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_hantverkhandelse_" + harleddavardenlista[i] + "m1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "hantverkhandelse" + "','" + harleddavardenlista[i] + "',-1);return false;\">";
-		htmlkod +="&#8211;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#8211;" + "1" + "</span>";
 		htmlkod+="</a>";
 		htmlkod+="</td>"
 		
@@ -7602,7 +7714,7 @@ function raknautattribut(){
 		htmlkod += "<a id=\"attributrakning_hantverkhandelse" + harleddavardenlista[i] + "p1" + "\"";
 		htmlkod += "title=\"\" href=\"PleaseEnableJavascript.html\"";
 		htmlkod += "onclick=\"attributrakningandring(rollperson, '" + "hantverkhandelse" + "','" + harleddavardenlista[i] + "',1);return false;\">";
-		htmlkod +="&#43;" + "1";
+		htmlkod +="<span style=\"white-space: nowrap\">&#43;" + "1" + "</span>";
 		htmlkod+="</a>";
 		/*
 		htmlkod +="&nbsp;";
@@ -8111,7 +8223,7 @@ a:active {
 		<td id="raknautattribut">
 		<!-- <a href="PleaseEnableJavascript.html" onclick="raknautattribut();return false;">Räkna ut attribut</a> -->
 		</td>
-		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-02-14</i></td>
+		<td id="versionsdatum" style="text-align:right"><i>Testversion <br>2017-02-15</i></td>
 		</tr>
 		</table>
 		</div>
