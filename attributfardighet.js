@@ -1,12 +1,8 @@
 ﻿//TODO:
 // Dela upp i hamta_fardighetslistaobjekt och hamta_fardighetsobjekt
 
-
-function hamta_attributobjekt(){
-	
-    var i;
-    
-    attributobjekt={};
+function hamta_attributlistaobjekt(){
+	attributlistaobjekt={};
     
     var grundattributlista=[];
 	grundattributlista[0]="styrka";
@@ -20,11 +16,6 @@ function hamta_attributobjekt(){
 	
 	var grundattributforkortningslista=["sty","tål","rör","upp","vil","psy","vis","uts"];
 	
-	attributobjekt.forkortning={};
-	for (i=0; i< grundattributlista.length;i++){
-		attributobjekt.forkortning[grundattributlista[i]]=grundattributforkortningslista[i];
-	}
-    
 	var harleddaattributlista=["forflyttning", "intryck", "kroppsbyggnad", "reaktion", "sjalvkontroll", "vaksamhet"];
 	var harleddavardenlista=["grundrustning", "grundskada", "livskraft", "lakningstakt", "grundbelastning"];
 
@@ -37,16 +28,49 @@ function hamta_attributobjekt(){
 	var harleddaattributparnummer=[[1,2],[6,7],[0,1],[2,3],[5,4],[5,3]];
 	
 	
-    attributobjekt.grundattributlista=grundattributlista;
-	attributobjekt.harleddaattributlista=harleddaattributlista;
-    attributobjekt.harleddavardenlista=harleddavardenlista;
+    attributlistaobjekt.grundattributlista=grundattributlista;
+	attributlistaobjekt.harleddaattributlista=harleddaattributlista;
+    attributlistaobjekt.harleddavardenlista=harleddavardenlista;
+    attributlistaobjekt.grundattributforkortningslista=grundattributforkortningslista;
     
-    attributobjekt.grundattributrubriker=grundattributrubriker;
-    attributobjekt.harleddaattributrubriker=harleddaattributrubriker;
-    attributobjekt.harleddavardenrubriker=harleddavardenrubriker;
+	
+    attributlistaobjekt.grundattributrubriker=grundattributrubriker;
+    attributlistaobjekt.harleddaattributrubriker=harleddaattributrubriker;
+    attributlistaobjekt.harleddavardenrubriker=harleddavardenrubriker;
     
-	attributobjekt.harleddaattributparnamn=harleddaattributparnamn;
-    attributobjekt.harleddaattributparnummer=harleddaattributparnummer;
+	attributlistaobjekt.harleddaattributparnamn=harleddaattributparnamn;
+    attributlistaobjekt.harleddaattributparnummer=harleddaattributparnummer;
+	
+	return attributlistaobjekt
+}
+
+
+function hamta_attributobjekt(){
+	
+	attributlistaobjekt=hamta_attributlistaobjekt();
+	
+    var i;
+    
+    attributobjekt={};
+   
+	attributobjekt.grundattributlista=attributlistaobjekt.grundattributlista;
+	attributobjekt.harleddaattributlista=attributlistaobjekt.harleddaattributlista;
+    attributobjekt.harleddavardenlista=attributlistaobjekt.harleddavardenlista;
+    attributobjekt.grundattributforkortningslista=attributlistaobjekt.grundattributforkortningslista;
+	
+	attributobjekt.grundattributrubriker=attributlistaobjekt.grundattributrubriker;
+	attributobjekt.harleddaattributrubriker=attributlistaobjekt.harleddaattributrubriker;
+    attributobjekt.harleddavardenrubriker=attributlistaobjekt.harleddavardenrubriker;
+    
+	attributobjekt.harleddaattributparnamn=attributlistaobjekt.harleddaattributparnamn;
+    attributobjekt.harleddaattributparnummer=attributlistaobjekt.harleddaattributparnummer;
+	
+   
+	attributobjekt.forkortning={};
+	for (i=0; i< attributobjekt.grundattributlista.length;i++){
+		attributobjekt.forkortning[attributobjekt.grundattributlista[i]]=attributobjekt.grundattributforkortningslista[i];
+	}
+    
 	
     for (i=0; i < attributobjekt.grundattributlista.length;i++){
     	attributobjekt[attributobjekt.grundattributlista[i]]={};

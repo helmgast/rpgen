@@ -338,14 +338,16 @@ function subvalobjektknapp(objektstyp){
 }
 
 function skrivbakgrunderkategorier(){
-
+	
+	var sidocellbredd=18;
+	
 	var htmlkod = "<div class='garald'>";
 
 	window.parent.document.getElementById('hogerkategorival').height="40";
 	htmlkod += "<table style=\"width:100%\">";
 	htmlkod += "<tr>";
 	if (window.parent.bakgrundstabeller.lista.length>1){
-		htmlkod += "<td class=\"center\" width=\"18%\">";
+		htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\">";
 		htmlkod += "<a id=\"rpvalkategori_slumpabakgrundstabell\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpabakgrundstabell();return false;\">";
 		htmlkod += "Slumpa bakgrundstabell";
 		htmlkod +="</a>";
@@ -379,7 +381,9 @@ function skrivbakgrunderkategorier(){
 		}
 	}
 	htmlkod += "</td>";
-	htmlkod += "<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td>";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td>";
+	//htmlkod += "<td class=\"center\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td>";
+	
 	htmlkod += "</tr></table>";
 	htmlkod += "</div>";
 	document.getElementById("hogerkategorival").innerHTML=htmlkod;
@@ -532,12 +536,14 @@ function sparabakgrund(bakgrundtabellnamn, bakgrundindex){
 
 function skrivfolkslagkategorier(){
 	
+	var sidocellbredd=18;
+	
 	var htmlkod = "<div class='garaldcenter'>";
 
 	window.parent.document.getElementById('hogerkategorival').height="80";
 	htmlkod += "<table style=\"width:100%\">";
 	htmlkod += "<tr>";
-	htmlkod += "<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpafolkslag();return false;\">Slumpa folkslag</a></td>";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpafolkslag();return false;\">Slumpa folkslag</a></td>";
 	htmlkod += "<td class=\"center\">";
 	for (i=0;i<window.parent.folkslagobjekt.lista.length;i++){
 		//console.log(i);
@@ -566,8 +572,8 @@ function skrivfolkslagkategorier(){
 	}
 
 	htmlkod += "</td>";
-	htmlkod += "<td class=\"center\" width=\"18%\">";
-	htmlkod += "<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td>";
+	//htmlkod += "<td class=\"center\" width=\"18%\">";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td>";
 	htmlkod += "</td></tr></table>";
 	htmlkod += "</div>";
 	document.getElementById("hogerkategorival").innerHTML = htmlkod;
@@ -582,6 +588,9 @@ function slumpafolkslag(){
 
 function skrivfolkslag(){
 	
+	var sidocellbredd=18;
+	var sidocellbreddextra=23;
+	var knappcellbredd=4;
 	aktivtrpvalobjekt=aktivtfolkslagobjekt;
 	
 	//Slumpa endast subval om objektet ej aktiverats
@@ -631,7 +640,7 @@ function skrivfolkslag(){
 			
 			if ("minantalsubval" in aktivtfolkslagobjekt.subval[i][0][0]){
 				if (aktivtfolkslagobjekt.subval[i][0][0].minantalsubval < aktivtfolkslagobjekt.subval[i][0][0].antalsubval){
-					htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
+					htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
 					
 					// Sätt om  valet ska vara markerat som förval
 					if (aktivtfolkslagobjekt.subval[i][0][0].valdasub.indexOf(j) == -1){
@@ -644,10 +653,10 @@ function skrivfolkslag(){
 				}
 			}else if (aktivtfolkslagobjekt.subval[i][0][0].antalsubval== aktivtfolkslagobjekt.subval[i].length-1){
 				// Alla subval ska väljas, inputform behövs ej
-				htmlkod += "<td width=\"4%\" valign=\"top\"></td>";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"></td>";
 			}else if (aktivtfolkslagobjekt.subval[i][0][0].antalsubval==1){
 				// Endast ett subval, radiobutton
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"radio\" name=\"folkslag_subval_" + i.toString() + "00\" value=\"folkslag_subval_" + i.toString() + j.toString() + "0\" id = \"folkslag_subval_" + i.toString() + j.toString() + "0\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"radio\" name=\"folkslag_subval_" + i.toString() + "00\" value=\"folkslag_subval_" + i.toString() + j.toString() + "0\" id = \"folkslag_subval_" + i.toString() + j.toString() + "0\"";
 			
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtfolkslagobjekt.subval[i][0][0].valdasub.indexOf(j) == -1){
@@ -659,7 +668,7 @@ function skrivfolkslag(){
 			
 			}else if (aktivtfolkslagobjekt.subval[i][0][0].antalsubval>=2){
 				// Flera subval, checkbox
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"folkslag_subval_" + i.toString() + "00\" value=\"folkslag_subval_" + i.toString() + j.toString() + "0\" id = \"folkslag_subval_" + i.toString() + j.toString() + "0\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"folkslag_subval_" + i.toString() + "00\" value=\"folkslag_subval_" + i.toString() + j.toString() + "0\" id = \"folkslag_subval_" + i.toString() + j.toString() + "0\"";
 			
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtfolkslagobjekt.subval[i][0][0].valdasub.indexOf(j) == -1){
@@ -689,7 +698,7 @@ function skrivfolkslag(){
 				htmlkod += "<td></td>";
 				if ("minantalsubval" in aktivtfolkslagobjekt.subval[i][j][0]){
 					if (aktivtfolkslagobjekt.subval[i][j][0].minantalsubval < aktivtfolkslagobjekt.subval[i][j][0].antalsubval){
-						htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+						htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 						
 						// Sätt om  valet ska vara markerat som förval
 						if (aktivtfolkslagobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -700,9 +709,9 @@ function skrivfolkslag(){
 						htmlkod += " onchange=\"togglecheckbox\(\'folkslag\'," + i + "," + j + "," + k + "\);\"></form></td>";
 					}
 				}else if (aktivtfolkslagobjekt.subval[i][j][0].antalsubval==aktivtfolkslagobjekt.subval[i][j].length-1){
-					htmlkod += "<td width=\"4%\" valign=\"top\"></td>";
+					htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"></td>";
 				}else if (aktivtfolkslagobjekt.subval[i][j][0].antalsubval==1){
-					htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"radio\" name=\"folkslag_subval_" + i.toString() + j.toString() + "0\" value=\"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+					htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"radio\" name=\"folkslag_subval_" + i.toString() + j.toString() + "0\" value=\"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 				
 					// Sätt om  valet ska vara markerat som förval
 					if (aktivtfolkslagobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -713,7 +722,7 @@ function skrivfolkslag(){
 					htmlkod += " onchange=\"toggleradio\(\'folkslag\'," + i + "," + j + "," + k + "\);\"></form></td>";
 				
 				}else if (aktivtfolkslagobjekt.subval[i][j][0].antalsubval>=2){
-					htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"folkslag_subval_" + i.toString() + j.toString() + "0\" value=\"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+					htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"folkslag_subval_" + i.toString() + j.toString() + "0\" value=\"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 				
 					// Sätt om  valet ska vara markerat som förval
 					if (aktivtfolkslagobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -756,7 +765,7 @@ function skrivfolkslag(){
 			
 			if ("minantalsubval" in aktivtfolkslagobjekt.subval[i][j][0]){
 				if (aktivtfolkslagobjekt.subval[i][j][0].minantalsubval < aktivtfolkslagobjekt.subval[i][j][0].antalsubval){
-					htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+					htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 					
 					// Sätt om  valet ska vara markerat som förval
 					if (aktivtfolkslagobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -767,9 +776,9 @@ function skrivfolkslag(){
 					htmlkod += " onchange=\"togglecheckbox\(\'folkslag\'," + i + "," + j + "," + k + "\);\"></form></td>";
 				}
 			}else if (aktivtfolkslagobjekt.subval[i][j][0].antalsubval==aktivtfolkslagobjekt.subval[i][j].length-1){
-				htmlkod += "<td width=\"4%\" valign=\"top\"></td>";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"></td>";
 			}else if (aktivtfolkslagobjekt.subval[i][j][0].antalsubval==1){
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"radio\" name=\"folkslag_subval_" + i.toString() + j.toString() + "0\" value=\"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"radio\" name=\"folkslag_subval_" + i.toString() + j.toString() + "0\" value=\"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 			
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtfolkslagobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -780,7 +789,7 @@ function skrivfolkslag(){
 				htmlkod += " onchange=\"toggleradio\(\'folkslag\'," + i + "," + j + "," + k + "\);\"></form></td>";
 			
 			}else if (aktivtfolkslagobjekt.subval[i][j][0].antalsubval>=2){
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"folkslag_subval_" + i.toString() + j.toString() + "0\" value=\"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"folkslag_subval_" + i.toString() + j.toString() + "0\" value=\"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"folkslag_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 			
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtfolkslagobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -836,15 +845,15 @@ function skrivfolkslag(){
 		harsubval=1;
 	}
 	if (harsubval==0){
-		htmlkodrubrik += "<td class=\"center\" width=\"20%\"></td>";
+		htmlkodrubrik += "<td class=\"center\" style=\"width:" + sidocellbreddextra + "%\"></td>";
 	}else{
-		htmlkodrubrik += "<td class=\"center\" width=\"20%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpaallasubval(\'folkslag\');return false;\">Slumpa alla subval</a>";
+		htmlkodrubrik += "<td class=\"center\" style=\"width:" + sidocellbreddextra + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpaallasubval(\'folkslag\');return false;\">Slumpa alla subval</a>";
 		htmlkodrubrik += "<br>";
 		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"nollasubvaluppdatera(\'folkslag\');return false;\">Nolla alla subval</a>";
 		htmlkodrubrik +="</td>";
 	}
 	htmlkodrubrik += "<td class=\"center\"><div><span></span><h1>" + aktivtfolkslagobjekt.rubrik +"</div></h1></td>";
-	htmlkodrubrik += "<td class=\"center\" width=\"20%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparafolkslag();return false;\">Välj " + aktivtfolkslagobjekt.rubrik + " &rArr;</a></td>";
+	htmlkodrubrik += "<td class=\"center\" style=\"width:" + sidocellbreddextra + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparafolkslag();return false;\">Välj " + aktivtfolkslagobjekt.rubrik + " &rArr;</a></td>";
 	htmlkodrubrik += "</tr>";
 	htmlkodrubrik += "</table>";
 	htmlkodrubrik += "</div>";
@@ -981,6 +990,8 @@ function slumpagrundattribut(){
     //rpvalmatris=hamta_rpvalmatris();
     //attributlista=rpvalmatris[0];
     
+	attributlistaobjekt=hamta_attributlistaobjekt();
+	grundattributlista=attributlistaobjekt.grundattributlista;
 	
     var tempindexarray=[0,1,2,3,4,5,6,7];
     var tempattributbonusar=[0,0,0,0,0,0,0,0];
@@ -994,7 +1005,7 @@ function slumpagrundattribut(){
 		slumpindex = slumpa(tempindexarray.length)-1;
     	tempattributbonusar[tempindexarray[slumpindex]] += 4;
        	if (tempattributbonusar[tempindexarray[slumpindex]] >=12){
-       		tempindexarray.splice(slumpindex);
+       		tempindexarray.splice(slumpindex,1);
 		}	
         summabonusar+=4;
     }
@@ -1007,9 +1018,18 @@ function slumpagrundattribut(){
     }
 	kvarvarandetarningar=antalbonustarningar-summabonusar/4;
 	
+	console.log("kvarvarandetarningar: " + kvarvarandetarningar)
+	console.log("summabonusar: " + summabonusar)
+	console.log("tempindexarray: " + tempindexarray)
+	console.log("tempattributbonusar: " + tempattributbonusar)
+	
 
 }
 function nollagrundattribut(){
+	
+	attributlistaobjekt=hamta_attributlistaobjekt();
+	grundattributlista=attributlistaobjekt.grundattributlista;
+
 	extratarningar={};
 	for (i=0; i<grundattributlista.length;i++){
 		extratarningar[grundattributlista[i]]=0;
@@ -1023,6 +1043,9 @@ function skrivgrundattribut(){
 	var grundattributlista=window.parent.attributobjekt.grundattributlista;
 	var grundattributrubriker=window.parent.attributobjekt.grundattributrubriker;
 	var i;
+	
+	var knappcellbredd=4;
+	
 	testvariabel=0;
 	
 	
@@ -1060,12 +1083,12 @@ function skrivgrundattribut(){
 		}
 		
 		
-		htmlkod += "<td class=\"center\" width=\"4%\"><a id=\"" + grundattributlista[i] + "_minska\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\"  onclick=\"andraextratarningar\(\'" + grundattributlista[i] + "\', -1\);return false;\">&ndash;</a></td>"; // onclick
+		htmlkod += "<td class=\"center\" style=\"width:" + knappcellbredd + "%\"><a id=\"" + grundattributlista[i] + "_minska\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\"  onclick=\"andraextratarningar\(\'" + grundattributlista[i] + "\', -1\);return false;\">&ndash;</a></td>"; // onclick
 		
 		
 		
 		htmlkod += "<td class=\"center\" width=\"12%\"><div id=\"" + grundattributlista[i] + "_extratarningar\">" + (extratarningar[grundattributlista[i]]).toString() + "T6</td>";
-		htmlkod += "<td class=\"center\" width=\"4%\"><a id=\"" + grundattributlista[i] + "_oka\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\"  onclick=\"andraextratarningar\(\'" + grundattributlista[i] + "\', 1\);return false;\">\+</a></td>"; // onclick
+		htmlkod += "<td class=\"center\" style=\"width:" + knappcellbredd + "%\"><a id=\"" + grundattributlista[i] + "_oka\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\"  onclick=\"andraextratarningar\(\'" + grundattributlista[i] + "\', 1\);return false;\">\+</a></td>"; // onclick
 		if (window.parent.rollperson.folkslag[grundattributlista[i]].varde % 4 ==0){
 			htmlkod += "<td class=\"center\"><div id=\"" + grundattributlista[i] + "_summa\">" + window.parent.vardetilltarningar(window.parent.rollperson.folkslag[grundattributlista[i]].varde+extratarningar[grundattributlista[i]]*4)  + "&#8199;&#8199;</div></td>";
 		}else{
@@ -1159,13 +1182,16 @@ function sparagrundattribut(){
 }
 
 function skrivarketypkategorier(){
+	
+	var sidocellbredd=18;
+	
 	var htmlkod ="<div class='garaldcenter'>";
 
 	document.getElementById('hogerkategorival').height="60";
 
 	htmlkod +="<table style=\"width:100%\">";
 	htmlkod +="<tr>";
-	htmlkod +="<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpaarketyp();return false;\">Slumpa arketyp</a></td>";
+	htmlkod +="<td class=\"center\" style=\"width:" + sidocellbredd + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpaarketyp();return false;\">Slumpa arketyp</a></td>";
 	htmlkod +="<td class=\"center\">";
 
 	for (i=0;i<arketypobjekt.lista.length;i++){
@@ -1198,17 +1224,20 @@ function skrivarketypkategorier(){
 	}
 
 	htmlkod +="</td>";
-	htmlkod +="<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td></tr></table>";
+	htmlkod +="<td class=\"center\" style=\"width:" + sidocellbredd + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td></tr></table>";
 	htmlkod +="</div>";
 	document.getElementById("hogerkategorival").innerHTML = htmlkod;
 }
 function skrivmiljokategorier(){
+	
+	var sidocellbredd=18;
+	
 	var htmlkod ="<div class='garaldcenter'>";
 
 	window.parent.document.getElementById('hogerkategorival').height="60";
 	htmlkod += "<table style=\"width:100%\">";
 	htmlkod += "<tr>";
-	htmlkod += "<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpamiljo();return false;\">Slumpa miljö</a></td>";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpamiljo();return false;\">Slumpa miljö</a></td>";
 	htmlkod += "<td class=\"center\">";
 	for (i=0;i<window.parent.miljoobjekt.lista.length;i++){
 		
@@ -1234,7 +1263,7 @@ function skrivmiljokategorier(){
 		}
 	}
 	htmlkod += "</td>";
-	htmlkod += "<td class=\"center\" width=\"18%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td></tr></table>";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a></td></tr></table>";
 	htmlkod += "</div>";
 	document.getElementById("hogerkategorival").innerHTML = htmlkod;
 }
@@ -1256,6 +1285,10 @@ function slumpamiljo(){
 
 function skrivarketypmiljo(objektstyp){
 	//window.alert("skrivarketyper kallad");
+	
+	var sidocellbredd=18;
+	var sidocellbreddextra=23;
+	var knappcellbredd=4;
 	
 	slumpsubvalarray=["pengarslag", "vardeslag", "kontaktenhetbool"];
 	
@@ -1325,7 +1358,7 @@ function skrivarketypmiljo(objektstyp){
 		
 		if ("minantalsubval" in aktivtrpvalobjekt.subval[i][0][0]){
 			if (aktivtrpvalobjekt.subval[i][0][0].minantalsubval < aktivtrpvalobjekt.subval[i][0][0].antalsubval){
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
 				
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtrpvalobjekt.subval[i][0][0].valdasub.indexOf(k) == -1){
@@ -1339,11 +1372,11 @@ function skrivarketypmiljo(objektstyp){
 		}
 		if (aktivtrpvalobjekt.subval[i][0][0].antalsubval== aktivtrpvalobjekt.subval[i].length-1){
 			// Alla subval ska väljas, inputform behövs ej
-			htmlkod += "<td width=\"4%\" valign=\"top\"></td>";
+			htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"></td>";
 			htmlkod +="<td colspan=\"2\"><b>" + aktivtrpvalobjekt.subval[i][j][0].rubrik + "</b>: " +  aktivtrpvalobjekt.subval[i][j][0].beskrivningvald +  "</td>";
 		}else if (aktivtrpvalobjekt.subval[i][0][0].antalsubval==1){
 			// Endast ett subval, radiobutton
-			htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
+			htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
 		
 			// Sätt om  valet ska vara markerat som förval
 			if (aktivtrpvalobjekt.subval[i][0][0].valdasub.indexOf(k) == -1){
@@ -1361,7 +1394,7 @@ function skrivarketypmiljo(objektstyp){
 			
 		}else if (aktivtrpvalobjekt.subval[i][0][0].antalsubval>=2){
 			// Flera subval, checkbox
-			htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
+			htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
 		
 			
 			// Sätt om  valet ska vara markerat som förval
@@ -1393,7 +1426,7 @@ function skrivarketypmiljo(objektstyp){
 			// Om ett subval kan lämnas som ej valt (exempelvis kamorianers hamnskiftarförmåga)
 			if ("minantalsubval" in aktivtrpvalobjekt.subval[i][j][0]){
 				if (aktivtrpvalobjekt.subval[i][j][0].minantalsubval < aktivtrpvalobjekt.subval[i][j][0].antalsubval){
-					htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+					htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 					
 					// Sätt om  valet ska vara markerat som förval
 					if (aktivtrpvalobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -1405,10 +1438,10 @@ function skrivarketypmiljo(objektstyp){
 				}
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval== aktivtrpvalobjekt.subval[i].length-1){
 				// Alla subval ska väljas, inputform behövs ej
-				htmlkod += "<td width=\"4%\" valign=\"top\"></td>";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"></td>";
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval==1){
 				// Endast ett subval, radiobutton
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 				
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtrpvalobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -1420,7 +1453,7 @@ function skrivarketypmiljo(objektstyp){
 				
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval>=2){
 				// Flera subval, checkbox
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 				
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtrpvalobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -1460,7 +1493,7 @@ function skrivarketypmiljo(objektstyp){
 		
 		if ("minantalsubval" in aktivtrpvalobjekt.subval[i][0][0]){
 			if (aktivtrpvalobjekt.subval[i][0][0].minantalsubval < aktivtrpvalobjekt.subval[i][0][0].antalsubval){
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
 				
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtrpvalobjekt.subval[i][0][0].valdasub.indexOf(k) == -1){
@@ -1472,10 +1505,10 @@ function skrivarketypmiljo(objektstyp){
 			}
 		}if (aktivtrpvalobjekt.subval[i][0][0].antalsubval== aktivtrpvalobjekt.subval[i].length-1){
 			// Alla subval ska väljas, inputform behövs ej
-			htmlkod += "<td width=\"4%\" valign=\"top\"></td>";
+			htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"></td>";
 		}else if (aktivtrpvalobjekt.subval[i][0][0].antalsubval==1){
 			// Endast ett subval, radiobutton
-			htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
+			htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
 		
 			// Sätt om  valet ska vara markerat som förval
 			if (aktivtrpvalobjekt.subval[i][0][0].valdasub.indexOf(k) == -1){
@@ -1487,7 +1520,7 @@ function skrivarketypmiljo(objektstyp){
 		
 		}else if (aktivtrpvalobjekt.subval[i][0][0].antalsubval>=2){
 			// Flera subval, checkbox
-			htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
+			htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
 		
 			// Sätt om  valet ska vara markerat som förval
 			if (aktivtrpvalobjekt.subval[i][0][0].valdasub.indexOf(k) == -1){
@@ -1499,7 +1532,7 @@ function skrivarketypmiljo(objektstyp){
 		
 		}
 		
-		//htmlkod +="<td width=\"4%\" valign=\"top\">&bull;</td>";
+		//htmlkod +="<td style=\"width:" + knappcellbredd + "%\" valign=\"top\">&bull;</td>";
 		
 		if (aktivtrpvalobjekt.subval[i][j][k].slumpning==1){
 			htmlkod += "<td colspan=\"2\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'" + objektstyp + "\'," + i + "," + j + "," + k + ");return false;\">" + aktivtrpvalobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtrpvalobjekt.subval[i][j][k].beskrivningvald +  "</td>";
@@ -1515,7 +1548,7 @@ function skrivarketypmiljo(objektstyp){
 			// Om ett subval kan lämnas som ej valt (exempelvis kamorianers hamnskiftarförmåga)
 			if ("minantalsubval" in aktivtrpvalobjekt.subval[i][j][0]){
 				if (aktivtrpvalobjekt.subval[i][j][0].minantalsubval < aktivtrpvalobjekt.subval[i][j][0].antalsubval){
-					htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+					htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 					
 					// Sätt om  valet ska vara markerat som förval
 					if (aktivtrpvalobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -1527,10 +1560,10 @@ function skrivarketypmiljo(objektstyp){
 				}
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval== aktivtrpvalobjekt.subval[i].length-1){
 				// Alla subval ska väljas, inputform behövs ej
-				htmlkod += "<td width=\"4%\" valign=\"top\"></td>";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"></td>";
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval==1){
 				// Endast ett subval, radiobutton
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 				
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtrpvalobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -1542,7 +1575,7 @@ function skrivarketypmiljo(objektstyp){
 				
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval>=2){
 				// Flera subval, checkbox
-				htmlkod += "<td width=\"4%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
+				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
 				
 				// Sätt om  valet ska vara markerat som förval
 				if (aktivtrpvalobjekt.subval[i][j][0].valdasub.indexOf(k) == -1){
@@ -1580,19 +1613,19 @@ function skrivarketypmiljo(objektstyp){
 	
 	
 	if (objektstyp=="arketyp"){
-		htmlkodrubrik += "<td class=\"center\" width=\"20%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpaallasubval(\'arketyp\');return false;\">Slumpa alla subval</a>";
+		htmlkodrubrik += "<td class=\"center\" style=\"width:" + sidocellbreddextra + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpaallasubval(\'arketyp\');return false;\">Slumpa alla subval</a>";
 		htmlkodrubrik += "<br>";
 		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"nollasubvaluppdatera(\'arketyp\');return false;\">Nolla alla subval</a>";
 		htmlkodrubrik += "</td>";
 		htmlkodrubrik += "<td class=\"center\"><div><span></span><h1>" + aktivtarketypobjekt.rubrik +"</div></h1></td>";
-		htmlkodrubrik += "<td width=\"20%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparaarketyp();return false;\">Välj " + aktivtarketypobjekt.rubrik + "&rArr;</a></td>";
+		htmlkodrubrik += "<td class=\"center\" style=\"width:" + sidocellbreddextra + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparaarketyp();return false;\">Välj " + aktivtarketypobjekt.rubrik + "&rArr;</a></td>";
 	}else if (objektstyp=="miljo"){
-		htmlkodrubrik += "<td class=\"center\" width=\"20%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpaallasubval(\'miljo\');return false;\">Slumpa alla subval</a>";
+		htmlkodrubrik += "<td class=\"center\" style=\"width:" + sidocellbreddextra + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpaallasubval(\'miljo\');return false;\">Slumpa alla subval</a>";
 		htmlkodrubrik += "<br>";
 		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"nollasubvaluppdatera(\'miljo\');return false;\">Nolla alla subval</a>";
 		htmlkodrubrik += "</td>";
 		htmlkodrubrik += "<td class=\"center\"><div><span></span><h1>" + aktivtmiljoobjekt.rubrik +"</div></h1></td>";
-		htmlkodrubrik += "<td class=\"center\" width=\"20%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparamiljo();return false;\">Välj " + aktivtmiljoobjekt.rubrik + "&rArr;</a></td>";
+		htmlkodrubrik += "<td class=\"center\" style=\"width:" + sidocellbreddextra + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparamiljo();return false;\">Välj " + aktivtmiljoobjekt.rubrik + "&rArr;</a></td>";
 	}else{
 	}
 	
@@ -1724,6 +1757,8 @@ function sparamiljo(){
 
 function skrivhandelsetabellerkategorier(){
 	
+	var sidocellbredd=18;
+	
 	saknadeobjekt=hamta_saknadeobjekt(rollperson);
 	var saknadeobjektstrang;
 	var i;
@@ -1733,7 +1768,7 @@ function skrivhandelsetabellerkategorier(){
 	
 	htmlkod += "<table style=\"width:100%\">";
 	htmlkod += "<tr>";
-	htmlkod += "<td class=\"center\" width=\"18%\">";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\">";
 	if (rollperson.redoforhandelsetabellslag==1){
 		
 		htmlkod +="<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpahandelsetabell();return false;\">Slumpa händelse&shy;tabell</a>";
@@ -1812,7 +1847,7 @@ function skrivhandelsetabellerkategorier(){
 	}
 	
 	htmlkod += "</td>";
-	htmlkod += "<td class=\"center\" width=\"18%\">Valfria tabell&shy;slag";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\">Valfria tabell&shy;slag";
 	if ("valfriatabellslag" in rollperson){
 		htmlkod += " \(" + rollperson.kvar_valfriatabellslag + "/" + rollperson.valfriatabellslag + "\) </td>";
 	}else{
@@ -2368,6 +2403,9 @@ function sparahandelsetabellslag(rollperson, aktivthandelsetabellslag){
 
 function skrivfardighetstabellerkategorier(){
 	//console.log("skrivfardighetstabellerkategorier körs");
+	
+	var sidocellbredd=18;
+	
 	window.parent.document.getElementById('hogerkategorival').height="80";
 	
 	var fardighetslistaobjekt=hamta_fardighetslistaobjekt();
@@ -2376,7 +2414,7 @@ function skrivfardighetstabellerkategorier(){
 
 	htmlkod += "<table style=\"width:100%\">";
 	htmlkod += "<tr>";
-	htmlkod += "<td class=\"center\" width=\"18%\"></td><td class=\"center\">";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\"></td><td class=\"center\">";
 	for (i=0;i<fardighetslistaobjekt.ovrigafardighetergrupplista_namn.length;i++){
 		if (fardighetslistaobjekt.ovrigafardighetergrupplista_namn[i] + "poang" in rollperson){
 		
@@ -2427,7 +2465,7 @@ function skrivfardighetstabellerkategorier(){
 	}
 	
 	htmlkod += "</td>";
-	htmlkod += "<td class=\"center\" width=\"18%\"></td></tr></table>";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\"></td></tr></table>";
 	htmlkod += "</div>";
 	
 	
