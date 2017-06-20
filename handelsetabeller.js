@@ -598,6 +598,8 @@ function hamta_handelsetabeller(){
 	handelsetabeller.farderaventyr[24].subval[0][0][0].kunskapsfardigheterenheter = 2; 
 	handelsetabeller.farderaventyr[24].subval[0][0][0].sjomannaskap = {};
 	handelsetabeller.farderaventyr[24].subval[0][0][0].sjomannaskap.lattlard=1; 
+	handelsetabeller.farderaventyr[24].subval[0][0][0].sprakenheter=2; 
+	
 
 	handelsetabeller.farderaventyr[25] = {}; 
 	handelsetabeller.farderaventyr[25].subval = [[[]]]; 
@@ -1380,6 +1382,7 @@ function hamta_handelsetabeller(){
 	handelsetabeller.farderaventyr[61].subval[0][0][0].visdom = {};
 	handelsetabeller.farderaventyr[61].subval[0][0][0].visdom.varde =2; 
 	handelsetabeller.farderaventyr[61].subval[0][0][0].ovrigt="Har under en längre tid vistats på fiendemark."
+	handelsetabeller.farderaventyr[61].subval[0][0][0].sprakenheter=2;
 
 	handelsetabeller.farderaventyr[62] = {}; 
 	handelsetabeller.farderaventyr[62].subval = [[[]]]; 
