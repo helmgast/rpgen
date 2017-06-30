@@ -1712,11 +1712,27 @@ function sparamiljo(){
 
 function skrivhandelsetabellerkategorier(){
 	
+	var handelsetabellista=hamta_handelsetabellista();
+	var handelsetabellista_ovrig=hamta_handelsetabellista_ovrig();
+	
 	var sidocellbredd=18;
 	
 	saknadeobjekt=hamta_saknadeobjekt(rollperson);
 	var saknadeobjektstrang;
 	var i;
+	var kvartotal=0;
+	
+	console.log("handelsetabellista.namn.length: " + handelsetabellista.namn.length);
+	
+	for (i=0; i<handelsetabellista.namn.length;i++){
+		
+		console.log("Kvartotal: " + kvartotal);
+		kvartotal += rollperson["kvar_" + handelsetabeller[handelsetabeller.lista[i]][0].namn];
+	}
+	kvartotal+=rollperson.kvar_valfriatabellslag;
+	rollperson.kvar_handelsetabellslag=kvartotal;
+	
+	
 	window.parent.document.getElementById('hogerkategorival').height="80";
 	var htmlkod = "<div class='garald'>";
 
@@ -1800,15 +1816,31 @@ function skrivhandelsetabellerkategorier(){
 			}
 		}
 	}
-	
-	htmlkod += "</td>";
-	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\">Valfria tabell&shy;slag";
+	htmlkod += "<br>";
+	htmlkod += "Valfria tabell&shy;slag";
 	if ("valfriatabellslag" in rollperson){
 		htmlkod += " \(" + rollperson.kvar_valfriatabellslag + "/" + rollperson.valfriatabellslag + "\) </td>";
 	}else{
 		htmlkod += " \(0\) </td>";
 	}
-	htmlkod += "</tr></table>";
+	htmlkod += "</td>";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\">";
+	
+	if (kvartotal>0){
+		htmlkod+="<a id=\"rpvalkategori_slumparesterandehandelser" + "\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandehandelser();return false;\">";
+		htmlkod+="Slumpa resterande händelser";
+		htmlkod+="</a>";
+	}
+	//htmlkod+="Kvarslag: " + rollperson.kvar_handelsetabellslag.toString();
+	
+	
+	//htmlkod += "Valfria tabell&shy;slag";
+	//if ("valfriatabellslag" in rollperson){
+	//	htmlkod += " \(" + rollperson.kvar_valfriatabellslag + "/" + rollperson.valfriatabellslag + "\) ";
+	//}else{
+	//	htmlkod += " \(0\) ";
+	//}
+	htmlkod += "</td></tr></table>";
 	htmlkod += "</div>";
 	
 	if (saknadeobjekt.length>0){
@@ -1823,6 +1855,22 @@ function skrivhandelsetabellerkategorier(){
 	
 	document.getElementById("hogerkategorival").innerHTML = htmlkod;
 	
+}
+function slumparesterandehandelser(){
+	while (rollperson.kvar_handelsetabellslag>0){
+		slumpahandelsetabell();
+		slapahandelsetabell();
+		
+		if ("nummer" in  aktivthandelsetabellslag){
+			if ("vald" in  aktivthandelsetabellslag){
+				if (aktivthandelsetabellslag.vald ==0){
+			
+					anropasparahandelsetabellslag(rollperson, aktivthandelsetabellslag);
+				}
+			}
+		}
+	}
+
 }
 
 function andrahandelsetabellslag(andring){
@@ -2089,19 +2137,21 @@ function skrivhandelsetabeller(){
 		htmlkodrubrik += aktiv_handelsetabell[0].rubrik;
 	}
 	htmlkodrubrik +="</h1></div></td>";
-	if ("nummer" in  aktivthandelsetabellslag){
-		if ("vald" in  aktivthandelsetabellslag){
-			if (aktivthandelsetabellslag.vald ==0){
-		
-				htmlkodrubrik += "<td class=\"center\" width=\"20%\" rowspan=3><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"anropasparahandelsetabellslag(rollperson, aktivthandelsetabellslag);return false;\">Spara " + aktivthandelsetabellslag.rubrik + " &rArr;</a></td>";
+	if (rollperson.kvar_handelsetabellslag>0){
+		if ("nummer" in  aktivthandelsetabellslag){
+			if ("vald" in  aktivthandelsetabellslag){
+				if (aktivthandelsetabellslag.vald ==0){
+			
+					htmlkodrubrik += "<td class=\"center\" width=\"20%\" rowspan=3><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"anropasparahandelsetabellslag(rollperson, aktivthandelsetabellslag);return false;\">Spara " + aktivthandelsetabellslag.rubrik + " &rArr;</a></td>";
+				}else{
+					htmlkodrubrik += "<td class=\"center\" width=\"20%\"></td>";
+				}
 			}else{
 				htmlkodrubrik += "<td class=\"center\" width=\"20%\"></td>";
 			}
 		}else{
 			htmlkodrubrik += "<td class=\"center\" width=\"20%\"></td>";
 		}
-	}else{
-		htmlkodrubrik += "<td class=\"center\" width=\"20%\"></td>";
 	}
 	htmlkodrubrik += "</tr>";
 	htmlkodrubrik += "<tr>";
