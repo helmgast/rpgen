@@ -1870,7 +1870,7 @@ function slumparesterandehandelser(){
 			}
 		}
 	}
-
+	rpvalkategori('fardighetstabeller');
 }
 
 function andrahandelsetabellslag(andring){
