@@ -22,12 +22,13 @@
 	var s;
 	var t;
 	
-	var folkslaglista = ["adasier", "cermirier", "cirefalier", "fedaki", "genver", "jahann", "jargier", "kamorian", "marnakhtirak", "missla", "pyar", "taup", "utmarkare", "zolod"];
+	var folkslaglista = ["adasier", "cermirier", "cirefalier", "damarier", "fedaki", "genver", "jahann", "jargier", "kamorian", "marnakhtirak", "missla", "pyar", "taup", "utmarkare", "zolod"];
 	//var folkslaglista = ["adasier", "cirefalier", "fedaki", "genver", "jahann", "jargier", "kamorian"];
 	//var folkslaglista = ["zolod"];
 	var folkslagobjekt={};
 	folkslagobjekt.lista=folkslaglista;
-	folkslagobjekt.rubriker=["adasier", "cermirier", "cirefalier", "fedaki", "genver", "jahann", "jargier", "kamorian", "marnakhtirak", "missla", "pyar", "taup", "utmarkare", "zolod"];
+	folkslagobjekt.rubriker=folkslaglista;
+	//["adasier", "cermirier", "cirefalier", "damarier", "fedaki", "genver", "jahann", "jargier", "kamorian", "marnakhtirak", "missla", "pyar", "taup", "utmarkare", "zolod"];
 
 	fardighetslistaobjekt = hamta_fardighetslistaobjekt(); // Behövs för zolods 5T6 Hantverksfärdighet
 	hantverkfardigheter=fardighetslistaobjekt.hantverkfardigheter.lista;
@@ -2197,8 +2198,496 @@ var utmarkare={};
 	utmarkare.subval[0][5][4].beskrivning="Akala, Anin, Aros, Chelem, Dor, Gahallan, Garon, Halvam, Igos, Mael, Menon, Mikal, Naro, Palan, Pavane, Rehelm, Stagus, Tolrune, Valentin, Vite.";
 	utmarkare.subval[0][5][4].mansnamnlista=["Akala", "Anin", "Aros", "Chelem", "Dor", "Gahallan", "Garon", "Halvam", "Igos", "Mael", "Menon", "Mikal", "Naro", "Palan", "Pavane", "Rehelm", "Stagus", "Tolrune", "Valentin", "Vite"];
 	
+	var damarier={};
+	folkslagobjekt.damarier=damarier;
+    damarier.rubrik="Damarier";
+	damarier.namn="damarier";
+	damarier.beskrivning="De flesta damarier är av vanariskt ursprung och härstammar från de folk som utvandrade från vad som numera är det jargiska kejsardömet under århundradena efter den stora reningen, även om det dessutom finns cirefalier, fedaker och andra folkgrupper bland deras förfäder. Deras hudfärg varierar mellan ljus och olivfärgad och de allra flesta har svart eller mörkbrunt hår, även om andra färger förekommer. Bruna och mörkblå ögon dominerar, men anmärkningsvärt många har gröna ögon, vilket antingen ses som ett tecken på svartkonst eller ett skönhetsdrag beroende på vem du frågar. Deras kroppsbyggnad är normalt ganska kraftig, men oftast något kortare än den genomsnittlige vanaren." + "\n" + "En damarisk man är omkring 170 cm lång och väger cirka 65 kg. En damarisk kvinna är omkring 160 cm lång och väger cirka 55 kg.";
+
+	
+	damarier.subval=[[[]]];
+	damarier.subval[0][0][0]={};
+	damarier.subval[0][0][0].valdasub = [];
+	damarier.subval[0][0][0].vald = 0;
+	
+	damarier.subval[0][0][0].styrka = {};
+	damarier.subval[0][0][0].styrka.varde=9;
+	damarier.subval[0][0][0].talighet = {};
+	damarier.subval[0][0][0].talighet.varde=9;
+	damarier.subval[0][0][0].rorlighet = {};
+	damarier.subval[0][0][0].rorlighet.varde=8;
+	damarier.subval[0][0][0].uppfattning = {};
+	damarier.subval[0][0][0].uppfattning.varde=8;
+	damarier.subval[0][0][0].vilja = {};
+	damarier.subval[0][0][0].vilja.varde=8;
+	damarier.subval[0][0][0].psyke = {};
+	damarier.subval[0][0][0].psyke.varde=8;
+	damarier.subval[0][0][0].visdom = {};
+	damarier.subval[0][0][0].visdom.varde=8;
+	damarier.subval[0][0][0].utstralning = {};
+	damarier.subval[0][0][0].utstralning.varde=8;
+	damarier.subval[0][0][0].beskrivningattribut=[[["Styrka"],["2T6\+1"]],[["Tålighet"],["2T6\+1"]],[["Rörlighet"],["2T6"]],[["Uppfattning"],["2T6"]],[["Vilja"],["2T6"]],[["Psyke"],["2T6"]],[["Visdom"],["1T6"]],[["Utstrålning"],["2T6"]]]
 	
 	
+	damarier.subval[0].push([]);
+	damarier.subval[0][1][0]={};
+	damarier.subval[0][1][0].rubrik="Stoiker";
+	damarier.subval[0][1][0].beskrivning="Så gott som alla damarier får sedan barnsben lära sig vikten av att uthärda och stå ut, oavsett vilka prövningar livet medför.";
+	damarier.subval[0][1][0].beskrivninghak="\+1 Livskraft.";
+	damarier.subval[0][1][0].livskraft={};
+	damarier.subval[0][1][0].livskraft.bonus=1;
+	
+	damarier.subval[0].push([]);
+	damarier.subval[0][2][0]={};
+	damarier.subval[0][2][0].rubrik="Luttrad";
+	damarier.subval[0][2][0].beskrivning="Årtusenden av umbäranden och förtryck har gjort de flesta damarier envisa och tålmodiga.";
+	damarier.subval[0][2][0].beskrivninghak="1 Avtrubbningskryss i valfri kategori.";
+	damarier.subval[0][2][0].avtrubbningvalfri=1;
+	
+
+	
+	damarier.subval.push([[]]);
+	damarier.subval[1][0][0]={};
+	damarier.subval[1][0][0].valdasub = [];
+	damarier.subval[1][0][0].vald = 0;
+	damarier.subval[1][0][0].rubrik="Fursten- och hertigdöme";
+	damarier.subval[1][0][0].beskrivning="Skillnaderna är stora mellan olika delar av riket, välj därför ett ursprungsområde.";
+	damarier.subval[1][0][0].antalsubval=1;
+	
+	damarier.subval[1].push([]);
+	damarier.subval[1][1][0]={};
+	damarier.subval[1][1][0].valdasub = [];
+	damarier.subval[1][1][0].vald = 0;
+	damarier.subval[1][1][0].rubrik="Targatia";
+	damarier.subval[1][1][0].beskrivning="Targatia är området där huvudstaden Targus är belägen och där flera olika folkslag och religioner lever sida vid sida i ett tillstånd som växlar mellan fredlig samexistens och uttalat krig. Targatierna ser sig själva som de sanna damarierna och arvtagare till Damas den svarte, något som även den fattigaste livegne bonden känner enorm stolthet över. Stora delar av Targatia består av vindpinade heder och höga berg, och de flesta targatier för en hård tillvaro plågade både av klimatet och av despotiska adelsmän och storfurstar.";
+	damarier.subval[1][1][0].ovrigt="Ursprung: Targatia"
+	damarier.subval[1][1][0].antalsubval=4;
+	
+	damarier.subval[1][1].push();
+	damarier.subval[1][1][1]={};
+	damarier.subval[1][1][1].rubrik="Talade språk";
+	damarier.subval[1][1][1].beskrivning="Targatiska, lägre jargiska (sydjargiska).";
+	damarier.subval[1][1][1].targatiska = {};
+	damarier.subval[1][1][1].targatiska.enheter=1;
+	damarier.subval[1][1][1].lagrejargiska = {};
+	damarier.subval[1][1][1].lagrejargiska.enheter=1;
+	
+	damarier.subval[1][1].push();
+	damarier.subval[1][1][2]={};
+	damarier.subval[1][1][2].rubrik="Skriftspråk";
+	damarier.subval[1][1][2].beskrivning="Inga.";
+	
+	damarier.subval[1][1].push();
+	damarier.subval[1][1][3]={};
+	damarier.subval[1][1][3].rubrik="Hårdhudade";
+	damarier.subval[1][1][3].beskrivning="Årtusenden av savengor och strider mot martellianer, tiraker, stråtrövare och monster har satt sina spår i den targatiska kulturen.";
+	damarier.subval[1][1][3].beskrivninghak="1 extra slag på händelsetabellen Strider \& drabbningar.";
+	damarier.subval[1][1][3].striderdrabbningar=1;
+	
+	damarier.subval[1][1].push();
+	damarier.subval[1][1][4]={};
+	damarier.subval[1][1][4].rubrik="Stolt";
+	damarier.subval[1][1][4].beskrivning="Även den fattigaste targatiern ser sig själv som en representant för de sanna damarierna och en ättling till Damas den svartes förkämpar.";
+	damarier.subval[1][1][4].beskrivninghak="\+1 Intryck";
+	damarier.subval[1][1][4].intryck = {};
+	damarier.subval[1][1][4].intryck.bonus=1;
+	
+	damarier.subval[1].push([]);
+	damarier.subval[1][2][0]={};
+	damarier.subval[1][2][0].valdasub = [];
+	damarier.subval[1][2][0].vald = 0;
+	damarier.subval[1][2][0].rubrik="Deogotha";
+	damarier.subval[1][2][0].beskrivning="Deogotha ligger söder om Järvskogen och har en lång historia av krig mot alver och andra fasor från skogarna. Deogoterna har sedan tidernas gryning varit nära allierade med dvärgarna från Khazim-renk-Ghor och har haft några av Damariens främsta hantverkare, arkitekter och smeder. För hundra år sedan förstördes Deogothas största stad, Helm, i en ohelig katastrof och furstendömet har ännu inte återhämtat sig. Deogoterna är självständiga och har ett rykte om sig som krigiska och lättstötta. Många av dem lever dessutom nära skogarna och bergens vildmark och har blivit skickliga överlevare i detta obarmhärtiga land.";
+	damarier.subval[1][2][0].ovrigt="Ursprung: Deogotha"
+	damarier.subval[1][2][0].antalsubval=4;
+	
+	damarier.subval[1][2].push();
+	damarier.subval[1][2][1]={};
+	damarier.subval[1][2][1].rubrik="Talade språk";
+	damarier.subval[1][2][1].beskrivning="Targatiska, lägre jargiska (sydjargiska).";
+	damarier.subval[1][2][1].targatiska = {};
+	damarier.subval[1][2][1].targatiska.enheter=1;
+	damarier.subval[1][2][1].lagrejargiska = {};
+	damarier.subval[1][2][1].lagrejargiska.enheter=1;
+	
+	damarier.subval[1][2].push();
+	damarier.subval[1][2][2]={};
+	damarier.subval[1][2][2].rubrik="Skriftspråk";
+	damarier.subval[1][2][2].beskrivning="Inga.";
+	
+	damarier.subval[1][2].push();
+	damarier.subval[1][2][3]={};
+	damarier.subval[1][2][3].rubrik="Skrattar åt döden";
+	damarier.subval[1][2][3].beskrivning="Deogoterna har rykte om sig att alltid bemöta tragedier och katastrofer med kärv galghumor. ";
+	damarier.subval[1][2][3].beskrivninghak="1 Avtrubbningskryss för utsatthet.";
+	damarier.subval[1][2][3].avtrubbningutsatthet=1;
+	
+	damarier.subval[1][2].push();
+	damarier.subval[1][2][4]={};
+	damarier.subval[1][2][4].rubrik="Sin egen lyckas smed";
+	damarier.subval[1][2][4].beskrivning="I ett land där så mycket gått förlorat tvingas allt fler deogoter att ta ödet i sina egna händer och ge sig ut i världen för att finna lyckan.";
+	damarier.subval[1][2][4].beskrivninghak="1 extra slag på händelsetabellen Färder \& äventyr.";
+	damarier.subval[1][2][4].farderaventyr=1;
+	
+	damarier.subval[1].push([]);
+	damarier.subval[1][3][0]={};
+	damarier.subval[1][3][0].valdasub = [];
+	damarier.subval[1][3][0].vald = 0;
+	damarier.subval[1][3][0].rubrik="Hammarnäset";
+	damarier.subval[1][3][0].beskrivning="Furstendömet Hammarnäset är ett rikt område med en lång tradition av sjöfart och krigare. Furstarna av Hammarnäs var alltid de största konkurrenterna med targatierna om storfurstendömets krona. Folket kallas martellianer (efter områdets jargiska namn Istmus Martelle) och sätter traditionellt disciplin, lojalitet och heder högt. Av alla damarier har martellianerna de starkaste banden till Kejsardömet i norr och deras språk är det som ligger närmast det jargiska. Hammarnäs är Damariens största och äldsta stad och det är i denna del av landet stödet för den nye storfursten är som starkast.";
+	damarier.subval[1][3][0].ovrigt="Ursprung: Hammarnäset"
+	damarier.subval[1][3][0].antalsubval=4;
+	
+	damarier.subval[1][3].push();
+	damarier.subval[1][3][1]={};
+	damarier.subval[1][3][1].rubrik="Talade språk";
+	damarier.subval[1][3][1].beskrivning="Targatiska, lägre jargiska (sydjargiska).";
+	damarier.subval[1][3][1].targatiska = {};
+	damarier.subval[1][3][1].targatiska.enheter=1;
+	damarier.subval[1][3][1].lagrejargiska = {};
+	damarier.subval[1][3][1].lagrejargiska.enheter=1;
+	
+	damarier.subval[1][3].push();
+	damarier.subval[1][3][2]={};
+	damarier.subval[1][3][2].rubrik="Skriftspråk";
+	damarier.subval[1][3][2].beskrivning="Inga.";
+	
+	damarier.subval[1][3].push();
+	damarier.subval[1][3][3]={};
+	damarier.subval[1][3][3].rubrik="God ton";
+	damarier.subval[1][3][3].beskrivning="Hammarnäset är ett strikt hierarkiskt samhälle där en förmåga att föra sig är vitalt för den som önskar vinna omgivningens respekt. ";
+	damarier.subval[1][3][3].beskrivninghak="2 enheter på Sociala färdigheter.";
+	damarier.subval[1][3][3].socialafardigheterenheter=2;
+	
+	damarier.subval[1][3].push();
+	damarier.subval[1][3][4]={};
+	damarier.subval[1][3][4].rubrik="Militäriska";
+	damarier.subval[1][3][4].beskrivning="Sedan urminnes tider har Hammarnäs varit en mötesplats för legoknektar och krigare. Idag är staden och stora delar av furstendömet helt kontrollerade av storfurstens flotta och armé, vars närvaro genomsyrar hela samhället.";
+	damarier.subval[1][3][4].beskrivninghak="1 extra slag på händelsetabellen Strider \& drabbningar.";
+	damarier.subval[1][3][4].striderdrabbningar=1;
+	
+	damarier.subval[1].push([]);
+	damarier.subval[1][4][0]={};
+	damarier.subval[1][4][0].valdasub = [];
+	damarier.subval[1][4][0].vald = 0;
+	damarier.subval[1][4][0].rubrik="Vallanborien";
+	damarier.subval[1][4][0].beskrivning="Bortom Järvskogen ligger det land som utgör Vallanborien, de nordliga dalarnas land. Här har folket länge levt isolerade från omvärlden och har sedan tidernas begynnelse haft en särpräglad kultur och språk. Vallanborierna har länge styrts av ätten van Culnar och deras allierade. Såväl adeln som allmogen ägnar sig åt mystiska riter och trosuppfattningar som till och med de andra damariska hedningarna finner märkliga och skrämmande. I grevskapet Merdakh är en stor del av befolkningen fedaker.";
+	damarier.subval[1][4][0].ovrigt="Ursprung: Vallanborien";
+	damarier.subval[1][4][0].antalsubval=4;
+	
+	damarier.subval[1][4].push();
+	damarier.subval[1][4][1]={};
+	damarier.subval[1][4][1].rubrik="Talade språk";
+	damarier.subval[1][4][1].beskrivning="Vallanboriska, lägre jargiska (sydjargiska).";
+	damarier.subval[1][4][1].vallanboriska = {};
+	damarier.subval[1][4][1].vallanboriska.enheter=1;
+	damarier.subval[1][4][1].lagrejargiska = {};
+	damarier.subval[1][4][1].lagrejargiska.enheter=1;
+	
+	damarier.subval[1][4].push();
+	damarier.subval[1][4][2]={};
+	damarier.subval[1][4][2].rubrik="Skriftspråk";
+	damarier.subval[1][4][2].beskrivning="Inga.";
+	
+	damarier.subval[1][4].push();
+	damarier.subval[1][4][3]={};
+	damarier.subval[1][4][3].rubrik="Gränslandsfödda";
+	damarier.subval[1][4][3].beskrivning="Det sägs att både Skugglandet och dödsriket gränsar till Vallanborien.";
+	damarier.subval[1][4][3].beskrivninghak="1 Avtrubbningskryss för övernaturligt.";
+	damarier.subval[1][4][3].avtrubbningovernaturligt=2;
+	
+	damarier.subval[1][4].push();
+	damarier.subval[1][4][4]={};
+	damarier.subval[1][4][4].rubrik="Skrock";
+	damarier.subval[1][4][4].beskrivning="Vallanborierna betraktas ofta som vidskepliga och skrockfulla, även av andra damarier, men själva ser de sig som försiktiga och kunniga när det kommer till de många faror som lurar i mörkret utanför.";
+	damarier.subval[1][4][4].beskrivninghak="1 extra slag på händelsetabellen Kunskap \& mysterier.";
+	damarier.subval[1][4][4].kunskapmysterier=1;
+
+	damarier.subval[1].push([]);
+	damarier.subval[1][5][0]={};
+	damarier.subval[1][5][0].valdasub = [];
+	damarier.subval[1][5][0].vald = 0;
+	damarier.subval[1][5][0].rubrik="Krylomar";
+	damarier.subval[1][5][0].beskrivning="Hertigdömet Krylomar ligger i Krylons floddal vid gränsen mot Västmark. Kryloniterna är ett enkelt folk som ofta förtryckts av antingen de targatiska eller de martellianska furstarna och vars bördiga land vid flertalet tillfällen varit en krigsskådeplats mellan damariska furstar, storfurstendömet och Västmark. De allra flesta kryloniter är fattiga, livegna bönder som finner enkla nöjen i religionen och festligheter.";
+	damarier.subval[1][5][0].ovrigt="Ursprung: Krylomar";
+	damarier.subval[1][5][0].antalsubval=4;
+	
+	damarier.subval[1][5].push();
+	damarier.subval[1][5][1]={};
+	damarier.subval[1][5][1].rubrik="Talade språk";
+	damarier.subval[1][5][1].beskrivning="Targatiska, lägre jargiska (sydjargiska).";
+	damarier.subval[1][5][1].targatiska = {};
+	damarier.subval[1][5][1].targatiska.enheter=1;
+	damarier.subval[1][5][1].lagrejargiska = {};
+	damarier.subval[1][5][1].lagrejargiska.enheter=1;
+	
+	damarier.subval[1][5].push();
+	damarier.subval[1][5][2]={};
+	damarier.subval[1][5][2].rubrik="Skriftspråk";
+	damarier.subval[1][5][2].beskrivning="Inga.";
+	
+	damarier.subval[1][5].push();
+	damarier.subval[1][5][3]={};
+	damarier.subval[1][5][3].rubrik="Flitiga";
+	damarier.subval[1][5][3].beskrivning="Kryloniterna är ett hårt arbetande folk, vare sig de vill eller ej. ";
+	damarier.subval[1][5][3].beskrivninghak="1 poäng Hantverk.";
+	damarier.subval[1][5][3].hantverkpoang=1;
+	
+	damarier.subval[1][5].push();
+	damarier.subval[1][5][4]={};
+	damarier.subval[1][5][4].rubrik="Äventyrslusta";
+	damarier.subval[1][5][4].beskrivning="De kryloniter som vågat ta språnget bort från hemmets lugna härd ut i den skrämmande världen utanför får ofta uppleva både det ena och det andra.";
+	damarier.subval[1][5][4].beskrivninghak="1 extra slag på händelsetabellen Färder \& äventyr.";
+	damarier.subval[1][5][4].farderaventyr=1;
+	
+	damarier.subval[1].push([]);
+	damarier.subval[1][6][0]={};
+	damarier.subval[1][6][0].valdasub = [];
+	damarier.subval[1][6][0].vald = 0;
+	damarier.subval[1][6][0].rubrik="Porfyrien";
+	damarier.subval[1][6][0].beskrivning="Porfyrien är ett hertigdöme vars folk alltid varit jordbrukare och handelsmän och deras rikedom har ofta gjort att de kunnat undgå mycket av det förtryck som plågat andra damarier. Landets överklass är till stor del köpmän snarare än adel och av alla Damariens provinser är porfyrierna de mest öppna och toleranta, även om maktstriderna mellan de härskande ätterna kan vara minst lika dödliga som i andra delar av landet. Landets kultur har starkt influerats av både Jargien och Melorion.";
+	damarier.subval[1][6][0].ovrigt="Ursprung: Porfyrien";
+	damarier.subval[1][6][0].antalsubval=4;
+	
+	damarier.subval[1][6].push();
+	damarier.subval[1][6][1]={};
+	damarier.subval[1][6][1].rubrik="Talade språk";
+	damarier.subval[1][6][1].beskrivning="Targatiska, lägre jargiska (sydjargiska).";
+	damarier.subval[1][6][1].targatiska = {};
+	damarier.subval[1][6][1].targatiska.enheter=1;
+	damarier.subval[1][6][1].lagrejargiska = {};
+	damarier.subval[1][6][1].lagrejargiska.enheter=1;
+	
+	damarier.subval[1][6].push();
+	damarier.subval[1][6][2]={};
+	damarier.subval[1][6][2].rubrik="Skriftspråk";
+	damarier.subval[1][6][2].beskrivning="Inga.";
+	
+	damarier.subval[1][6].push();
+	damarier.subval[1][6][3]={};
+	damarier.subval[1][6][3].rubrik="Språkkunniga";
+	damarier.subval[1][6][3].beskrivning="Porfyrien är den del av Damarien som är mest öppen för andra länder och kulturer, och här kan man möta både pyaralver, cirefalier, jargier, sabrier och mûhadiner. ";
+	damarier.subval[1][6][3].beskrivninghak="2 Språkenheter.";
+	damarier.subval[1][6][3].sprakenheter=2;
+	
+	damarier.subval[1][6].push();
+	damarier.subval[1][6][4]={};
+	damarier.subval[1][6][4].rubrik="Intrigerande";
+	damarier.subval[1][6][4].beskrivning="De kryloniter som vågat ta språnget bort från hemmets lugna härd ut i den skrämmande världen utanför får ofta uppleva både det ena och det andra.";
+	damarier.subval[1][6][4].beskrivninghak="1 extra slag på händelsetabellen Intriger \& illgärningar.";
+	damarier.subval[1][6][4].intrigerillgarningar=1;
+	
+	 
+
+	
+	
+	
+	damarier.subval.push([[]]);
+	damarier.subval[2][0][0]={};
+	damarier.subval[2][0][0].valdasub = [];
+	damarier.subval[2][0][0].vald = 0;
+	damarier.subval[2][0][0].rubrik="Religion";
+	damarier.subval[2][0][0].beskrivning="Skillnaderna är stora mellan de olika religionerna. Välj en av följande:";
+	damarier.subval[2][0][0].antalsubval=1;
+	
+	
+	damarier.subval[2].push([]);
+	damarier.subval[2][1][0]={};
+	damarier.subval[2][1][0].valdasub = [];
+	damarier.subval[2][1][0].vald = 0;
+	damarier.subval[2][1][0].rubrik="Daakkyrkan";
+	damarier.subval[2][1][0].beskrivning="Daakkyrkan är Damariens statsreligion, även om en majoritet av folket inte följer dess lära. Den är starkast bland adelsmännen, i städerna och längs kusten.";
+	damarier.subval[2][1][0].ovrigt="Religion: Daakkyrkan";
+	damarier.subval[2][1][0].antalsubval=1;
+	
+	damarier.subval[2][1].push();
+	damarier.subval[2][1][1]={};
+	damarier.subval[2][1][1].rubrik="S:t Henrudas arv";
+	damarier.subval[2][1][1].beskrivning="Den damariska Daakkyrkan betonar starkt lärdomstraditionerna från S:t Henruda och profeten Milargok.";
+	damarier.subval[2][1][1].kunskapsfardigheterenheter=3;
+	damarier.subval[2][1][1].beskrivninghak="3 enheter på Kunskapsfärdigheter.";
+	
+	damarier.subval[2].push([]);
+	damarier.subval[2][2][0]={};
+	damarier.subval[2][2][0].valdasub = [];
+	damarier.subval[2][2][0].vald = 0;
+	damarier.subval[2][2][0].rubrik="Jordesoldatens vittnen";
+	damarier.subval[2][2][0].beskrivning="Jordesoldatens vittnen är en av den jargiska moderkyrkan förbjuden grupp vars medlemmar följer vad de anser är den förste profetens sanna läror. Gruppen betonar enkelhet, jämlikhet, ärlighet och mod.";
+	damarier.subval[2][2][0].ovrigt="Religion: Jordesoldatens vittnen";
+	damarier.subval[2][2][0].antalsubval=1;
+	
+	damarier.subval[2][2].push();
+	damarier.subval[2][2][1]={};
+	damarier.subval[2][2][1].rubrik="Gudfruktig flit";
+	damarier.subval[2][2][1].beskrivning="En god smed och en hederlig snickare hedrar Daak bättre än alla Tibaras prelater.";
+	damarier.subval[2][2][1].hantverkpoang=2;
+	damarier.subval[2][2][1].beskrivninghak="2 poäng Hantverk.";
+	
+	damarier.subval[2].push([]);
+	damarier.subval[2][3][0]={};
+	damarier.subval[2][3][0].valdasub = [];
+	damarier.subval[2][3][0].vald = 0;
+	damarier.subval[2][3][0].rubrik="Hedendomen";
+	damarier.subval[2][3][0].beskrivning="Hedningar är ett samlingsnamn för de otaliga religiösa traditioner och läror som predikas runt om i Damarien och omfattar allt från den livsbejakande gudinnan Leticias anhängare till de sjömän som tillber havsguden Navare eller de galna siare och bedragare som följer den kaotiske Anordino.";
+	damarier.subval[2][3][0].ovrigt="Religion: Hedendomen";
+	damarier.subval[2][3][0].antalsubval=1;
+	
+	damarier.subval[2][3].push();
+	damarier.subval[2][3][1]={};
+	damarier.subval[2][3][1].rubrik="De gamla sagorna";
+	damarier.subval[2][3][1].beskrivning="En av de främsta plikterna för de gamla gudarnas anhängare är att hålla de gamla berättelserna levande.";
+	damarier.subval[2][3][1].berattarkonst={};
+	damarier.subval[2][3][1].berattarkonst.enheter=2;
+	damarier.subval[2][3][1].historia={};
+	damarier.subval[2][3][1].historia.enheter=1;
+	damarier.subval[2][3][1].ockultism={};
+	damarier.subval[2][3][1].ockultism.enheter=1;
+	damarier.subval[2][3][1].beskrivninghak="2 enheter Berättarkonst, 1 enhet Historia och 1 enhet Ockultism.";
+	
+	damarier.subval[2].push([]);
+	damarier.subval[2][4][0]={};
+	damarier.subval[2][4][0].valdasub = [];
+	damarier.subval[2][4][0].vald = 0;
+	damarier.subval[2][4][0].rubrik="Kristallorden";
+	damarier.subval[2][4][0].beskrivning="Kristallorden är en stor, mäktig och krigisk grupp av damariska hedningar som främst följer dödsguden Dibuk och Modern, ödesgudinnan Arachna. De anser sig försvara mot allt som hotar Damariens hedningar men hyser ett särskilt hat mot vindmunkarna och deras skyddslingar.";
+	damarier.subval[2][4][0].ovrigt="Religion: Kristallorden";
+	damarier.subval[2][4][0].antalsubval=1;
+	
+	damarier.subval[2][4].push();
+	damarier.subval[2][4][1]={};
+	damarier.subval[2][4][1].rubrik="Crusatora";
+	damarier.subval[2][4][1].beskrivning="Det är varje medlems plikt att med vapen i hand bekämpa de gamla gudarnas fiender. ";
+	damarier.subval[2][4][1].avtrubbningvald=1;
+	damarier.subval[2][4][1].stridsfardigheterenheter=3;
+	damarier.subval[2][4][1].beskrivninghak="1 Avtrubbningskryss för våld och 3 enheter på Stridsfärdigheter.";
+
+	damarier.subval[2].push([]);
+	damarier.subval[2][5][0]={};
+	damarier.subval[2][5][0].valdasub = [];
+	damarier.subval[2][5][0].vald = 0;
+	damarier.subval[2][5][0].rubrik="Vindtron";
+	damarier.subval[2][5][0].beskrivning="De vindtroende följer de läror som predikas av munkarna från Vita klostret. Religionens anhängare tillber och söker balans mellan de fem vindarna och tillber även flera mindre andeväsen.";
+	damarier.subval[2][5][0].ovrigt="Religion: Vindtron";
+	damarier.subval[2][5][0].antalsubval=1;
+	
+	damarier.subval[2][5].push();
+	damarier.subval[2][5][1]={};
+	damarier.subval[2][5][1].rubrik="Hjärtevindens stillhet";
+	damarier.subval[2][5][1].beskrivning="Endast genom inre frid kan en människa nå balans mellan vindarna och höra den femte vindens röst. ";
+	damarier.subval[2][5][1].sjalvkontroll={};
+	damarier.subval[2][5][1].sjalvkontroll.bonus=1;
+	damarier.subval[2][5][1].beskrivninghak="\+1 Självkontroll.";
+	
+	damarier.subval[2].push([]);
+	damarier.subval[2][6][0]={};
+	damarier.subval[2][6][0].valdasub = [];
+	damarier.subval[2][6][0].vald = 0;
+	damarier.subval[2][6][0].rubrik="Hemliga sällskap";
+	damarier.subval[2][6][0].beskrivning="Det finns många ljusskygga kulter och sällskap i Damarien som utövar sin tro i hemlighet. Dessa är ofta hatade och fruktade av de annars ganska toleranta damarierna. Exempel på sådana grupper är Commersium Lamia, Xinukulten eller malgoarhiterna.";
+	damarier.subval[2][6][0].ovrigt="Religion: Hemligt sällskap";
+	damarier.subval[2][6][0].antalsubval=1;
+	
+	damarier.subval[2][6].push();
+	damarier.subval[2][6][1]={};
+	damarier.subval[2][6][1].rubrik="I lönndom";
+	damarier.subval[2][6][1].beskrivning="Medlemmar av hemliga sällskap måste snabbt lära sig hur man bäst skyddar sitt eget sällskaps hemligheter från utomståendes orena blickar genom att verka i det fördolda.  ";
+	damarier.subval[2][6][1].dupera={};
+	damarier.subval[2][6][1].dupera.enheter=2;
+	damarier.subval[2][6][1].genomskada={};
+	damarier.subval[2][6][1].genomskada.enheter=1;
+	damarier.subval[2][6][1].skumraskaffarer={};
+	damarier.subval[2][6][1].skumraskaffarer.enheter=1;
+	damarier.subval[2][6][1].beskrivninghak="2 enheter Dupera, 1 enhet Genomskåda, 1 enhet Skumraskaffärer.";
+	
+	damarier.subval[2].push([]);
+	damarier.subval[2][7][0]={};
+	damarier.subval[2][7][0].valdasub = [];
+	damarier.subval[2][7][0].vald = 0;
+	damarier.subval[2][7][0].rubrik="Samoriska läran";
+	damarier.subval[2][7][0].beskrivning="Samorismen är den dominerande religionen i Västmark, Asharien och Soldarn, men förekommer även i södra Damarien. De följer profeten Samor den heliges och Den eviga omvälvningens läror och tillber solgudarna Aurias och Pelias. Thamas regim förföljer samorier, då de ofta misstänks vara lojala mot Västmark och Soldarn, och många av dem utövar sin religion i hemlighet.";
+	damarier.subval[2][7][0].ovrigt="Religion: Samoriska läran";
+	damarier.subval[2][7][0].antalsubval=1;
+	
+	damarier.subval[2][7].push();
+	damarier.subval[2][7][1]={};
+	damarier.subval[2][7][1].rubrik="Förföljda";
+	damarier.subval[2][7][1].beskrivning="De allt hårdare förföljelserna av Damariens samorier har lett till att många av dem tvingats genomgå svåra prövningar och utöva sin tro under stort hemlighetsmakeri. ";
+	damarier.subval[2][7][1].dupera={};
+	damarier.subval[2][7][1].dupera.enheter=1;
+	damarier.subval[2][7][1].smyga={};
+	damarier.subval[2][7][1].smyga.enheter=1;
+	damarier.subval[2][7][1].avtrubbningutsatthet=1;
+	damarier.subval[2][7][1].beskrivninghak="1 Avtrubbningskryss för utsatthet, 1 enhet Dupera och 1 enhet Smyga.";
+
+	damarier.subval.push([[]]);
+	damarier.subval[3][0][0]={};
+	damarier.subval[3][0][0].valdasub = [];
+	damarier.subval[3][0][0].vald = 0;
+	damarier.subval[3][0][0].rubrik="Släktens relation till Thamas regim";
+	damarier.subval[3][0][0].beskrivning="Välj eller slumpa vilken relation släkten har till Thamas regim:";
+	damarier.subval[3][0][0].antalsubval=1;
+	
+	damarier.subval[3].push([]);
+	damarier.subval[3][1][0]={};
+	damarier.subval[3][1][0].rubrik="Utländska lojalister";
+	damarier.subval[3][1][0].ovrigt="Rollpersonens familj är utländska lojalister.";
+	damarier.subval[3][1][0].beskrivning="Rollpersonens familj är utlänningar, vanligtvis jargier eller cirefalier, som anlände till Damarien i samband med eller strax efter Thamas maktövertagande och som kommit upp sig i Damarien tack vare storfursten.";
+	
+	damarier.subval[3].push([]);
+	damarier.subval[3][2][0]={};
+	damarier.subval[3][2][0].rubrik="Damariska lojalister";
+	damarier.subval[3][2][0].ovrigt="Rollpersonens familj är damariska lojalister.";
+	damarier.subval[3][2][0].beskrivning="Rollpersonens familj har sina rötter i Damarien, men anslöt sig på ett tidigt stadium till Thamas sida i maktkampen. Tack vare detta har släkten belönats rikligt, men samtidigt skaffat sig många mäktiga fiender.";
+	
+	damarier.subval[3].push([]);
+	damarier.subval[3][3][0]={};
+	damarier.subval[3][3][0].rubrik="Neutrala";
+	damarier.subval[3][3][0].ovrigt="Rollpersonens familj är neutralt inställda till Thamas regim.";
+	damarier.subval[3][3][0].beskrivning="Rollpersonens familj har gjort vad de kunnat för att helt hålla sig utanför maktkampen som följde på Thamas maktövertagande. Denna neutralitet har gjort att de framstår som misstänkta både i lojalisternas och upprorsmännens ögon.";
+	
+	damarier.subval[3].push([]);
+	damarier.subval[3][4][0]={};
+	damarier.subval[3][4][0].rubrik="Oppurtunister";
+	damarier.subval[3][4][0].ovrigt="Rollpersonens familj är oppurtunister.";
+	damarier.subval[3][4][0].beskrivning="Rollpersonens familj har aldrig officiellt tagit ställning vare sig för eller emot storfurstens regim, men har framgångsrikt övertygat båda sidor att de skulle vara värdefulla allierade i händelse av konflikt. En dag kommer man vara tvungen att ta ställning en gång för alla, men detta ställningstagande skjuter släktens överhuvuden gärna på så länge som möjligt.";
+	
+	damarier.subval[3].push([]);
+	damarier.subval[3][5][0]={};
+	damarier.subval[3][5][0].rubrik="Splittrade";
+	damarier.subval[3][5][0].ovrigt="Rollpersonens familj är splittrade vad gäller relationen till Thamas regim.";
+	damarier.subval[3][5][0].beskrivning="Rollpersonens familj splittrades i samband med den vita fjäderns krig då vissa familjemedlemmar valde att stötta Thamas medan andra valde att bekämpa honom. Familjen är alltjämt delad mellan lojalister och rebeller och denna splittring skapar mycket ont blod mellan släktingarna.";
+	
+	damarier.subval[3].push([]);
+	damarier.subval[3][6][0]={};
+	damarier.subval[3][6][0].rubrik="Lojalistiska överlöpare";
+	damarier.subval[3][6][0].ovrigt="Rollpersonens familj är lojalistiska överlöpare.";
+	damarier.subval[3][6][0].beskrivning="Rollpersonens familj gjorde ursprungligen motstånd mot Thamas, men bytte så småningom sida. Dess medlemmar kämpar nu hårt för att bevisa sin lojalitet mot rikets nye herre, som officiellt förlåtit dem men alltjämt behandlar dem med misstänksamhet.";
+	
+	damarier.subval[3].push([]);
+	damarier.subval[3][7][0]={};
+	damarier.subval[3][7][0].rubrik="Rebelliska överlöpare";
+	damarier.subval[3][7][0].ovrigt="Rollpersonens familj är rebelliska överlöpare.";
+	damarier.subval[3][7][0].beskrivning="Rollpersonens familj var ursprungligen lojala anhängare till Thamas. Men av någon anledning, kanske på grund av att hovintriger berövat dem storfurstens gunst eller på grund av familjens avsky mot storfurstens alltmer maktfullkomliga styre, har de istället blivit hans fiender.";
+	
+	damarier.subval[3].push([]);
+	damarier.subval[3][8][0]={};
+	damarier.subval[3][8][0].rubrik="Rebeller";
+	damarier.subval[3][8][0].ovrigt="Rollpersonens familj är rebeller.";
+	damarier.subval[3][8][0].beskrivning="Rollpersonens familj har varit svurna fiender till storfursten och dennes hantlangare ända sedan de först besudlade Damariens jord med sina fötter. Familjen har på grund av detta drabbats av hård förföljelse, men det har bara gjort överlevarna än mer säkra på sin sak.";
+
+	damarier.subval[3].push([]);
+	damarier.subval[3][9][0]={};
+	damarier.subval[3][9][0].rubrik="Lojalistiska ögontjänare";
+	damarier.subval[3][9][0].ovrigt="Rollpersonens familj är lojalistiska ögontjänare.";
+	damarier.subval[3][9][0].beskrivning="Rollpersonens familj är på ytan obrottsligt lojala mot storfurstens regim, men i hemlighet avskyr många av dess medlemmar starkt Thamas regentskap och skulle med glädje stödja en annan härskare, förutsatt att ett gott tillfälle visar sig.";
+
+	damarier.subval[3].push([]);
+	damarier.subval[3][10][0]={};
+	damarier.subval[3][10][0].rubrik="Kuvade lojalister";
+	damarier.subval[3][10][0].ovrigt="Rollpersonens familj är kuvade lojalister.";
+	damarier.subval[3][10][0].beskrivning="Rollpersonens familj var tidigare neutrala eller aktiva fiender till Thamas, men efter att stora delar av släkten fängslats, avrättats eller tagits som gisslan av regimen är de flesta av dess medlemmar nu antingen lojala eller för rädda för att våga sätta sig upp mot storfursten.";
+
+
 	
 	// förmodligen battre med lista av objekt, därav kommentering
 

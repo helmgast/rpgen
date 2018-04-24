@@ -1,13 +1,13 @@
-ï»¿function hamta_bakgrundstabeller (){
+function hamta_bakgrundstabeller (){
 	
 	// expertispoang=2 eller expertiser=2?
 	
 	
-    bakgrundstabellista = ["jargiensbefolkning", "vildmark", "nermadasbefolkning"];
+    bakgrundstabellista = ["jargiensbefolkning", "vildmark", "nermadasbefolkning", "damarien"];
 	var bakgrundstabeller = {};
 	var i;
 	bakgrundstabeller.lista=bakgrundstabellista;
-    bakgrundstabeller.rubriker=["Jargiens befolkning", "Vildmark", "Nermadas befolkning"];
+    bakgrundstabeller.rubriker=["Jargiens befolkning", "Vildmark", "Nermadas befolkning", "Damariens befolkning"];
     // --- //
     
     bakgrundstabeller.jargiensbefolkning = [];
@@ -24,8 +24,8 @@
 	bakgrundstabeller.jargiensbefolkning[1].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[1].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[1].mystikfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[1].beskrivning="Alkemisten Ã¤r en konstnÃ¤r besatt av att tÃ¤mja de mystiska krafter som ingjutits i livets vatten som genomsyrar vÃ¤rlden. Vissa nÃ¥r erkÃ¤nnande men mÃ¥nga slutar som galningar efter att ha luktat fÃ¶r djupt i de dunster som salter och syror utsÃ¶ndrar. Alkemisten viger sitt liv Ã¥t att fÃ¶rena magi, vetenskap och ockultism. De fÃ¥r dock bruka sina konster i hemlighet dÃ¥ inkvisitionen ser dessa som kÃ¤ttare och svartkonstnÃ¤rer.";
-	bakgrundstabeller.jargiensbefolkning[1].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter MystikfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[1].beskrivning="Alkemisten är en konstnär besatt av att tämja de mystiska krafter som ingjutits i livets vatten som genomsyrar världen. Vissa når erkännande men många slutar som galningar efter att ha luktat för djupt i de dunster som salter och syror utsöndrar. Alkemisten viger sitt liv åt att förena magi, vetenskap och ockultism. De får dock bruka sina konster i hemlighet då inkvisitionen ser dessa som kättare och svartkonstnärer.";
+	bakgrundstabeller.jargiensbefolkning[1].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Mystikfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[2] = {};
@@ -35,8 +35,8 @@
 	bakgrundstabeller.jargiensbefolkning[2].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[2].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[2].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[2].beskrivning="I trÃ¥nga butiker i stÃ¤derna, stugor pÃ¥ landsbygden eller tÃ¤ckta vagnar som rÃ¶r sig mellan byarna fÃ¶rrÃ¤ttar apotekarna sitt vÃ¤rv. De fÃ¶rser folket med extrakt, salvor och dekokter som sÃ¤gs bota allt frÃ¥n magont, eksem och varande sÃ¥r till hÃ¥ravfall, impotens och tandvÃ¤rk. Vissa kan konsten att sÃ¤tta stopp fÃ¶r oÃ¶nskade graviditeter och andra sÃ¤ljer gifter utan att stÃ¤lla nÃ¥gra frÃ¥gor.";
-	bakgrundstabeller.jargiensbefolkning[2].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[2].beskrivning="I trånga butiker i städerna, stugor på landsbygden eller täckta vagnar som rör sig mellan byarna förrättar apotekarna sitt värv. De förser folket med extrakt, salvor och dekokter som sägs bota allt från magont, eksem och varande sår till håravfall, impotens och tandvärk. Vissa kan konsten att sätta stopp för oönskade graviditeter och andra säljer gifter utan att ställa några frågor.";
+	bakgrundstabeller.jargiensbefolkning[2].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Kunskapsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[3] = {};
@@ -46,8 +46,8 @@
 	bakgrundstabeller.jargiensbefolkning[3].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[3].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[3].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[3].beskrivning="Om ingen ser efter stÃ¤derna hamnar de snart i fÃ¶rfall. Hus rasar samman, kloakerna svÃ¤mmar Ã¶ver, akvedukterna slammar igen. Arkitektorn har ansvaret fÃ¶r att se till att allt fungerar. Detta pÃ¥verkar handeln samt var och nÃ¤r nya inrÃ¤ttningar fÃ¥r uppfÃ¶ras. Detta gÃ¶r att positionen som arkitektor Ã¤r en av de mest inkomstbringande nÃ¤r det gÃ¤ller mutor dÃ¥ sÃ¥ gott som alla vill hÃ¥lla sig vÃ¤l med denne.";
-	bakgrundstabeller.jargiensbefolkning[3].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[3].beskrivning="Om ingen ser efter städerna hamnar de snart i förfall. Hus rasar samman, kloakerna svämmar över, akvedukterna slammar igen. Arkitektorn har ansvaret för att se till att allt fungerar. Detta påverkar handeln samt var och när nya inrättningar får uppföras. Detta gör att positionen som arkitektor är en av de mest inkomstbringande när det gäller mutor då så gott som alla vill hålla sig väl med denne.";
+	bakgrundstabeller.jargiensbefolkning[3].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[4] = {};
@@ -57,8 +57,8 @@
 	bakgrundstabeller.jargiensbefolkning[4].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[4].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[4].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[4].beskrivning="Det finns en gammal tradition att balsamera sina dÃ¶da hos den Ã¶vre klassen dÃ¤r man ser det som sin plikt att fÃ¶rvara fÃ¶rfÃ¤der i kryptor och gravvalv till tidens Ã¤nde. Andra balsamerare stoppar upp djur och monster samt kokar skallar och rensar kadaver till de Ã¤dlingar och handelsfurstar som vill ha stÃ¥tliga trofÃ©er. Balsamerare har en stor insikt i den mÃ¤nskliga anatomin och en stor samling groteska redskap och vÃ¤tskor fÃ¶r att preparera kroppar.";
-	bakgrundstabeller.jargiensbefolkning[4].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[4].beskrivning="Det finns en gammal tradition att balsamera sina döda hos den övre klassen där man ser det som sin plikt att förvara förfäder i kryptor och gravvalv till tidens ände. Andra balsamerare stoppar upp djur och monster samt kokar skallar och rensar kadaver till de ädlingar och handelsfurstar som vill ha ståtliga troféer. Balsamerare har en stor insikt i den mänskliga anatomin och en stor samling groteska redskap och vätskor för att preparera kroppar.";
+	bakgrundstabeller.jargiensbefolkning[4].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[5] = {};
@@ -68,8 +68,8 @@
 	bakgrundstabeller.jargiensbefolkning[5].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[5].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[5].socialafardigheterenheter=4
-	bakgrundstabeller.jargiensbefolkning[5].beskrivning="Med flinka fingrar Ã¶ver en lyras strÃ¤ngar fÃ¶rrÃ¤ttar barden sitt vÃ¤rv. SÃ¥nger framfÃ¶rs som sÃ¤tter hjÃ¤rtan i brand, fÃ¥r tÃ¥rar att flÃ¶da, leenden att sprida sig och skratt att klinga. Barden Ã¤r en sagoberÃ¤ttare, sÃ¥ngare, poet och underhÃ¥llare. De mest misslyckade barderna Ã¤r inte mycket mer Ã¤n tiggare som i lappade klÃ¤der spelar pÃ¥ spruckna instrument. De mest lyckade framfÃ¶r uteslutande fÃ¶r de rikaste slÃ¤kterna och till och med infÃ¶r Kejsarens hov.";
-	bakgrundstabeller.jargiensbefolkning[5].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[5].beskrivning="Med flinka fingrar över en lyras strängar förrättar barden sitt värv. Sånger framförs som sätter hjärtan i brand, får tårar att flöda, leenden att sprida sig och skratt att klinga. Barden är en sagoberättare, sångare, poet och underhållare. De mest misslyckade barderna är inte mycket mer än tiggare som i lappade kläder spelar på spruckna instrument. De mest lyckade framför uteslutande för de rikaste släkterna och till och med inför Kejsarens hov.";
+	bakgrundstabeller.jargiensbefolkning[5].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[6] = {};
@@ -79,8 +79,8 @@
 	bakgrundstabeller.jargiensbefolkning[6].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[6].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[6].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[6].beskrivning="NÃ¤r lagen hinner ifatt brottslingar Ã¤r straffet ofta hÃ¥rt. HÃ¤nder ska kapas, tungor skÃ¤ras ut och folk ska hÃ¤ngas frÃ¥n galgen, halshuggas eller bringas om livet pÃ¥ de sÃ¤tt som makthavarna dÃ¶mt. Detta Ã¤r bestraffarens vÃ¤rv. Denne lever stÃ¤ndigt nÃ¤ra dÃ¶den och Ã¤r allt som oftast utstÃ¶tt och fruktad. MÃ¥nga har sjÃ¤lva varit dÃ¶dsdÃ¶mda men blivit benÃ¥dade i utbyte mot att bli bestraffare resten av livet.";
-	bakgrundstabeller.jargiensbefolkning[6].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[6].beskrivning="När lagen hinner ifatt brottslingar är straffet ofta hårt. Händer ska kapas, tungor skäras ut och folk ska hängas från galgen, halshuggas eller bringas om livet på de sätt som makthavarna dömt. Detta är bestraffarens värv. Denne lever ständigt nära döden och är allt som oftast utstött och fruktad. Många har själva varit dödsdömda men blivit benådade i utbyte mot att bli bestraffare resten av livet.";
+	bakgrundstabeller.jargiensbefolkning[6].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.jargiensbefolkning[7] = {};
@@ -90,19 +90,19 @@
 	bakgrundstabeller.jargiensbefolkning[7].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[7].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[7].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[7].beskrivning="Med blÃ¤ckstÃ¤nkta hÃ¤nder och en stressad uppsyn sÃ¥ driver boktryckarna pÃ¥ med sin produktion av att trycka bÃ¶cker Ã¥t kyrkan och privata aktÃ¶rer. De graverar och gjuter hela sidor Ã¥t gÃ¥ngen och deras hantverkarkonst ses pÃ¥ med misstanke och Ã¤r mycket ogillade av skrivarna dÃ¥ deras roll blir allt mer fÃ¶rsvagad ju fler bÃ¶cker som trycks.";
-	bakgrundstabeller.jargiensbefolkning[7].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[7].beskrivning="Med bläckstänkta händer och en stressad uppsyn så driver boktryckarna på med sin produktion av att trycka böcker åt kyrkan och privata aktörer. De graverar och gjuter hela sidor åt gången och deras hantverkarkonst ses på med misstanke och är mycket ogillade av skrivarna då deras roll blir allt mer försvagad ju fler böcker som trycks.";
+	bakgrundstabeller.jargiensbefolkning[7].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 2 poäng Hantverk."
 
 
 	bakgrundstabeller.jargiensbefolkning[8] = {};
-	bakgrundstabeller.jargiensbefolkning[8].rubrik="BosÃ¤ttare";
-	bakgrundstabeller.jargiensbefolkning[8].bestamd="bosÃ¤ttaren";
-	bakgrundstabeller.jargiensbefolkning[8].obestamd="en bosÃ¤ttare";
+	bakgrundstabeller.jargiensbefolkning[8].rubrik="Bosättare";
+	bakgrundstabeller.jargiensbefolkning[8].bestamd="bosättaren";
+	bakgrundstabeller.jargiensbefolkning[8].obestamd="en bosättare";
 	bakgrundstabeller.jargiensbefolkning[8].farderaventyr=1;
-	bakgrundstabeller.jargiensbefolkning[8].stidsfardigheterenheter=4;
+	bakgrundstabeller.jargiensbefolkning[8].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[8].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[8].beskrivning="De jargiska kolonierna behÃ¶ver stÃ¤ndigt nya invÃ¥nare som brukar jorden, slÃ¥ss mot urbefolkningen och sprider Daaks bud. En del blir lockade om lÃ¶ften om ett bÃ¤ttre liv, andra tvingas till utvandring. MÃ¥nga Ã¤r fattiga familjer som lever pÃ¥ grÃ¤nsen till svÃ¤lt varje dag och mÃ¥ste slita hÃ¥rt fÃ¶r att bygga upp torp och hela samhÃ¤llen.";
-	bakgrundstabeller.jargiensbefolkning[8].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[8].beskrivning="De jargiska kolonierna behöver ständigt nya invånare som brukar jorden, slåss mot urbefolkningen och sprider Daaks bud. En del blir lockade om löften om ett bättre liv, andra tvingas till utvandring. Många är fattiga familjer som lever på gränsen till svält varje dag och måste slita hårt för att bygga upp torp och hela samhällen.";
+	bakgrundstabeller.jargiensbefolkning[8].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[9] = {};
@@ -113,8 +113,8 @@
 	bakgrundstabeller.jargiensbefolkning[9].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[9].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[9].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[9].beskrivning="Det finns lagar och regler fÃ¶r allt. Vad man fÃ¥r Ã¤ta, var man fÃ¥r sova, vad man fÃ¥r handla med, vad man fÃ¥r sÃ¤ga, vad man fÃ¥r skriva, vad man fÃ¥r tÃ¤nka. Brottslingen gÃ¶r det till praxis att bryta mot de lagar som passar fÃ¶r att kunna tjÃ¤na sitt uppehÃ¤lle. Det handlar ofta om smuggling, inbrott, rÃ¥n och beskyddarverksamhet.";
-	bakgrundstabeller.jargiensbefolkning[9].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[9].beskrivning="Det finns lagar och regler för allt. Vad man får äta, var man får sova, vad man får handla med, vad man får säga, vad man får skriva, vad man får tänka. Brottslingen gör det till praxis att bryta mot de lagar som passar för att kunna tjäna sitt uppehälle. Det handlar ofta om smuggling, inbrott, rån och beskyddarverksamhet.";
+	bakgrundstabeller.jargiensbefolkning[9].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[10] = {};
@@ -124,8 +124,8 @@
 	bakgrundstabeller.jargiensbefolkning[10].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[10].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[10].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[10].beskrivning="I KejsardÃ¶met finns mÃ¥nga viljor som drar folket i olika riktningar och det Ã¤r inte alltid alla dessa viljor tjÃ¤nar de styrandes intressen. MÃ¥nga fÃ¶rfattare, skÃ¥despelare och filosofer har tankar och idÃ©er som allvarligt skulle kunna skada den jargiska ordningen och dÃ¤rfÃ¶r finns det sÃ¥ kallade censorer som arbetar med att granska verk som skapas i KejsardÃ¶met och se till att ingenting sprids som kan rubba maktbalansen.";
-	bakgrundstabeller.jargiensbefolkning[10].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[10].beskrivning="I Kejsardömet finns många viljor som drar folket i olika riktningar och det är inte alltid alla dessa viljor tjänar de styrandes intressen. Många författare, skådespelare och filosofer har tankar och idéer som allvarligt skulle kunna skada den jargiska ordningen och därför finns det så kallade censorer som arbetar med att granska verk som skapas i Kejsardömet och se till att ingenting sprids som kan rubba maktbalansen.";
+	bakgrundstabeller.jargiensbefolkning[10].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[11] = {};
@@ -135,8 +135,8 @@
 	bakgrundstabeller.jargiensbefolkning[11].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[11].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[11].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[11].beskrivning="Det komplicerade jargiska systemet Ã¤r en oÃ¶verskÃ¥dlig spindelvÃ¤v av lagar och paragrafer och det Ã¤r consultatorns uppgift att dra i trÃ¥darna fÃ¶r att fÃ¥ byrÃ¥kratin att agera pÃ¥ det sÃ¤tt man Ã¶nskar. Consultatorn agerar som advokat och rÃ¥dgivare och alla stÃ¶rre slÃ¤kter har ett flertal consultatorer i sin tjÃ¤nst. Ett fÃ¥tal av dessa anvÃ¤nder systemet fÃ¶r att skapa rÃ¤ttvisa medan de flesta ser det som ett sÃ¤tt att fylla sina egna kistor.";
-	bakgrundstabeller.jargiensbefolkning[11].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[11].beskrivning="Det komplicerade jargiska systemet är en oöverskådlig spindelväv av lagar och paragrafer och det är consultatorns uppgift att dra i trådarna för att få byråkratin att agera på det sätt man önskar. Consultatorn agerar som advokat och rådgivare och alla större släkter har ett flertal consultatorer i sin tjänst. Ett fåtal av dessa använder systemet för att skapa rättvisa medan de flesta ser det som ett sätt att fylla sina egna kistor.";
+	bakgrundstabeller.jargiensbefolkning[11].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[12] = {};
@@ -146,8 +146,8 @@
 	bakgrundstabeller.jargiensbefolkning[12].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[12].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[12].kanneteckenpoang=2;
-	bakgrundstabeller.jargiensbefolkning[12].beskrivning="I skÃ¥despel om KejsardÃ¶mets storhetstid framfÃ¶r dansarna episka strider framfÃ¶r Ã¥skÃ¥darna. PÃ¥ smutsiga tavernor i talgljusens sotiga sken dansar skÃ¶kor fÃ¶r druckna legionÃ¤rer som kastar mynt vid deras fÃ¶tter. I Ã¤dlingarnas palats framtrÃ¤der bÃ¥de kvinnor och mÃ¤n, med sina smidiga kroppar inoljade och pudrade med gyllene stoft. Alla rÃ¶r de sig virvlande till rytmen av KejsardÃ¶mets taktfasta hjÃ¤rtslag.";
-	bakgrundstabeller.jargiensbefolkning[12].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.jargiensbefolkning[12].beskrivning="I skådespel om Kejsardömets storhetstid framför dansarna episka strider framför åskådarna. På smutsiga tavernor i talgljusens sotiga sken dansar skökor för druckna legionärer som kastar mynt vid deras fötter. I ädlingarnas palats framträder både kvinnor och män, med sina smidiga kroppar inoljade och pudrade med gyllene stoft. Alla rör de sig virvlande till rytmen av Kejsardömets taktfasta hjärtslag.";
+	bakgrundstabeller.jargiensbefolkning[12].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.jargiensbefolkning[13] = {};
@@ -157,8 +157,8 @@
 	bakgrundstabeller.jargiensbefolkning[13].valfriatabellslag=1;
 	bakgrundstabeller.jargiensbefolkning[13].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[13].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[13].beskrivning="Ord kan flytta berg, rÃ¶ra folkmassor till handling och fÃ¥ katastrofer att lÃ¥ta som glÃ¤djebud. En del demagoger Ã¤r inte mer Ã¤n skrÃ¤vlare som uppmanar folk till handling, andra Ã¤r anstiftare till blodiga uppror, karismatiska sektledare eller sÃ¥dana som Ã¤lskar att skapa konflikter. NÃ¥gra Ã¤r talesmÃ¤n fÃ¶r akademier eller inflytelserika familjer i KejsardÃ¶met men mÃ¥nga finner sig jagade och ansatta av makthavarna som ogillar deras lÃ¶sa tungor.";
-	bakgrundstabeller.jargiensbefolkning[13].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[13].beskrivning="Ord kan flytta berg, röra folkmassor till handling och få katastrofer att låta som glädjebud. En del demagoger är inte mer än skrävlare som uppmanar folk till handling, andra är anstiftare till blodiga uppror, karismatiska sektledare eller sådana som älskar att skapa konflikter. Några är talesmän för akademier eller inflytelserika familjer i Kejsardömet men många finner sig jagade och ansatta av makthavarna som ogillar deras lösa tungor.";
+	bakgrundstabeller.jargiensbefolkning[13].beskrivninghak = "1 slag på valfri tabell, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[14] = {};
@@ -168,8 +168,8 @@
 	bakgrundstabeller.jargiensbefolkning[14].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[14].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[14].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[14].beskrivning="Allt som lever ska dÃ¶. Alla blommor ska vittra. De som dyrkar dÃ¶dsguden Dibuk ser sanningen. De ser KejsardÃ¶mets sÃ¶ndervittrade fasader, de fattigas magra kroppar, de rikas svÃ¤llande bukar. Allt har sin storhetstid och allt har sitt slut. I smÃ¥ skaror samlas kultisterna under falska identiteter fÃ¶r att dyrka dÃ¶dens och det kommande slutets gud, Dibuk. Vissa gÃ¥r direkt mot dÃ¶dens kalla famn medan andra lÃ¤mnas kvar fÃ¶r att leda folket till frÃ¤lsning.";
-	bakgrundstabeller.jargiensbefolkning[14].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[14].beskrivning="Allt som lever ska dö. Alla blommor ska vittra. De som dyrkar dödsguden Dibuk ser sanningen. De ser Kejsardömets söndervittrade fasader, de fattigas magra kroppar, de rikas svällande bukar. Allt har sin storhetstid och allt har sitt slut. I små skaror samlas kultisterna under falska identiteter för att dyrka dödens och det kommande slutets gud, Dibuk. Vissa går direkt mot dödens kalla famn medan andra lämnas kvar för att leda folket till frälsning.";
+	bakgrundstabeller.jargiensbefolkning[14].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[15] = {};
@@ -179,19 +179,19 @@
 	bakgrundstabeller.jargiensbefolkning[15].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[15].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[15].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[15].beskrivning="Den sista tiden nÃ¤rmar sig. Tecknen blir allt fler och snart kommer den mÃ¶rke Malgoarh och hans demoner att stÃ¶rta in i vÃ¤rlden och alla som inte Ã¤r svurna till Daak kommer slitas i stycken och torteras i all evighet. Domedagspredikanterna inser detta och fÃ¶rsÃ¶ker med hÃ¤ngivelse, fÃ¶rkunnanden och Ã¶ppna predikningar varna folket. Domedagspredikanterna kan man se pÃ¥ torg, vandrande mellan stÃ¤der och utanfÃ¶r kyrkorna.";
-	bakgrundstabeller.jargiensbefolkning[15].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[15].beskrivning="Den sista tiden närmar sig. Tecknen blir allt fler och snart kommer den mörke Malgoarh och hans demoner att störta in i världen och alla som inte är svurna till Daak kommer slitas i stycken och torteras i all evighet. Domedagspredikanterna inser detta och försöker med hängivelse, förkunnanden och öppna predikningar varna folket. Domedagspredikanterna kan man se på torg, vandrande mellan städer och utanför kyrkorna.";
+	bakgrundstabeller.jargiensbefolkning[15].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[16] = {};
-	bakgrundstabeller.jargiensbefolkning[16].rubrik="DÃ¶dgrÃ¤vare";
-	bakgrundstabeller.jargiensbefolkning[16].bestamd="dÃ¶dgrÃ¤varen";
-	bakgrundstabeller.jargiensbefolkning[16].obestamd="en dÃ¶dgrÃ¤vare";
+	bakgrundstabeller.jargiensbefolkning[16].rubrik="Dödgrävare";
+	bakgrundstabeller.jargiensbefolkning[16].bestamd="dödgrävaren";
+	bakgrundstabeller.jargiensbefolkning[16].obestamd="en dödgrävare";
 	bakgrundstabeller.jargiensbefolkning[16].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[16].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[16].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[16].beskrivning="Allt dÃ¶r fÃ¶rr eller senare. De rika sÃ¤tter mat i halsen och de fattiga svÃ¤lter ihjÃ¤l. FÃ¶r dÃ¶dgrÃ¤varen spelar det ingen roll â€“ alla ska de ned i jorden. Gravar skottas upp, kroppar sÃ¤nks ned och jord skyfflas Ã¶ver. En del tar extra tid och placerar en blomma pÃ¥ graven och sÃ¤ger en bÃ¶n â€“ andra plundrar de dÃ¶da pÃ¥ allt de har och vissa sÃ¤ljer kroppar eller delar av kroppar till ljusskygga individer. DÃ¶dgrÃ¤vare Ã¤r sedda pÃ¥ med misstro dÃ¥ det finns mÃ¥nga sagor och sÃ¥nger dÃ¤r dÃ¶dgrÃ¤vare sÃ¤gs stÃ¥ i fÃ¶rbund med mÃ¶rkrets makter.";
-	bakgrundstabeller.jargiensbefolkning[16].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[16].beskrivning="Allt dör förr eller senare. De rika sätter mat i halsen och de fattiga svälter ihjäl. För dödgrävaren spelar det ingen roll – alla ska de ned i jorden. Gravar skottas upp, kroppar sänks ned och jord skyfflas över. En del tar extra tid och placerar en blomma på graven och säger en bön – andra plundrar de döda på allt de har och vissa säljer kroppar eller delar av kroppar till ljusskygga individer. Dödgrävare är sedda på med misstro då det finns många sagor och sånger där dödgrävare sägs stå i förbund med mörkrets makter.";
+	bakgrundstabeller.jargiensbefolkning[16].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Rörelsefärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[17] = {};
@@ -201,8 +201,8 @@
 	bakgrundstabeller.jargiensbefolkning[17].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[17].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[17].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[17].beskrivning="KejsardÃ¶met hÃ¥lls vid liv av det stÃ¤ndiga flÃ¶det av silver och exaktorn Ã¤r en skatteindrivare och fogde som ser till att skatten betalas in. Exaktorns hÃ¤nder Ã¤r vanligen upptagna med stÃ¤mplade och blÃ¤ckflÃ¤ckiga pergament och laghandlingar men de Ã¤r minst lika upptagna med att ta emot silver fÃ¶r att Ã¤ndra i dessa dokument sÃ¥ att skattetrycket inte blir sÃ¥ hÃ¥rt fÃ¶r dem som har rÃ¥d att betala.";
-	bakgrundstabeller.jargiensbefolkning[17].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[17].beskrivning="Kejsardömet hålls vid liv av det ständiga flödet av silver och exaktorn är en skatteindrivare och fogde som ser till att skatten betalas in. Exaktorns händer är vanligen upptagna med stämplade och bläckfläckiga pergament och laghandlingar men de är minst lika upptagna med att ta emot silver för att ändra i dessa dokument så att skattetrycket inte blir så hårt för dem som har råd att betala.";
+	bakgrundstabeller.jargiensbefolkning[17].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[18] = {};
@@ -212,19 +212,19 @@
 	bakgrundstabeller.jargiensbefolkning[18].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[18].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[18].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[18].beskrivning="PÃ¥ floder, sjÃ¶ar och vid Igonhavets grunda strÃ¤nder kan man se fiskarnas bÃ¥tar. Vattnet Ã¤r deras levebrÃ¶d. FrÃ¥n djupet drar de upp sprattlande fiskar som glÃ¤nser likt silver i solskenet. De lagar sina nÃ¤t pÃ¥ stÃ¤llningar vid strÃ¤nderna och rÃ¶ker, saltar och jÃ¤ser sin fÃ¥ngst. MÃ¥nga Ã¤r vidskepliga och alla har de en respekt fÃ¶r vÃ¤drets makter, i synnerhet stormarna, som vÃ¤lter deras bÃ¥tar och offrar dem till djupet.";
-	bakgrundstabeller.jargiensbefolkning[18].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[18].beskrivning="På floder, sjöar och vid Igonhavets grunda stränder kan man se fiskarnas båtar. Vattnet är deras levebröd. Från djupet drar de upp sprattlande fiskar som glänser likt silver i solskenet. De lagar sina nät på ställningar vid stränderna och röker, saltar och jäser sin fångst. Många är vidskepliga och alla har de en respekt för vädrets makter, i synnerhet stormarna, som välter deras båtar och offrar dem till djupet.";
+	bakgrundstabeller.jargiensbefolkning[18].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[19] = {};
-	bakgrundstabeller.jargiensbefolkning[19].rubrik="FjÃ¤rilsfÃ¥ngare";
-	bakgrundstabeller.jargiensbefolkning[19].bestamd="fjÃ¤rilsfÃ¥ngaren";
-	bakgrundstabeller.jargiensbefolkning[19].obestamd="en fjÃ¤rilsfÃ¥ngare";
+	bakgrundstabeller.jargiensbefolkning[19].rubrik="Fjärilsfångare";
+	bakgrundstabeller.jargiensbefolkning[19].bestamd="fjärilsfångaren";
+	bakgrundstabeller.jargiensbefolkning[19].obestamd="en fjärilsfångare";
 	bakgrundstabeller.jargiensbefolkning[19].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[19].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[19].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[19].beskrivning="Ett vackrare namn fÃ¶r insektsjÃ¤gare Ã¤r de fjÃ¤rilsfÃ¥ngare som ser till att Ã¤dlingar fÃ¥r sova ostÃ¶rt pÃ¥ nÃ¤tterna. Fladdrande malvingar, gnisslande syrsor och skrapandet av tusenfotingar kan stÃ¶ra sÃ¶mnen och fjÃ¤rilsfÃ¥ngarna gÃ¶r sitt bÃ¤sta fÃ¶r att tyst och metodiskt fÃ¶rgifta och ta ihjÃ¤l dem. Det finns Ã¤ven finare fjÃ¤rilsfÃ¥ngare, som samlar fÃ¤rgglada insekter fÃ¶r dess skÃ¶nhets skull eller fÃ¶r att utvinna sekret till unika gifter och motgifter.";
-	bakgrundstabeller.jargiensbefolkning[19].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[19].beskrivning="Ett vackrare namn för insektsjägare är de fjärilsfångare som ser till att ädlingar får sova ostört på nätterna. Fladdrande malvingar, gnisslande syrsor och skrapandet av tusenfotingar kan störa sömnen och fjärilsfångarna gör sitt bästa för att tyst och metodiskt förgifta och ta ihjäl dem. Det finns även finare fjärilsfångare, som samlar färgglada insekter för dess skönhets skull eller för att utvinna sekret till unika gifter och motgifter.";
+	bakgrundstabeller.jargiensbefolkning[19].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[20] = {};
@@ -234,8 +234,8 @@
 	bakgrundstabeller.jargiensbefolkning[20].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[20].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[20].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[20].beskrivning="KlÃ¤dd i trasor och med sÃ¶nderpiskad rygg vandrar flagellanten genom KejsardÃ¶met. Denne Ã¤r uppfylld av den heliga Udars lidande och mÃ¤ssar osammanhÃ¤ngande fÃ¶r alla som vill lyssna. Vissa blir flagellanter efter religiÃ¶sa visioner, andra som straff fÃ¶r sina synder. FÃ¶r att visa pÃ¥ Udars barmhÃ¤rtighet tar en del med sig fÃ¶rÃ¤ldralÃ¶sa barn i sitt fÃ¶lje och lÃ¥ter dessa leva pÃ¥ allmosorna. De smetar in barnens kinder med sitt blod till dess att barnen Ã¤r gamla nog att sjÃ¤lva ta upp piskan och delta i sjÃ¤lvspÃ¤kelsen â€“ den heligaste av riter.";
-	bakgrundstabeller.jargiensbefolkning[20].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[20].beskrivning="Klädd i trasor och med sönderpiskad rygg vandrar flagellanten genom Kejsardömet. Denne är uppfylld av den heliga Udars lidande och mässar osammanhängande för alla som vill lyssna. Vissa blir flagellanter efter religiösa visioner, andra som straff för sina synder. För att visa på Udars barmhärtighet tar en del med sig föräldralösa barn i sitt följe och låter dessa leva på allmosorna. De smetar in barnens kinder med sitt blod till dess att barnen är gamla nog att själva ta upp piskan och delta i självspäkelsen – den heligaste av riter.";
+	bakgrundstabeller.jargiensbefolkning[20].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Vildmarksfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[21] = {};
@@ -245,30 +245,30 @@
 	bakgrundstabeller.jargiensbefolkning[21].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[21].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[21].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[21].beskrivning="Knutna till lÃ¤rosÃ¤ten lever forskarna som arbetar fÃ¶r att fÃ¶rdjupa sin insikt runt mÃ¤nniskan, naturen, historia eller teologi. Vissa lÃ¤rda mÃ¤n och kvinnor fÃ¥r sin forskning sanktionerad av kyrkan, frÃ¤mst de som specialiserat sig pÃ¥ teologi. Andra lever i stÃ¤ndig skrÃ¤ck fÃ¶r att kyrkan eller censorerna ska beslagta deras alster och straffa dem fÃ¶r deras hÃ¤diska tankar och idÃ©er.";
-	bakgrundstabeller.jargiensbefolkning[21].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[21].beskrivning="Knutna till lärosäten lever forskarna som arbetar för att fördjupa sin insikt runt människan, naturen, historia eller teologi. Vissa lärda män och kvinnor får sin forskning sanktionerad av kyrkan, främst de som specialiserat sig på teologi. Andra lever i ständig skräck för att kyrkan eller censorerna ska beslagta deras alster och straffa dem för deras hädiska tankar och idéer.";
+	bakgrundstabeller.jargiensbefolkning[21].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[22] = {};
-	bakgrundstabeller.jargiensbefolkning[22].rubrik="FÃ¤ltskÃ¤r";
-	bakgrundstabeller.jargiensbefolkning[22].bestamd="fÃ¤ltskÃ¤ren";
-	bakgrundstabeller.jargiensbefolkning[22].obestamd="en fÃ¤ltskÃ¤r";
+	bakgrundstabeller.jargiensbefolkning[22].rubrik="Fältskär";
+	bakgrundstabeller.jargiensbefolkning[22].bestamd="fältskären";
+	bakgrundstabeller.jargiensbefolkning[22].obestamd="en fältskär";
 	bakgrundstabeller.jargiensbefolkning[22].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[22].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[22].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[22].beskrivning="NÃ¤r det sker stridigheter dÃ¶r de flesta lÃ¥ngt efter slaget av sina skador. FÃ¤ltskÃ¤ren fÃ¶rsÃ¶ker rÃ¤dda livet pÃ¥ dessa. Denne lÃ¤kekunnige Ã¤r van att resa med legionerna eller hÃ¥ller sig nÃ¤ra borgar och grÃ¤nsposteringar. FÃ¤ltskÃ¤rer Ã¤r skickliga pÃ¥ att stoppa blÃ¶dningar, spjÃ¤lka ben och genomfÃ¶ra vissa enklare kirurgiska ingrepp men trots detta dukar mÃ¥nga av patienterna under och fÃ¥ har sett sÃ¥ mycket lidande i livets sista timmar som dessa mÃ¤n och kvinnor.";
-	bakgrundstabeller.jargiensbefolkning[22].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[22].beskrivning="När det sker stridigheter dör de flesta långt efter slaget av sina skador. Fältskären försöker rädda livet på dessa. Denne läkekunnige är van att resa med legionerna eller håller sig nära borgar och gränsposteringar. Fältskärer är skickliga på att stoppa blödningar, spjälka ben och genomföra vissa enklare kirurgiska ingrepp men trots detta dukar många av patienterna under och få har sett så mycket lidande i livets sista timmar som dessa män och kvinnor.";
+	bakgrundstabeller.jargiensbefolkning[22].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Kunskapsfärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[23] = {};
-	bakgrundstabeller.jargiensbefolkning[23].rubrik="FÃ¶rfalskare";
-	bakgrundstabeller.jargiensbefolkning[23].bestamd="fÃ¶rfalskaren";
-	bakgrundstabeller.jargiensbefolkning[23].obestamd="en fÃ¶rfalskare";
+	bakgrundstabeller.jargiensbefolkning[23].rubrik="Förfalskare";
+	bakgrundstabeller.jargiensbefolkning[23].bestamd="förfalskaren";
+	bakgrundstabeller.jargiensbefolkning[23].obestamd="en förfalskare";
 	bakgrundstabeller.jargiensbefolkning[23].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[23].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[23].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[23].beskrivning="Med ett skarpt Ã¶ga kopieras handstilar, sigillstÃ¤mplar och till och med formuleringar och dolda budskap av fÃ¶rfalskaren. I ett rike dÃ¤r dokument, sigill och kontrakt utgÃ¶r kÃ¤rnan i alla tÃ¤nkbara verksamheter har en skicklig fÃ¶rfalskare en mÃ¶jlighet att tjÃ¤na stora pengar. Straffet fÃ¶r fÃ¶rfalskning Ã¤r dock mycket hÃ¥rt och fÃ¶rfalskare arbetar dÃ¤rfÃ¶r ofta genom mellanhÃ¤nder om nÃ¥gon av kunderna skulle bli infÃ¥ngad och tvingad att tala.";
-	bakgrundstabeller.jargiensbefolkning[23].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[23].beskrivning="Med ett skarpt öga kopieras handstilar, sigillstämplar och till och med formuleringar och dolda budskap av förfalskaren. I ett rike där dokument, sigill och kontrakt utgör kärnan i alla tänkbara verksamheter har en skicklig förfalskare en möjlighet att tjäna stora pengar. Straffet för förfalskning är dock mycket hårt och förfalskare arbetar därför ofta genom mellanhänder om någon av kunderna skulle bli infångad och tvingad att tala.";
+	bakgrundstabeller.jargiensbefolkning[23].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.jargiensbefolkning[24] = {};
@@ -278,19 +278,19 @@
 	bakgrundstabeller.jargiensbefolkning[24].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[24].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[24].valfriaenheter=4;
-	bakgrundstabeller.jargiensbefolkning[24].beskrivning="Gardessoldater kan ha mycket varierande uppgifter, vissa arbetar med att skydda en person eller en plats, andra arbetar fÃ¶r att tillintetgÃ¶ra en fientlig organisation eller rÃ¶relse. Garderna bestÃ¥r oftast av elitsoldater som visat stor skicklighet inom ett visst omrÃ¥de och som av denna anledning blivit plockade frÃ¥n sina tidigare anstÃ¤llningar fÃ¶r att tjÃ¤na ett hÃ¶gre syfte. Vanligtvis Ã¤r garderna finansierade av en mycket rik adelsman eller ett stort och mÃ¤ktigt gille fÃ¶r att tjÃ¤na deras syften.";
-	bakgrundstabeller.jargiensbefolkning[24].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.jargiensbefolkning[24].beskrivning="Gardessoldater kan ha mycket varierande uppgifter, vissa arbetar med att skydda en person eller en plats, andra arbetar för att tillintetgöra en fientlig organisation eller rörelse. Garderna består oftast av elitsoldater som visat stor skicklighet inom ett visst område och som av denna anledning blivit plockade från sina tidigare anställningar för att tjäna ett högre syfte. Vanligtvis är garderna finansierade av en mycket rik adelsman eller ett stort och mäktigt gille för att tjäna deras syften.";
+	bakgrundstabeller.jargiensbefolkning[24].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[25] = {};
-	bakgrundstabeller.jargiensbefolkning[25].rubrik="GatufÃ¶rsÃ¤ljare";
-	bakgrundstabeller.jargiensbefolkning[25].bestamd="gatufÃ¶rsÃ¤ljaren";
-	bakgrundstabeller.jargiensbefolkning[25].obestamd="en gatufÃ¶rsÃ¤ljare";
+	bakgrundstabeller.jargiensbefolkning[25].rubrik="Gatuförsäljare";
+	bakgrundstabeller.jargiensbefolkning[25].bestamd="gatuförsäljaren";
+	bakgrundstabeller.jargiensbefolkning[25].obestamd="en gatuförsäljare";
 	bakgrundstabeller.jargiensbefolkning[25].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[25].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[25].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[25].beskrivning="Skrikandes om erbjudanden om fÃ¤rsk fisk, vackra tyger, nybakt brÃ¶d och vÃ¤ldoftande oljor stÃ¥r gatufÃ¶rsÃ¤ljarna i sina smÃ¥ affÃ¤rer fÃ¶r att locka in folkhopen fÃ¶r att kÃ¶pa deras varor. Med snabba ord som likt honung sÃ¶ker sig in i kundernas Ã¶ron sÃ¥ sÃ¤ljer de sina varor till folket. De anvÃ¤nder alla knep som finns fÃ¶r att klara vardagen och samtidigt fÃ¶rsÃ¶ka hÃ¥lla uppe sitt rykte till morgondagen.";
-	bakgrundstabeller.jargiensbefolkning[25].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[25].beskrivning="Skrikandes om erbjudanden om färsk fisk, vackra tyger, nybakt bröd och väldoftande oljor står gatuförsäljarna i sina små affärer för att locka in folkhopen för att köpa deras varor. Med snabba ord som likt honung söker sig in i kundernas öron så säljer de sina varor till folket. De använder alla knep som finns för att klara vardagen och samtidigt försöka hålla uppe sitt rykte till morgondagen.";
+	bakgrundstabeller.jargiensbefolkning[25].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[26] = {};
@@ -301,8 +301,8 @@
 	bakgrundstabeller.jargiensbefolkning[26].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[26].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[26].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[26].beskrivning="Det finns inga fÃ¤ngelser i KejsardÃ¶met, men Ã¤ndÃ¥ finns det fÃ¥ngna personer som Ã¤r fÃ¶r viktiga eller anvÃ¤ndbara fÃ¶r att dÃ¶das. Dessa fungerar vanligen som gisslan mellan rika slÃ¤kter, en sÃ¤kerhet att man fullfÃ¶ljer sin del av avtalen. Gisslan kan i vÃ¤rsta fall hÃ¥llas i kalla och fuktiga kÃ¤llarhÃ¥lor, men i de flesta fall fÃ¥r de arbeta i hushÃ¥llet eller bo i ensliga kloster. Riktig betydelsefull gisslan kan leva som Ã¤rade gÃ¤ster i stÃ¥tliga borgar. Deras liv hÃ¤nger dock pÃ¥ sina vÃ¤rdars vÃ¤lvilja och nÃ¤r som helst kan de tas av daga.";
-	bakgrundstabeller.jargiensbefolkning[26].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[26].beskrivning="Det finns inga fängelser i Kejsardömet, men ändå finns det fångna personer som är för viktiga eller användbara för att dödas. Dessa fungerar vanligen som gisslan mellan rika släkter, en säkerhet att man fullföljer sin del av avtalen. Gisslan kan i värsta fall hållas i kalla och fuktiga källarhålor, men i de flesta fall får de arbeta i hushållet eller bo i ensliga kloster. Riktig betydelsefull gisslan kan leva som ärade gäster i ståtliga borgar. Deras liv hänger dock på sina värdars välvilja och när som helst kan de tas av daga.";
+	bakgrundstabeller.jargiensbefolkning[26].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[27] = {};
@@ -312,8 +312,8 @@
 	bakgrundstabeller.jargiensbefolkning[27].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[27].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[27].kanneteckenpoang=2;
-	bakgrundstabeller.jargiensbefolkning[27].beskrivning="Till publikens jubel stÃ¶rtar kÃ¤mpar samman. StÃ¥l mÃ¶ter stÃ¥l, blod spills, ben bryts och nÃ¤r allt Ã¤r Ã¶ver stÃ¥r en segrare upp med sitt vapen hÃ¶jt mot skyn. Gladiatorn Ã¤r en kÃ¤mpe som slÃ¥ss fÃ¶r att underhÃ¥lla i vÃ¤lkoreograferade strider gentemot sina vapenbrÃ¶der. NÃ¤r man inte mÃ¶ter mÃ¤nskliga motstÃ¥ndare slÃ¤pps monster och bestar in pÃ¥ arenan och gladiatorerna tillintetgÃ¶r dÃ¥ dessa styggelser i Daaks namn. De mest vÃ¤lkÃ¤nda gladiatorerna Ã¤r hyllade som hjÃ¤ltar och deras namn Ã¤r spridda Ã¤nda till kolonierna. De okÃ¤nda slÃ¥ss pÃ¥ mindre arenor och Ã¤r vanligen de som Ã¤r fÃ¶rutbestÃ¤mda att fÃ¶rlora i de allt som oftast uppgjorda striderna.";
-	bakgrundstabeller.jargiensbefolkning[27].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.jargiensbefolkning[27].beskrivning="Till publikens jubel störtar kämpar samman. Stål möter stål, blod spills, ben bryts och när allt är över står en segrare upp med sitt vapen höjt mot skyn. Gladiatorn är en kämpe som slåss för att underhålla i välkoreograferade strider gentemot sina vapenbröder. När man inte möter mänskliga motståndare släpps monster och bestar in på arenan och gladiatorerna tillintetgör då dessa styggelser i Daaks namn. De mest välkända gladiatorerna är hyllade som hjältar och deras namn är spridda ända till kolonierna. De okända slåss på mindre arenor och är vanligen de som är förutbestämda att förlora i de allt som oftast uppgjorda striderna.";
+	bakgrundstabeller.jargiensbefolkning[27].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.jargiensbefolkning[28] = {};
@@ -323,19 +323,19 @@
 	bakgrundstabeller.jargiensbefolkning[28].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[28].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[28].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[28].beskrivning="Mat, vin, orgier, droger, vild kopulering och ohÃ¤mmad njutning utgÃ¶r kÃ¤rnan i glutharianens liv. Denna hedniska tro dÃ¤r man Ã¤r pÃ¥ en stÃ¤ndig jakt efter njutningen pÃ¥ de mest perversa sÃ¤tt Ã¤r vanlig bland de rika i det jargiska samhÃ¤llet. Trots utbredningen av kulten gÃ¶r sÃ¤llan inkvisitionen nÃ¥gra stÃ¶rre tillslag gentemot dem och det ryktas att ett flertal av anhÃ¤ngarna Ã¤r mÃ¤n och kvinnor av kyrkan.";
-	bakgrundstabeller.jargiensbefolkning[28].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[28].beskrivning="Mat, vin, orgier, droger, vild kopulering och ohämmad njutning utgör kärnan i glutharianens liv. Denna hedniska tro där man är på en ständig jakt efter njutningen på de mest perversa sätt är vanlig bland de rika i det jargiska samhället. Trots utbredningen av kulten gör sällan inkvisitionen några större tillslag gentemot dem och det ryktas att ett flertal av anhängarna är män och kvinnor av kyrkan.";
+	bakgrundstabeller.jargiensbefolkning[28].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[29] = {};
-	bakgrundstabeller.jargiensbefolkning[29].rubrik="GodsÃ¤gare";
-	bakgrundstabeller.jargiensbefolkning[29].bestamd="godsÃ¤garen";
-	bakgrundstabeller.jargiensbefolkning[29].obestamd="en godsÃ¤gare";
+	bakgrundstabeller.jargiensbefolkning[29].rubrik="Godsägare";
+	bakgrundstabeller.jargiensbefolkning[29].bestamd="godsägaren";
+	bakgrundstabeller.jargiensbefolkning[29].obestamd="en godsägare";
 	bakgrundstabeller.jargiensbefolkning[29].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[29].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[29].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[29].beskrivning="FÃ¶r mÃ¥nga Ã¤r bilden av en godsÃ¤gare en man eller kvinna som med ett sorglÃ¶st leende och blickar ut Ã¶ver fÃ¤lten dÃ¤r slavarna arbetar medan denne ligger pÃ¥ divanen och blir matad med druvor. Det finns nÃ¥gra som har detta enkla liv med pengar, rikedom och makt men lÃ¥ngt ifrÃ¥n alla. MÃ¥nga Ã¤r hÃ¥rt arbetande och inblandade i grÃ¤nstvister med sina grannar, nÃ¥got som ibland Ã¶vergÃ¥r till regelrÃ¤tta stridigheter.";
-	bakgrundstabeller.jargiensbefolkning[29].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[29].beskrivning="För många är bilden av en godsägare en man eller kvinna som med ett sorglöst leende och blickar ut över fälten där slavarna arbetar medan denne ligger på divanen och blir matad med druvor. Det finns några som har detta enkla liv med pengar, rikedom och makt men långt ifrån alla. Många är hårt arbetande och inblandade i gränstvister med sina grannar, något som ibland övergår till regelrätta stridigheter.";
+	bakgrundstabeller.jargiensbefolkning[29].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Kunskapsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[30] = {};
@@ -345,19 +345,19 @@
 	bakgrundstabeller.jargiensbefolkning[30].valfriatabellslag=1;
 	bakgrundstabeller.jargiensbefolkning[30].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[30].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[30].beskrivning="Yxor biter in i trÃ¤dstammarna, hackor och hammare frigÃ¶r marmor frÃ¥n stenbrotten och murar och byggnader byggs av ren mankraft. Grovarbetarna Ã¤r de som utfÃ¶r det tyngsta arbetet i KejsardÃ¶met. De Ã¤r kÃ¤nda fÃ¶r kamratskap och envishet. Arbetslagen sliter i bÃ¥de regn och gassande sol och sover sedan tungt i kojorna ute i vildmarken. NÃ¤r sÃ¤songen Ã¤r Ã¶ver Ã¥tervÃ¤nder de till sin familj med pengar eller till stÃ¤derna i jakt pÃ¥ nytt arbete.";
-	bakgrundstabeller.jargiensbefolkning[30].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[30].beskrivning="Yxor biter in i trädstammarna, hackor och hammare frigör marmor från stenbrotten och murar och byggnader byggs av ren mankraft. Grovarbetarna är de som utför det tyngsta arbetet i Kejsardömet. De är kända för kamratskap och envishet. Arbetslagen sliter i både regn och gassande sol och sover sedan tungt i kojorna ute i vildmarken. När säsongen är över återvänder de till sin familj med pengar eller till städerna i jakt på nytt arbete.";
+	bakgrundstabeller.jargiensbefolkning[30].beskrivninghak = "1 slag på valfri tabell, 4 enheter Vildmarksfärdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.jargiensbefolkning[31] = {};
-	bakgrundstabeller.jargiensbefolkning[31].rubrik="GrÃ¥tare";
-	bakgrundstabeller.jargiensbefolkning[31].bestamd="grÃ¥taren";
-	bakgrundstabeller.jargiensbefolkning[31].obestamd="en grÃ¥tare";
+	bakgrundstabeller.jargiensbefolkning[31].rubrik="Gråtare";
+	bakgrundstabeller.jargiensbefolkning[31].bestamd="gråtaren";
+	bakgrundstabeller.jargiensbefolkning[31].obestamd="en gråtare";
 	bakgrundstabeller.jargiensbefolkning[31].valfriatabellslag=1;
 	bakgrundstabeller.jargiensbefolkning[31].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[31].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[31].beskrivning="NÃ¤r en person dÃ¶tt vars slÃ¤ktingar Ã¤r bland de bemedlade sÃ¥ anlitar dessa grÃ¥tare fÃ¶r att sÃ¶rja den dÃ¶de. Dessa mÃ¤n och kvinnor klÃ¤r sig i askgrÃ¥ klÃ¤der, skriker, grÃ¥ter och slÃ¤pper ut sorg och vÃ¥nda. De sjunger Ã¤ven elegier, begravningshymner och ber till Daak att vaka Ã¶ver den bortgÃ¥ngne. Ofta fÃ¶rrÃ¤ttar de sitt vÃ¤rv utanfÃ¶r den dÃ¶des hus eller vandrar efter stadens gator och skriker den dÃ¶des namn.";
-	bakgrundstabeller.jargiensbefolkning[31].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[31].beskrivning="När en person dött vars släktingar är bland de bemedlade så anlitar dessa gråtare för att sörja den döde. Dessa män och kvinnor klär sig i askgrå kläder, skriker, gråter och släpper ut sorg och vånda. De sjunger även elegier, begravningshymner och ber till Daak att vaka över den bortgångne. Ofta förrättar de sitt värv utanför den dödes hus eller vandrar efter stadens gator och skriker den dödes namn.";
+	bakgrundstabeller.jargiensbefolkning[31].beskrivninghak = "1 slag på valfri tabell, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[32] = {};
@@ -367,8 +367,8 @@
 	bakgrundstabeller.jargiensbefolkning[32].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[32].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[32].kanneteckenpoang=2;
-	bakgrundstabeller.jargiensbefolkning[32].beskrivning="Enkla nÃ¶jen fÃ¶r enkla mÃ¤nniskor. Gycklare underhÃ¥ller det vanliga folket med allehanda konster sÃ¥som akrobatik, jonglering, eldblÃ¥sning och eldslukning samt enklare fakirtrick. MÃ¥nga gycklare vandrar mellan stÃ¤derna fÃ¶r att finna nya platser dÃ¤r folk Ã¤nnu inte sett deras upptrÃ¤dande och dessa uppmÃ¤rksamma personer fÃ¶r med sig skvaller och nyheter frÃ¥n KejsardÃ¶mets alla hÃ¶rn.";
-	bakgrundstabeller.jargiensbefolkning[32].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.jargiensbefolkning[32].beskrivning="Enkla nöjen för enkla människor. Gycklare underhåller det vanliga folket med allehanda konster såsom akrobatik, jonglering, eldblåsning och eldslukning samt enklare fakirtrick. Många gycklare vandrar mellan städerna för att finna nya platser där folk ännu inte sett deras uppträdande och dessa uppmärksamma personer för med sig skvaller och nyheter från Kejsardömets alla hörn.";
+	bakgrundstabeller.jargiensbefolkning[32].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.jargiensbefolkning[33] = {};
@@ -378,8 +378,8 @@
 	bakgrundstabeller.jargiensbefolkning[33].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[33].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[33].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[33].beskrivning="NÃ¤ra botten av samhÃ¤llets pyramid befinner sig hamnarbetarna och de utfÃ¶r den grova arbetsinsats som krÃ¤vs fÃ¶r att stuva lasten pÃ¥ fartyg. De syns stÃ¤ndigt bÃ¤rande pÃ¥ tunga sÃ¤ckar eller lÃ¥rar eller fast i timtal vandrandes i hamnens kranhjul. De Ã¤r rÃ¥barkade typer med ytterst lite fritid som de dock gÃ¤rna spenderar drickandes pÃ¥ billiga tavernor, stÃ¤ndigt beredda pÃ¥ slagsmÃ¥l. Hamnarbetare har stor koll pÃ¥ vad fÃ¶r last olika skepp och lagerbyggnader har i sina mÃ¶rka utrymmen och fÃ¶r nÃ¥gra extra stop Ã¶l pÃ¥ krogen blir de ofta benÃ¤gna att berÃ¤tta mer om lasten Ã¤n dess Ã¤gare skulle acceptera.";
-	bakgrundstabeller.jargiensbefolkning[33].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[33].beskrivning="Nära botten av samhällets pyramid befinner sig hamnarbetarna och de utför den grova arbetsinsats som krävs för att stuva lasten på fartyg. De syns ständigt bärande på tunga säckar eller lårar eller fast i timtal vandrandes i hamnens kranhjul. De är råbarkade typer med ytterst lite fritid som de dock gärna spenderar drickandes på billiga tavernor, ständigt beredda på slagsmål. Hamnarbetare har stor koll på vad för last olika skepp och lagerbyggnader har i sina mörka utrymmen och för några extra stop öl på krogen blir de ofta benägna att berätta mer om lasten än dess ägare skulle acceptera.";
+	bakgrundstabeller.jargiensbefolkning[33].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[34] = {};
@@ -388,37 +388,37 @@
 	bakgrundstabeller.jargiensbefolkning[34].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[34].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[34].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[34].beskrivning="I stÃ¤derna lever hantverkarna indelade i olika gillen. De mest inflytelserika hantverkarna Ã¤r gillesmÃ¤stare vilka anses vara nÃ¥gra av stadens mÃ¤ktigaste mÃ¤n som sitter pÃ¥ bÃ¥de rikligt med pengar och otaliga hantverkshemligheter. De som har lÃ¤gst inflytande Ã¤r lÃ¤rlingar vilka under flera Ã¥rs tid fÃ¥r arbeta likt slavar Ã¥t nÃ¥gon av de andra medlemmarna i hopp om att lÃ¤ra sig vÃ¤rvet.";
-	bakgrundstabeller.jargiensbefolkning[34].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[34].beskrivning="I städerna lever hantverkarna indelade i olika gillen. De mest inflytelserika hantverkarna är gillesmästare vilka anses vara några av stadens mäktigaste män som sitter på både rikligt med pengar och otaliga hantverkshemligheter. De som har lägst inflytande är lärlingar vilka under flera års tid får arbeta likt slavar åt någon av de andra medlemmarna i hopp om att lära sig värvet.";
+	bakgrundstabeller.jargiensbefolkning[34].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.jargiensbefolkning[35] = {};
-	bakgrundstabeller.jargiensbefolkning[35].rubrik="HÃ¤mnare";
-	bakgrundstabeller.jargiensbefolkning[35].bestamd="hÃ¤mnaren";
+	bakgrundstabeller.jargiensbefolkning[35].rubrik="Hämnare";
+	bakgrundstabeller.jargiensbefolkning[35].bestamd="hämnaren";
 	bakgrundstabeller.jargiensbefolkning[35].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[35].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[35].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[35].beskrivning="Ã„ra och heder Ã¤r det dyrbaraste som finns fÃ¶r en jargier. FÃ¶rlorad heder kan vara svÃ¥rt att Ã¥terfÃ¥, men det finns speciella hÃ¤mnare som kallas okuro eller avengor som Ã¤r vapenkunniga och Ã¤r experter pÃ¥ att skada sina offers anseende. Vanligt Ã¤r ocksÃ¥ att hÃ¤mnarnas offer utmanas pÃ¥ en duell pÃ¥ liv och dÃ¶d. Andra metoder som hÃ¤mnarna kan anvÃ¤nda Ã¤r att slÃ¥ till mot offrets anhÃ¶riga, eller rent av utfÃ¶ra hedersmord. Normalt har en magistrat utfÃ¤rdat en speciell konfiskeringsorder som gÃ¤ller just Ã¥terbÃ¶rdandet av fÃ¶rlorad Ã¤ra, heder eller rÃ¤ttigheter.";
-	bakgrundstabeller.jargiensbefolkning[35].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[35].beskrivning="Ära och heder är det dyrbaraste som finns för en jargier. Förlorad heder kan vara svårt att återfå, men det finns speciella hämnare som kallas okuro eller avengor som är vapenkunniga och är experter på att skada sina offers anseende. Vanligt är också att hämnarnas offer utmanas på en duell på liv och död. Andra metoder som hämnarna kan använda är att slå till mot offrets anhöriga, eller rent av utföra hedersmord. Normalt har en magistrat utfärdat en speciell konfiskeringsorder som gäller just återbördandet av förlorad ära, heder eller rättigheter.";
+	bakgrundstabeller.jargiensbefolkning[35].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[36] = {};
-	bakgrundstabeller.jargiensbefolkning[36].rubrik="HÃ¤xa";
-	bakgrundstabeller.jargiensbefolkning[36].bestamd="hÃ¤xan";
+	bakgrundstabeller.jargiensbefolkning[36].rubrik="Häxa";
+	bakgrundstabeller.jargiensbefolkning[36].bestamd="häxan";
 	bakgrundstabeller.jargiensbefolkning[36].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[36].mystikfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[36].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[36].beskrivning="Kvinnor och mÃ¤n som genom pakter med Antimon lyckats fÃ¥ krafter bortom det mÃ¤nskliga. Vissa sÃ¤gs kunna bota sjukdomar som hÃ¤rjar och andra kan fÃ¥ stolar och katter att flyga runt som fÃ¥glar. SÃ¥ gott som alla Ã¤r magi- och lÃ¤kekunniga med en insikt i de fÃ¶rdolda. Enligt inkvisitionen sÃ¤gs de mÃ¶rka makterna ha flÃ¤ckat dessa personer pÃ¥ nÃ¥got sÃ¤tt och det Ã¤r endast genom dessa tecken som man kan veta med sÃ¤kerhet om en person verkligen Ã¤r en Ã¤kta hÃ¤xa. OlikfÃ¤rgade Ã¶gon, krumma ryggar eller svarta flÃ¤ckar frÃ¥n de punkter dÃ¤r den onde berÃ¶rt dem ses som bevis.";
-	bakgrundstabeller.jargiensbefolkning[36].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter MystikfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[36].beskrivning="Kvinnor och män som genom pakter med Antimon lyckats få krafter bortom det mänskliga. Vissa sägs kunna bota sjukdomar som härjar och andra kan få stolar och katter att flyga runt som fåglar. Så gott som alla är magi- och läkekunniga med en insikt i de fördolda. Enligt inkvisitionen sägs de mörka makterna ha fläckat dessa personer på något sätt och det är endast genom dessa tecken som man kan veta med säkerhet om en person verkligen är en äkta häxa. Olikfärgade ögon, krumma ryggar eller svarta fläckar från de punkter där den onde berört dem ses som bevis.";
+	bakgrundstabeller.jargiensbefolkning[36].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Mystikfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[37] = {};
-	bakgrundstabeller.jargiensbefolkning[37].rubrik="HÃ¤xjÃ¤gare";
+	bakgrundstabeller.jargiensbefolkning[37].rubrik="Häxjägare";
 	bakgrundstabeller.jargiensbefolkning[37].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[37].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[37].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[37].beskrivning="Det finns mÃ¥nga fasor i KejsardÃ¶met. PÃ¥ gamla kyrkogÃ¥rdar vaknar de dÃ¶da, i avlÃ¤gsna byar blir folk besatta av andevÃ¤sen som kommer om natten, desperata personer svÃ¤r sig till demoner utan att veta vilket pris de kommer tvingas betala. HÃ¤xjÃ¤garen Ã¤r en person som tagit det som sin uppgift att finna och tillintetgÃ¶ra mÃ¶rkrets makter. En del av dessa arbetar under en inkvisitor, andra Ã¤r sjÃ¤lva jagade av inkvisitionen.";
-	bakgrundstabeller.jargiensbefolkning[37].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[37].beskrivning="Det finns många fasor i Kejsardömet. På gamla kyrkogårdar vaknar de döda, i avlägsna byar blir folk besatta av andeväsen som kommer om natten, desperata personer svär sig till demoner utan att veta vilket pris de kommer tvingas betala. Häxjägaren är en person som tagit det som sin uppgift att finna och tillintetgöra mörkrets makter. En del av dessa arbetar under en inkvisitor, andra är själva jagade av inkvisitionen.";
+	bakgrundstabeller.jargiensbefolkning[37].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[38] = {};
@@ -426,8 +426,8 @@
 	bakgrundstabeller.jargiensbefolkning[38].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[38].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[38].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[38].beskrivning="Aggression, hotfullhet och ett respektingivande yttre Ã¤r meriter hos indrivare i de lÃ¤gre samhÃ¤llsklasserna. Bland de mer fÃ¶rmÃ¶gna Ã¤r det vÃ¤ltalighet kryddad med dolda hot, skicklig dokumentation och en insikt i lÃ¥ntagarens tillgÃ¥ngar det som fungerar bÃ¤st. Deras roll Ã¤r dock densamma; att utlÃ¥nade pengar kommer tillbaka till sin Ã¤gare. Om detta sÃ¥ lÃ¶ses med att fingrar bryts och tÃ¤nder slÃ¥s ut eller att affÃ¤rer saboteras, familjer hotas och egendom brÃ¤nns ned beror helt och hÃ¥llet pÃ¥ situationen och summans storlek.";
-	bakgrundstabeller.jargiensbefolkning[38].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter Sociala fÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[38].beskrivning="Aggression, hotfullhet och ett respektingivande yttre är meriter hos indrivare i de lägre samhällsklasserna. Bland de mer förmögna är det vältalighet kryddad med dolda hot, skicklig dokumentation och en insikt i låntagarens tillgångar det som fungerar bäst. Deras roll är dock densamma; att utlånade pengar kommer tillbaka till sin ägare. Om detta så löses med att fingrar bryts och tänder slås ut eller att affärer saboteras, familjer hotas och egendom bränns ned beror helt och hållet på situationen och summans storlek.";
+	bakgrundstabeller.jargiensbefolkning[38].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Sociala färdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[39] = {};
@@ -436,8 +436,8 @@
 	bakgrundstabeller.jargiensbefolkning[39].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[39].mystikfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[39].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[39].beskrivning="KÃ¤ttare, syndare, hÃ¤xor, hedningar och svartkonstnÃ¤rer finns Ã¶verallt. Inkvisitionen har svurit att finna dessa och rena dem, straffa dem eller dÃ¶da dem och pÃ¥ sÃ¥ sÃ¤tt hÃ¥lla KejsardÃ¶met tryggt. Inkvisitorerna letar efter tecken pÃ¥ syndare och tar in dessa pÃ¥ fÃ¶rhÃ¶r. De nystar i fÃ¶rbjudna sammanslutningar, bevakar tvivelaktiga individer och i deras Ã¶kÃ¤nda tortyrkammare pressas sanningen fram med glÃ¶dgade tÃ¤nger. Inkvisitorer Ã¤r fruktade av alla. Det finns mÃ¥nga som missbrukar sin makt medan andra fÃ¶r en modig kamp gentemot demoner och Ã¶vernaturliga styggelser fÃ¶r att hÃ¥lla de troende sÃ¤kra.";
-	bakgrundstabeller.jargiensbefolkning[39].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter MystikfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[39].beskrivning="Kättare, syndare, häxor, hedningar och svartkonstnärer finns överallt. Inkvisitionen har svurit att finna dessa och rena dem, straffa dem eller döda dem och på så sätt hålla Kejsardömet tryggt. Inkvisitorerna letar efter tecken på syndare och tar in dessa på förhör. De nystar i förbjudna sammanslutningar, bevakar tvivelaktiga individer och i deras ökända tortyrkammare pressas sanningen fram med glödgade tänger. Inkvisitorer är fruktade av alla. Det finns många som missbrukar sin makt medan andra för en modig kamp gentemot demoner och övernaturliga styggelser för att hålla de troende säkra.";
+	bakgrundstabeller.jargiensbefolkning[39].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Mystikfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[40] = {};
@@ -445,17 +445,17 @@
 	bakgrundstabeller.jargiensbefolkning[40].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[40].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[40].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[40].beskrivning="KejsardÃ¶met hÃ¥lls vid liv av dem som brukar jorden. Dessa sÃ¥r fÃ¤lten, vallar boskapen och frambringar den stora mÃ¤ngd spannmÃ¥l och kÃ¶tt som fraktas till stÃ¤derna pÃ¥ oxdragna vagnar. Under svÃ¤ltÃ¥r Ã¤r livet pÃ¥ landet mycket hÃ¥rt men nÃ¤r skÃ¶rden Ã¤r god lever mÃ¥nga gott och de som Ã¤r lite mer bemedlade kan hyra in arbetare som daglÃ¶nare eller har slavar som utfÃ¶r en del av arbetet.";
-	bakgrundstabeller.jargiensbefolkning[40].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[40].beskrivning="Kejsardömet hålls vid liv av dem som brukar jorden. Dessa sår fälten, vallar boskapen och frambringar den stora mängd spannmål och kött som fraktas till städerna på oxdragna vagnar. Under svältår är livet på landet mycket hårt men när skörden är god lever många gott och de som är lite mer bemedlade kan hyra in arbetare som daglönare eller har slavar som utför en del av arbetet.";
+	bakgrundstabeller.jargiensbefolkning[40].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.jargiensbefolkning[41] = {};
-	bakgrundstabeller.jargiensbefolkning[41].rubrik="JÃ¤gare";
+	bakgrundstabeller.jargiensbefolkning[41].rubrik="Jägare";
 	bakgrundstabeller.jargiensbefolkning[41].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[41].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[41].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[41].beskrivning="I vildmarken vid KejsardÃ¶mets grÃ¤nstrakter lever dessa simpla mÃ¤nniskor pÃ¥ sin skicklighet med spjut och bÃ¥ge. DÃ¥ och dÃ¥ reser de tillbaka till stÃ¤derna eller byarna med hudar, kÃ¶tt eller hantverk i horn och ben. Vissa jÃ¤gare arbetar ensamma men andra vÃ¤ljer att ansluta sig till jaktlag som tillsammans driver och fÃ¤ller bytet.";
-	bakgrundstabeller.jargiensbefolkning[41].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[41].beskrivning="I vildmarken vid Kejsardömets gränstrakter lever dessa simpla människor på sin skicklighet med spjut och båge. Då och då reser de tillbaka till städerna eller byarna med hudar, kött eller hantverk i horn och ben. Vissa jägare arbetar ensamma men andra väljer att ansluta sig till jaktlag som tillsammans driver och fäller bytet.";
+	bakgrundstabeller.jargiensbefolkning[41].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[42] = {};
@@ -463,17 +463,17 @@
 	bakgrundstabeller.jargiensbefolkning[42].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[42].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[42].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[42].beskrivning="FÃ¶r kÃ¶pmÃ¤nnen, Ã¤dlingarna, kyrkan, armÃ©n och givetvis Kejsaren har det alltid varit viktigt att veta hur geografin i riket och kolonierna ser ut. Kartograferna kan provinsernas grÃ¤nser, vÃ¤gar, vattendrag, floder, skogar, Ã¥kerareal samt Ã¤ven vilka lÃ¤nder som finns bortom haven, de nordliga bergen, slÃ¤tterna och den fÃ¶rhatliga askÃ¶knen Tarkas. MÃ¥nga kartografer fÃ¶retar sig i sin ungdom dramatiska och farliga resor i KejsardÃ¶mets utkanter.";
-	bakgrundstabeller.jargiensbefolkning[42].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[42].beskrivning="För köpmännen, ädlingarna, kyrkan, armén och givetvis Kejsaren har det alltid varit viktigt att veta hur geografin i riket och kolonierna ser ut. Kartograferna kan provinsernas gränser, vägar, vattendrag, floder, skogar, åkerareal samt även vilka länder som finns bortom haven, de nordliga bergen, slätterna och den förhatliga asköknen Tarkas. Många kartografer företar sig i sin ungdom dramatiska och farliga resor i Kejsardömets utkanter.";
+	bakgrundstabeller.jargiensbefolkning[42].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Kunskapsfärdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.jargiensbefolkning[43] = {};
-	bakgrundstabeller.jargiensbefolkning[43].rubrik="KonfiskatÃ¶r";
+	bakgrundstabeller.jargiensbefolkning[43].rubrik="Konfiskatör";
 	bakgrundstabeller.jargiensbefolkning[43].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[43].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[43].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[43].beskrivning="Ã„godelar, varor och pengar pÃ¥ villovÃ¤gar ska naturligtvis beslagtas och Ã¥terbÃ¶rdas till sin rÃ¤ttmÃ¤tiga Ã¤gare. Oftast rÃ¶r det sig om nÃ¥gon form av egendom som stulits, fÃ¶rskingrats eller Ã¶verlÃ¥tits till en ny Ã¤gare. En konfiskatÃ¶r eller apprendator stÃ¶djer sig pÃ¥ en konfiskationsorder som utfÃ¤rdats av en magistrat och fÃ¥r normalt provision i efterhand â€“ allt frÃ¥n en tiondel till hÃ¤lften av godsets vÃ¤rde.";
-	bakgrundstabeller.jargiensbefolkning[43].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[43].beskrivning="Ägodelar, varor och pengar på villovägar ska naturligtvis beslagtas och återbördas till sin rättmätiga ägare. Oftast rör det sig om någon form av egendom som stulits, förskingrats eller överlåtits till en ny ägare. En konfiskatör eller apprendator stödjer sig på en konfiskationsorder som utfärdats av en magistrat och får normalt provision i efterhand – allt från en tiondel till hälften av godsets värde.";
+	bakgrundstabeller.jargiensbefolkning[43].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[44] = {};
@@ -481,8 +481,8 @@
 	bakgrundstabeller.jargiensbefolkning[44].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[44].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[44].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[44].beskrivning="Konkubiner Ã¤r mer Ã¤n vanliga skÃ¶kor dÃ¥ de tar hutlÃ¶sa summor fÃ¶r sitt umgÃ¤nge och blir sÃ¥ledes Ã¤lskarinnor och Ã¤lskare till de allra mest fÃ¶rmÃ¶gna och inflytelserika. Konkubinerna mÃ¥ste alltid strÃ¤va efter att behÃ¥lla gunsten och intresset dÃ¥ detta Ã¤r deras levebrÃ¶d och mÃ¥nga Ã¤r dÃ¤rfÃ¶r experter nÃ¤r det gÃ¤ller fÃ¶rfÃ¶relse eller utÃ¶vandet av mer ovanliga sexuella akter. Andra har kommit att bli intuitiva och intelligenta rÃ¥dgivare.";
-	bakgrundstabeller.jargiensbefolkning[44].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[44].beskrivning="Konkubiner är mer än vanliga skökor då de tar hutlösa summor för sitt umgänge och blir således älskarinnor och älskare till de allra mest förmögna och inflytelserika. Konkubinerna måste alltid sträva efter att behålla gunsten och intresset då detta är deras levebröd och många är därför experter när det gäller förförelse eller utövandet av mer ovanliga sexuella akter. Andra har kommit att bli intuitiva och intelligenta rådgivare.";
+	bakgrundstabeller.jargiensbefolkning[44].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[45] = {};
@@ -490,8 +490,8 @@
 	bakgrundstabeller.jargiensbefolkning[45].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[45].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[45].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[45].beskrivning="I tjÃ¤nst Ã¥t nÃ¥gon uppsatt, vanligen nÃ¥gon inom kyrkan, hovet, en av slÃ¤kterna, ett handelshus eller kanske till och med ett frÃ¤mmande rike spionerar kunskaparen pÃ¥ sina mÃ¥l och sÃ¤nder tillbaka detaljerade rapporter om vad som pÃ¥gÃ¥r. En del kunskapare Ã¤r inte mer Ã¤n tjÃ¤nare som fÃ¥r nÃ¥gra extra guld genom att berÃ¤tta vad dennes herrar har fÃ¶r sig medan andra kunskapare har trÃ¤nats i sitt vÃ¤rv sedan barnsben.";
-	bakgrundstabeller.jargiensbefolkning[45].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[45].beskrivning="I tjänst åt någon uppsatt, vanligen någon inom kyrkan, hovet, en av släkterna, ett handelshus eller kanske till och med ett främmande rike spionerar kunskaparen på sina mål och sänder tillbaka detaljerade rapporter om vad som pågår. En del kunskapare är inte mer än tjänare som får några extra guld genom att berätta vad dennes herrar har för sig medan andra kunskapare har tränats i sitt värv sedan barnsben.";
+	bakgrundstabeller.jargiensbefolkning[45].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[46] = {};
@@ -499,28 +499,28 @@
 	bakgrundstabeller.jargiensbefolkning[46].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[46].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[46].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[46].beskrivning="I det vÃ¤ldiga KejsardÃ¶met fÃ¤rdas nyheter lÃ¥ngsamt. NÃ¤r bud mÃ¥ste skickas med hast eller nyheter mÃ¥ste spridas till rikets alla invÃ¥nare sÃ¤nds kurirryttare mellan stÃ¤derna. De spikar upp plakat, levererar sigillfÃ¶rseglade brev och viskar kodade budskap till utvalda personer. SÃ¥ gott som alla stora slÃ¤kter har egna kurirryttare, likasÃ¥ kyrkan och armÃ©n.";
-	bakgrundstabeller.jargiensbefolkning[46].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[46].beskrivning="I det väldiga Kejsardömet färdas nyheter långsamt. När bud måste skickas med hast eller nyheter måste spridas till rikets alla invånare sänds kurirryttare mellan städerna. De spikar upp plakat, levererar sigillförseglade brev och viskar kodade budskap till utvalda personer. Så gott som alla stora släkter har egna kurirryttare, likaså kyrkan och armén.";
+	bakgrundstabeller.jargiensbefolkning[46].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[47] = {};
-	bakgrundstabeller.jargiensbefolkning[47].rubrik="KÃ¤ttare";
+	bakgrundstabeller.jargiensbefolkning[47].rubrik="Kättare";
 	bakgrundstabeller.jargiensbefolkning[47].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[47].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[47].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[47].beskrivning="Det finns de som vÃ¤nt sitt ansikte frÃ¥n Daaks sanna lÃ¤ra, de tvivlar pÃ¥ kyrkans budskap och fÃ¶rnekar Aboratens ord. Deras tro Ã¶verensstÃ¤mmer inte med den enda sanna och deras syn pÃ¥ religionen spottar kyrkan och alla Daaks helgon i ansiktet. KÃ¤ttarna fÃ¶rsÃ¶ker hitta tvivlare, infÃ¶r vilka de propagerar om sin sanning och sÃ¥r sina idÃ©er. Det Ã¤r ett mycket farligt vÃ¤rv som drar till sig inkvisitionens uppmÃ¤rksamhet.";
-	bakgrundstabeller.jargiensbefolkning[47].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[47].beskrivning="Det finns de som vänt sitt ansikte från Daaks sanna lära, de tvivlar på kyrkans budskap och förnekar Aboratens ord. Deras tro överensstämmer inte med den enda sanna och deras syn på religionen spottar kyrkan och alla Daaks helgon i ansiktet. Kättarna försöker hitta tvivlare, inför vilka de propagerar om sin sanning och sår sina idéer. Det är ett mycket farligt värv som drar till sig inkvisitionens uppmärksamhet.";
+	bakgrundstabeller.jargiensbefolkning[47].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[48] = {};
-	bakgrundstabeller.jargiensbefolkning[48].rubrik="KÃ¶pman";
-	bakgrundstabeller.jargiensbefolkning[48].bestamd="kÃ¶pmannen";
-	bakgrundstabeller.jargiensbefolkning[48].pluralobestamd="kÃ¶pmÃ¤n";
+	bakgrundstabeller.jargiensbefolkning[48].rubrik="Köpman";
+	bakgrundstabeller.jargiensbefolkning[48].bestamd="köpmannen";
+	bakgrundstabeller.jargiensbefolkning[48].pluralobestamd="köpmän";
 	bakgrundstabeller.jargiensbefolkning[48].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[48].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[48].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[48].beskrivning="PÃ¥ noga balanserade vÃ¥gar vÃ¤gs silver och guldhalten avgÃ¶rs genom att bita i mynten. KÃ¶pmannen sÃ¤ljer, byter och kÃ¶per varor och fÃ¶rsÃ¶ker pressa fram sÃ¥ stor vinst som det bara Ã¤r mÃ¶jligt. DjÃ¤rva chanstagningar, fÃ¶rsenade leveranser eller konkurrensen kan helt slÃ¥ ut en kÃ¶pman. I KejsardÃ¶met Ã¤r de dock mÃ¥ngtaliga och de som dukar under Ã¤r snart bortglÃ¶mda och nya giriga mÃ¤n och kvinnor tar deras plats.";
-	bakgrundstabeller.jargiensbefolkning[48].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[48].beskrivning="På noga balanserade vågar vägs silver och guldhalten avgörs genom att bita i mynten. Köpmannen säljer, byter och köper varor och försöker pressa fram så stor vinst som det bara är möjligt. Djärva chanstagningar, försenade leveranser eller konkurrensen kan helt slå ut en köpman. I Kejsardömet är de dock mångtaliga och de som dukar under är snart bortglömda och nya giriga män och kvinnor tar deras plats.";
+	bakgrundstabeller.jargiensbefolkning[48].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[49] = {};
@@ -528,8 +528,8 @@
 	bakgrundstabeller.jargiensbefolkning[49].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[49].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[49].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[49].beskrivning="I Jargien finns det mÃ¥nga sagor om lamiorna, de bleka vandÃ¶da som sÃ¤gs stryka runt nattetid och tÃ¶mma mÃ¤nniskor pÃ¥ blod. De Ã¤r vÃ¤sen som fÃ¶rkastat Daak men genom mÃ¶rk magi vunnit skÃ¶nhet, ofantlig styrka och evigt liv. Runt om i riket har det uppstÃ¥tt kulter som dyrkar dessa varelser i svarta mÃ¤ssor och blodsriter i hopp om att fÃ¥ del av deras makt och kanske slutligen vinna odÃ¶dlighetens gÃ¥va.";
-	bakgrundstabeller.jargiensbefolkning[49].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[49].beskrivning="I Jargien finns det många sagor om lamiorna, de bleka vandöda som sägs stryka runt nattetid och tömma människor på blod. De är väsen som förkastat Daak men genom mörk magi vunnit skönhet, ofantlig styrka och evigt liv. Runt om i riket har det uppstått kulter som dyrkar dessa varelser i svarta mässor och blodsriter i hopp om att få del av deras makt och kanske slutligen vinna odödlighetens gåva.";
+	bakgrundstabeller.jargiensbefolkning[49].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Rörelsefärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[50] = {};
@@ -537,8 +537,8 @@
 	bakgrundstabeller.jargiensbefolkning[50].valfriatabellslag=1;
 	bakgrundstabeller.jargiensbefolkning[50].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[50].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[50].beskrivning="Lantarbetarna Ã¤r de lÃ¤gsta bland jordbrukarna. Det Ã¤r de som inte Ã¤ger vare sig jord eller egendom men fÃ¥r slita mest av alla pÃ¥ fÃ¤lten. MÃ¤nnen slÃ¥r skÃ¶rden i gassande solsken, kvinnorna samlar upp den i kÃ¤rvar. FÃ¥r vallas av unga pojkar och flickor och nÃ¤r hÃ¶sten kommer grÃ¤vs rovorna upp. MÃ¥nga drÃ¶mmer om ett bÃ¤ttre liv dÃ¤r de Ã¤ger jorden som de sliter pÃ¥ dag ut och dag in.";
-	bakgrundstabeller.jargiensbefolkning[50].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[50].beskrivning="Lantarbetarna är de lägsta bland jordbrukarna. Det är de som inte äger vare sig jord eller egendom men får slita mest av alla på fälten. Männen slår skörden i gassande solsken, kvinnorna samlar upp den i kärvar. Får vallas av unga pojkar och flickor och när hösten kommer grävs rovorna upp. Många drömmer om ett bättre liv där de äger jorden som de sliter på dag ut och dag in.";
+	bakgrundstabeller.jargiensbefolkning[50].beskrivninghak = "1 slag på valfri tabell, 4 enheter Vildmarksfärdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.jargiensbefolkning[51] = {};
@@ -546,17 +546,17 @@
 	bakgrundstabeller.jargiensbefolkning[51].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[51].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[51].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[51].beskrivning="De krigare som inte ansluter sig till legionerna blir ofta legosoldater. Vissa Ã¤r fÃ¶re detta legionÃ¤rer som valt att gÃ¥ sin egen vÃ¤g medan andra vÃ¤rvas direkt som unga mÃ¤n fÃ¶r att slÃ¥ss i ett fÃ¶rband. Legosoldater reser land och rike runt fÃ¶r att slÃ¥ss fÃ¶r dem som betalar bÃ¤st.";
-	bakgrundstabeller.jargiensbefolkning[51].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[51].beskrivning="De krigare som inte ansluter sig till legionerna blir ofta legosoldater. Vissa är före detta legionärer som valt att gå sin egen väg medan andra värvas direkt som unga män för att slåss i ett förband. Legosoldater reser land och rike runt för att slåss för dem som betalar bäst.";
+	bakgrundstabeller.jargiensbefolkning[51].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[52] = {};
-	bakgrundstabeller.jargiensbefolkning[52].rubrik="LÃ¶nnmÃ¶rdare";
+	bakgrundstabeller.jargiensbefolkning[52].rubrik="Lönnmördare";
 	bakgrundstabeller.jargiensbefolkning[52].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[52].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[52].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[52].beskrivning="I KejsardÃ¶met Ã¤r lÃ¶nnmÃ¶rdare ett populÃ¤rt redskap fÃ¶r att undanrÃ¶ja oÃ¶nskade element. De kan rÃ¶ra sig om allt frÃ¥n brutala knivskÃ¤rare i hamnkvarteren till subtila giftmÃ¶rdare i hoven. Alla stÃ¶rre slÃ¤kter har en eller flera personer i sin sold med denna specialitet. Dessa fungerar ofta som livvakter och rÃ¥dgivare som skydd mot andra lÃ¶nnmÃ¶rdare. Det Ã¤r ett yrke som krÃ¤ver ett kallt hjÃ¤rta eller en passion fÃ¶r konstformen och KejsardÃ¶met Ã¤r fyllt med sÃ¥vÃ¤l kallhjÃ¤rtade som passionerade individer.";
-	bakgrundstabeller.jargiensbefolkning[52].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[52].beskrivning="I Kejsardömet är lönnmördare ett populärt redskap för att undanröja oönskade element. De kan röra sig om allt från brutala knivskärare i hamnkvarteren till subtila giftmördare i hoven. Alla större släkter har en eller flera personer i sin sold med denna specialitet. Dessa fungerar ofta som livvakter och rådgivare som skydd mot andra lönnmördare. Det är ett yrke som kräver ett kallt hjärta eller en passion för konstformen och Kejsardömet är fyllt med såväl kallhjärtade som passionerade individer.";
+	bakgrundstabeller.jargiensbefolkning[52].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[53] = {};
@@ -566,8 +566,8 @@
 	bakgrundstabeller.jargiensbefolkning[53].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[53].mystikfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[53].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[53].beskrivning="StÃ¤ndigt pÃ¥ flykt frÃ¥n inkvisitionens grepp Ã¤r magikerna, begÃ¥vade mÃ¤stare pÃ¥ att manipulera vÃ¤rlden efter sin vilja. De bedriver sitt vÃ¤rv i hemlighet och mÃ¥nga har ett annat yrke som fasad. Det finns dock hemliga magiska sÃ¤llskap och mÃ¥nga inflytelserika kan tÃ¤nka sig att betala dyrt fÃ¶r att bruka den fÃ¶rbjudna magin sÃ¥ lÃ¤nge de inte blir sammankopplade med magikern ifrÃ¥ga.";
-	bakgrundstabeller.jargiensbefolkning[53].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter MystikfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[53].beskrivning="Ständigt på flykt från inkvisitionens grepp är magikerna, begåvade mästare på att manipulera världen efter sin vilja. De bedriver sitt värv i hemlighet och många har ett annat yrke som fasad. Det finns dock hemliga magiska sällskap och många inflytelserika kan tänka sig att betala dyrt för att bruka den förbjudna magin så länge de inte blir sammankopplade med magikern ifråga.";
+	bakgrundstabeller.jargiensbefolkning[53].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Mystikfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[54] = {};
@@ -575,8 +575,8 @@
 	bakgrundstabeller.jargiensbefolkning[54].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[54].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[54].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[54].beskrivning="I alla jargiska stÃ¤der och stÃ¶rre byar finns det en magistrat vilken Ã¤r hÃ¶gsta ansvarig fÃ¶r rÃ¤ttskipningen inom sitt omrÃ¥de. Denna inflytelserika person leder en allmÃ¤n domstol dÃ¤r alla tviste- och brottsmÃ¥l behandlas och i slutÃ¤ndan Ã¤r det magistraten som beslutar vilka som mÃ¥ste dÃ¶, vilka som mÃ¥ste betala och vilka som ska slÃ¤ppas fria.";
-	bakgrundstabeller.jargiensbefolkning[54].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[54].beskrivning="I alla jargiska städer och större byar finns det en magistrat vilken är högsta ansvarig för rättskipningen inom sitt område. Denna inflytelserika person leder en allmän domstol där alla tviste- och brottsmål behandlas och i slutändan är det magistraten som beslutar vilka som måste dö, vilka som måste betala och vilka som ska släppas fria.";
+	bakgrundstabeller.jargiensbefolkning[54].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[55] = {};
@@ -585,17 +585,17 @@
 	bakgrundstabeller.jargiensbefolkning[55].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[55].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[55].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[55].beskrivning="NÃ¤r folk blir sjuka, ben mÃ¥ste spjÃ¤lkas och sÃ¥r mÃ¥ste sys tillkallas en medikus. Denne specialiserar sig pÃ¥ kroppens mysterier och hur man botar Ã¥kommor genom Ã¥derlÃ¥tning, beska dekokter och stinkande salvor. Kunskapen om hur man nÃ¥r balans i kroppens vÃ¤tskor gÃ¶r dessa individer mycket respekterade.";
-	bakgrundstabeller.jargiensbefolkning[55].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[55].beskrivning="När folk blir sjuka, ben måste spjälkas och sår måste sys tillkallas en medikus. Denne specialiserar sig på kroppens mysterier och hur man botar åkommor genom åderlåtning, beska dekokter och stinkande salvor. Kunskapen om hur man når balans i kroppens vätskor gör dessa individer mycket respekterade.";
+	bakgrundstabeller.jargiensbefolkning[55].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[56] = {};
-	bakgrundstabeller.jargiensbefolkning[56].rubrik="MissionÃ¤r";
+	bakgrundstabeller.jargiensbefolkning[56].rubrik="Missionär";
 	bakgrundstabeller.jargiensbefolkning[56].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[56].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[56].valfriaenheter=4;
-	bakgrundstabeller.jargiensbefolkning[56].beskrivning="Det finns sÃ¥ mÃ¥nga otrogna i kolonierna, i fjÃ¤rran riken och i KejsardÃ¶mets utkanter att kyrkans godhet inte klarar av att titta handfallet pÃ¥ utan mÃ¥ste agera fÃ¶r deras sjÃ¤lars skull. MissionÃ¤ren Ã¤r en person av kyrkan, vanligen en munk, nunna, tempelriddare eller prÃ¤st som tagit sig an ett heligt uppdrag att sprida Daaks bud Ã¶ver Mundana. Vissa missionÃ¤rer anvÃ¤nder tÃ¥lmodigt diplomati och visar pÃ¥ Daaks vÃ¤lvilja medan andra fÃ¶redrar vÃ¥ldets vÃ¤g fÃ¶r att tvinga de otrogna till underkastelse â€“ det handlar ju trots allt om att rÃ¤dda deras sjÃ¤lar.";
-	bakgrundstabeller.jargiensbefolkning[56].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.jargiensbefolkning[56].beskrivning="Det finns så många otrogna i kolonierna, i fjärran riken och i Kejsardömets utkanter att kyrkans godhet inte klarar av att titta handfallet på utan måste agera för deras själars skull. Missionären är en person av kyrkan, vanligen en munk, nunna, tempelriddare eller präst som tagit sig an ett heligt uppdrag att sprida Daaks bud över Mundana. Vissa missionärer använder tålmodigt diplomati och visar på Daaks välvilja medan andra föredrar våldets väg för att tvinga de otrogna till underkastelse – det handlar ju trots allt om att rädda deras själar.";
+	bakgrundstabeller.jargiensbefolkning[56].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[57] = {};
@@ -606,19 +606,19 @@
 	bakgrundstabeller.jargiensbefolkning[57].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[57].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[57].valfriaenheter=4;
-	bakgrundstabeller.jargiensbefolkning[57].beskrivning="De finns de troende som vÃ¤ljer att svÃ¤ra sig till Daak och gÃ¥r med i ett kloster fÃ¶r att dÃ¤r tjÃ¤na honom. En del kloster ligger isolerade lÃ¥ngt ute pÃ¥ landsbygden medan andra Ã¤r belÃ¤gna mitt i stÃ¤der dÃ¤r man dagligen har kontakt med stadsborna. Vissa kloster Ã¤r mycket strikta med tysthetslÃ¶fte och straff fÃ¶r minsta fÃ¶rseelse men i andra sker fÃ¶rbjudna ting bakom murarna och dÃ¤r handlar lÃ¶ftet snarare om att inte avslÃ¶ja nÃ¥got fÃ¶r utomstÃ¥ende.";
-	bakgrundstabeller.jargiensbefolkning[57].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.jargiensbefolkning[57].beskrivning="De finns de troende som väljer att svära sig till Daak och går med i ett kloster för att där tjäna honom. En del kloster ligger isolerade långt ute på landsbygden medan andra är belägna mitt i städer där man dagligen har kontakt med stadsborna. Vissa kloster är mycket strikta med tysthetslöfte och straff för minsta förseelse men i andra sker förbjudna ting bakom murarna och där handlar löftet snarare om att inte avslöja något för utomstående.";
+	bakgrundstabeller.jargiensbefolkning[57].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[58] = {};
-	bakgrundstabeller.jargiensbefolkning[58].rubrik="MunskÃ¤nk";
-	bakgrundstabeller.jargiensbefolkning[58].pluralobestamd="munskÃ¤nkar";
+	bakgrundstabeller.jargiensbefolkning[58].rubrik="Munskänk";
+	bakgrundstabeller.jargiensbefolkning[58].pluralobestamd="munskänkar";
 	
 	bakgrundstabeller.jargiensbefolkning[58].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[58].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[58].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[58].beskrivning="Ju hÃ¶gre status man har i KejsardÃ¶met desto fler fiender fÃ¥r man och fÃ¶rgiftning Ã¤r en dÃ¶dsorsak som Ã¤r allt fÃ¶r vanlig hos de rika. MunskÃ¤nkar Ã¤r personer med mycket kÃ¤nsliga smaklÃ¶kar som trÃ¤nats i att upptÃ¤cka gifter i mat och dryck. Genom att Ã¤ta en stund innan sin herre kan de utveckla fÃ¶rgiftningssymptom innan herren ens smakar maten. Dessa personer befinner sig mitt i de hÃ¶gre stÃ¥nden och har en inblick i mÃ¥nga av de gÃ¶romÃ¥l som sker dÃ¤r.";
-	bakgrundstabeller.jargiensbefolkning[58].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[58].beskrivning="Ju högre status man har i Kejsardömet desto fler fiender får man och förgiftning är en dödsorsak som är allt för vanlig hos de rika. Munskänkar är personer med mycket känsliga smaklökar som tränats i att upptäcka gifter i mat och dryck. Genom att äta en stund innan sin herre kan de utveckla förgiftningssymptom innan herren ens smakar maten. Dessa personer befinner sig mitt i de högre stånden och har en inblick i många av de göromål som sker där.";
+	bakgrundstabeller.jargiensbefolkning[58].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Vildmarksfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[59] = {};
@@ -626,8 +626,8 @@
 	bakgrundstabeller.jargiensbefolkning[59].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[59].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[59].valfriaenheter=4;
-	bakgrundstabeller.jargiensbefolkning[59].beskrivning="Guld och silver flÃ¶dar genom KejsardÃ¶met och de som inga pengar har kan inte komma lÃ¥ngt. Ockrarna Ã¤r personer som har en egen fÃ¶rmÃ¶genhet och som gÃ¤rna lÃ¥nar ut en summa mot en riklig rÃ¤nta. Det finns alltid de som vill gÃ¶ra affÃ¤rer, behÃ¶ver en medikus eller mÃ¥ste betala av en skuld. Om inte pengarna kommer tillbaka i tid sÃ¥ tvingas ockraren ta hjÃ¤lp av indrivare fÃ¶r att skydda sin investering.";
-	bakgrundstabeller.jargiensbefolkning[59].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.jargiensbefolkning[59].beskrivning="Guld och silver flödar genom Kejsardömet och de som inga pengar har kan inte komma långt. Ockrarna är personer som har en egen förmögenhet och som gärna lånar ut en summa mot en riklig ränta. Det finns alltid de som vill göra affärer, behöver en medikus eller måste betala av en skuld. Om inte pengarna kommer tillbaka i tid så tvingas ockraren ta hjälp av indrivare för att skydda sin investering.";
+	bakgrundstabeller.jargiensbefolkning[59].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[60] = {};
@@ -635,8 +635,8 @@
 	bakgrundstabeller.jargiensbefolkning[60].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[60].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[60].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[60].beskrivning="Svurna till Daak och omgÃ¤rdade av riter och mystik axlar ordensriddarna manteln som rikets beskyddare och Daaks fÃ¶rkÃ¤mpar. De Ã¤r respekterade och fruktade av folket dÃ¥ deras makt ofta gÃ¶r dem onÃ¥bara fÃ¶r anklagelser vilket gÃ¶r att vissa inte drar sig fÃ¶r att anvÃ¤nda sitt inflytande fÃ¶r att ta det de vill utan rÃ¤dsla fÃ¶r repressalier. MÃ¥nga Ã¤r fanatiskt trogna den orden de tillhÃ¶r och att fÃ¶rsvara sin och dess Ã¤ra tar upp all deras tid.";
-	bakgrundstabeller.jargiensbefolkning[60].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[60].beskrivning="Svurna till Daak och omgärdade av riter och mystik axlar ordensriddarna manteln som rikets beskyddare och Daaks förkämpar. De är respekterade och fruktade av folket då deras makt ofta gör dem onåbara för anklagelser vilket gör att vissa inte drar sig för att använda sitt inflytande för att ta det de vill utan rädsla för repressalier. Många är fanatiskt trogna den orden de tillhör och att försvara sin och dess ära tar upp all deras tid.";
+	bakgrundstabeller.jargiensbefolkning[60].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[61] = {};
@@ -644,17 +644,17 @@
 	bakgrundstabeller.jargiensbefolkning[61].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[61].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[61].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[61].beskrivning="Till fots, iklÃ¤dda enkla klÃ¤der i dova fÃ¤rger med en pilgrimsstav i sin hand och ett Daakkors runt sin hals fÃ¤rdas pilgrimerna genom KejsardÃ¶met. De Ã¤r obevÃ¤pnade dÃ¥ Daak skyddar dem pÃ¥ sin vandring mellan de heliga platserna. Vissa vandrar fÃ¶r att visa sin underkastelse till sin gud, andra fÃ¶r att gÃ¶ra bot. PÃ¥ knÃ¤ ber de vid helgedomar, besÃ¶ker orakel och helare, kysser marken dÃ¤r profeter har vandrat i hopp om att blidka den ende guden och vinna insikt.";
-	bakgrundstabeller.jargiensbefolkning[61].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[61].beskrivning="Till fots, iklädda enkla kläder i dova färger med en pilgrimsstav i sin hand och ett Daakkors runt sin hals färdas pilgrimerna genom Kejsardömet. De är obeväpnade då Daak skyddar dem på sin vandring mellan de heliga platserna. Vissa vandrar för att visa sin underkastelse till sin gud, andra för att göra bot. På knä ber de vid helgedomar, besöker orakel och helare, kysser marken där profeter har vandrat i hopp om att blidka den ende guden och vinna insikt.";
+	bakgrundstabeller.jargiensbefolkning[61].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Kunskapsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[62] = {};
-	bakgrundstabeller.jargiensbefolkning[62].rubrik="PrisjÃ¤gare";
+	bakgrundstabeller.jargiensbefolkning[62].rubrik="Prisjägare";
 	bakgrundstabeller.jargiensbefolkning[62].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[62].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[62].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[62].beskrivning="NÃ¥gra anvÃ¤nder sina kontakter och sitt skarpsinne, andra en sÃ¤llan skÃ¥dad vÃ¥ldsamhet, men i slutÃ¤ndan Ã¤r prisjÃ¤garens, eller captatorns, enda mÃ¥l att fÃ¥nga in misstÃ¤nkta brottslingar och fÃ¶ra dem infÃ¶r magistraten fÃ¶r att dÃ¶mas. Arresteringsordrar spikas upp pÃ¥ vÃ¤ggar vid stadsportar eller lÃ¤ses upp av utropare och ju farligare byte och grÃ¶vre brott desto mer silver kan de inbringa.";
-	bakgrundstabeller.jargiensbefolkning[62].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[62].beskrivning="Några använder sina kontakter och sitt skarpsinne, andra en sällan skådad våldsamhet, men i slutändan är prisjägarens, eller captatorns, enda mål att fånga in misstänkta brottslingar och föra dem inför magistraten för att dömas. Arresteringsordrar spikas upp på väggar vid stadsportar eller läses upp av utropare och ju farligare byte och grövre brott desto mer silver kan de inbringa.";
+	bakgrundstabeller.jargiensbefolkning[62].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[63] = {};
@@ -663,35 +663,35 @@
 	bakgrundstabeller.jargiensbefolkning[63].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[63].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[63].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[63].beskrivning="Det finns mÃ¥nga vÃ¤rdefulla saker som behÃ¶ver skyddas: personer, egendomar och fÃ¶remÃ¥l. En protektor har till uppgift att mot betalning vaka Ã¶ver dessa och ta till vapen om sÃ¥ skulle krÃ¤vas. En del agerar som livvakter till bortskÃ¤mda Ã¤dlingar, andra bÃ¤r och skyddar familjens sigillstÃ¤mplar och vissa Ã¤r anstÃ¤llda av handelshus fÃ¶r att se till att lasten kommer fram orÃ¶rd.";
-	bakgrundstabeller.jargiensbefolkning[63].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[63].beskrivning="Det finns många värdefulla saker som behöver skyddas: personer, egendomar och föremål. En protektor har till uppgift att mot betalning vaka över dessa och ta till vapen om så skulle krävas. En del agerar som livvakter till bortskämda ädlingar, andra bär och skyddar familjens sigillstämplar och vissa är anställda av handelshus för att se till att lasten kommer fram orörd.";
+	bakgrundstabeller.jargiensbefolkning[63].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[64] = {};
-	bakgrundstabeller.jargiensbefolkning[64].rubrik="PrÃ¤st";
+	bakgrundstabeller.jargiensbefolkning[64].rubrik="Präst";
 	bakgrundstabeller.jargiensbefolkning[64].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[64].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[64].mystikfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[64].beskrivning="Utan Daaks vÃ¤gledning skulle folket bli fÃ¶rvildade och hedniska bestar dÃ¶mda till en evighet i skÃ¤rselden efter dÃ¶den. PrÃ¤sterna har till uppgift att rÃ¤dda deras sjÃ¤lar och hjÃ¤lpa folket att finna Daak. De hÃ¥ller i mÃ¤ssor, kommer med rÃ¥d och Ã¤r hjÃ¤lp och stÃ¶d till dem som har de svÃ¥rt eller har drabbats av tvivel. MÃ¥nga har valt detta vÃ¤rv pÃ¥ grund av deras tilltro till den ende guden och en vilja att gÃ¶ra gott men det finns de som drivs av girighet och politiska ambitioner och anvÃ¤nder tron som ett redskap fÃ¶r att manipulera sina anhÃ¤ngare och svartmÃ¥la sina fiender.";
-	bakgrundstabeller.jargiensbefolkning[64].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter MystikfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[64].beskrivning="Utan Daaks vägledning skulle folket bli förvildade och hedniska bestar dömda till en evighet i skärselden efter döden. Prästerna har till uppgift att rädda deras själar och hjälpa folket att finna Daak. De håller i mässor, kommer med råd och är hjälp och stöd till dem som har de svårt eller har drabbats av tvivel. Många har valt detta värv på grund av deras tilltro till den ende guden och en vilja att göra gott men det finns de som drivs av girighet och politiska ambitioner och använder tron som ett redskap för att manipulera sina anhängare och svartmåla sina fiender.";
+	bakgrundstabeller.jargiensbefolkning[64].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Mystikfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[65] = {};
-	bakgrundstabeller.jargiensbefolkning[65].rubrik="ReliksÃ¤ljare";
+	bakgrundstabeller.jargiensbefolkning[65].rubrik="Reliksäljare";
 	bakgrundstabeller.jargiensbefolkning[65].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[65].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[65].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[65].beskrivning="Dit pilgrimerna fÃ¤rdas finner man reliksÃ¤ljarna likt surrande flugor runt ett ruttnande kadaver. Dessa sÃ¤ljer vÃ¤lsignade oljor, Ã¤godelar eller skelettbitar tillhÃ¶rande kÃ¤nda helgon, Daakkors, billiga helgonmÃ¥lningar, mumifierade delar av hedningar och allt annat de kan komma Ã¶ver och lura pÃ¥ de troende. Dessa mÃ¤n och kvinnor har ett smort munlÃ¤der och en makaber samling fÃ¶remÃ¥l i sin Ã¤go.";
-	bakgrundstabeller.jargiensbefolkning[65].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[65].beskrivning="Dit pilgrimerna färdas finner man reliksäljarna likt surrande flugor runt ett ruttnande kadaver. Dessa säljer välsignade oljor, ägodelar eller skelettbitar tillhörande kända helgon, Daakkors, billiga helgonmålningar, mumifierade delar av hedningar och allt annat de kan komma över och lura på de troende. Dessa män och kvinnor har ett smort munläder och en makaber samling föremål i sin ägo.";
+	bakgrundstabeller.jargiensbefolkning[65].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[66] = {};
-	bakgrundstabeller.jargiensbefolkning[66].rubrik="RÃ¥ttfÃ¥ngare";
+	bakgrundstabeller.jargiensbefolkning[66].rubrik="Råttfångare";
 	bakgrundstabeller.jargiensbefolkning[66].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[66].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[66].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[66].beskrivning="StÃ¤derna svÃ¤mmar Ã¶ver av rÃ¥ttor. De krÃ¤lar i grÃ¤nder, kÃ¤llare och kloaker. De tar sig in i de fÃ¶rnÃ¤msta husen och gnager sÃ¶nder dyrbara mattor, Ã¤ter det fattiga folkets fÃ¶rrÃ¥d och stjÃ¤l mat direkt frÃ¥n vÃ¤rdshusens bord. RÃ¥ttfÃ¥ngarna Ã¤r trashankar som lever pÃ¥ att fÃ¥nga in och ha ihjÃ¤l sÃ¥ mÃ¥nga som mÃ¶jligt av dessa gnagare fÃ¶r nÃ¥gra kopparslantar i betalning. Vissa rÃ¥ttfÃ¥ngare passar pÃ¥ att tjÃ¤na nÃ¥gra extra mynt genom att tillaga sin fÃ¥ngst och sÃ¤lja dem i fattigkvarteren.";
-	bakgrundstabeller.jargiensbefolkning[66].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[66].beskrivning="Städerna svämmar över av råttor. De krälar i gränder, källare och kloaker. De tar sig in i de förnämsta husen och gnager sönder dyrbara mattor, äter det fattiga folkets förråd och stjäl mat direkt från värdshusens bord. Råttfångarna är trashankar som lever på att fånga in och ha ihjäl så många som möjligt av dessa gnagare för några kopparslantar i betalning. Vissa råttfångare passar på att tjäna några extra mynt genom att tillaga sin fångst och sälja dem i fattigkvarteren.";
+	bakgrundstabeller.jargiensbefolkning[66].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[67] = {};
@@ -699,17 +699,17 @@
 	bakgrundstabeller.jargiensbefolkning[67].valfriatabellslag=1;
 	bakgrundstabeller.jargiensbefolkning[67].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[67].valfriaenheter=4;
-	bakgrundstabeller.jargiensbefolkning[67].beskrivning="KejsardÃ¶met Ã¤r en obarmhÃ¤rtig plats och den som inte kan hÃ¥lla sig pÃ¥ fÃ¶tter trampas ned. Gamla personer dÃ¶r ensamma i sina stugor, sjuka dukar under i feberfrossor och spÃ¤dbarn skriker av hunger. Det finns dock de som svurit sina liv att bistÃ¥ sjuka, lytta och modfÃ¤llda Ã¤ven om de inte kan betala fÃ¶r sig. Dessa barmhÃ¤rtiga mÃ¤nniskor finner man bland alla samhÃ¤llsklasser, till och med pÃ¥ de mest ovÃ¤ntade stÃ¤llen.";
-	bakgrundstabeller.jargiensbefolkning[67].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter Sociala fÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.jargiensbefolkning[67].beskrivning="Kejsardömet är en obarmhärtig plats och den som inte kan hålla sig på fötter trampas ned. Gamla personer dör ensamma i sina stugor, sjuka dukar under i feberfrossor och spädbarn skriker av hunger. Det finns dock de som svurit sina liv att bistå sjuka, lytta och modfällda även om de inte kan betala för sig. Dessa barmhärtiga människor finner man bland alla samhällsklasser, till och med på de mest oväntade ställen.";
+	bakgrundstabeller.jargiensbefolkning[67].beskrivninghak = "1 slag på valfri tabell, 4 enheter Sociala färdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[68] = {};
-	bakgrundstabeller.jargiensbefolkning[68].rubrik="SjÃ¶farare";
+	bakgrundstabeller.jargiensbefolkning[68].rubrik="Sjöfarare";
 	bakgrundstabeller.jargiensbefolkning[68].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[68].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[68].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[68].beskrivning="Saltet, brisen, mÃ¥sarnas skratt och strÃ¶mmarnas nyckfullhet. Ingenting gÃ¥r upp mot att mÃ¶ta soluppgÃ¥ngen pÃ¥ ett majestÃ¤tiskt fartyg, hÃ¶gt uppe i riggen med en bit skeppsskorpa i ena handen och en flaska rom i den andra. SjÃ¶fararna reser vida kring i sina gungande borgar. Det Ã¤r dock ett farligt vÃ¤rv; pÃ¥ mÃ¶rka vatten hopas stormar och orkaner som kan slita de stÃ¶rsta skeppen i stycken. Djupt under ytan ligger monster och sjÃ¶odjur vilande i vÃ¤ntan pÃ¥ att ett lÃ¤mpligt mÃ¥l med mat ska rÃ¥ka segla fÃ¶rbi.";
-	bakgrundstabeller.jargiensbefolkning[68].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[68].beskrivning="Saltet, brisen, måsarnas skratt och strömmarnas nyckfullhet. Ingenting går upp mot att möta soluppgången på ett majestätiskt fartyg, högt uppe i riggen med en bit skeppsskorpa i ena handen och en flaska rom i den andra. Sjöfararna reser vida kring i sina gungande borgar. Det är dock ett farligt värv; på mörka vatten hopas stormar och orkaner som kan slita de största skeppen i stycken. Djupt under ytan ligger monster och sjöodjur vilande i väntan på att ett lämpligt mål med mat ska råka segla förbi.";
+	bakgrundstabeller.jargiensbefolkning[68].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[69] = {};
@@ -717,28 +717,28 @@
 	bakgrundstabeller.jargiensbefolkning[69].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[69].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[69].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[69].beskrivning="Med blÃ¤ckstÃ¤nk pÃ¥ sina fingrar, en fjÃ¤derpenna i sitt grepp och bÃ¶jd rygg fylls ark efter ark med text. Skrivare finns Ã¶verallt i KejsardÃ¶met. MÃ¥nga arbetar som tjÃ¤nstemÃ¤n i byrÃ¥kratin, andra skapar vackra kopior av kÃ¤nda bÃ¶cker eller skriver ned order frÃ¥n militÃ¤rer, handelsfurstar eller adelsmÃ¤n. DÃ¥ de skriver av och kopierar mÃ¥nga texter och bÃ¶cker besitter de ofta en bred kunskap om mÃ¥nga olika Ã¤mnen och vissa har en insikt i affÃ¤rer som inte bÃ¶r bli allmÃ¤nt kÃ¤nda.";
-	bakgrundstabeller.jargiensbefolkning[69].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[69].beskrivning="Med bläckstänk på sina fingrar, en fjäderpenna i sitt grepp och böjd rygg fylls ark efter ark med text. Skrivare finns överallt i Kejsardömet. Många arbetar som tjänstemän i byråkratin, andra skapar vackra kopior av kända böcker eller skriver ned order från militärer, handelsfurstar eller adelsmän. Då de skriver av och kopierar många texter och böcker besitter de ofta en bred kunskap om många olika ämnen och vissa har en insikt i affärer som inte bör bli allmänt kända.";
+	bakgrundstabeller.jargiensbefolkning[69].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 2 poäng Hantverk."
 
 	
 	
 	bakgrundstabeller.jargiensbefolkning[70] = {};
-	bakgrundstabeller.jargiensbefolkning[70].rubrik="SkulptÃ¶r";
+	bakgrundstabeller.jargiensbefolkning[70].rubrik="Skulptör";
 	bakgrundstabeller.jargiensbefolkning[70].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[70].valfriaenheter=4;
 	bakgrundstabeller.jargiensbefolkning[70].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[70].beskrivning="De finns de som vigt sina liv Ã¥t att forma stenen och skapa vackra och imponerande konstverk. DvÃ¤rgar har en fallenhet fÃ¶r denna konstform. Med tanke pÃ¥ det outsinliga behov av stenarbeten som finns i KejsardÃ¶met har mÃ¥nga mÃ¤nniskor uppnÃ¥tt minst lika stor skicklighet i detta vÃ¤rv. Vissa konstverk Ã¤r sÃ¥ skÃ¶na eller skrÃ¤ckinjagande att dess blotta existens gett upphov till rykten om vissa skulptÃ¶rers makt att till och med ge sina skapelser liv.";
-	bakgrundstabeller.jargiensbefolkning[70].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 valfria enheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[70].beskrivning="De finns de som vigt sina liv åt att forma stenen och skapa vackra och imponerande konstverk. Dvärgar har en fallenhet för denna konstform. Med tanke på det outsinliga behov av stenarbeten som finns i Kejsardömet har många människor uppnått minst lika stor skicklighet i detta värv. Vissa konstverk är så sköna eller skräckinjagande att dess blotta existens gett upphov till rykten om vissa skulptörers makt att till och med ge sina skapelser liv.";
+	bakgrundstabeller.jargiensbefolkning[70].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 valfria enheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.jargiensbefolkning[71] = {};
-	bakgrundstabeller.jargiensbefolkning[71].rubrik="SkÃ¶ka";
-	bakgrundstabeller.jargiensbefolkning[71].pluralobestamd="skÃ¶kor";
+	bakgrundstabeller.jargiensbefolkning[71].rubrik="Sköka";
+	bakgrundstabeller.jargiensbefolkning[71].pluralobestamd="skökor";
 	bakgrundstabeller.jargiensbefolkning[71].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[71].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[71].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[71].beskrivning="Lust, passion och frestelse fÃ¶rdÃ¶ms av kyrkan och de som mot betalning utfÃ¶r dessa tjÃ¤nster Ã¤r bespottade av sÃ¥ gott som alla. Men lidelsen och lusten genomsyrar hela KejsardÃ¶met och tvingar mÃ¤n och kvinnor som saknar andra medel att sÃ¤lja sina kroppar fÃ¶r att klara dagen. Det Ã¤r ett farligt vÃ¤rv dÃ¤r man riskerar att drabbas av sjukdomar, vÃ¥ldsamma kunder och fÃ¶r kvinnorna Ã¤ven oÃ¶nskade graviditeter.";
-	bakgrundstabeller.jargiensbefolkning[71].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[71].beskrivning="Lust, passion och frestelse fördöms av kyrkan och de som mot betalning utför dessa tjänster är bespottade av så gott som alla. Men lidelsen och lusten genomsyrar hela Kejsardömet och tvingar män och kvinnor som saknar andra medel att sälja sina kroppar för att klara dagen. Det är ett farligt värv där man riskerar att drabbas av sjukdomar, våldsamma kunder och för kvinnorna även oönskade graviditeter.";
+	bakgrundstabeller.jargiensbefolkning[71].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[72] = {};
@@ -749,8 +749,8 @@
 	bakgrundstabeller.jargiensbefolkning[72].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[72].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[72].valfriaenheter=4;
-	bakgrundstabeller.jargiensbefolkning[72].beskrivning="PÃ¥ fÃ¤lt, i gruvor, vinlundar och skogar sliter slavarna under rappen frÃ¥n sina arbetsledares piskor. De Ã¤r drivna till att utfÃ¶ra de tyngsta, farligaste och mest plÃ¥gsamma arbetsuppgifterna. NÃ¤r kloakerna mÃ¥ste rensas, vÃ¤gar mÃ¥ste anlÃ¤ggas och instabila gruvor expanderas sÃ¥ sÃ¤tts slavarna in. En del slavar har Ã¤gare som behandlar dem rÃ¤ttvist och skÃ¤nker dem mat och ibland till och med nÃ¶jen. Andra behandlas nÃ¤stan som djur av grymma despoter vilka ser dem som en resurs som man lÃ¤tt kan byta ut.";
-	bakgrundstabeller.jargiensbefolkning[72].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.jargiensbefolkning[72].beskrivning="På fält, i gruvor, vinlundar och skogar sliter slavarna under rappen från sina arbetsledares piskor. De är drivna till att utföra de tyngsta, farligaste och mest plågsamma arbetsuppgifterna. När kloakerna måste rensas, vägar måste anläggas och instabila gruvor expanderas så sätts slavarna in. En del slavar har ägare som behandlar dem rättvist och skänker dem mat och ibland till och med nöjen. Andra behandlas nästan som djur av grymma despoter vilka ser dem som en resurs som man lätt kan byta ut.";
+	bakgrundstabeller.jargiensbefolkning[72].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[73] = {};
@@ -761,52 +761,52 @@
 	bakgrundstabeller.jargiensbefolkning[73].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[73].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[73].kanneteckenpoang=2;
-	bakgrundstabeller.jargiensbefolkning[73].beskrivning="Att ha en vacker slav vid sin sida som man kan njuta av eller dela med till sina vÃ¤nner ses som hÃ¶g status inom vissa dekadenta kretsar. Slaven ses allt som oftast som ett redskap endast avsett fÃ¶r njutning och som lika lÃ¤tt kan kasseras om den skulle sluta att roa eller gÃ¥ sÃ¶nder. NÃ¥gra trÃ¤nas till att behaga rika herrar efter allehanda konststycken, andra Ã¤r inte mer Ã¤n fastkedjade djur i smutsiga bordeller eller slÃ¤pas efter trossen tillhÃ¶rande de olika krigsregementena.";
-	bakgrundstabeller.jargiensbefolkning[73].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.jargiensbefolkning[73].beskrivning="Att ha en vacker slav vid sin sida som man kan njuta av eller dela med till sina vänner ses som hög status inom vissa dekadenta kretsar. Slaven ses allt som oftast som ett redskap endast avsett för njutning och som lika lätt kan kasseras om den skulle sluta att roa eller gå sönder. Några tränas till att behaga rika herrar efter allehanda konststycken, andra är inte mer än fastkedjade djur i smutsiga bordeller eller släpas efter trossen tillhörande de olika krigsregementena.";
+	bakgrundstabeller.jargiensbefolkning[73].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.jargiensbefolkning[74] = {};
-	bakgrundstabeller.jargiensbefolkning[74].rubrik="Slav \(lÃ¤rd\)";
+	bakgrundstabeller.jargiensbefolkning[74].rubrik="Slav \(lärd\)";
 	bakgrundstabeller.jargiensbefolkning[74].bestamd="slaven";
 	bakgrundstabeller.jargiensbefolkning[74].pluralobestamd="slavar";
 	
 	bakgrundstabeller.jargiensbefolkning[74].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[74].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[74].rorelsefardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[74].beskrivning="Med skarpa intellekt, hÃ¤ngivenhet och uppmÃ¤rksamhet tjÃ¤nar de lÃ¤rda slavarna sina mÃ¤stare. De fungerar som lÃ¤rare Ã¥t barn i familjen, rÃ¥dgivare Ã¥t militÃ¤rer eller rÃ¤knar ut de mest gynnsamma handelskontrakten med tillhÃ¶rande mutor. Dessa slavar har vanligen ett gott liv om Ã¤n ej i frihet dÃ¥ de alla fruktar att pÃ¥ nÃ¥got sÃ¤tt missbehaga sina herrar.";
-	bakgrundstabeller.jargiensbefolkning[74].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter RÃ¶relsefÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[74].beskrivning="Med skarpa intellekt, hängivenhet och uppmärksamhet tjänar de lärda slavarna sina mästare. De fungerar som lärare åt barn i familjen, rådgivare åt militärer eller räknar ut de mest gynnsamma handelskontrakten med tillhörande mutor. Dessa slavar har vanligen ett gott liv om än ej i frihet då de alla fruktar att på något sätt missbehaga sina herrar.";
+	bakgrundstabeller.jargiensbefolkning[74].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Rörelsefärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[75] = {};
-	bakgrundstabeller.jargiensbefolkning[75].rubrik="Slav \(tjÃ¤nare\)";
-	bakgrundstabeller.jargiensbefolkning[75].bestamd="tjÃ¤naren";
-	bakgrundstabeller.jargiensbefolkning[75].pluralobestamd="tjÃ¤nare";
+	bakgrundstabeller.jargiensbefolkning[75].rubrik="Slav \(tjänare\)";
+	bakgrundstabeller.jargiensbefolkning[75].bestamd="tjänaren";
+	bakgrundstabeller.jargiensbefolkning[75].pluralobestamd="tjänare";
 	
 	bakgrundstabeller.jargiensbefolkning[75].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[75].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[75].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[75].beskrivning="De fÃ¶rmÃ¶gna mÃ¥ste passas upp. NÃ¥gon mÃ¥ste bada dem, torka deras kroppar, gnida in dem med vÃ¤ldoftande oljor, klÃ¤ dem i finaste tyger, lÃ¤gga fram besticken, sopa upp smutsen, polera silvret, rÃ¤tta till gobelÃ¤ngerna, mata dem med druvor och sÃ¶tsaker, springa med meddelanden, klippa deras naglar och vara i nÃ¤rheten fÃ¶r att hÃ¶rsamma deras befallningar. Allt detta Ã¤r tjÃ¤narnas uppgifter och har de tur kan de leva ett liv dÃ¤r de inte blir alltfÃ¶r pryglade och fÃ¥r Ã¤ta sig mÃ¤tta varje kvÃ¤ll.";
-	bakgrundstabeller.jargiensbefolkning[75].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[75].beskrivning="De förmögna måste passas upp. Någon måste bada dem, torka deras kroppar, gnida in dem med väldoftande oljor, klä dem i finaste tyger, lägga fram besticken, sopa upp smutsen, polera silvret, rätta till gobelängerna, mata dem med druvor och sötsaker, springa med meddelanden, klippa deras naglar och vara i närheten för att hörsamma deras befallningar. Allt detta är tjänarnas uppgifter och har de tur kan de leva ett liv där de inte blir alltför pryglade och får äta sig mätta varje kväll.";
+	bakgrundstabeller.jargiensbefolkning[75].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[76] = {};
-	bakgrundstabeller.jargiensbefolkning[76].rubrik="Slav \(underhÃ¥llare\)";
-	bakgrundstabeller.jargiensbefolkning[76].bestamd="underhÃ¥llaren";
-	bakgrundstabeller.jargiensbefolkning[76].pluralobestamd="underhÃ¥llare";
+	bakgrundstabeller.jargiensbefolkning[76].rubrik="Slav \(underhållare\)";
+	bakgrundstabeller.jargiensbefolkning[76].bestamd="underhållaren";
+	bakgrundstabeller.jargiensbefolkning[76].pluralobestamd="underhållare";
 	bakgrundstabeller.jargiensbefolkning[76].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[76].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[76].kanneteckenpoang=2;
-	bakgrundstabeller.jargiensbefolkning[76].beskrivning="De som Ã¤r rika och inflytelserika mÃ¥ste fÃ¥ skratta, grÃ¥ta och fÃ¶rundras fÃ¶r att kunna glÃ¶mma bort alla sina tyngande bekymmer. UnderhÃ¥llaren har till uppgift att roa sina herrar. Det kan vara genom dans, sÃ¥ng, historieberÃ¤ttande, akrobatik eller trolleritrick. En del underhÃ¥llare Ã¤r inte mer Ã¤n vulgÃ¤ra narrar som skrockande berÃ¤ttar frÃ¤cka historier och lÃ¥ter sig bli hunsade. Andra Ã¤r personer vars sÃ¥nger bÃ¤r med sig smÃ¤rtan frÃ¥n fÃ¥ngenskapens ok och fÃ¥r tÃ¥rarna att rinna ned fÃ¶r Ã¥hÃ¶rarnas kinder. Dessa slavar skattas hÃ¶gt och Ã¤r fÃ¶r vÃ¤rdefulla fÃ¶r att slÃ¤ppas fria.";
-	bakgrundstabeller.jargiensbefolkning[76].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.jargiensbefolkning[76].beskrivning="De som är rika och inflytelserika måste få skratta, gråta och förundras för att kunna glömma bort alla sina tyngande bekymmer. Underhållaren har till uppgift att roa sina herrar. Det kan vara genom dans, sång, historieberättande, akrobatik eller trolleritrick. En del underhållare är inte mer än vulgära narrar som skrockande berättar fräcka historier och låter sig bli hunsade. Andra är personer vars sånger bär med sig smärtan från fångenskapens ok och får tårarna att rinna ned för åhörarnas kinder. Dessa slavar skattas högt och är för värdefulla för att släppas fria.";
+	bakgrundstabeller.jargiensbefolkning[76].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.jargiensbefolkning[77] = {};
-	bakgrundstabeller.jargiensbefolkning[77].rubrik="SlavfÃ¶rmedlare";
+	bakgrundstabeller.jargiensbefolkning[77].rubrik="Slavförmedlare";
 	bakgrundstabeller.jargiensbefolkning[77].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[77].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[77].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[77].beskrivning="DÃ¥ slavhandel Ã¤r fÃ¶rbjudet inom KejsardÃ¶met och slavar delas ut via strikta byrÃ¥kratiska beslut finns det officiellt inga egentliga slavhandlare. DÃ¤remot finns det de mÃ¤n och kvinnor som har kontakter och hjÃ¤lper de rika se ut slavar som de vill ha och sedan ser till att skaffa dem, via mutor, pÃ¥ byrÃ¥kratisk vÃ¤g eller via utlÃ¤ndska slavhandlare. En del slavfÃ¶rmedlare specialiserar sig pÃ¥ bildade slavar, andra pÃ¥ barbarfolk sÃ¥som kamorianerna och nÃ¥gra pÃ¥ exotiska slavar sÃ¥som albinos, siamesiska tvillingar eller sÃ¥dana som har sÃ¤rskilda talanger.";
-	bakgrundstabeller.jargiensbefolkning[77].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[77].beskrivning="Då slavhandel är förbjudet inom Kejsardömet och slavar delas ut via strikta byråkratiska beslut finns det officiellt inga egentliga slavhandlare. Däremot finns det de män och kvinnor som har kontakter och hjälper de rika se ut slavar som de vill ha och sedan ser till att skaffa dem, via mutor, på byråkratisk väg eller via utländska slavhandlare. En del slavförmedlare specialiserar sig på bildade slavar, andra på barbarfolk såsom kamorianerna och några på exotiska slavar såsom albinos, siamesiska tvillingar eller sådana som har särskilda talanger.";
+	bakgrundstabeller.jargiensbefolkning[77].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[78] = {};
@@ -814,8 +814,8 @@
 	bakgrundstabeller.jargiensbefolkning[78].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[78].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[78].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[78].beskrivning="Att frakta varor genom KejsardÃ¶met eller till andra lÃ¤nder utan rÃ¤tt papper Ã¤r en omÃ¶jlighet och Ã¤ven om man har dessa sÃ¥ fÃ¶rsvinner mycket av vinsten i tull, mutor och skatter. Smugglaren ser till att frakta varor utan att nÃ¥gon fÃ¥r reda pÃ¥ det. En del leder mindre karavaner genom obygden, har dolda utrymmen i sina vagnar och de mest framgÃ¥ngsrika hela skepp fyllda med smuggelgods.";
-	bakgrundstabeller.jargiensbefolkning[78].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[78].beskrivning="Att frakta varor genom Kejsardömet eller till andra länder utan rätt papper är en omöjlighet och även om man har dessa så försvinner mycket av vinsten i tull, mutor och skatter. Smugglaren ser till att frakta varor utan att någon får reda på det. En del leder mindre karavaner genom obygden, har dolda utrymmen i sina vagnar och de mest framgångsrika hela skepp fyllda med smuggelgods.";
+	bakgrundstabeller.jargiensbefolkning[78].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[79] = {};
@@ -824,8 +824,8 @@
 	bakgrundstabeller.jargiensbefolkning[79].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[79].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[79].valfriaenheter=4;
-	bakgrundstabeller.jargiensbefolkning[79].beskrivning="KejsardÃ¶mets ryggrad Ã¤r soldaterna i krigsregementena. Dessa mÃ¤n Ã¤r stationerade Ã¶ver hela riket, i kolonierna, och de bevakar grÃ¤nser, provinser och handelsleder. Bland dem finns det ett starkt broderskap och en tilltro till sina befÃ¤lhavare. Vissa Ã¤r fanatiskt lojala till Kejsaren och riket medan andra gladeligen skulle sluta upp vid karismatiska Ã¶verordnade om dessa skulle ha maktambitioner som skulle krÃ¤va nÃ¥gon typ av revolt.";
-	bakgrundstabeller.jargiensbefolkning[79].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.jargiensbefolkning[79].beskrivning="Kejsardömets ryggrad är soldaterna i krigsregementena. Dessa män är stationerade över hela riket, i kolonierna, och de bevakar gränser, provinser och handelsleder. Bland dem finns det ett starkt broderskap och en tilltro till sina befälhavare. Vissa är fanatiskt lojala till Kejsaren och riket medan andra gladeligen skulle sluta upp vid karismatiska överordnade om dessa skulle ha maktambitioner som skulle kräva någon typ av revolt.";
+	bakgrundstabeller.jargiensbefolkning[79].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 4 valfria enheter.";
 
 	
 	
@@ -834,8 +834,8 @@
 	bakgrundstabeller.jargiensbefolkning[80].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[80].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[80].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[80].beskrivning="TÃ¤rningar, kort och brÃ¤den. Enkla sÃ¤tt att tjÃ¤na snabba silvermynt om turen Ã¤r med en eller om man Ã¤r skicklig alternativt oÃ¤rlig nog att fuska. Spelare finns i alla delar av samhÃ¤llet och en del Ã¤r inget annat Ã¤n smutsiga trashankar som pantsÃ¤tter sina skor i hoppet om att vinna en handfull mynt. Andra Ã¤r rika Ã¤dlingar som Ã¶ver dyra viner tÃ¶mmer familjens skattkistor, spelar bort tillgÃ¥ngar, slavar och skepp. FÃ¶r en spelare Ã¤r det fÃ¥ saker som inte kan satsas pÃ¥ ett djÃ¤rvt tÃ¤rningskast.";
-	bakgrundstabeller.jargiensbefolkning[80].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[80].beskrivning="Tärningar, kort och bräden. Enkla sätt att tjäna snabba silvermynt om turen är med en eller om man är skicklig alternativt oärlig nog att fuska. Spelare finns i alla delar av samhället och en del är inget annat än smutsiga trashankar som pantsätter sina skor i hoppet om att vinna en handfull mynt. Andra är rika ädlingar som över dyra viner tömmer familjens skattkistor, spelar bort tillgångar, slavar och skepp. För en spelare är det få saker som inte kan satsas på ett djärvt tärningskast.";
+	bakgrundstabeller.jargiensbefolkning[80].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[81] = {};
@@ -843,17 +843,17 @@
 	bakgrundstabeller.jargiensbefolkning[81].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[81].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[81].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[81].beskrivning="Stadsportarna ska vaktas, handelsmÃ¤nnens varor ska sÃ¶kas igenom, fyllebrÃ¥k ska stoppas, det ska hÃ¥llas utkik efter eldsvÃ¥dor och brottslingar arresteras. Stadsvakten kÃ¤nner till varje grÃ¤nd, varje bakgata, kommer ihÃ¥g ansiktena pÃ¥ de vanliga handelsmÃ¤nnen och har alltid ett Ã¶ga pÃ¥ dem som tycks sticka ut. En del tar allvarligt pÃ¥ att hÃ¥lla ordning i staden, andra ser det som en god position att ta mutor och Ã¤r inte mycket mer Ã¤n brottslingar med befogenheter.";
-	bakgrundstabeller.jargiensbefolkning[81].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter Sociala fÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[81].beskrivning="Stadsportarna ska vaktas, handelsmännens varor ska sökas igenom, fyllebråk ska stoppas, det ska hållas utkik efter eldsvådor och brottslingar arresteras. Stadsvakten känner till varje gränd, varje bakgata, kommer ihåg ansiktena på de vanliga handelsmännen och har alltid ett öga på dem som tycks sticka ut. En del tar allvarligt på att hålla ordning i staden, andra ser det som en god position att ta mutor och är inte mycket mer än brottslingar med befogenheter.";
+	bakgrundstabeller.jargiensbefolkning[81].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Sociala färdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[82] = {};
-	bakgrundstabeller.jargiensbefolkning[82].rubrik="StrÃ¥trÃ¶vare";
+	bakgrundstabeller.jargiensbefolkning[82].rubrik="Stråtrövare";
 	bakgrundstabeller.jargiensbefolkning[82].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[82].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[82].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[82].beskrivning="Med vÃ¤garna tungt trafikerade av resande mÃ¤nniskor Ã¤r det inte konstigt att vissa valt att tjÃ¤na sitt leverne pÃ¥ att rÃ¥na och stjÃ¤la frÃ¥n andra. Med utrustning och vapen i varierande kvalitet lÃ¤gger de sig i bakhÃ¥ll och anfaller nÃ¤r offren minst anar det. En del rÃ¶varband bestÃ¥r bara av tvÃ¥ till tre individer medan andra kan bli upp mot tjugo och trettio. Dessa kan till och med anfalla stÃ¶rre mÃ¥l sÃ¥ som en kejserlig transport eller ett fÃ¶rnÃ¤mt rikemansfÃ¶lje med bevÃ¤pnad eskort.";
-	bakgrundstabeller.jargiensbefolkning[82].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[82].beskrivning="Med vägarna tungt trafikerade av resande människor är det inte konstigt att vissa valt att tjäna sitt leverne på att råna och stjäla från andra. Med utrustning och vapen i varierande kvalitet lägger de sig i bakhåll och anfaller när offren minst anar det. En del rövarband består bara av två till tre individer medan andra kan bli upp mot tjugo och trettio. Dessa kan till och med anfalla större mål så som en kejserlig transport eller ett förnämt rikemansfölje med beväpnad eskort.";
+	bakgrundstabeller.jargiensbefolkning[82].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[83] = {};
@@ -861,8 +861,8 @@
 	bakgrundstabeller.jargiensbefolkning[83].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[83].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[83].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[83].beskrivning="Genom att vÃ¤lja sina ord rÃ¤tt och bÃ¶ja pÃ¥ sanningen nÃ¤r helst situationen krÃ¤ver det kan svindlaren gÃ¶ra sig stora vinster pÃ¥ att sÃ¤lja vÃ¤rdelÃ¶st gods till godtrogna kÃ¶pare. Ofta mÃ¥ste en svindlare byta stad dÃ¥ och dÃ¥ nÃ¤r ryktet om hans eller hennes fÃ¶rsÃ¤ljningstaktik snart blir allmÃ¤n kÃ¤nnedom. DÃ¥ gÃ¤ller det att kunna resa snabbt och spÃ¥rlÃ¶st, fÃ¶r att sedan slÃ¥ upp verksamheten igen lite senare i en annan del av KejsardÃ¶met.";
-	bakgrundstabeller.jargiensbefolkning[83].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter Sociala fÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[83].beskrivning="Genom att välja sina ord rätt och böja på sanningen när helst situationen kräver det kan svindlaren göra sig stora vinster på att sälja värdelöst gods till godtrogna köpare. Ofta måste en svindlare byta stad då och då när ryktet om hans eller hennes försäljningstaktik snart blir allmän kännedom. Då gäller det att kunna resa snabbt och spårlöst, för att sedan slå upp verksamheten igen lite senare i en annan del av Kejsardömet.";
+	bakgrundstabeller.jargiensbefolkning[83].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Sociala färdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[84] = {};
@@ -870,8 +870,8 @@
 	bakgrundstabeller.jargiensbefolkning[84].valfriatabellslag=1;
 	bakgrundstabeller.jargiensbefolkning[84].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[84].hantverkpoang=2;
-	bakgrundstabeller.jargiensbefolkning[84].beskrivning="Soldater fÃ¥r sina tÃ¤nder utslagna, Ã¤dlingars garnityr drabbas av rÃ¶ta efter fÃ¶r mycket sÃ¶tsaker och kyrkans mÃ¤n gnisslar tÃ¤nder i sÃ¶mnen Ã¶ver all synd som begÃ¥s. Tandsmeden Ã¤r den som ser Ã¶ver detta. De mest vÃ¤lbÃ¤rgade har mottagningar i de stÃ¶rsta stÃ¤derna, dÃ¤r ersÃ¤tter de fÃ¶rlorade tÃ¤nder med guld eller silver. De fattiga tandsmederna reser mellan byar och drar ut tÃ¤nder med grova tÃ¤nger.";
-	bakgrundstabeller.jargiensbefolkning[84].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.jargiensbefolkning[84].beskrivning="Soldater får sina tänder utslagna, ädlingars garnityr drabbas av röta efter för mycket sötsaker och kyrkans män gnisslar tänder i sömnen över all synd som begås. Tandsmeden är den som ser över detta. De mest välbärgade har mottagningar i de största städerna, där ersätter de förlorade tänder med guld eller silver. De fattiga tandsmederna reser mellan byar och drar ut tänder med grova tänger.";
+	bakgrundstabeller.jargiensbefolkning[84].beskrivninghak = "1 slag på valfri tabell, 4 enheter Rörelsefärdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.jargiensbefolkning[85] = {};
@@ -879,8 +879,8 @@
 	bakgrundstabeller.jargiensbefolkning[85].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[85].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[85].kanneteckenpoang=2;
-	bakgrundstabeller.jargiensbefolkning[85].beskrivning="Med utstrÃ¤ckta hÃ¤nder strÃ¤cker sig smutsiga, utmÃ¤rglade och trasklÃ¤dda gestalter mot de som har pengar och ber om att fÃ¥ nÃ¥gra silver sÃ¥ de kan fÃ¥ mat fÃ¶r dagen. Har de tur passerar fÃ¶rmÃ¶gna som delar ut allmosor, andra gÃ¥nger jagar stadsvakten bort dem med sparkar och slag. I vissa stÃ¤der fÃ¥r tiggarna sÃ¤rskilda tiggarbrickor som de syr fast pÃ¥ sina klÃ¤der eller har i ett band runt halsen fÃ¶r att visa att de har rÃ¤tten att be om allmosor.";
-	bakgrundstabeller.jargiensbefolkning[85].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.jargiensbefolkning[85].beskrivning="Med utsträckta händer sträcker sig smutsiga, utmärglade och trasklädda gestalter mot de som har pengar och ber om att få några silver så de kan få mat för dagen. Har de tur passerar förmögna som delar ut allmosor, andra gånger jagar stadsvakten bort dem med sparkar och slag. I vissa städer får tiggarna särskilda tiggarbrickor som de syr fast på sina kläder eller har i ett band runt halsen för att visa att de har rätten att be om allmosor.";
+	bakgrundstabeller.jargiensbefolkning[85].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.jargiensbefolkning[86] = {};
@@ -890,8 +890,8 @@
 	bakgrundstabeller.jargiensbefolkning[86].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[86].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[86].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[86].beskrivning="HÃ¶gt ovan hustaken och lÃ¥ngt nere i stadens mÃ¶rkaste vrÃ¥r Ã¤r det inte stadsvakten, prÃ¤sterskapet, adeln eller kÃ¶pmÃ¤nnen som regerar. HÃ¤r lever tjuvarna pÃ¥ att ta frÃ¥n allt och alla som inte hÃ¥ller tillrÃ¤ckligt god uppsyn pÃ¥ sina fickor och hus.";
-	bakgrundstabeller.jargiensbefolkning[86].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[86].beskrivning="Högt ovan hustaken och långt nere i stadens mörkaste vrår är det inte stadsvakten, prästerskapet, adeln eller köpmännen som regerar. Här lever tjuvarna på att ta från allt och alla som inte håller tillräckligt god uppsyn på sina fickor och hus.";
+	bakgrundstabeller.jargiensbefolkning[86].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[87] = {};
@@ -899,18 +899,18 @@
 	bakgrundstabeller.jargiensbefolkning[87].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[87].valfriaenheter=4;
 	bakgrundstabeller.jargiensbefolkning[87].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[87].beskrivning="KejsardÃ¶met Ã¤r fyllt av hemligheter som mÃ¥ste avslÃ¶jas och personer som mÃ¥ste straffas. Torterarens roll Ã¤r bryta sÃ¶nder ett mÃ¤nskligt psyke och tvinga fram erkÃ¤nnanden eller sarga offer till oigenkÃ¤nnlighet. I dunkla valv pressas glÃ¶dgade tÃ¤nger mot bar hud, lemmar slits ur led och piskor sargar kroppar. Torterare Ã¤r vanligen anlitade av armÃ©n, stadsvakten, brottsorganisationer eller rika slÃ¤kter. De som blir torterare Ã¤r vanligen kallhamrade eller sÃ¥dana som finner en stor njutning i sitt vÃ¤rv.";
-	bakgrundstabeller.jargiensbefolkning[87].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 valfria enheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[87].beskrivning="Kejsardömet är fyllt av hemligheter som måste avslöjas och personer som måste straffas. Torterarens roll är bryta sönder ett mänskligt psyke och tvinga fram erkännanden eller sarga offer till oigenkännlighet. I dunkla valv pressas glödgade tänger mot bar hud, lemmar slits ur led och piskor sargar kroppar. Torterare är vanligen anlitade av armén, stadsvakten, brottsorganisationer eller rika släkter. De som blir torterare är vanligen kallhamrade eller sådana som finner en stor njutning i sitt värv.";
+	bakgrundstabeller.jargiensbefolkning[87].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 valfria enheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[88] = {};
-	bakgrundstabeller.jargiensbefolkning[88].rubrik="TrofÃ©jÃ¤gare";
-	bakgrundstabeller.jargiensbefolkning[88].bestamd="trofÃ©jÃ¤garen";
+	bakgrundstabeller.jargiensbefolkning[88].rubrik="Troféjägare";
+	bakgrundstabeller.jargiensbefolkning[88].bestamd="troféjägaren";
 	bakgrundstabeller.jargiensbefolkning[88].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[88].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[88].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[88].beskrivning="I KejsardÃ¶mets utkanter finns det gott om otillgÃ¤ngliga trakter. Djupa skogar, bergskedjor, trÃ¤sk och gamla ruiner. I dessa omrÃ¥den kan man finna monstruÃ¶sa bestar av olika slag. TrofÃ©jÃ¤garen har gjort en konst av att jaga och nedlÃ¤gga monstren. TrofÃ©erna sÃ¤ljs sedan att pryda de vackra villorna i KejsardÃ¶mets Ã¶vre skikt. Ibland fÃ¥ngas monstren in levande och sÃ¤ljs till gladiatorarenorna med god fÃ¶rtjÃ¤nst.";
-	bakgrundstabeller.jargiensbefolkning[88].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[88].beskrivning="I Kejsardömets utkanter finns det gott om otillgängliga trakter. Djupa skogar, bergskedjor, träsk och gamla ruiner. I dessa områden kan man finna monstruösa bestar av olika slag. Troféjägaren har gjort en konst av att jaga och nedlägga monstren. Troféerna säljs sedan att pryda de vackra villorna i Kejsardömets övre skikt. Ibland fångas monstren in levande och säljs till gladiatorarenorna med god förtjänst.";
+	bakgrundstabeller.jargiensbefolkning[88].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[89] = {};
@@ -918,18 +918,18 @@
 	bakgrundstabeller.jargiensbefolkning[89].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[89].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[89].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[89].beskrivning="Det finns de som ser hur korrupt och misskÃ¶tt KejsardÃ¶met Ã¤r och hur orÃ¤ttvisor segrar dag efter dag. Vissa tar till vapen och vÃ¤ljer att kÃ¤mpa fÃ¶r att befria riket frÃ¥n tyranniet. MÃ¥nga fÃ¶rsÃ¶ker fÃ¥ provinserna sjÃ¤lvstÃ¤ndiga genom brandtal och attacker mot Kejsarens utsÃ¤nda. Dessa upprorsmakare Ã¤r stÃ¤ndigt jagade.";
-	bakgrundstabeller.jargiensbefolkning[89].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter Sociala fÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[89].beskrivning="Det finns de som ser hur korrupt och misskött Kejsardömet är och hur orättvisor segrar dag efter dag. Vissa tar till vapen och väljer att kämpa för att befria riket från tyranniet. Många försöker få provinserna självständiga genom brandtal och attacker mot Kejsarens utsända. Dessa upprorsmakare är ständigt jagade.";
+	bakgrundstabeller.jargiensbefolkning[89].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Sociala färdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[90] = {};
-	bakgrundstabeller.jargiensbefolkning[90].rubrik="UpptÃ¤cksresande";
-	bakgrundstabeller.jargiensbefolkning[90].pluralobestamd="upptÃ¤cksresande";
+	bakgrundstabeller.jargiensbefolkning[90].rubrik="Upptäcksresande";
+	bakgrundstabeller.jargiensbefolkning[90].pluralobestamd="upptäcksresande";
 	bakgrundstabeller.jargiensbefolkning[90].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[90].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[90].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[90].beskrivning="Ã–ver Ã¶knar, genom djungler, under stormar och mitt bland frÃ¤mmande kulturer reser de upptÃ¤cktsresande fÃ¶r att vinna insikt i hur omvÃ¤rlden fungerar. Faror i form av lÃ¶mska sjÃ¶jungfrur, hemska vidunder, ofantliga cykloper och ondsinta barbarfolk gÃ¶r resan svÃ¥r och i allra hÃ¶gsta grad dÃ¶dlig fÃ¶r de som vÃ¥gar sig ut utanfÃ¶r civilisationens grÃ¤nser. Samtidigt lockar det okÃ¤nda med dolda skatter, urgammal kunskap och inte minst Ã¤ra och berÃ¶mmelse till de som Ã¶verlever.";
-	bakgrundstabeller.jargiensbefolkning[90].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[90].beskrivning="Över öknar, genom djungler, under stormar och mitt bland främmande kulturer reser de upptäcktsresande för att vinna insikt i hur omvärlden fungerar. Faror i form av lömska sjöjungfrur, hemska vidunder, ofantliga cykloper och ondsinta barbarfolk gör resan svår och i allra högsta grad dödlig för de som vågar sig ut utanför civilisationens gränser. Samtidigt lockar det okända med dolda skatter, urgammal kunskap och inte minst ära och berömmelse till de som överlever.";
+	bakgrundstabeller.jargiensbefolkning[90].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Kunskapsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[91] = {};
@@ -938,17 +938,17 @@
 	bakgrundstabeller.jargiensbefolkning[91].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[91].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[91].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[91].beskrivning="NÃ¤r ett fyllebrÃ¥k urartar och ett vÃ¤nskapligt handgemÃ¤ng Ã¶vergÃ¥r till sparkar och kanske dragna vapen behÃ¶vs det nÃ¥gon som kan sÃ¤ra pÃ¥ de involverade och ge dem alla en kraftig spark mot dÃ¶rren. Detta Ã¤r utkastarens jobb. Om det inte vore fÃ¶r dessa individer skulle mÃ¥nga krogar snart vara i spillror.";
-	bakgrundstabeller.jargiensbefolkning[91].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[91].beskrivning="När ett fyllebråk urartar och ett vänskapligt handgemäng övergår till sparkar och kanske dragna vapen behövs det någon som kan sära på de involverade och ge dem alla en kraftig spark mot dörren. Detta är utkastarens jobb. Om det inte vore för dessa individer skulle många krogar snart vara i spillror.";
+	bakgrundstabeller.jargiensbefolkning[91].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[92] = {};
-	bakgrundstabeller.jargiensbefolkning[92].rubrik="UtmÃ¤tare";
+	bakgrundstabeller.jargiensbefolkning[92].rubrik="Utmätare";
 	bakgrundstabeller.jargiensbefolkning[92].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[92].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[92].socialafardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[92].beskrivning="Ett tÃ¤rningskast, en misslyckad affÃ¤r, eller otur kan driva en person i skuld. En utmÃ¤tare, vindicator pÃ¥ jargiska, ombesÃ¶rjer dÃ¥ utmÃ¤tning av egendomen specificerade till ett visst belopp. UtmÃ¤tare Ã¤r skickliga pÃ¥ att hantera siffror, vÃ¤rdera tillgÃ¥ngar och se exakt vad som mÃ¥ste sÃ¤ljas fÃ¶r att fÃ¥ fram pengarna. NÃ¤r dessa har utmÃ¤tningsordern i sin hand hjÃ¤lper inga bÃ¶ner eller ursÃ¤kter, de kommer ta ifrÃ¥n en det sista klÃ¤desplagget om sÃ¥ krÃ¤vs. UtmÃ¤tare fÃ¥r provision pÃ¥ det de tjÃ¤nar och det Ã¤r inte ovanligt att utmÃ¤tningsordrar som kan bringa in stora summor sÃ¤ljs fÃ¶r tusentals silver.";
-	bakgrundstabeller.jargiensbefolkning[92].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[92].beskrivning="Ett tärningskast, en misslyckad affär, eller otur kan driva en person i skuld. En utmätare, vindicator på jargiska, ombesörjer då utmätning av egendomen specificerade till ett visst belopp. Utmätare är skickliga på att hantera siffror, värdera tillgångar och se exakt vad som måste säljas för att få fram pengarna. När dessa har utmätningsordern i sin hand hjälper inga böner eller ursäkter, de kommer ta ifrån en det sista klädesplagget om så krävs. Utmätare får provision på det de tjänar och det är inte ovanligt att utmätningsordrar som kan bringa in stora summor säljs för tusentals silver.";
+	bakgrundstabeller.jargiensbefolkning[92].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[93] = {};
@@ -956,17 +956,17 @@
 	bakgrundstabeller.jargiensbefolkning[93].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[93].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[93].valfriaenheter=4;
-	bakgrundstabeller.jargiensbefolkning[93].beskrivning="I de vÃ¤ldiga stÃ¤derna mÃ¥ste nyheter fÃ¶rkunnas till folket. DÃ¥ mÃ¥nga inte kan lÃ¤sa Ã¤r det utroparens roll att meddela invÃ¥narna om makthavarnas beslut. PÃ¥ torg och vid stadsportar proklamerar de om gudstjÃ¤nster, efterlysta brottslingar, arbeten som utlyses, nya lagar, vad som sker i staden, stundande offentliga avrÃ¤ttningar och nyheter frÃ¥n resten av KejsardÃ¶met. Det Ã¤r fÃ¥ som har en sÃ¥dan insikt i stadens affÃ¤rer som utroparna.";
-	bakgrundstabeller.jargiensbefolkning[93].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.jargiensbefolkning[93].beskrivning="I de väldiga städerna måste nyheter förkunnas till folket. Då många inte kan läsa är det utroparens roll att meddela invånarna om makthavarnas beslut. På torg och vid stadsportar proklamerar de om gudstjänster, efterlysta brottslingar, arbeten som utlyses, nya lagar, vad som sker i staden, stundande offentliga avrättningar och nyheter från resten av Kejsardömet. Det är få som har en sådan insikt i stadens affärer som utroparna.";
+	bakgrundstabeller.jargiensbefolkning[93].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[94] = {};
-	bakgrundstabeller.jargiensbefolkning[94].rubrik="VapenmÃ¤stare";
+	bakgrundstabeller.jargiensbefolkning[94].rubrik="Vapenmästare";
 	bakgrundstabeller.jargiensbefolkning[94].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[94].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[94].stridsfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[94].beskrivning="VapenmÃ¤starna ser strid som en konstform. De lÃ¤r sig invecklade och mÃ¥nga gÃ¥nger vackra sÃ¤tt att kÃ¤mpa och fÃ¶r mÃ¥nga handlar det mer om uppvisning Ã¤n om faktiskt kamp. En del vapenmÃ¤stare tjÃ¤nar som instruktÃ¶rer, livvakter eller underhÃ¥llare i hoven. Andra vandrar mellan byarna och erbjuder sina tjÃ¤nster fÃ¶r en handfull mynt.";
-	bakgrundstabeller.jargiensbefolkning[94].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[94].beskrivning="Vapenmästarna ser strid som en konstform. De lär sig invecklade och många gånger vackra sätt att kämpa och för många handlar det mer om uppvisning än om faktiskt kamp. En del vapenmästare tjänar som instruktörer, livvakter eller underhållare i hoven. Andra vandrar mellan byarna och erbjuder sina tjänster för en handfull mynt.";
+	bakgrundstabeller.jargiensbefolkning[94].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[95] = {};
@@ -974,38 +974,38 @@
 	bakgrundstabeller.jargiensbefolkning[95].striderdrabbningar=1;
 	bakgrundstabeller.jargiensbefolkning[95].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[95].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[95].beskrivning="Krig skÃ¶rdar sina offer och veteranen har drÃ¤pt fler Ã¤n denne kan minnas och fÃ¶rlorat mÃ¥nga vÃ¤nner till vinande pilar och svÃ¤rdshugg. VÃ¥ldsamheterna har satt sina spÃ¥r och mÃ¥nga veteraner vrider sig i mardrÃ¶mmar, hÃ¤ller i sig vin fÃ¶r att glÃ¶mma eller har Ã¶vergÃ¥tt till att bli obehagligt avtrubbade. Ã„ven om de krigiska dagarna Ã¤r Ã¶ver fÃ¶r veteranen Ã¤r det ack sÃ¥ lÃ¤tt att ta till vapen fÃ¶r att tjÃ¤na nÃ¥gra enkla silver dÃ¥ den vanliga vÃ¤rlden fÃ¶r dem blivit frÃ¤mmande och olustig.";
-	bakgrundstabeller.jargiensbefolkning[95].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[95].beskrivning="Krig skördar sina offer och veteranen har dräpt fler än denne kan minnas och förlorat många vänner till vinande pilar och svärdshugg. Våldsamheterna har satt sina spår och många veteraner vrider sig i mardrömmar, häller i sig vin för att glömma eller har övergått till att bli obehagligt avtrubbade. Även om de krigiska dagarna är över för veteranen är det ack så lätt att ta till vapen för att tjäna några enkla silver då den vanliga världen för dem blivit främmande och olustig.";
+	bakgrundstabeller.jargiensbefolkning[95].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[96] = {};
-	bakgrundstabeller.jargiensbefolkning[96].rubrik="VinkÃ¤nnare";
+	bakgrundstabeller.jargiensbefolkning[96].rubrik="Vinkännare";
 	bakgrundstabeller.jargiensbefolkning[96].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[96].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[96].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[96].beskrivning="VinkÃ¤nnarens roll Ã¤r att hÃ¥lla koll pÃ¥ de juridiska dokument om vem som fÃ¥r jÃ¤sa vin, provsmaka partier som ska sÃ¤ljas och titta sÃ¥ att det lagras pÃ¥ korrekt sÃ¤tt. De som arbetar med detta Ã¤r oftast sÃ¥ pass goda vinkÃ¤nnare att de bara genom att dofta pÃ¥ det kan berÃ¤tta exakt frÃ¥n vilken vingÃ¥rd vinet kommer, vilken druva som anvÃ¤nts och vilken Ã¥rgÃ¥ng det Ã¤r. SÃ¥ledes kan man se till att de rika fÃ¥r de finaste vinerna och att inga av vingÃ¥rdarna blir lurade och kopierade.";
-	bakgrundstabeller.jargiensbefolkning[96].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[96].beskrivning="Vinkännarens roll är att hålla koll på de juridiska dokument om vem som får jäsa vin, provsmaka partier som ska säljas och titta så att det lagras på korrekt sätt. De som arbetar med detta är oftast så pass goda vinkännare att de bara genom att dofta på det kan berätta exakt från vilken vingård vinet kommer, vilken druva som använts och vilken årgång det är. Således kan man se till att de rika får de finaste vinerna och att inga av vingårdarna blir lurade och kopierade.";
+	bakgrundstabeller.jargiensbefolkning[96].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[97] = {};
-	bakgrundstabeller.jargiensbefolkning[97].rubrik="VÃ¤gvisare";
-	bakgrundstabeller.jargiensbefolkning[97].bestamd="vÃ¤gvisaren";
+	bakgrundstabeller.jargiensbefolkning[97].rubrik="Vägvisare";
+	bakgrundstabeller.jargiensbefolkning[97].bestamd="vägvisaren";
 	bakgrundstabeller.jargiensbefolkning[97].farderaventyr=1;
 	bakgrundstabeller.jargiensbefolkning[97].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[97].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.jargiensbefolkning[97].beskrivning="I bÃ¥de stad och vildmark Ã¤r det viktigt att hitta rÃ¤tt. Handelsresande, pilgrimer och andra resande sÃ¤llskap anlitar dÃ¤rfÃ¶r en vÃ¤gvisare fÃ¶r att leda dem genom labyrinten av stigar, vÃ¤gar, broar, vadstÃ¤llen och korsningar. FÃ¶rutom den vanliga betalningen i form av silver brukar uppdragsgivaren Ã¤ven fÃ¥ stÃ¥ fÃ¶r mat och dryck fÃ¶r vÃ¤gvisaren under hela resan.";
-	bakgrundstabeller.jargiensbefolkning[97].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.jargiensbefolkning[97].beskrivning="I både stad och vildmark är det viktigt att hitta rätt. Handelsresande, pilgrimer och andra resande sällskap anlitar därför en vägvisare för att leda dem genom labyrinten av stigar, vägar, broar, vadställen och korsningar. Förutom den vanliga betalningen i form av silver brukar uppdragsgivaren även få stå för mat och dryck för vägvisaren under hela resan.";
+	bakgrundstabeller.jargiensbefolkning[97].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[98] = {};
-	bakgrundstabeller.jargiensbefolkning[98].rubrik="VÃ¤rdshusvÃ¤rd";
-	bakgrundstabeller.jargiensbefolkning[98].bestamd="vÃ¤rdshusvÃ¤rden";
-	bakgrundstabeller.jargiensbefolkning[98].pluralobestamd="vÃ¤rdshusvÃ¤rdar";
+	bakgrundstabeller.jargiensbefolkning[98].rubrik="Värdshusvärd";
+	bakgrundstabeller.jargiensbefolkning[98].bestamd="värdshusvärden";
+	bakgrundstabeller.jargiensbefolkning[98].pluralobestamd="värdshusvärdar";
 	bakgrundstabeller.jargiensbefolkning[98].valfriatabellslag=1;
 	bakgrundstabeller.jargiensbefolkning[98].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[98].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[98].beskrivning="Mat serveras, rum stÃ¤das, golv sopas, stop diskas, resande kommer och resande lÃ¤mnar. En vÃ¤rdshusvÃ¤rd trÃ¤ffar och pratar med mÃ¥nga olika typer av individer och blir snart en person som har koll pÃ¥ vad som hÃ¤nder i staden och vÃ¤rlden. De mest nedgÃ¥ngna vÃ¤rdshusen Ã¤r inget mer Ã¤n rÃ¶kiga och pisstinkande gryt dÃ¤r Ã¶len Ã¤r utspÃ¤dd och gÃ¤sterna fattiga. De mest luxuÃ¶sa vÃ¤rdshusen har en hel stab av tjÃ¤nare, otaliga rum, ett stort kÃ¶k, en fylld vinkÃ¤llare och ett gott anseende.";
-	bakgrundstabeller.jargiensbefolkning[98].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[98].beskrivning="Mat serveras, rum städas, golv sopas, stop diskas, resande kommer och resande lämnar. En värdshusvärd träffar och pratar med många olika typer av individer och blir snart en person som har koll på vad som händer i staden och världen. De mest nedgångna värdshusen är inget mer än rökiga och pisstinkande gryt där ölen är utspädd och gästerna fattiga. De mest luxuösa värdshusen har en hel stab av tjänare, otaliga rum, ett stort kök, en fylld vinkällare och ett gott anseende.";
+	bakgrundstabeller.jargiensbefolkning[98].beskrivninghak = "1 slag på valfri tabell, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[99] = {};
@@ -1014,19 +1014,19 @@
 	bakgrundstabeller.jargiensbefolkning[99].kunskapmysterier=1;
 	bakgrundstabeller.jargiensbefolkning[99].stridsfardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[99].expertispoang=2;
-	bakgrundstabeller.jargiensbefolkning[99].beskrivning="De plÃ¥gade skrik som kommer frÃ¥n Xinus anhÃ¤ngare Ã¤r ett offer till den mÃ¶rka guden. I sina privata tortyrkammare dyrkar de smÃ¤rtans och det eviga lidandets prins, den mÃ¶rka och vansinnige Xinu. Under svarta mÃ¤ssor nÃ¥r dyrkarna extas genom att piska sig och sina anhÃ¤ngare till ljudet av psalmerna. FÃ¥, om ens nÃ¥gon av de invigda kommer nÃ¥gonsin kunna Ã¥tervÃ¤nda till den oskyldiga sinnesro som de en gÃ¥ng hade, sedan den sadistiska och fÃ¶rbjudna gudomen satt sina klor i deras sjÃ¤lar. De anser sig utvalda infÃ¶r den kommande striden och trÃ¤nar fÃ¶r att bli Xinus fÃ¶rkÃ¤mpar.";
-	bakgrundstabeller.jargiensbefolkning[99].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter StridsfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.jargiensbefolkning[99].beskrivning="De plågade skrik som kommer från Xinus anhängare är ett offer till den mörka guden. I sina privata tortyrkammare dyrkar de smärtans och det eviga lidandets prins, den mörka och vansinnige Xinu. Under svarta mässor når dyrkarna extas genom att piska sig och sina anhängare till ljudet av psalmerna. Få, om ens någon av de invigda kommer någonsin kunna återvända till den oskyldiga sinnesro som de en gång hade, sedan den sadistiska och förbjudna gudomen satt sina klor i deras själar. De anser sig utvalda inför den kommande striden och tränar för att bli Xinus förkämpar.";
+	bakgrundstabeller.jargiensbefolkning[99].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Stridsfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.jargiensbefolkning[100] = {};
-	bakgrundstabeller.jargiensbefolkning[100].rubrik="Ã„dling";
-	bakgrundstabeller.jargiensbefolkning[100].bestamd="Ã¤dlingen";
-	bakgrundstabeller.jargiensbefolkning[100].pluralobestamd="Ã¤dlingar"
+	bakgrundstabeller.jargiensbefolkning[100].rubrik="Ädling";
+	bakgrundstabeller.jargiensbefolkning[100].bestamd="ädlingen";
+	bakgrundstabeller.jargiensbefolkning[100].pluralobestamd="ädlingar"
 	bakgrundstabeller.jargiensbefolkning[100].intrigerillgarningar=1;
 	bakgrundstabeller.jargiensbefolkning[100].socialafardigheterenheter=4;
 	bakgrundstabeller.jargiensbefolkning[100].valfriaenheter=4;
-	bakgrundstabeller.jargiensbefolkning[100].beskrivning="I toppen av KejsardÃ¶met, hÃ¶jd Ã¶ver den vanliga smutsiga massan, lever Ã¤dlingarna. NÃ¥gra spenderar sin tid likt fÃ¥ngar i ekande marmorpalats, andra deltar i dekadenta orgier dÃ¤r de glupskt slukar njutningar och fÃ¶rbjudna nÃ¶jen. De disciplinerade vakar Ã¶ver sin familjs fÃ¶rmÃ¶genhet och spinner den vÃ¤v av intriger som hÃ¥ller samman KejsardÃ¶met och fÃ¥r de lÃ¤gre stÃ¥nden att dansa efter deras vilja.";
-	bakgrundstabeller.jargiensbefolkning[100].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.jargiensbefolkning[100].beskrivning="I toppen av Kejsardömet, höjd över den vanliga smutsiga massan, lever ädlingarna. Några spenderar sin tid likt fångar i ekande marmorpalats, andra deltar i dekadenta orgier där de glupskt slukar njutningar och förbjudna nöjen. De disciplinerade vakar över sin familjs förmögenhet och spinner den väv av intriger som håller samman Kejsardömet och får de lägre stånden att dansa efter deras vilja.";
+	bakgrundstabeller.jargiensbefolkning[100].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 4 valfria enheter.";
 	
 	bakgrundstabeller.vildmark = [];
 	bakgrundstabeller.vildmark[0] = {};
@@ -1036,25 +1036,25 @@
     bakgrundstabeller.vildmark[0].namn="vildmark";
     
 	bakgrundstabeller.vildmark[1]= {};
-	bakgrundstabeller.vildmark[1].rubrik="AndebesvÃ¤rjare";
-	bakgrundstabeller.vildmark[1].bestamd="andebesvÃ¤rjaren";
-	bakgrundstabeller.vildmark[1].obestamd="en andebesvÃ¤rjare";
+	bakgrundstabeller.vildmark[1].rubrik="Andebesvärjare";
+	bakgrundstabeller.vildmark[1].bestamd="andebesvärjaren";
+	bakgrundstabeller.vildmark[1].obestamd="en andebesvärjare";
 	bakgrundstabeller.vildmark[1].kunskapmysterier=1;
 	bakgrundstabeller.vildmark[1].mystikfardigheterenheter=4;
 	bakgrundstabeller.vildmark[1].expertispoang=2;
-	bakgrundstabeller.vildmark[1].beskrivning="MÃ¥nga stamsamhÃ¤llen karaktÃ¤riseras i stor utstrÃ¤ckning av vÃ¶rdnaden fÃ¶r naturens mÃ¥nga andar, och sÃ¥ledes ser man ett stÃ¤ndigt behov av att kunna hÃ¥lla sig vÃ¤l med dessa. Denna tro ersÃ¤tts ibland med, eller kompletteras av, en vÃ¶rdnad fÃ¶r Ã¤rorika och mÃ¤ktiga fÃ¶rfadersandar som Ã¤nnu vakar Ã¶ver sina efterlevande. Med detta i Ã¥tanke Ã¤r det inte mÃ¤rkligt att andebesvÃ¤rjaren, som ofta kallas schaman, har en viktig roll och kan fÃ¥ stort inflytande.";
-	bakgrundstabeller.vildmark[1].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter MystikfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.vildmark[1].beskrivning="Många stamsamhällen karaktäriseras i stor utsträckning av vördnaden för naturens många andar, och således ser man ett ständigt behov av att kunna hålla sig väl med dessa. Denna tro ersätts ibland med, eller kompletteras av, en vördnad för ärorika och mäktiga förfadersandar som ännu vakar över sina efterlevande. Med detta i åtanke är det inte märkligt att andebesvärjaren, som ofta kallas schaman, har en viktig roll och kan få stort inflytande.";
+	bakgrundstabeller.vildmark[1].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Mystikfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.vildmark[2] = {};
-	bakgrundstabeller.vildmark[2].rubrik="BerÃ¤ttare";
-	bakgrundstabeller.vildmark[2].bestamd="berÃ¤ttaren";
-	bakgrundstabeller.vildmark[2].obestamd="en berÃ¤ttare";
+	bakgrundstabeller.vildmark[2].rubrik="Berättare";
+	bakgrundstabeller.vildmark[2].bestamd="berättaren";
+	bakgrundstabeller.vildmark[2].obestamd="en berättare";
 	bakgrundstabeller.vildmark[2].kunskapmysterier=1;
 	bakgrundstabeller.vildmark[2].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.vildmark[2].socialafardigheterenheter=4;
-	bakgrundstabeller.vildmark[2].beskrivning="Ã„ven om det ofta faller pÃ¥ prÃ¤sternas eller andebesvÃ¤rjarnas lott, dÃ¤r sÃ¥dana finns, kan den som behÃ¤rskar konsten att berÃ¤tta om forna tider vara en mycket aktad individ. MÃ¥nga har detta som ett rent sidointresse, men ett litet fÃ¥tal Ã¤r sÃ¥ skickliga och uppskattade att deras rÃ¥d och historiefÃ¶rtÃ¤ljande gÃ¶r stammen villig att stÃ¥ fÃ¶r deras fÃ¶rsÃ¶rjning.";
-	bakgrundstabeller.vildmark[2].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[2].beskrivning="Även om det ofta faller på prästernas eller andebesvärjarnas lott, där sådana finns, kan den som behärskar konsten att berätta om forna tider vara en mycket aktad individ. Många har detta som ett rent sidointresse, men ett litet fåtal är så skickliga och uppskattade att deras råd och historieförtäljande gör stammen villig att stå för deras försörjning.";
+	bakgrundstabeller.vildmark[2].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.vildmark[3] = {};
@@ -1064,8 +1064,8 @@
 	bakgrundstabeller.vildmark[3].farderaventyr=1;
 	bakgrundstabeller.vildmark[3].stridsfardigheterenheter=4;
 	bakgrundstabeller.vildmark[3].hantverkpoang=2;
-	bakgrundstabeller.vildmark[3].beskrivning="Trots att de inte tillhÃ¶r de renodlade krigarnas skara Ã¤r mÃ¥nga boskapsdrivare hÃ¤rdat folk som ofta rÃ¶r sig en bit frÃ¥n stammens boplatser. De mÃ¥ste vara kapabla att skydda de vÃ¤rdefulla kreaturen undan vilddjur och boskapstjuvar, Ã¥tminstone tills hjÃ¤lp kan anlÃ¤nda.";
-	bakgrundstabeller.vildmark[3].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.vildmark[3].beskrivning="Trots att de inte tillhör de renodlade krigarnas skara är många boskapsdrivare härdat folk som ofta rör sig en bit från stammens boplatser. De måste vara kapabla att skydda de värdefulla kreaturen undan vilddjur och boskapstjuvar, åtminstone tills hjälp kan anlända.";
+	bakgrundstabeller.vildmark[3].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Stridsfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.vildmark[4] = {};
@@ -1075,19 +1075,19 @@
 	bakgrundstabeller.vildmark[4].farderaventyr=1;
 	bakgrundstabeller.vildmark[4].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.vildmark[4].valfriaenheter=4;
-	bakgrundstabeller.vildmark[4].beskrivning="I den ofta ofÃ¶rlÃ¥tande vildmark dÃ¤r de flesta stamfolk lever anses det vara vanvett att fÃ¶rsÃ¶ka klara sig helt ensam. MÃ¥nga enslingar Ã¤r fÃ¶rskjutna frÃ¥n sina stammar fÃ¶r att de begÃ¥tt grova brott mot lag eller tabu, men det finns ocksÃ¥ alltid de som av egen vilja drar sig undan frÃ¥n gemenskapen. FÃ¥ blir dock gamla med denna ensamma livsfÃ¶ring.";
-	bakgrundstabeller.vildmark[4].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter VildmarksfÃ¤rdigheter, 4 Valfria enheter.";
+	bakgrundstabeller.vildmark[4].beskrivning="I den ofta oförlåtande vildmark där de flesta stamfolk lever anses det vara vanvett att försöka klara sig helt ensam. Många enslingar är förskjutna från sina stammar för att de begått grova brott mot lag eller tabu, men det finns också alltid de som av egen vilja drar sig undan från gemenskapen. Få blir dock gamla med denna ensamma livsföring.";
+	bakgrundstabeller.vildmark[4].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 4 Valfria enheter.";
 
 	
 	bakgrundstabeller.vildmark[5] = {};
-	bakgrundstabeller.vildmark[5].rubrik="FÃ¶rhandlare";
-	bakgrundstabeller.vildmark[5].bestamd="fÃ¶rhandlaren";
-	bakgrundstabeller.vildmark[5].obestamd="en fÃ¶rhandlare";
+	bakgrundstabeller.vildmark[5].rubrik="Förhandlare";
+	bakgrundstabeller.vildmark[5].bestamd="förhandlaren";
+	bakgrundstabeller.vildmark[5].obestamd="en förhandlare";
 	bakgrundstabeller.vildmark[5].farderaventyr=1;
 	bakgrundstabeller.vildmark[5].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.vildmark[5].socialafardigheterenheter=4
-	bakgrundstabeller.vildmark[5].beskrivning="Det Ã¤r inte alla stammar som har fÃ¶rhandlare, men nÃ¤r ett samhÃ¤lle vÃ¤xer sig tillrÃ¤ckligt stort brukar det ofta utkristalliseras grupper av individer som har talets gÃ¥va och Ã¤r kapabla att nÃ¥ allmÃ¤nt godkÃ¤nda kompromisser. MÃ¥nga av dessa slÃ¥r sig pÃ¥ kÃ¶penskap, men andra fokuserar helt pÃ¥ att vara hÃ¶vdingars utsÃ¤nda och folkets representanter vid stÃ¶rre mÃ¶ten, liksom pÃ¥ att lÃ¶sa tvister innan de eskalerar till vÃ¥ldsamheter. Ofta tvingas fÃ¶rhandlare agera lÃ¥ngt frÃ¥n stammens territorium, och deras resor kan rentav ta dem till frÃ¤mmande folk.";
-	bakgrundstabeller.vildmark[5].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[5].beskrivning="Det är inte alla stammar som har förhandlare, men när ett samhälle växer sig tillräckligt stort brukar det ofta utkristalliseras grupper av individer som har talets gåva och är kapabla att nå allmänt godkända kompromisser. Många av dessa slår sig på köpenskap, men andra fokuserar helt på att vara hövdingars utsända och folkets representanter vid större möten, liksom på att lösa tvister innan de eskalerar till våldsamheter. Ofta tvingas förhandlare agera långt från stammens territorium, och deras resor kan rentav ta dem till främmande folk.";
+	bakgrundstabeller.vildmark[5].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.vildmark[6] = {};
@@ -1097,8 +1097,8 @@
 	bakgrundstabeller.vildmark[6].intrigerillgarningar=1;
 	bakgrundstabeller.vildmark[6].socialafardigheterenheter=4;
 	bakgrundstabeller.vildmark[6].kanneteckenpoang=2;
-	bakgrundstabeller.vildmark[6].beskrivning="Handelns omfattning varierar mycket bland olika folk, men det finns sÃ¥ gott som alltid mÃ¶jlighet fÃ¶r den som Ã¤r slÃ¤ngd i kÃ¤ften att gÃ¶ra sig nÃ¥got mÃ¥tt av rikedom genom kÃ¶penskap. I mÃ¥nga samhÃ¤llen ser man dock ner pÃ¥ dessa krÃ¤mare och anser att de saknar fÃ¶rmÃ¥ga att livnÃ¤ra sig pÃ¥ Ã¤rliga vis. Den allra mesta handeln sker, naturligtvis, genom byte av varor snarare Ã¤n i form av pengahantering.";
-	bakgrundstabeller.vildmark[6].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.vildmark[6].beskrivning="Handelns omfattning varierar mycket bland olika folk, men det finns så gott som alltid möjlighet för den som är slängd i käften att göra sig något mått av rikedom genom köpenskap. I många samhällen ser man dock ner på dessa krämare och anser att de saknar förmåga att livnära sig på ärliga vis. Den allra mesta handeln sker, naturligtvis, genom byte av varor snarare än i form av pengahantering.";
+	bakgrundstabeller.vildmark[6].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.vildmark[7] = {};
@@ -1108,8 +1108,8 @@
 	bakgrundstabeller.vildmark[7].intrigerillgarningar=1;
 	bakgrundstabeller.vildmark[7].socialafardigheterenheter=4;
 	bakgrundstabeller.vildmark[7].hantverkpoang=2;
-	bakgrundstabeller.vildmark[7].beskrivning="Vilka hantverk som utÃ¶vas inom en stam beror pÃ¥ sÃ¥vÃ¤l de krav miljÃ¶n stÃ¤ller som folkets teknologiska nivÃ¥, men i alla hÃ¤ndelser behÃ¶vs det nÃ¥gra som Ã¤r skickliga pÃ¥ att skapa och reparera fÃ¶remÃ¥l. I mÃ¥nga fall Ã¤r det dessa ting som kÃ¶pslagare sedan kan anvÃ¤nda fÃ¶r att byta till sig frÃ¤mmande varor till stammen.";
-	bakgrundstabeller.vildmark[7].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.vildmark[7].beskrivning="Vilka hantverk som utövas inom en stam beror på såväl de krav miljön ställer som folkets teknologiska nivå, men i alla händelser behövs det några som är skickliga på att skapa och reparera föremål. I många fall är det dessa ting som köpslagare sedan kan använda för att byta till sig främmande varor till stammen.";
+	bakgrundstabeller.vildmark[7].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Hantverk."
 
 
 	bakgrundstabeller.vildmark[8] = {};
@@ -1119,8 +1119,8 @@
 	bakgrundstabeller.vildmark[8].kunskapmysterier=1;
 	bakgrundstabeller.vildmark[8].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.vildmark[8].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.vildmark[8].beskrivning="MÃ¥nga som lever i stamsamhÃ¤llen lÃ¤r sig av nÃ¶den att lÃ¤gga Ã¥tminstone klumpiga fÃ¶rband om de sÃ¥r de allt fÃ¶r ofta drabbas av, men vid allvarligare skador sÃ¶ker man upp en helare. Det Ã¤r inte alltid helaren Ã¤r stammens mest respekterade person, men hen Ã¤r viktig fÃ¶r folkets Ã¶verlevnad.";
-	bakgrundstabeller.vildmark[8].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[8].beskrivning="Många som lever i stamsamhällen lär sig av nöden att lägga åtminstone klumpiga förband om de sår de allt för ofta drabbas av, men vid allvarligare skador söker man upp en helare. Det är inte alltid helaren är stammens mest respekterade person, men hen är viktig för folkets överlevnad.";
+	bakgrundstabeller.vildmark[8].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.vildmark[9] = {};
@@ -1131,8 +1131,8 @@
 	bakgrundstabeller.vildmark[9].farderaventyr=1;
 	bakgrundstabeller.vildmark[9].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.vildmark[9].hantverkpoang=2;
-	bakgrundstabeller.vildmark[9].beskrivning="De flesta stamlevande folk Ã¤gnar sig i Ã¥tminstone nÃ¥gon mÃ¥n Ã¥t jordbruk, eller Ã¥tminstone Ã¥t att veta var de mest nÃ¤rande vÃ¤xterna finns. I vÃ¤ldigt isolerade kulturer betraktas fÃ¶rmÃ¥gan att veta nÃ¤r man ska sÃ¥ och hur man bÃ¤st skÃ¶rdar jordens frukter som nÃ¤rmast magisk och de som behÃ¤rskar den som personer i god kontakt med naturens andar.";
-	bakgrundstabeller.vildmark[9].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.vildmark[9].beskrivning="De flesta stamlevande folk ägnar sig i åtminstone någon mån åt jordbruk, eller åtminstone åt att veta var de mest närande växterna finns. I väldigt isolerade kulturer betraktas förmågan att veta när man ska så och hur man bäst skördar jordens frukter som närmast magisk och de som behärskar den som personer i god kontakt med naturens andar.";
+	bakgrundstabeller.vildmark[9].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.vildmark[10] = {};
@@ -1142,19 +1142,19 @@
 	bakgrundstabeller.vildmark[10].valfriatabellslag=1;
 	bakgrundstabeller.vildmark[10].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.vildmark[10].socialafardigheterenheter=4;
-	bakgrundstabeller.vildmark[10].beskrivning="Ã„ven om det inte betraktas som den mest Ã¤rorika sysslan i ofta krigiska kulturer Ã¤r de som kan konsten att pÃ¥ bÃ¤sta sÃ¤tt bistÃ¥ vid fÃ¶rlossningar mycket uppskattade. Deras hjÃ¤lp kan ofta vara helt avgÃ¶rande fÃ¶r moderns och barnets Ã¶verlevnad, och mÃ¥nga knyter starka band till de barn de hjÃ¤lper till vÃ¤rlden.";
-	bakgrundstabeller.vildmark[10].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[10].beskrivning="Även om det inte betraktas som den mest ärorika sysslan i ofta krigiska kulturer är de som kan konsten att på bästa sätt bistå vid förlossningar mycket uppskattade. Deras hjälp kan ofta vara helt avgörande för moderns och barnets överlevnad, och många knyter starka band till de barn de hjälper till världen.";
+	bakgrundstabeller.vildmark[10].beskrivninghak = "1 slag på valfri tabell, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.vildmark[11] = {};
-	bakgrundstabeller.vildmark[11].rubrik="JÃ¤gare";
-	bakgrundstabeller.vildmark[11].bestamd="jÃ¤garen";
-	bakgrundstabeller.vildmark[11].obestamd="en jÃ¤gare";
+	bakgrundstabeller.vildmark[11].rubrik="Jägare";
+	bakgrundstabeller.vildmark[11].bestamd="jägaren";
+	bakgrundstabeller.vildmark[11].obestamd="en jägare";
 	bakgrundstabeller.vildmark[11].farderaventyr=1;
 	bakgrundstabeller.vildmark[11].rorelsefardigheterenheter=4;
 	bakgrundstabeller.vildmark[11].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.vildmark[11].beskrivning="JÃ¤gare kan arbeta med mycket olika metoder beroende pÃ¥ var de lever, om de jagar i grupp, och i synnerhet pÃ¥ vad deras byte Ã¤r. Detta Ã¤r en mycket vanlig sysselsÃ¤ttning inom de flesta stamsamhÃ¤llen.";
-	bakgrundstabeller.vildmark[11].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[11].beskrivning="Jägare kan arbeta med mycket olika metoder beroende på var de lever, om de jagar i grupp, och i synnerhet på vad deras byte är. Detta är en mycket vanlig sysselsättning inom de flesta stamsamhällen.";
+	bakgrundstabeller.vildmark[11].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.vildmark[12] = {};
@@ -1164,8 +1164,8 @@
 	bakgrundstabeller.vildmark[12].intrigerillgarningar=1;
 	bakgrundstabeller.vildmark[12].socialafardigheterenheter=4;
 	bakgrundstabeller.vildmark[12].stridsfardigheterenheter=4;
-	bakgrundstabeller.vildmark[12].beskrivning="I mÃ¥nga stamsamhÃ¤llen Ã¤r inte ledarpositionen nÃ¥got man Ã¤rver frÃ¥n vÃ¶rdade fÃ¶rfÃ¤der, utan nÃ¥gonting individen mÃ¥ste kÃ¤mpa sig till och visa sig duglig fÃ¶r. Ã„ven om skickliga ledare i allmÃ¤nhet lÃ¤r sig att spela ut motstÃ¥ndare mot varandra fÃ¶r att inte stÃ¤ndigt behÃ¶va fÃ¶rsvara sin position med blod Ã¤r krigaridealet pÃ¥tagligt hos de flesta ledare.";
-	bakgrundstabeller.vildmark[12].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter."
+	bakgrundstabeller.vildmark[12].beskrivning="I många stamsamhällen är inte ledarpositionen något man ärver från vördade förfäder, utan någonting individen måste kämpa sig till och visa sig duglig för. Även om skickliga ledare i allmänhet lär sig att spela ut motståndare mot varandra för att inte ständigt behöva försvara sin position med blod är krigaridealet påtagligt hos de flesta ledare.";
+	bakgrundstabeller.vildmark[12].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 4 enheter Stridsfärdigheter."
 
 	
 	bakgrundstabeller.vildmark[13] = {};
@@ -1175,30 +1175,30 @@
 	bakgrundstabeller.vildmark[13].valfriatabellslag=1;
 	bakgrundstabeller.vildmark[13].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.vildmark[13].hantverkpoang=2;
-	bakgrundstabeller.vildmark[13].beskrivning="En ofri man eller kvinna Ã¤r ofta slav eller trÃ¤l, dÃ¤r sÃ¥dana fÃ¶rekommer, men kan Ã¤ven ha tagits som krigsfÃ¥nge. Ett fÃ¥tal har ocksÃ¥ fÃ¶rlorat sin frihet som straff fÃ¶r nÃ¥gon fÃ¶rbrytelse, Ã¤ven om det sÃ¤llan Ã¤r en vanlig form av bestraffning. Ofta har de ofria hÃ¥rda arbetsuppgifter som inte tar dem fÃ¶r lÃ¥ngt frÃ¥n folkets vakande Ã¶gon.";
-	bakgrundstabeller.vildmark[13].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.vildmark[13].beskrivning="En ofri man eller kvinna är ofta slav eller träl, där sådana förekommer, men kan även ha tagits som krigsfånge. Ett fåtal har också förlorat sin frihet som straff för någon förbrytelse, även om det sällan är en vanlig form av bestraffning. Ofta har de ofria hårda arbetsuppgifter som inte tar dem för långt från folkets vakande ögon.";
+	bakgrundstabeller.vildmark[13].beskrivninghak = "1 slag på valfri tabell, 4 enheter Vildmarksfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.vildmark[14] = {};
-	bakgrundstabeller.vildmark[14].rubrik="OgÃ¤rningsman";
-	bakgrundstabeller.vildmark[14].bestamd="ogÃ¤rningsmannen";
-	bakgrundstabeller.vildmark[14].obestamd="en ogÃ¤rningsman";
+	bakgrundstabeller.vildmark[14].rubrik="Ogärningsman";
+	bakgrundstabeller.vildmark[14].bestamd="ogärningsmannen";
+	bakgrundstabeller.vildmark[14].obestamd="en ogärningsman";
 	bakgrundstabeller.vildmark[14].farderaventyr=1;
 	bakgrundstabeller.vildmark[14].rorelsefardigheterenheter=4;
 	bakgrundstabeller.vildmark[14].socialafardigheterenheter=4;
-	bakgrundstabeller.vildmark[14].beskrivning="Att fÃ¶rsÃ¶rja sig pÃ¥ stÃ¶lder frÃ¥n stammen Ã¤r ofta ett sÃ¤kert sÃ¤tt att bli fÃ¶rvisad eller drÃ¤pt, och sÃ¥ledes gÃ¶r den som tÃ¤nker sig ett ohederligt leverne bÃ¤st i att vara mycket fÃ¶rslagen. Den som med stor skicklighet stjÃ¤l boskap eller andra dyrbarheter frÃ¥n frÃ¤mmande folk och fientliga stammar mÃ¶ter dock sÃ¤llan nÃ¥gon fientlighet bland de sina, och kan rentav bli mycket uppskattad under vissa omstÃ¤ndigheter.";
-	bakgrundstabeller.vildmark[14].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[14].beskrivning="Att försörja sig på stölder från stammen är ofta ett säkert sätt att bli förvisad eller dräpt, och således gör den som tänker sig ett ohederligt leverne bäst i att vara mycket förslagen. Den som med stor skicklighet stjäl boskap eller andra dyrbarheter från främmande folk och fientliga stammar möter dock sällan någon fientlighet bland de sina, och kan rentav bli mycket uppskattad under vissa omständigheter.";
+	bakgrundstabeller.vildmark[14].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.vildmark[15] = {};
-	bakgrundstabeller.vildmark[15].rubrik="PrÃ¤st";
-	bakgrundstabeller.vildmark[15].bestamd="prÃ¤sten";
-	bakgrundstabeller.vildmark[15].obestamd="en prÃ¤st";
+	bakgrundstabeller.vildmark[15].rubrik="Präst";
+	bakgrundstabeller.vildmark[15].bestamd="prästen";
+	bakgrundstabeller.vildmark[15].obestamd="en präst";
 	bakgrundstabeller.vildmark[15].kunskapmysterier=1;
 	bakgrundstabeller.vildmark[15].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.vildmark[15].mystikfardigheterenheter=4;
-	bakgrundstabeller.vildmark[15].beskrivning="Bland vissa stamfolk fÃ¶rekommer tron pÃ¥ en eller flera namngivna gudar istÃ¤llet fÃ¶r dyrkan av besjÃ¤lad natur eller fÃ¶rfadersandar. FÃ¶rdomsfulla jargiska lÃ¤rde betraktar ofta denna typ av religion som en mer civiliserad och utvecklad form av avgudadyrkan. I vissa, inte sÃ¤llan splittrade, grupper verkar sÃ¥vÃ¤l andebesvÃ¤rjare som prÃ¤ster.";
-	bakgrundstabeller.vildmark[15].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter MystikfÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[15].beskrivning="Bland vissa stamfolk förekommer tron på en eller flera namngivna gudar istället för dyrkan av besjälad natur eller förfadersandar. Fördomsfulla jargiska lärde betraktar ofta denna typ av religion som en mer civiliserad och utvecklad form av avgudadyrkan. I vissa, inte sällan splittrade, grupper verkar såväl andebesvärjare som präster.";
+	bakgrundstabeller.vildmark[15].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Mystikfärdigheter.";
 
 	
 	bakgrundstabeller.vildmark[16] = {};
@@ -1209,30 +1209,30 @@
 	bakgrundstabeller.vildmark[16].kunskapsfardigheterenheter=2;
 	bakgrundstabeller.vildmark[16].vildmarksfardigheterenheter=2;
 	bakgrundstabeller.vildmark[16].hantverkpoang=2;
-	bakgrundstabeller.vildmark[16].beskrivning="Som samlare rÃ¤knas de som Ã¤r vana att hitta sÃ¥vÃ¤l matnyttiga vÃ¤xter som Ã¶rter som kan anvÃ¤ndas fÃ¶r fÃ¤rgningsarbeten och olika dekokter. I vissa fall har de roller som Ã¶verlappar helarens, men mÃ¥nga behÃ¤rskar ocksÃ¥ konsten att brygga dÃ¶dliga gifter.";
-	bakgrundstabeller.vildmark[16].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 2 enheter KunskapsfÃ¤rdigheter, 2 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.vildmark[16].beskrivning="Som samlare räknas de som är vana att hitta såväl matnyttiga växter som örter som kan användas för färgningsarbeten och olika dekokter. I vissa fall har de roller som överlappar helarens, men många behärskar också konsten att brygga dödliga gifter.";
+	bakgrundstabeller.vildmark[16].beskrivninghak = "1 slag på Färder \& äventyr, 2 enheter Kunskapsfärdigheter, 2 enheter Vildmarksfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.vildmark[17] = {};
-	bakgrundstabeller.vildmark[17].rubrik="SjÃ¶farare";
-	bakgrundstabeller.vildmark[17].bestamd="sjÃ¶fararen";
-	bakgrundstabeller.vildmark[17].obestamd="en sjÃ¶farare";
+	bakgrundstabeller.vildmark[17].rubrik="Sjöfarare";
+	bakgrundstabeller.vildmark[17].bestamd="sjöfararen";
+	bakgrundstabeller.vildmark[17].obestamd="en sjöfarare";
 	bakgrundstabeller.vildmark[17].farderaventyr=1;
 	bakgrundstabeller.vildmark[17].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.vildmark[17].kanneteckenpoang=2;
-	bakgrundstabeller.vildmark[17].beskrivning="Beroende pÃ¥ var stammen lever kan sjÃ¶farare, utÃ¶ver att vara helt obefintliga, sysselsÃ¤tta sig som strÃ¤vsamma fiskare eller lÃ¥ngvÃ¤ga resande. Gemensamt Ã¤r att deras liv Ã¤r hÃ¥rda och att de Ã¤r pÃ¥tagligt utlÃ¤mnade Ã¥t vÃ¤drets makter, ofta i bÃ¥tar som kan lÃ¤mna en hel del att Ã¶nska. De flesta sjÃ¶farare kÃ¤nner till hundratals ramsor och ritualer fÃ¶r att vinna god vind och fina fÃ¥ngster, och ofta Ã¤r de lite kantiga och passar inte riktigt in bland de som inte delar deras band till vattnet.";
-	bakgrundstabeller.vildmark[17].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken.";
+	bakgrundstabeller.vildmark[17].beskrivning="Beroende på var stammen lever kan sjöfarare, utöver att vara helt obefintliga, sysselsätta sig som strävsamma fiskare eller långväga resande. Gemensamt är att deras liv är hårda och att de är påtagligt utlämnade åt vädrets makter, ofta i båtar som kan lämna en hel del att önska. De flesta sjöfarare känner till hundratals ramsor och ritualer för att vinna god vind och fina fångster, och ofta är de lite kantiga och passar inte riktigt in bland de som inte delar deras band till vattnet.";
+	bakgrundstabeller.vildmark[17].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 2 poäng Kännetecken.";
 
 	
 	bakgrundstabeller.vildmark[18] = {};
-	bakgrundstabeller.vildmark[18].rubrik="SkuggmÃ¤rkt";
-	bakgrundstabeller.vildmark[18].bestamd="den skuggmÃ¤rkta";
-	bakgrundstabeller.vildmark[18].obestamd="en skuggmÃ¤rkt";
+	bakgrundstabeller.vildmark[18].rubrik="Skuggmärkt";
+	bakgrundstabeller.vildmark[18].bestamd="den skuggmärkta";
+	bakgrundstabeller.vildmark[18].obestamd="en skuggmärkt";
 	bakgrundstabeller.vildmark[18].farderaventyr=1;
 	bakgrundstabeller.vildmark[18].valfriaenheter=4;
 	bakgrundstabeller.vildmark[18].expertispoang=2;
-	bakgrundstabeller.vildmark[18].beskrivning="Detta Ã¤r inte direkt ett sÃ¤tt att fÃ¶rsÃ¶rja sig eller ett yrke inom stammen, utan snarare en roll som man ofta talar tyst om. De flesta folk som lever nÃ¤ra den otÃ¤mjda naturen har likvÃ¤l erfarenheter av och legender om det frÃ¤mmande och farliga Skugglandet, och kunskapen om hur man hanterar dess inverkan kan vara livsavgÃ¶rande fÃ¶r en hel bosÃ¤ttning. Man talar tyst om det fÃ¥tal som kÃ¤nner skuggfolkens seder - ofta vet alla vilka det Ã¤r, utan att egentligen yttra det annat Ã¤n i nÃ¶dfall. Inte sÃ¤llan tros dessa speciella individer vara halvblod av nÃ¥got slag, eller kunna vandra in i Skugglandet efter egen vilja.";
-	bakgrundstabeller.vildmark[18].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 Valfria enheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.vildmark[18].beskrivning="Detta är inte direkt ett sätt att försörja sig eller ett yrke inom stammen, utan snarare en roll som man ofta talar tyst om. De flesta folk som lever nära den otämjda naturen har likväl erfarenheter av och legender om det främmande och farliga Skugglandet, och kunskapen om hur man hanterar dess inverkan kan vara livsavgörande för en hel bosättning. Man talar tyst om det fåtal som känner skuggfolkens seder - ofta vet alla vilka det är, utan att egentligen yttra det annat än i nödfall. Inte sällan tros dessa speciella individer vara halvblod av något slag, eller kunna vandra in i Skugglandet efter egen vilja.";
+	bakgrundstabeller.vildmark[18].beskrivninghak = "1 slag på Färder \& äventyr, 4 Valfria enheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.vildmark[19] = {};
@@ -1242,8 +1242,8 @@
 	bakgrundstabeller.vildmark[19].striderdrabbningar=1;
 	bakgrundstabeller.vildmark[19].stridsfardigheterenheter=4;
 	bakgrundstabeller.vildmark[19].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.vildmark[19].beskrivning="Ã„ven om livet i stammen ofta krÃ¤ver att alla kan fÃ¶rsvara sig hjÃ¤lpligt Ã¤r det vanligt att det finns en skara dedikerade krigare, pÃ¥ vilkas lott det faller att skydda befolkningen och kÃ¤mpa i stammens namn. I fredligare tider bistÃ¥r de emellanÃ¥t jÃ¤garna, men stamkrigare Ã¤r mycket pÃ¥tagligt trÃ¤nade fÃ¶r att besegra och dÃ¶da mÃ¤nniskor snarare Ã¤n djur.";
-	bakgrundstabeller.vildmark[19].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[19].beskrivning="Även om livet i stammen ofta kräver att alla kan försvara sig hjälpligt är det vanligt att det finns en skara dedikerade krigare, på vilkas lott det faller att skydda befolkningen och kämpa i stammens namn. I fredligare tider bistår de emellanåt jägarna, men stamkrigare är mycket påtagligt tränade för att besegra och döda människor snarare än djur.";
+	bakgrundstabeller.vildmark[19].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.vildmark[20] = {};
@@ -1253,8 +1253,8 @@
 	bakgrundstabeller.vildmark[20].farderaventyr=1;
 	bakgrundstabeller.vildmark[20].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.vildmark[20].kanneteckenpoang=2;
-	bakgrundstabeller.vildmark[20].beskrivning="Stigfinnarnas vÃ¤rv Ã¶verlappar ofta med jÃ¤garnas, men stigfinnarna Ã¤r mer inriktade pÃ¥ att upptÃ¤cka stÃ¤ndigt nya resurser och smidigare fÃ¤rdesvÃ¤gar pÃ¥ det omrÃ¥de som stammen hÃ¥ller som sitt. De Ã¤r ofta nÃ¥got av excentriska ensamvargar och kan emellanÃ¥t vara ifrÃ¥n bosÃ¤ttningen lÃ¤ngre tider, utan att pÃ¥ nÃ¥got sÃ¤tt Ã¶verge den.";
-	bakgrundstabeller.vildmark[20].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken.";
+	bakgrundstabeller.vildmark[20].beskrivning="Stigfinnarnas värv överlappar ofta med jägarnas, men stigfinnarna är mer inriktade på att upptäcka ständigt nya resurser och smidigare färdesvägar på det område som stammen håller som sitt. De är ofta något av excentriska ensamvargar och kan emellanåt vara ifrån bosättningen längre tider, utan att på något sätt överge den.";
+	bakgrundstabeller.vildmark[20].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 2 poäng Kännetecken.";
 
 	
 	bakgrundstabeller.vildmark[21] = {};
@@ -1264,52 +1264,52 @@
 	bakgrundstabeller.vildmark[21].kunskapmysterier=1;
 	bakgrundstabeller.vildmark[21].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.vildmark[21].expertispoang=2;
-	bakgrundstabeller.vildmark[21].beskrivning="Med teckentydare avses inte i fÃ¶rsta hand spÃ¥rare, Ã¤ven om de ofta kan bli mycket skickliga sÃ¥dana, utan personer som pÃ¥ nÃ¥got sÃ¤tt ser mer Ã¤n andra. Ofta handlar det om att de tros kunna fÃ¶rutspÃ¥ framtiden i naturens mÃ¶nster, men vissa av dem sÃ¤ger sig Ã¤ven kunna se gÃ¥ngna tider och platser, eller rentav kommunicera med de dÃ¶das andar. De har sÃ¤llan andebesvÃ¤rjares specifika utbildning fÃ¶r sitt vÃ¤rv och befinner sig emellanÃ¥t rentav pÃ¥ kollisionskurs med dessa. MÃ¥nga sÃ¶ker dock upp teckentydarna fÃ¶r att fÃ¥ veta vad framtiden bÃ¤r i sitt skÃ¶te.";
-	bakgrundstabeller.vildmark[21].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.vildmark[21].beskrivning="Med teckentydare avses inte i första hand spårare, även om de ofta kan bli mycket skickliga sådana, utan personer som på något sätt ser mer än andra. Ofta handlar det om att de tros kunna förutspå framtiden i naturens mönster, men vissa av dem säger sig även kunna se gångna tider och platser, eller rentav kommunicera med de dödas andar. De har sällan andebesvärjares specifika utbildning för sitt värv och befinner sig emellanåt rentav på kollisionskurs med dessa. Många söker dock upp teckentydarna för att få veta vad framtiden bär i sitt sköte.";
+	bakgrundstabeller.vildmark[21].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Vildmarksfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.vildmark[22] = {};
-	bakgrundstabeller.vildmark[22].rubrik="TÃ¤mjare";
-	bakgrundstabeller.vildmark[22].bestamd="tÃ¤mjaren";
-	bakgrundstabeller.vildmark[22].obestamd="en tÃ¤mjare";
+	bakgrundstabeller.vildmark[22].rubrik="Tämjare";
+	bakgrundstabeller.vildmark[22].bestamd="tämjaren";
+	bakgrundstabeller.vildmark[22].obestamd="en tämjare";
 	bakgrundstabeller.vildmark[22].farderaventyr=1;
 	bakgrundstabeller.vildmark[22].socialafardigheterenheter=4;
 	bakgrundstabeller.vildmark[22].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.vildmark[22].beskrivning="MÃ¥nga stamfolk har kommit att hÃ¥lla sig med nÃ¥gon form av trÃ¤nade djur, som exempelvis hundar eller olika riddjur. Att lÃ¤ra upp dessa Ã¤r sÃ¤llan en persons enda syssla, men det kan vara en krÃ¤vande konst som krÃ¤ver tÃ¥lamod, slughet och en stark vilja.";
-	bakgrundstabeller.vildmark[22].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter Sociala fÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[22].beskrivning="Många stamfolk har kommit att hålla sig med någon form av tränade djur, som exempelvis hundar eller olika riddjur. Att lära upp dessa är sällan en persons enda syssla, men det kan vara en krävande konst som kräver tålamod, slughet och en stark vilja.";
+	bakgrundstabeller.vildmark[22].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Sociala färdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.vildmark[23] = {};
-	bakgrundstabeller.vildmark[23].rubrik="UnderhÃ¥llare";
-	bakgrundstabeller.vildmark[23].bestamd="underhÃ¥llaren";
-	bakgrundstabeller.vildmark[23].obestamd="en underhÃ¥llare";
+	bakgrundstabeller.vildmark[23].rubrik="Underhållare";
+	bakgrundstabeller.vildmark[23].bestamd="underhållaren";
+	bakgrundstabeller.vildmark[23].obestamd="en underhållare";
 	bakgrundstabeller.vildmark[23].farderaventyr=1;
 	bakgrundstabeller.vildmark[23].socialafardigheterenheter=4;
 	bakgrundstabeller.vildmark[23].kanneteckenpoang=2;
-	bakgrundstabeller.vildmark[23].beskrivning="De flesta i stamsamhÃ¤llen kan inte livnÃ¤ra sig enbart pÃ¥ att vara underhÃ¥llande, men ibland dyker det upp personer som brinner sÃ¥ fÃ¶r sÃ¥ng, musik och liknande nÃ¶jen att de ser det som sin huvudsakliga uppgift i livet. SÃ¥ lÃ¤nge dessa individer Ã¤ven gÃ¶r sitt fÃ¶r att dra in mat till samhÃ¤llet betraktas de med allt frÃ¥n stor uppskattning till roat Ã¶verseende. MÃ¥nga Ã¤r ocksÃ¥ oroliga sjÃ¤lar som vandrar runt mellan bosÃ¤ttningar och kan agera sÃ¤ndebud dÃ¤r specialiserade sÃ¥dana saknas.";
-	bakgrundstabeller.vildmark[23].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.vildmark[23].beskrivning="De flesta i stamsamhällen kan inte livnära sig enbart på att vara underhållande, men ibland dyker det upp personer som brinner så för sång, musik och liknande nöjen att de ser det som sin huvudsakliga uppgift i livet. Så länge dessa individer även gör sitt för att dra in mat till samhället betraktas de med allt från stor uppskattning till roat överseende. Många är också oroliga själar som vandrar runt mellan bosättningar och kan agera sändebud där specialiserade sådana saknas.";
+	bakgrundstabeller.vildmark[23].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Sociala färdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.vildmark[24] = {};
-	bakgrundstabeller.vildmark[24].rubrik="VÃ¤ktare";
-	bakgrundstabeller.vildmark[24].bestamd="vÃ¤ktaren";
-	bakgrundstabeller.vildmark[24].obestamd="en vÃ¤ktare";
+	bakgrundstabeller.vildmark[24].rubrik="Väktare";
+	bakgrundstabeller.vildmark[24].bestamd="väktaren";
+	bakgrundstabeller.vildmark[24].obestamd="en väktare";
 	bakgrundstabeller.vildmark[24].striderdrabbningar=1;
 	bakgrundstabeller.vildmark[24].stridsfardigheterenheter=4;
 	bakgrundstabeller.vildmark[24].socialafardigheterenheter=4;
-	bakgrundstabeller.vildmark[24].beskrivning="Denna sorts specialiserade krigare fÃ¶rekommer inte i alla kulturer, men dÃ¤r de finns Ã¤r de stolta Ã¶ver sitt vÃ¤rv och hyllade fÃ¶r det. Deras roll Ã¤r att beskydda platser och, framfÃ¶r allt, individer av sÃ¤rskild vikt, vilket skiljer dem frÃ¥n de typiska kÃ¤mparna som ofta har bredare sysselsÃ¤ttningar. Kloka ledare omger sig gÃ¤rna med en eller flera dugliga vÃ¤ktare, liksom mystiker och sÃ¤ndebud av olika slag.";
-	bakgrundstabeller.vildmark[24].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter Sociala fÃ¤rdigheter 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.vildmark[24].beskrivning="Denna sorts specialiserade krigare förekommer inte i alla kulturer, men där de finns är de stolta över sitt värv och hyllade för det. Deras roll är att beskydda platser och, framför allt, individer av särskild vikt, vilket skiljer dem från de typiska kämparna som ofta har bredare sysselsättningar. Kloka ledare omger sig gärna med en eller flera dugliga väktare, liksom mystiker och sändebud av olika slag.";
+	bakgrundstabeller.vildmark[24].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Sociala färdigheter 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.vildmark[25] = {};
-	bakgrundstabeller.vildmark[25].rubrik="Ã„lskare";
-	bakgrundstabeller.vildmark[25].bestamd="Ã¤lskaren";
-	bakgrundstabeller.vildmark[25].obestamd="en Ã¤lskare";
+	bakgrundstabeller.vildmark[25].rubrik="Älskare";
+	bakgrundstabeller.vildmark[25].bestamd="älskaren";
+	bakgrundstabeller.vildmark[25].obestamd="en älskare";
 	bakgrundstabeller.vildmark[25].intrigerillgarningar=1;
 	bakgrundstabeller.vildmark[25].socialafardigheterenheter=4;
 	bakgrundstabeller.vildmark[25].kanneteckenpoang=2;
-	bakgrundstabeller.vildmark[25].beskrivning="I alla kulturer finns det de som av nÃ¶d eller val vinner fÃ¶rsÃ¶rjning genom sin fÃ¶rmÃ¥ga att skÃ¤nka kÃ¶ttsliga njutningar. Deras position pÃ¥ samhÃ¤llsstegen kan variera enormt, till den grad att de kan betraktas som samhÃ¤llets lÃ¤gsta hos vissa folk och tillhÃ¶ra den absoluta eliten bland andra. Det Ã¤r ocksÃ¥ mycket olika huruvida de har fÃ¤st sig vid en specifik person eller fÃ¶rvÃ¤ntas betjÃ¤na vem som Ã¤n kan erbjuda tillrÃ¤ckligt fÃ¶r deras tjÃ¤nster.";
-	bakgrundstabeller.vildmark[25].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken.";
+	bakgrundstabeller.vildmark[25].beskrivning="I alla kulturer finns det de som av nöd eller val vinner försörjning genom sin förmåga att skänka köttsliga njutningar. Deras position på samhällsstegen kan variera enormt, till den grad att de kan betraktas som samhällets lägsta hos vissa folk och tillhöra den absoluta eliten bland andra. Det är också mycket olika huruvida de har fäst sig vid en specifik person eller förväntas betjäna vem som än kan erbjuda tillräckligt för deras tjänster.";
+	bakgrundstabeller.vildmark[25].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Kännetecken.";
 	
 	bakgrundstabeller.nermadasbefolkning = [];
 	bakgrundstabeller.nermadasbefolkning[0] = {};
@@ -1325,8 +1325,8 @@
 	bakgrundstabeller.nermadasbefolkning[1].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[1].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[1].hantverkpoang=2;
-	bakgrundstabeller.nermadasbefolkning[1].beskrivning="Konsten att planera sÃ¥vÃ¤l hus som broar och andra byggen Ã¤r sÃ¥vÃ¤l viktig som uppskattad, och dess utÃ¶vare Ã¤r ofta vÃ¤lbetalda. PÃ¥ detta omrÃ¥de anses nermadierna tillhÃ¶ra Mundanas allra frÃ¤msta.";
-	//bakgrundstabeller.nermadasbefolkning[1].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.nermadasbefolkning[1].beskrivning="Konsten att planera såväl hus som broar och andra byggen är såväl viktig som uppskattad, och dess utövare är ofta välbetalda. På detta område anses nermadierna tillhöra Mundanas allra främsta.";
+	//bakgrundstabeller.nermadasbefolkning[1].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[2] = {};
@@ -1336,8 +1336,8 @@
 	bakgrundstabeller.nermadasbefolkning[2].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[2].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[2].socialafardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[2].beskrivning="Den som kan underhÃ¥lla med musik och medryckande berÃ¤ttelser blir vÃ¤l mottagen vart han Ã¤n vandrar.";
-	//bakgrundstabeller.nermadasbefolkning[2].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[2].beskrivning="Den som kan underhålla med musik och medryckande berättelser blir väl mottagen vart han än vandrar.";
+	//bakgrundstabeller.nermadasbefolkning[2].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[3] = {};
@@ -1347,19 +1347,19 @@
 	bakgrundstabeller.nermadasbefolkning[3].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[3].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[3].socialafardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[3].beskrivning="Baroner och baronessor Ã¤r inflytelserika lÃ¤nsherrar som styr ett lÃ¤n i utbyte mot en trohetsed till en av de sju grevarna och glatt intrigerar sinsemellan fÃ¶r att Ã¶ka sin makt.";
-	//bakgrundstabeller.nermadasbefolkning[3].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[3].beskrivning="Baroner och baronessor är inflytelserika länsherrar som styr ett län i utbyte mot en trohetsed till en av de sju grevarna och glatt intrigerar sinsemellan för att öka sin makt.";
+	//bakgrundstabeller.nermadasbefolkning[3].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[4] = {};
-	bakgrundstabeller.nermadasbefolkning[4].rubrik="BÃ¶del";
-	bakgrundstabeller.nermadasbefolkning[4].bestamd="bÃ¶deln";
-	bakgrundstabeller.nermadasbefolkning[4].obestamd="en bÃ¶del";
+	bakgrundstabeller.nermadasbefolkning[4].rubrik="Bödel";
+	bakgrundstabeller.nermadasbefolkning[4].bestamd="bödeln";
+	bakgrundstabeller.nermadasbefolkning[4].obestamd="en bödel";
 	bakgrundstabeller.nermadasbefolkning[4].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[4].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[4].hantverkpoang=2;
-	bakgrundstabeller.nermadasbefolkning[4].beskrivning="Ã„ven i ett samhÃ¤lle som det nermadiska, dÃ¤r bÃ¶deln inte befinner sig pÃ¥ botten av samhÃ¤llet, rÃ¶r det sig om en fruktad och mytomspunnen person.";
-	//bakgrundstabeller.nermadasbefolkning[4].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.nermadasbefolkning[4].beskrivning="Även i ett samhälle som det nermadiska, där bödeln inte befinner sig på botten av samhället, rör det sig om en fruktad och mytomspunnen person.";
+	//bakgrundstabeller.nermadasbefolkning[4].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[5] = {};
@@ -1369,19 +1369,19 @@
 	bakgrundstabeller.nermadasbefolkning[5].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[5].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[5].stridsfardigheterenheter=4
-	bakgrundstabeller.nermadasbefolkning[5].beskrivning="SÃ¥vÃ¤l i stÃ¤derna som pÃ¥ landsbygden finns det folk som anvÃ¤nder sig av allehanda ohederliga och inte sÃ¤llan vÃ¥ldsamma metoder fÃ¶r att fÃ¶rsÃ¶ka bli rika eller bara Ã¶verleva till nÃ¤sta dag.";
-	//bakgrundstabeller.nermadasbefolkning[5].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[5].beskrivning="Såväl i städerna som på landsbygden finns det folk som använder sig av allehanda ohederliga och inte sällan våldsamma metoder för att försöka bli rika eller bara överleva till nästa dag.";
+	//bakgrundstabeller.nermadasbefolkning[5].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[6] = {};
-	bakgrundstabeller.nermadasbefolkning[6].rubrik="DansmÃ¤stare";
-	bakgrundstabeller.nermadasbefolkning[6].bestamd="dansmÃ¤staren";
-	bakgrundstabeller.nermadasbefolkning[6].obestamd="en dansmÃ¤stare";
+	bakgrundstabeller.nermadasbefolkning[6].rubrik="Dansmästare";
+	bakgrundstabeller.nermadasbefolkning[6].bestamd="dansmästaren";
+	bakgrundstabeller.nermadasbefolkning[6].obestamd="en dansmästare";
 	bakgrundstabeller.nermadasbefolkning[6].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[6].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[6].kanneteckenpoang=2;
-	bakgrundstabeller.nermadasbefolkning[6].beskrivning="UrÃ¥ldriga traditioner frÃ¥n det coloniska imperiet fÃ¶rvaltas av de skickligaste underhÃ¥llare, som framfÃ¶r fantastiska berÃ¤ttelser med sina akrobatiska danser.";
-	//bakgrundstabeller.nermadasbefolkning[6].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.nermadasbefolkning[6].beskrivning="Uråldriga traditioner från det coloniska imperiet förvaltas av de skickligaste underhållare, som framför fantastiska berättelser med sina akrobatiska danser.";
+	//bakgrundstabeller.nermadasbefolkning[6].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.nermadasbefolkning[7] = {};
@@ -1391,19 +1391,19 @@
 	bakgrundstabeller.nermadasbefolkning[7].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[7].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[7].socialafardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[7].beskrivning="Vare sig de tjÃ¤nar vid furstehov inom landet eller som Nermadas ambassadÃ¶rer i fjÃ¤rran lÃ¤nder Ã¤r diplomaterna aktade fÃ¶r sina insatser och fruktade fÃ¶r sina lena tungor och slipade intellekt. ";
-	//bakgrundstabeller.nermadasbefolkning[7].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter."
+	bakgrundstabeller.nermadasbefolkning[7].beskrivning="Vare sig de tjänar vid furstehov inom landet eller som Nermadas ambassadörer i fjärran länder är diplomaterna aktade för sina insatser och fruktade för sina lena tungor och slipade intellekt. ";
+	//bakgrundstabeller.nermadasbefolkning[7].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter."
 
 
 	bakgrundstabeller.nermadasbefolkning[8] = {};
-	bakgrundstabeller.nermadasbefolkning[8].rubrik="DÃ¶dgrÃ¤vare";
-	bakgrundstabeller.nermadasbefolkning[8].bestamd="dÃ¶dgrÃ¤varen";
-	bakgrundstabeller.nermadasbefolkning[8].obestamd="en dÃ¶dgrÃ¤vare";
+	bakgrundstabeller.nermadasbefolkning[8].rubrik="Dödgrävare";
+	bakgrundstabeller.nermadasbefolkning[8].bestamd="dödgrävaren";
+	bakgrundstabeller.nermadasbefolkning[8].obestamd="en dödgrävare";
 	bakgrundstabeller.nermadasbefolkning[8].kunskapmysterier=1;
 	bakgrundstabeller.nermadasbefolkning[8].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[8].expertispoang=2;
-	bakgrundstabeller.nermadasbefolkning[8].beskrivning="DÃ¶den tar alla, och alla mÃ¥ste tas om hand nÃ¤r livet Ã¤r slut. Att grÃ¤va gravar och hantera de dÃ¶da anses ofta vara en av samhÃ¤llets lÃ¤gsta sysslor, men deras tÃ¤ta kontakter med prÃ¤sterskapet gÃ¶r mÃ¥nga dÃ¶dgrÃ¤vare fÃ¶rvÃ¥nansvÃ¤rt kunniga pÃ¥ allehanda omrÃ¥den.";
-	//bakgrundstabeller.nermadasbefolkning[8].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.nermadasbefolkning[8].beskrivning="Döden tar alla, och alla måste tas om hand när livet är slut. Att gräva gravar och hantera de döda anses ofta vara en av samhällets lägsta sysslor, men deras täta kontakter med prästerskapet gör många dödgrävare förvånansvärt kunniga på allehanda områden.";
+	//bakgrundstabeller.nermadasbefolkning[8].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Rörelsefärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[9] = {};
@@ -1414,41 +1414,41 @@
 	bakgrundstabeller.nermadasbefolkning[9].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[9].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[9].expertispoang=2;
-	bakgrundstabeller.nermadasbefolkning[9].beskrivning="Havet skÃ¤nker nermadierna en stor del av deras fÃ¶da, och det anses vara ett rejÃ¤lt och hederligt arbete att med envishet och skicklighet skÃ¶rda dess frukter.";
-	//bakgrundstabeller.nermadasbefolkning[9].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.nermadasbefolkning[9].beskrivning="Havet skänker nermadierna en stor del av deras föda, och det anses vara ett rejält och hederligt arbete att med envishet och skicklighet skörda dess frukter.";
+	//bakgrundstabeller.nermadasbefolkning[9].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[10] = {};
-	bakgrundstabeller.nermadasbefolkning[10].rubrik="LÃ¤rd";
-	bakgrundstabeller.nermadasbefolkning[10].bestamd="den lÃ¤rde";
-	bakgrundstabeller.nermadasbefolkning[10].obestamd="en lÃ¤rd";
+	bakgrundstabeller.nermadasbefolkning[10].rubrik="Lärd";
+	bakgrundstabeller.nermadasbefolkning[10].bestamd="den lärde";
+	bakgrundstabeller.nermadasbefolkning[10].obestamd="en lärd";
 	bakgrundstabeller.nermadasbefolkning[10].kunskapmysterier=1;
 	bakgrundstabeller.nermadasbefolkning[10].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[10].expertispoang=2;
-	bakgrundstabeller.nermadasbefolkning[10].beskrivning="De lÃ¤rda fyller mÃ¥ngahanda roller i samhÃ¤llet, och deras kunskaper kan vara av de mest skiftande slag. FÃ¶r mÃ¥nga Ã¤r en tjÃ¤nst dÃ¤r man undervisar och rÃ¥dger vid hoven den mest Ã¶nskade sysslan, men lÃ¤rda arbetar ocksÃ¥ inom handelsbolag eller pÃ¥ lÃ¤gre poster inom administrationen.";
-	//bakgrundstabeller.nermadasbefolkning[10].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.nermadasbefolkning[10].beskrivning="De lärda fyller mångahanda roller i samhället, och deras kunskaper kan vara av de mest skiftande slag. För många är en tjänst där man undervisar och rådger vid hoven den mest önskade sysslan, men lärda arbetar också inom handelsbolag eller på lägre poster inom administrationen.";
+	//bakgrundstabeller.nermadasbefolkning[10].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[11] = {};
-	bakgrundstabeller.nermadasbefolkning[11].rubrik="FÃ¤ltskÃ¤r";
-	bakgrundstabeller.nermadasbefolkning[11].bestamd="fÃ¤ltskÃ¤ren";
-	bakgrundstabeller.nermadasbefolkning[11].obestamd="en fÃ¤ltskÃ¤r";
+	bakgrundstabeller.nermadasbefolkning[11].rubrik="Fältskär";
+	bakgrundstabeller.nermadasbefolkning[11].bestamd="fältskären";
+	bakgrundstabeller.nermadasbefolkning[11].obestamd="en fältskär";
 	bakgrundstabeller.nermadasbefolkning[11].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[11].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[11].stridsfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[11].beskrivning="De djÃ¤rvaste av lÃ¤kekunniga sÃ¶ker sig till tjÃ¤nster nÃ¤ra de strider dÃ¤r folk sargas av fienders vapen och bestars klor. Andra har helt enkelt oturen att kommenderas till tjÃ¤nst pÃ¥ dessa utsatta platser, och gÃ¶r vad de kan fÃ¶r att Ã¶verleva och hÃ¥lla andra vid liv.";
-	bakgrundstabeller.nermadasbefolkning[11].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[11].beskrivning="De djärvaste av läkekunniga söker sig till tjänster nära de strider där folk sargas av fienders vapen och bestars klor. Andra har helt enkelt oturen att kommenderas till tjänst på dessa utsatta platser, och gör vad de kan för att överleva och hålla andra vid liv.";
+	bakgrundstabeller.nermadasbefolkning[11].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Kunskapsfärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[12] = {};
-	bakgrundstabeller.nermadasbefolkning[12].rubrik="FÃ¶rfalskare";
-	bakgrundstabeller.nermadasbefolkning[12].bestamd="fÃ¶rfalskaren";
-	bakgrundstabeller.nermadasbefolkning[12].obestamd="en fÃ¶rfalskare";
+	bakgrundstabeller.nermadasbefolkning[12].rubrik="Förfalskare";
+	bakgrundstabeller.nermadasbefolkning[12].bestamd="förfalskaren";
+	bakgrundstabeller.nermadasbefolkning[12].obestamd="en förfalskare";
 	bakgrundstabeller.nermadasbefolkning[12].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[12].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[12].hantverkpoang=2;
-	bakgrundstabeller.nermadasbefolkning[12].beskrivning="Varje sigill och vapenskÃ¶ld som skapas och varje dokument som undertecknas Ã¤r en mÃ¶jlighet fÃ¶r fÃ¶rfalskaren och hans ibland hÃ¶gt uppsatta uppdragsgivare.";
-	bakgrundstabeller.nermadasbefolkning[12].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.nermadasbefolkning[12].beskrivning="Varje sigill och vapensköld som skapas och varje dokument som undertecknas är en möjlighet för förfalskaren och hans ibland högt uppsatta uppdragsgivare.";
+	bakgrundstabeller.nermadasbefolkning[12].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.nermadasbefolkning[13] = {};
@@ -1458,19 +1458,19 @@
 	bakgrundstabeller.nermadasbefolkning[13].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[13].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[13].valfriaenheter=4;
-	bakgrundstabeller.nermadasbefolkning[13].beskrivning="Varje Ã¤dling av betydelse mÃ¥ste ha skickliga stridsmÃ¤n till hands som kan skydda sÃ¥vÃ¤l Ã¤gor som person. Dessa gardessoldater handplockas ofta bland de skickligaste krigare, och kan ha mycket olika trÃ¤ning och specialkompetens.";
-	bakgrundstabeller.nermadasbefolkning[13].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.nermadasbefolkning[13].beskrivning="Varje ädling av betydelse måste ha skickliga stridsmän till hands som kan skydda såväl ägor som person. Dessa gardessoldater handplockas ofta bland de skickligaste krigare, och kan ha mycket olika träning och specialkompetens.";
+	bakgrundstabeller.nermadasbefolkning[13].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[14] = {};
-	bakgrundstabeller.nermadasbefolkning[14].rubrik="GatufÃ¶rsÃ¤ljare";
-	bakgrundstabeller.nermadasbefolkning[14].bestamd="gatufÃ¶rsÃ¤ljaren";
-	bakgrundstabeller.nermadasbefolkning[14].obestamd="en gatufÃ¶rsÃ¤ljare";
+	bakgrundstabeller.nermadasbefolkning[14].rubrik="Gatuförsäljare";
+	bakgrundstabeller.nermadasbefolkning[14].bestamd="gatuförsäljaren";
+	bakgrundstabeller.nermadasbefolkning[14].obestamd="en gatuförsäljare";
 	bakgrundstabeller.nermadasbefolkning[14].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[14].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[14].expertispoang=2;
-	bakgrundstabeller.nermadasbefolkning[14].beskrivning="Mer framstÃ¥endekÃ¶pmÃ¤n markerar ofta sitt avstÃ¥nd mot de mÃ¥nglare som mÃ¥ste skrika ut sina varors fÃ¶rtrÃ¤fflighet pÃ¥ gator och torg, men handlarna ser och hÃ¶r mycket som inte nÃ¥r in i de slutna salongerna.";
-	bakgrundstabeller.nermadasbefolkning[14].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.nermadasbefolkning[14].beskrivning="Mer framståendeköpmän markerar ofta sitt avstånd mot de månglare som måste skrika ut sina varors förträfflighet på gator och torg, men handlarna ser och hör mycket som inte når in i de slutna salongerna.";
+	bakgrundstabeller.nermadasbefolkning[14].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[15] = {};
@@ -1480,8 +1480,8 @@
 	bakgrundstabeller.nermadasbefolkning[15].valfriatabellslag=1;
 	bakgrundstabeller.nermadasbefolkning[15].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[15].hantverkpoang=2;
-	bakgrundstabeller.nermadasbefolkning[15].beskrivning="Det finns alltid hÃ¥rda arbeten som behÃ¶ver gÃ¶ras, och mÃ¥nga fattiga som sliter ut sina kroppar fÃ¶r att utfÃ¶ra dem.";
-	bakgrundstabeller.nermadasbefolkning[15].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.nermadasbefolkning[15].beskrivning="Det finns alltid hårda arbeten som behöver göras, och många fattiga som sliter ut sina kroppar för att utföra dem.";
+	bakgrundstabeller.nermadasbefolkning[15].beskrivninghak = "1 slag på valfri tabell, 4 enheter Vildmarksfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[16] = {};
@@ -1491,19 +1491,19 @@
 	bakgrundstabeller.nermadasbefolkning[16].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[16].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[16].kanneteckenpoang=2;
-	bakgrundstabeller.nermadasbefolkning[16].beskrivning="Gyckelkonster och deras utÃ¶vare Ã¤r lÃ¥ngt ifrÃ¥n lika aktade som att fÃ¤ngsla en publik med musik och sagor, men mÃ¥nga har inget val och andra anser att ett liv i nÃ¥gon sorts frihet Ã¤r vÃ¤rt rotlÃ¶sheten och de sneda blickarna.";
-	bakgrundstabeller.nermadasbefolkning[16].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken.";
+	bakgrundstabeller.nermadasbefolkning[16].beskrivning="Gyckelkonster och deras utövare är långt ifrån lika aktade som att fängsla en publik med musik och sagor, men många har inget val och andra anser att ett liv i någon sorts frihet är värt rotlösheten och de sneda blickarna.";
+	bakgrundstabeller.nermadasbefolkning[16].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[17] = {};
-	bakgrundstabeller.nermadasbefolkning[17].rubrik="HamnsjÃ¥are";
-	bakgrundstabeller.nermadasbefolkning[17].bestamd="hamnsjÃ¥aren";
-	bakgrundstabeller.nermadasbefolkning[17].obestamd="en hamnsjÃ¥are";
+	bakgrundstabeller.nermadasbefolkning[17].rubrik="Hamnsjåare";
+	bakgrundstabeller.nermadasbefolkning[17].bestamd="hamnsjåaren";
+	bakgrundstabeller.nermadasbefolkning[17].obestamd="en hamnsjåare";
 	bakgrundstabeller.nermadasbefolkning[17].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[17].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[17].expertispoang=2;
-	bakgrundstabeller.nermadasbefolkning[17].beskrivning="Om Ã¤n betraktade som rÃ¥skinn som man gÃ¶r bÃ¤st i att inte stÃ¶ta sig med fyller hamnsjÃ¥arna en mycket viktig funktion genom att lassa och lossa varor i Nermadas hamnar.";
-	bakgrundstabeller.nermadasbefolkning[17].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.nermadasbefolkning[17].beskrivning="Om än betraktade som råskinn som man gör bäst i att inte stöta sig med fyller hamnsjåarna en mycket viktig funktion genom att lassa och lossa varor i Nermadas hamnar.";
+	bakgrundstabeller.nermadasbefolkning[17].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[18] = {};
@@ -1513,19 +1513,19 @@
 	bakgrundstabeller.nermadasbefolkning[18].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[18].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[18].hantverkpoang=2;
-	bakgrundstabeller.nermadasbefolkning[18].beskrivning="Det finns alltid saker som behÃ¶ver lagas eller skapas frÃ¥n grunden, och hantverkare lÃ¥ter sig svÃ¥rligen klumpas ihop till en grupp. Allt frÃ¥n krukmakare till snickare och vapensmeder ryms i denna bakgrund.";
-	bakgrundstabeller.nermadasbefolkning[18].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.nermadasbefolkning[18].beskrivning="Det finns alltid saker som behöver lagas eller skapas från grunden, och hantverkare låter sig svårligen klumpas ihop till en grupp. Allt från krukmakare till snickare och vapensmeder ryms i denna bakgrund.";
+	bakgrundstabeller.nermadasbefolkning[18].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[19] = {};
-	bakgrundstabeller.nermadasbefolkning[19].rubrik="HÃ¤rold";
-	bakgrundstabeller.nermadasbefolkning[19].bestamd="hÃ¤rolden";
-	bakgrundstabeller.nermadasbefolkning[19].obestamd="en hÃ¤rold";
+	bakgrundstabeller.nermadasbefolkning[19].rubrik="Härold";
+	bakgrundstabeller.nermadasbefolkning[19].bestamd="härolden";
+	bakgrundstabeller.nermadasbefolkning[19].obestamd="en härold";
 	bakgrundstabeller.nermadasbefolkning[19].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[19].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[19].hantverkpoang=2;
-	bakgrundstabeller.nermadasbefolkning[19].beskrivning="Det faller pÃ¥ hÃ¤roldens lott att bÃ¥de skapa passande vapenskÃ¶ldar och med tillbÃ¶rlig inlevelse tillkÃ¤nnage sin herres nÃ¤rvaro, sÃ¥ dessa ibland adliga mÃ¤n och kvinnor mÃ¥ste ha sÃ¥vÃ¤l hantverksmÃ¤ssig skicklighet som fÃ¶rmÃ¥ga att ta folk.";
-	bakgrundstabeller.nermadasbefolkning[19].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.nermadasbefolkning[19].beskrivning="Det faller på häroldens lott att både skapa passande vapensköldar och med tillbörlig inlevelse tillkännage sin herres närvaro, så dessa ibland adliga män och kvinnor måste ha såväl hantverksmässig skicklighet som förmåga att ta folk.";
+	bakgrundstabeller.nermadasbefolkning[19].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[20] = {};
@@ -1535,8 +1535,8 @@
 	bakgrundstabeller.nermadasbefolkning[20].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[20].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[20].stridsfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[20].beskrivning="De flesta indrivare Ã¤r fÃ¶ga mer Ã¤n utpressare som jobbar fÃ¶r Ã¤nnu vÃ¤rre skurkar, men vissa av dem tjÃ¤nar nÃ¥gorlunda legitima herrar. Metoderna Ã¤r dock ofta desamma.";
-	bakgrundstabeller.nermadasbefolkning[20].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter Sociala fÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[20].beskrivning="De flesta indrivare är föga mer än utpressare som jobbar för ännu värre skurkar, men vissa av dem tjänar någorlunda legitima herrar. Metoderna är dock ofta desamma.";
+	bakgrundstabeller.nermadasbefolkning[20].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Sociala färdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[21] = {};
@@ -1546,30 +1546,30 @@
 	bakgrundstabeller.nermadasbefolkning[21].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[21].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[21].hantverkpoang=2;
-	bakgrundstabeller.nermadasbefolkning[21].beskrivning="Vare sig de driver boskap eller tvingar ur jorden dess ibland magra skÃ¶rdar Ã¤r det jordbrukarna som tillsammans med fiskare och jÃ¤gare stÃ¥r fÃ¶r att driva upp den mat som alla behÃ¶ver.";
-	bakgrundstabeller.nermadasbefolkning[21].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter VildmarksfÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.nermadasbefolkning[21].beskrivning="Vare sig de driver boskap eller tvingar ur jorden dess ibland magra skördar är det jordbrukarna som tillsammans med fiskare och jägare står för att driva upp den mat som alla behöver.";
+	bakgrundstabeller.nermadasbefolkning[21].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Vildmarksfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[22] = {};
-	bakgrundstabeller.nermadasbefolkning[22].rubrik="JÃ¤gare";
-	bakgrundstabeller.nermadasbefolkning[22].bestamd="jÃ¤garen";
-	bakgrundstabeller.nermadasbefolkning[22].obestamd="en jÃ¤gare";
+	bakgrundstabeller.nermadasbefolkning[22].rubrik="Jägare";
+	bakgrundstabeller.nermadasbefolkning[22].bestamd="jägaren";
+	bakgrundstabeller.nermadasbefolkning[22].obestamd="en jägare";
 	bakgrundstabeller.nermadasbefolkning[22].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[22].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[22].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[22].beskrivning="Att jaga fÃ¶r fÃ¶dan Ã¤r inte sÃ¤rskilt vanligt i Nermada, och det Ã¤r inte ovanligt att en stor del av den professionella jÃ¤garens tid gÃ¥r Ã¥t till att hÃ¥lla ett vakande Ã¶ga pÃ¥ lÃ¤nsherrens marker.";
-	bakgrundstabeller.nermadasbefolkning[22].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[22].beskrivning="Att jaga för födan är inte särskilt vanligt i Nermada, och det är inte ovanligt att en stor del av den professionella jägarens tid går åt till att hålla ett vakande öga på länsherrens marker.";
+	bakgrundstabeller.nermadasbefolkning[22].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[23] = {};
-	bakgrundstabeller.nermadasbefolkning[23].rubrik="KonstnÃ¤r";
-	bakgrundstabeller.nermadasbefolkning[23].bestamd="konstnÃ¤ren";
-	bakgrundstabeller.nermadasbefolkning[23].obestamd="en konstnÃ¤r";
+	bakgrundstabeller.nermadasbefolkning[23].rubrik="Konstnär";
+	bakgrundstabeller.nermadasbefolkning[23].bestamd="konstnären";
+	bakgrundstabeller.nermadasbefolkning[23].obestamd="en konstnär";
 	bakgrundstabeller.nermadasbefolkning[23].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[23].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[23].hantverkpoang=2;
-	bakgrundstabeller.nermadasbefolkning[23].beskrivning="Nermadas konstnÃ¤rer Ã¤r oftast skulptÃ¶rer, men mÃ¥leriet hÃ¥ller pÃ¥ att bli allt populÃ¤rare och dess kvalitet allt hÃ¶gre. KonstnÃ¤rerna distanserar sig gÃ¤rna frÃ¥n de hantverkare med vilka de delar mÃ¥nga drag, och Ã¤r inte sÃ¤llan av Ã¤del bÃ¶rd.";
-	bakgrundstabeller.nermadasbefolkning[23].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Hantverk."
+	bakgrundstabeller.nermadasbefolkning[23].beskrivning="Nermadas konstnärer är oftast skulptörer, men måleriet håller på att bli allt populärare och dess kvalitet allt högre. Konstnärerna distanserar sig gärna från de hantverkare med vilka de delar många drag, och är inte sällan av ädel börd.";
+	bakgrundstabeller.nermadasbefolkning[23].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Hantverk."
 
 	
 	bakgrundstabeller.nermadasbefolkning[24] = {};
@@ -1579,8 +1579,8 @@
 	bakgrundstabeller.nermadasbefolkning[24].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[24].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[24].socialafardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[24].beskrivning="Kunskap Ã¤r makt, och det finns alltid nÃ¥gon som Ã¤r beredd att betala fÃ¶r hemligheter.";
-	bakgrundstabeller.nermadasbefolkning[24].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[24].beskrivning="Kunskap är makt, och det finns alltid någon som är beredd att betala för hemligheter.";
+	bakgrundstabeller.nermadasbefolkning[24].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[25] = {};
@@ -1590,20 +1590,20 @@
 	bakgrundstabeller.nermadasbefolkning[25].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[25].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[25].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[25].beskrivning="Att fÃ¤rdas med bud stÃ¤ller stora krav pÃ¥ sÃ¥vÃ¤l kuriren som hans riddjur. Det finns budbÃ¤rare som arbetar fÃ¶r vem som Ã¤n kan betala, men i allmÃ¤nhet Ã¤r de anstÃ¤llda av nÃ¥gon Ã¤dling eller fÃ¶rmÃ¶gen person.";
-	bakgrundstabeller.nermadasbefolkning[25].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[25].beskrivning="Att färdas med bud ställer stora krav på såväl kuriren som hans riddjur. Det finns budbärare som arbetar för vem som än kan betala, men i allmänhet är de anställda av någon ädling eller förmögen person.";
+	bakgrundstabeller.nermadasbefolkning[25].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[26] = {};
-	bakgrundstabeller.nermadasbefolkning[26].rubrik="KÃ¶pman";
-	bakgrundstabeller.nermadasbefolkning[26].bestamd="kÃ¶pmannen";
-	bakgrundstabeller.nermadasbefolkning[26].obestamd="en kÃ¶pman";
+	bakgrundstabeller.nermadasbefolkning[26].rubrik="Köpman";
+	bakgrundstabeller.nermadasbefolkning[26].bestamd="köpmannen";
+	bakgrundstabeller.nermadasbefolkning[26].obestamd="en köpman";
 	bakgrundstabeller.nermadasbefolkning[26].pluralobestamd="gisslan";
 	bakgrundstabeller.nermadasbefolkning[26].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[26].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[26].socialafardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[26].beskrivning="Ã„ven om konkurrensen bland kÃ¶pmÃ¤nnen Ã¤r hÃ¥rd anser mÃ¥nga att det Ã¤r vÃ¤rt att ge sig in i den eviga kampen om den bÃ¤sta affÃ¤ren. De frÃ¤msta blir ocksÃ¥ nÃ¤rmast ofattbart rika.";
-	bakgrundstabeller.nermadasbefolkning[26].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[26].beskrivning="Även om konkurrensen bland köpmännen är hård anser många att det är värt att ge sig in i den eviga kampen om den bästa affären. De främsta blir också närmast ofattbart rika.";
+	bakgrundstabeller.nermadasbefolkning[26].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[27] = {};
@@ -1613,19 +1613,19 @@
 	bakgrundstabeller.nermadasbefolkning[27].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[27].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[27].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[27].beskrivning="De som strider fÃ¶r den som kan betala betraktas ofta som ett orosmoment i de styrandes Ã¶gon, men samtidigt behÃ¶vs deras tjÃ¤nster och de kan ibland dra in en god sold.";
-	bakgrundstabeller.nermadasbefolkning[27].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter."
+	bakgrundstabeller.nermadasbefolkning[27].beskrivning="De som strider för den som kan betala betraktas ofta som ett orosmoment i de styrandes ögon, men samtidigt behövs deras tjänster och de kan ibland dra in en god sold.";
+	bakgrundstabeller.nermadasbefolkning[27].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter."
 
 	
 	bakgrundstabeller.nermadasbefolkning[28] = {};
-	bakgrundstabeller.nermadasbefolkning[28].rubrik="LÃ¤kekunnig";
-	bakgrundstabeller.nermadasbefolkning[28].bestamd="den lÃ¤kekunniga";
-	bakgrundstabeller.nermadasbefolkning[28].obestamd="en lÃ¤kekunnig";
+	bakgrundstabeller.nermadasbefolkning[28].rubrik="Läkekunnig";
+	bakgrundstabeller.nermadasbefolkning[28].bestamd="den läkekunniga";
+	bakgrundstabeller.nermadasbefolkning[28].obestamd="en läkekunnig";
 	bakgrundstabeller.nermadasbefolkning[28].kunskapmysterier=1;
 	bakgrundstabeller.nermadasbefolkning[28].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[28].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[28].beskrivning="Vare sig hon Ã¤r en medikus i en stad eller en klok gumma pÃ¥ landsbygden Ã¤r den lÃ¤kekunniga mycket uppskattad, Ã¤ven om det alltid finns de som viskar bakom hennes rygg om kÃ¤llan till hennes kunskap.";
-	bakgrundstabeller.nermadasbefolkning[28].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[28].beskrivning="Vare sig hon är en medikus i en stad eller en klok gumma på landsbygden är den läkekunniga mycket uppskattad, även om det alltid finns de som viskar bakom hennes rygg om källan till hennes kunskap.";
+	bakgrundstabeller.nermadasbefolkning[28].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[29] = {};
@@ -1635,8 +1635,8 @@
 	bakgrundstabeller.nermadasbefolkning[29].kunskapmysterier=1;
 	bakgrundstabeller.nermadasbefolkning[29].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[29].valfriaenheter=4;
-	bakgrundstabeller.nermadasbefolkning[29].beskrivning="InnanfÃ¶r klostrens skyddande vÃ¤ggar kan de varmt troende reflektera Ã¶ver trons mysterier och dessutom fÃ¶rkovra sig i allehanda lÃ¤rdom och fÃ¤rdigheter, allt efter sin ordens krav och sina egna talanger.";
-	bakgrundstabeller.nermadasbefolkning[29].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.nermadasbefolkning[29].beskrivning="Innanför klostrens skyddande väggar kan de varmt troende reflektera över trons mysterier och dessutom förkovra sig i allehanda lärdom och färdigheter, allt efter sin ordens krav och sina egna talanger.";
+	bakgrundstabeller.nermadasbefolkning[29].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[30] = {};
@@ -1646,8 +1646,8 @@
 	bakgrundstabeller.nermadasbefolkning[30].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[30].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[30].valfriaenheter=4;
-	bakgrundstabeller.nermadasbefolkning[30].beskrivning="Att livnÃ¤ra sig pÃ¥ att lÃ¥na ut pengar anses lÃ¥ngt ifrÃ¥n hedervÃ¤rt, men den skicklige ockraren kan bli fÃ¶rmÃ¶gen och leva i ett Ã¶verflÃ¶d som annars Ã¤r fÃ¶rbehÃ¥llet adeln.";
-	bakgrundstabeller.nermadasbefolkning[30].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 4 valfria enheter."
+	bakgrundstabeller.nermadasbefolkning[30].beskrivning="Att livnära sig på att låna ut pengar anses långt ifrån hedervärt, men den skicklige ockraren kan bli förmögen och leva i ett överflöd som annars är förbehållet adeln.";
+	bakgrundstabeller.nermadasbefolkning[30].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 4 valfria enheter."
 
 	
 	bakgrundstabeller.nermadasbefolkning[31] = {};
@@ -1657,8 +1657,8 @@
 	bakgrundstabeller.nermadasbefolkning[31].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[31].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[31].stridsfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[31].beskrivning="Besluten om var trupper ska placeras pÃ¥ slagfÃ¤lt och hur Ã¶vergripande strategier ska lÃ¤ggas upp fattas av befÃ¤l som antingen sjÃ¤lva Ã¤r av nobel bÃ¶rd eller tjÃ¤nar nÃ¥gon Ã¤dling. Dessa krigskonstens frÃ¤msta leder dessutom djÃ¤rvt trupper i strid.";
-	bakgrundstabeller.nermadasbefolkning[31].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[31].beskrivning="Besluten om var trupper ska placeras på slagfält och hur övergripande strategier ska läggas upp fattas av befäl som antingen själva är av nobel börd eller tjänar någon ädling. Dessa krigskonstens främsta leder dessutom djärvt trupper i strid.";
+	bakgrundstabeller.nermadasbefolkning[31].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Kunskapsfärdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[32] = {};
@@ -1668,29 +1668,29 @@
 	bakgrundstabeller.nermadasbefolkning[32].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[32].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[32].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[32].beskrivning="Havets fasor hÃ¤rjar Ã¤ven kring det fredliga Nermada, med sÃ¥vÃ¤l brutala Ã¶verfall till havs som snabba strandhugg.";
-	bakgrundstabeller.nermadasbefolkning[32].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter."
+	bakgrundstabeller.nermadasbefolkning[32].beskrivning="Havets fasor härjar även kring det fredliga Nermada, med såväl brutala överfall till havs som snabba strandhugg.";
+	bakgrundstabeller.nermadasbefolkning[32].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter."
 
 	
 	bakgrundstabeller.nermadasbefolkning[33] = {};
-	bakgrundstabeller.nermadasbefolkning[33].rubrik="PrisjÃ¤gare";
-	bakgrundstabeller.nermadasbefolkning[33].bestamd="prisjÃ¤garen";
-	bakgrundstabeller.nermadasbefolkning[33].obestamd="en prisjÃ¤gare";
+	bakgrundstabeller.nermadasbefolkning[33].rubrik="Prisjägare";
+	bakgrundstabeller.nermadasbefolkning[33].bestamd="prisjägaren";
+	bakgrundstabeller.nermadasbefolkning[33].obestamd="en prisjägare";
 	bakgrundstabeller.nermadasbefolkning[33].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[33].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[33].rorelsefardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[33].beskrivning="Uppdragen att jaga ner personer pÃ¥ flykt kommer omvÃ¤xlande frÃ¥n den dÃ¶mande makten och frÃ¥n rika och hÃ¤mndlystna privatpersoner. Vilka uppdrag prisjÃ¤garen tas styrs av dennes moral och mÃ¶jlighet att vÃ¤lja och vraka, sÃ¥tillvida han inte Ã¤r anstÃ¤lld av nÃ¥gon vars order han bara har att lyda.";
-	bakgrundstabeller.nermadasbefolkning[33].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter RÃ¶relsefÃ¤rdigheter 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[33].beskrivning="Uppdragen att jaga ner personer på flykt kommer omväxlande från den dömande makten och från rika och hämndlystna privatpersoner. Vilka uppdrag prisjägaren tas styrs av dennes moral och möjlighet att välja och vraka, såtillvida han inte är anställd av någon vars order han bara har att lyda.";
+	bakgrundstabeller.nermadasbefolkning[33].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Rörelsefärdigheter 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[34] = {};
-	bakgrundstabeller.nermadasbefolkning[34].rubrik="PrÃ¤st";
-	bakgrundstabeller.nermadasbefolkning[34].bestamd="prÃ¤sten";
+	bakgrundstabeller.nermadasbefolkning[34].rubrik="Präst";
+	bakgrundstabeller.nermadasbefolkning[34].bestamd="prästen";
 	bakgrundstabeller.nermadasbefolkning[34].kunskapmysterier=1;
 	bakgrundstabeller.nermadasbefolkning[34].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[34].mystikfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[34].beskrivning="Vare sig man fÃ¶rmedlar Aurias och Pelias budskap eller tolkar Daaks heliga ord Ã¤r prÃ¤sten en mycket viktig och i allmÃ¤nhet respekterad person.";
-	bakgrundstabeller.nermadasbefolkning[34].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter MystikfÃ¤rdigheter."
+	bakgrundstabeller.nermadasbefolkning[34].beskrivning="Vare sig man förmedlar Aurias och Pelias budskap eller tolkar Daaks heliga ord är prästen en mycket viktig och i allmänhet respekterad person.";
+	bakgrundstabeller.nermadasbefolkning[34].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Kunskapsfärdigheter, 4 enheter Mystikfärdigheter."
 
 	
 	bakgrundstabeller.nermadasbefolkning[35] = {};
@@ -1699,18 +1699,18 @@
 	bakgrundstabeller.nermadasbefolkning[35].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[35].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[35].stridsfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[35].beskrivning="Att tjÃ¤na sin lÃ¤nsherre med vapen i hand Ã¤r ett sÃ¤tt att leva och en kÃ¤lla till stolthet fÃ¶r Nermadas riddare.";
-	bakgrundstabeller.nermadasbefolkning[35].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter Sociala fÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[35].beskrivning="Att tjäna sin länsherre med vapen i hand är ett sätt att leva och en källa till stolthet för Nermadas riddare.";
+	bakgrundstabeller.nermadasbefolkning[35].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Sociala färdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[36] = {};
-	bakgrundstabeller.nermadasbefolkning[36].rubrik="SjÃ¶farare";
-	bakgrundstabeller.nermadasbefolkning[36].bestamd="sjÃ¶fararen";
+	bakgrundstabeller.nermadasbefolkning[36].rubrik="Sjöfarare";
+	bakgrundstabeller.nermadasbefolkning[36].bestamd="sjöfararen";
 	bakgrundstabeller.nermadasbefolkning[36].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[36].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[36].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[36].beskrivning="Ingen kan berÃ¤tta lika mycket om frÃ¤mmande lÃ¤nder och mÃ¤rkliga folk som en berest sjÃ¶man, men fÃ¥ stretar heller lika hÃ¥rt eller riskerar lika mycket.";
-	bakgrundstabeller.nermadasbefolkning[36].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[36].beskrivning="Ingen kan berätta lika mycket om främmande länder och märkliga folk som en berest sjöman, men få stretar heller lika hårt eller riskerar lika mycket.";
+	bakgrundstabeller.nermadasbefolkning[36].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[37] = {};
@@ -1718,17 +1718,17 @@
 	bakgrundstabeller.nermadasbefolkning[37].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[37].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[37].hantverkpoang=2;
-	bakgrundstabeller.nermadasbefolkning[37].beskrivning="Ã„ven om de flesta nermadier kan lÃ¤sa och skriva Ã¥tminstone hjÃ¤lpligt finns det goda mÃ¶jligheter till arbeten fÃ¶r den som snabbt och elegant kan fÃ¤sta ord pÃ¥ prÃ¤nt.";
-	bakgrundstabeller.nermadasbefolkning[37].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 2 poÃ¤ng Hantverk.";
+	bakgrundstabeller.nermadasbefolkning[37].beskrivning="Även om de flesta nermadier kan läsa och skriva åtminstone hjälpligt finns det goda möjligheter till arbeten för den som snabbt och elegant kan fästa ord på pränt.";
+	bakgrundstabeller.nermadasbefolkning[37].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 2 poäng Hantverk.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[38] = {};
-	bakgrundstabeller.nermadasbefolkning[38].rubrik="SkÃ¶ka";
+	bakgrundstabeller.nermadasbefolkning[38].rubrik="Sköka";
 	bakgrundstabeller.nermadasbefolkning[38].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[38].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[38].expertispoang=2;
-	bakgrundstabeller.nermadasbefolkning[38].beskrivning="Vare sig hon Ã¤r mer eller mindre slav pÃ¥ nÃ¥gon bordell eller bespottad sockenhora ute pÃ¥ landet Ã¤r skÃ¶kan en kvinna som folk frÃ¥n alla samhÃ¤llsskikt sÃ¥vÃ¤l fÃ¶raktar som gÃ¶r affÃ¤rer med.";
-	bakgrundstabeller.nermadasbefolkning[38].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.nermadasbefolkning[38].beskrivning="Vare sig hon är mer eller mindre slav på någon bordell eller bespottad sockenhora ute på landet är skökan en kvinna som folk från alla samhällsskikt såväl föraktar som gör affärer med.";
+	bakgrundstabeller.nermadasbefolkning[38].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[39] = {};
@@ -1737,8 +1737,8 @@
 	bakgrundstabeller.nermadasbefolkning[39].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[39].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[39].valfriaenheter=4;
-	bakgrundstabeller.nermadasbefolkning[39].beskrivning="Ã„ven om slaveriets omfattning har minskat anvÃ¤nds slavar alltjÃ¤mt fÃ¶r en hel del ofta hÃ¥rda och farliga arbeten.";
-	bakgrundstabeller.nermadasbefolkning[39].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.nermadasbefolkning[39].beskrivning="Även om slaveriets omfattning har minskat används slavar alltjämt för en hel del ofta hårda och farliga arbeten.";
+	bakgrundstabeller.nermadasbefolkning[39].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Rörelsefärdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[40] = {};
@@ -1746,8 +1746,8 @@
 	bakgrundstabeller.nermadasbefolkning[40].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[40].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[40].kanneteckenpoang=2;
-	bakgrundstabeller.nermadasbefolkning[40].beskrivning="De kÃ¤mpar som strider pÃ¥ gladiatorarenorna Ã¤r aldrig fria, men de kan vinna en berÃ¶mmelse som arbetsslavar aldrig kommer i nÃ¤rheten av.";
-	bakgrundstabeller.nermadasbefolkning[40].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 2 poÃ¤ng KÃ¤nnetecken."
+	bakgrundstabeller.nermadasbefolkning[40].beskrivning="De kämpar som strider på gladiatorarenorna är aldrig fria, men de kan vinna en berömmelse som arbetsslavar aldrig kommer i närheten av.";
+	bakgrundstabeller.nermadasbefolkning[40].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Kännetecken."
 
 	
 	bakgrundstabeller.nermadasbefolkning[41] = {};
@@ -1755,8 +1755,8 @@
 	bakgrundstabeller.nermadasbefolkning[41].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[41].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[41].expertispoang=2;
-	bakgrundstabeller.nermadasbefolkning[41].beskrivning="Slavhandlarna fÃ¶r en allt mer tynande tillvaro i en tid nÃ¤r de flesta slavar fÃ¶ds in i sina roller och ofta tjÃ¤nar samma herre eller slÃ¤kt under hela sina liv. Ã„nnu gÃ¥r det dock att gÃ¶ra stora vinster i handeln med slavar som Ã¤r dugliga eller pÃ¥ andra sÃ¤tt intressanta.";
-	bakgrundstabeller.nermadasbefolkning[41].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.nermadasbefolkning[41].beskrivning="Slavhandlarna för en allt mer tynande tillvaro i en tid när de flesta slavar föds in i sina roller och ofta tjänar samma herre eller släkt under hela sina liv. Ännu går det dock att göra stora vinster i handeln med slavar som är dugliga eller på andra sätt intressanta.";
+	bakgrundstabeller.nermadasbefolkning[41].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[42] = {};
@@ -1764,8 +1764,8 @@
 	bakgrundstabeller.nermadasbefolkning[42].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[42].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[42].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[42].beskrivning="DÃ¤r det finns nÃ¥gon som krÃ¤ver in tullar finns det nÃ¥gon som lever pÃ¥ att fÃ¶rsÃ¶ka frakta varor utan att behÃ¶va dela med sig av sina pengar.";
-	bakgrundstabeller.nermadasbefolkning[42].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter."
+	bakgrundstabeller.nermadasbefolkning[42].beskrivning="Där det finns någon som kräver in tullar finns det någon som lever på att försöka frakta varor utan att behöva dela med sig av sina pengar.";
+	bakgrundstabeller.nermadasbefolkning[42].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter."
 
 	
 	bakgrundstabeller.nermadasbefolkning[43] = {};
@@ -1773,8 +1773,8 @@
 	bakgrundstabeller.nermadasbefolkning[43].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[43].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[43].valfriaenheter=4;
-	bakgrundstabeller.nermadasbefolkning[43].beskrivning="Som soldaten tillhÃ¶r man de fasta militÃ¤ra styrkorna, och fÃ¥r en anstÃ¤ndig stridstrÃ¤ning.";
-	bakgrundstabeller.nermadasbefolkning[43].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter StridsfÃ¤rdigheter, 4 valfria enheter.";
+	bakgrundstabeller.nermadasbefolkning[43].beskrivning="Som soldaten tillhör man de fasta militära styrkorna, och får en anständig stridsträning.";
+	bakgrundstabeller.nermadasbefolkning[43].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Stridsfärdigheter, 4 valfria enheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[44] = {};
@@ -1782,8 +1782,8 @@
 	bakgrundstabeller.nermadasbefolkning[44].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[44].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[44].rorelsefardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[44].beskrivning="Spelaren fÃ¶rsÃ¶rjer sig pÃ¥ att bedriva hasardspel eller vadslagningar, men fÃ¥ har den enorma talang eller sanslÃ¶sa tur som krÃ¤vs fÃ¶r att alltid kunna sÃ¤kra en vinst pÃ¥ Ã¤rligt vis.";
-	bakgrundstabeller.nermadasbefolkning[44].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[44].beskrivning="Spelaren försörjer sig på att bedriva hasardspel eller vadslagningar, men få har den enorma talang eller sanslösa tur som krävs för att alltid kunna säkra en vinst på ärligt vis.";
+	bakgrundstabeller.nermadasbefolkning[44].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[45] = {};
@@ -1791,17 +1791,17 @@
 	bakgrundstabeller.nermadasbefolkning[45].striderdrabbningar=1;
 	bakgrundstabeller.nermadasbefolkning[45].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[45].socialafardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[45].beskrivning="Den dagliga tillvaron fÃ¶r stadsvakterna Ã¤r sÃ¤llan sÃ¤rskilt spÃ¤nnande, men stÃ¤derna kan inte vara utan dem och det finns vissa mÃ¶jligheter att avancera till bÃ¤ttre avlÃ¶nade tjÃ¤nster.";
-	bakgrundstabeller.nermadasbefolkning[45].beskrivninghak = "1 slag pÃ¥ Strider \& drabbningar, 4 enheter Sociala fÃ¤rdigheter, 4 enheter StridsfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[45].beskrivning="Den dagliga tillvaron för stadsvakterna är sällan särskilt spännande, men städerna kan inte vara utan dem och det finns vissa möjligheter att avancera till bättre avlönade tjänster.";
+	bakgrundstabeller.nermadasbefolkning[45].beskrivninghak = "1 slag på Strider \& drabbningar, 4 enheter Sociala färdigheter, 4 enheter Stridsfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[46] = {};
-	bakgrundstabeller.nermadasbefolkning[46].rubrik="StrÃ¥trÃ¶vare";
+	bakgrundstabeller.nermadasbefolkning[46].rubrik="Stråtrövare";
 	bakgrundstabeller.nermadasbefolkning[46].farderaventyr=1;
 	bakgrundstabeller.nermadasbefolkning[46].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[46].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[46].beskrivning="Grupper av desperata mÃ¤n och kvinnor slÃ¥r sig ibland ihop och driver runt pÃ¥ landsbygden, dÃ¤r de stjÃ¤l vad de kan under hot om och utÃ¶vande av vÃ¥ld. [1 slag pÃ¥ FÃ¤rder & Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.]";
-	bakgrundstabeller.nermadasbefolkning[46].beskrivninghak = "1 slag pÃ¥ FÃ¤rder \& Ã¤ventyr, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[46].beskrivning="Grupper av desperata män och kvinnor slår sig ibland ihop och driver runt på landsbygden, där de stjäl vad de kan under hot om och utövande av våld. [1 slag på Färder & äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.]";
+	bakgrundstabeller.nermadasbefolkning[46].beskrivninghak = "1 slag på Färder \& äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[47] = {};
@@ -1809,8 +1809,8 @@
 	bakgrundstabeller.nermadasbefolkning[47].kunskapmysterier=1;
 	bakgrundstabeller.nermadasbefolkning[47].stridsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[47].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[47].beskrivning="Varje religion kan fÃ¶rr eller senare behÃ¶va fÃ¶rsvaras med vapen i hand, och dessa strider Ã¤r tempelriddarnas uppdrag.";
-	bakgrundstabeller.nermadasbefolkning[47].beskrivninghak = "1 slag pÃ¥ Kunskap \& mysterier, 4 enheter StridsfÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[47].beskrivning="Varje religion kan förr eller senare behöva försvaras med vapen i hand, och dessa strider är tempelriddarnas uppdrag.";
+	bakgrundstabeller.nermadasbefolkning[47].beskrivninghak = "1 slag på Kunskap \& mysterier, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[48] = {};
@@ -1820,26 +1820,959 @@
 	bakgrundstabeller.nermadasbefolkning[48].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[48].rorelsefardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[48].vildmarksfardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[48].beskrivning="Tjuvens tveksamma syssla kan bestÃ¥ av allt frÃ¥n simpla fickstÃ¶lder nÃ¤r ingen tittar till halsbrytande fasadklÃ¤ttring fÃ¶r att bryta sig in hos den som tror sig vara sÃ¤ker bakom hÃ¶ga murar.";
-	bakgrundstabeller.nermadasbefolkning[48].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter RÃ¶relsefÃ¤rdigheter, 4 enheter VildmarksfÃ¤rdigheter.";
+	bakgrundstabeller.nermadasbefolkning[48].beskrivning="Tjuvens tveksamma syssla kan bestå av allt från simpla fickstölder när ingen tittar till halsbrytande fasadklättring för att bryta sig in hos den som tror sig vara säker bakom höga murar.";
+	bakgrundstabeller.nermadasbefolkning[48].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[49] = {};
-	bakgrundstabeller.nermadasbefolkning[49].rubrik="VÃ¤rdshusvÃ¤rd";
+	bakgrundstabeller.nermadasbefolkning[49].rubrik="Värdshusvärd";
 	bakgrundstabeller.nermadasbefolkning[49].valfriatabellslag=1;
 	bakgrundstabeller.nermadasbefolkning[49].socialafardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[49].expertispoang=2;
-	bakgrundstabeller.nermadasbefolkning[49].beskrivning="Det stÃ¤lle som kan tillhandahÃ¥lla Ã¤tlig mat, starka drycker och anstÃ¤ndigt loppfria bÃ¤ddar kan utgÃ¶ra ett vÃ¤lkommet inslag i stadsbilden eller vara en bys sjÃ¤lva centrum, och somliga vÃ¤rdshusvÃ¤rdar lever mycket gott pÃ¥ sin verksamhet.";
-	bakgrundstabeller.nermadasbefolkning[49].beskrivninghak = "1 slag pÃ¥ valfri tabell, 4 enheter Sociala fÃ¤rdigheter, 2 poÃ¤ng Expertiser.";
+	bakgrundstabeller.nermadasbefolkning[49].beskrivning="Det ställe som kan tillhandahålla ätlig mat, starka drycker och anständigt loppfria bäddar kan utgöra ett välkommet inslag i stadsbilden eller vara en bys själva centrum, och somliga värdshusvärdar lever mycket gott på sin verksamhet.";
+	bakgrundstabeller.nermadasbefolkning[49].beskrivninghak = "1 slag på valfri tabell, 4 enheter Sociala färdigheter, 2 poäng Expertiser.";
 
 	
 	bakgrundstabeller.nermadasbefolkning[50] = {};
-	bakgrundstabeller.nermadasbefolkning[50].rubrik="Ã„ktenskapsmÃ¤klare";
+	bakgrundstabeller.nermadasbefolkning[50].rubrik="Äktenskapsmäklare";
 	bakgrundstabeller.nermadasbefolkning[50].intrigerillgarningar=1;
 	bakgrundstabeller.nermadasbefolkning[50].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.nermadasbefolkning[50].socialafardigheterenheter=4;
-	bakgrundstabeller.nermadasbefolkning[50].beskrivning="Kanske finns det inget mer typiskt nermadiskt yrke Ã¤n den nobla sysselsÃ¤ttningen att fÃ¶rhandla fram Ã¤ktenskap.";
-	bakgrundstabeller.nermadasbefolkning[50].beskrivninghak = "1 slag pÃ¥ Intriger \& illgÃ¤rningar, 4 enheter KunskapsfÃ¤rdigheter, 4 enheter Sociala fÃ¤rdigheter."
+	bakgrundstabeller.nermadasbefolkning[50].beskrivning="Kanske finns det inget mer typiskt nermadiskt yrke än den nobla sysselsättningen att förhandla fram äktenskap.";
+	bakgrundstabeller.nermadasbefolkning[50].beskrivninghak = "1 slag på Intriger \& illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter."
+	
+	
+	
+	
+	bakgrundstabeller.damarien = [];
+	bakgrundstabeller.damarien[0] = {};
+	bakgrundstabeller.damarien[0].subval = [[[]]];
+	bakgrundstabeller.damarien[0].vald = 0;
+    bakgrundstabeller.damarien[0].rubrik="Damarien";
+    bakgrundstabeller.damarien[0].namn="damarien";
+	
+	bakgrundstabeller.damarien[1] = {};
+	bakgrundstabeller.damarien[1].rubrik="Alkemist";
+	bakgrundstabeller.damarien[1].beskrivning="Alkemisten viger sitt liv åt att förena magi, vetenskap och ockultism. Vissa når erkännande men många slutar som galningar efter att ha luktat för djupt i de dunster som salter och syror utsöndrar. De flesta alkemister i Damarien är medlemmar i den mystiska och högt ansedda Santimarexorden och många av dem är ursprungligen flyktingar från Jargien, där alkemister ofta förföljs av inkvisitionen.";
+	bakgrundstabeller.damarien[1].kunskapmysterier=1;
+	bakgrundstabeller.damarien[1].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[1].mystikfardigheterenheter=4;
+	
+	
+	bakgrundstabeller.damarien[2] = {};
+	bakgrundstabeller.damarien[2].rubrik="Ambulier";
+	bakgrundstabeller.damarien[2].beskrivning="Många av de fedaker som slagit sig ned i Damarien har behållit sin kringresande livsstil. De mest legendariska av dessa är ambulierna, eller knallarna, gårdfarihandlare som reser mellan byar och gods och försörjer sig genom att byta sina egna hantverk och alla möjliga varor de kommit över under sina resor. Många sagor och vidskepelser har uppstått kring dem och det sägs att resande köpmän är särskilt beskyddade av S:t Argora. Ofta vågar inte ens Kristallordens krigare attackera en knalle som bär helgonets amulett på sitt bröst.";
+	bakgrundstabeller.damarien[2].farderaventyr=1;
+	bakgrundstabeller.damarien[2].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[2].hantverkpoang=2;
+	
+	
+	
+
+	
+	bakgrundstabeller.damarien[3] = {};
+	bakgrundstabeller.damarien[3].rubrik="Apotekare";
+	bakgrundstabeller.damarien[3].beskrivning="I trånga butiker i städerna, stugor på landsbygden eller täckta vagnar som rör sig mellan byarna förrättar apotekarna sitt värv. De förser folket med extrakt, salvor och dekokter som sägs bota allt från magont, eksem och varande sår till håravfall, impotens och tandvärk. Vissa kan konsten att sätta stopp för oönskade graviditeter och andra säljer gifter utan att ställa några frågor.";
+	bakgrundstabeller.damarien[3].farderaventyr=1;
+	bakgrundstabeller.damarien[3].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[3].vildmarksfardigheterenheter=4;
+	
+
+
+	bakgrundstabeller.damarien[4] = {};
+	bakgrundstabeller.damarien[4].rubrik="Arkitekt";
+	bakgrundstabeller.damarien[4].beskrivning="Innan Helmslakten hade staden en av Asharinahalvöns viktigaste läroanstalter för arkitektur och byggkonst, där dvärgar och människor med små medel tillsammans frambringade imponerande byggnadsverk. Sedan Helms fördärv har mycket gått förlorat, men i och med återuppbyggnaden av Helm, Mirrons snabba tillväxt och Thamas intensiva upprustning av Damariens borgar finns det gott om arbete för arkitekter. Precis som i Kejsardömet är arkitekter högt sedda, men det är även en riskabel position då det är farligt att känna till hemligheterna hos mäktiga härskares byggprojekt. Det är inte ovanligt att arkitekter som konstruerat borgar åt storfursten eller adelsmän försvinner spårlöst så snart projektet fullbordats.";
+	bakgrundstabeller.damarien[4].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[4].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[4].socialafardigheterenheter=4;
+	
+	
+
+	bakgrundstabeller.damarien[5] = {};
+	bakgrundstabeller.damarien[5].rubrik="Barberare";
+	bakgrundstabeller.damarien[5].beskrivning="Barberarna är respekterade hantverkare som tar betalt för att klippa hår, lägga frisyrer och trimma skägg åt alla som har råd. Men även om de är mest kända för skönhetsvård så är barberarens arbete långt mer mångfacetterat än så, då många av dem mot betalning bland annat drar ut kunders värkande tänder, åderlåter dem med iglar eller till och med utför enklare kirurgi och amputationer. Detta gör att många damarier får kalla kårar vid åsynen av de röda och vita stänger som märker ut barberarbodarna, där den röda färgen symboliserar blod och den vita bandage. En barberare kommer ofta mycket nära sina kunder och kan därför ibland vara i besittning av väldigt känslig, privat information om dessa.";
+	bakgrundstabeller.damarien[5].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[5].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[5].hantverkpoang=2;
+	
+	
+
+	bakgrundstabeller.damarien[6] = {};
+	bakgrundstabeller.damarien[6].rubrik="Bard";
+	bakgrundstabeller.damarien[6].beskrivning="Med flinka fingrar över en lyras strängar förrättar barden sitt värv. Sånger framförs som sätter hjärtan i brand, får tårar att flöda, leenden att sprida sig och skratt att klinga. Barden är en sagoberättare, sångare, poet och underhållare. De mest misslyckade barderna är inte mycket mer än tiggare som i lappade kläder spelar på spruckna instrument medan de mest lyckade uppträder uteslutande för de rikaste släkterna och till och med inför storfurstens hov.";
+	bakgrundstabeller.damarien[6].farderaventyr=1;
+	bakgrundstabeller.damarien[6].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[6].socialafardigheterenheter=4;
+	
+	
+
+	bakgrundstabeller.damarien[7] = {};
+	bakgrundstabeller.damarien[7].rubrik="Besvärjare";
+	bakgrundstabeller.damarien[7].beskrivning="Även om många damarier känner djup fruktan och avsky för besvärjare och trots att Daaks präster predikar om de mörka konsternas ondska kan magiker ofta öppet utöva sin konst i storfurstendömet. Under århundraden har otaliga häxor och trollkarlar flytt från kejsardömet för att söka en fristad i Damarien. Endast ett fåtal gillen tillåts verka, det viktigaste av dessa är de magiker som är organiserade i Santimarexorden. Men inte ens där kan en magiker känna sig helt trygg, då de Daaktroende Sebaeliterna, storfurstens kunskapare eller en ensam häxjägare när som helst kan få för sig att dennes studier i de förbjudna konsterna gått för långt och måste göras slut på en gång för alla.";
+	bakgrundstabeller.damarien[7].kunskapmysterier=1;
+	bakgrundstabeller.damarien[7].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[7].mystikfardigheterenheter=4;
+	
+	.
+
+	bakgrundstabeller.damarien[8] = {};
+	bakgrundstabeller.damarien[8].rubrik="Boktryckare";
+	bakgrundstabeller.damarien[8].beskrivning="Med bläckstänkta händer och en stressad uppsyn så driver boktryckarna på med sin produktion av att trycka böcker åt kyrkan och privata aktörer. De ristar hela sidor i trä och trycker sedan dessa, då dvärgiska bokpressar med rörliga typer alltjämt väl förborgad hemlighet. Boktryckarnas hantverk ses på med misstanke och är mycket ogillade av skrivarna då deras roll blir alltmer försvagad ju fler böcker som trycks. Boktryckning utan storfurstens uttryckliga tillåtelse är förbjudet, då detta ses som ett farligt sätt att sprida upproriska tankar. De tryckare som finns övervakas antingen strängt av kronans kunskapare eller så arbetar de i det fördolda.";
+	bakgrundstabeller.damarien[8].kunskapmysterier=1;
+	bakgrundstabeller.damarien[8].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[8].hantverkpoang=2;
+	
+	
+
+	bakgrundstabeller.damarien[9] = {};
+	bakgrundstabeller.damarien[9].rubrik="Brottsling";
+	bakgrundstabeller.damarien[9].pluralobestamd="brottslingar";
+	bakgrundstabeller.damarien[9].beskrivning="Även i länder med brutala rättsväsenden finns det gott om människor som av olika skäl beslutat sig för att leva det farliga livet som brottslingar och försörja sig på rån, smuggling, inbrott och beskyddarverksamhet. Många av dem som lever på samhällets skuggsida försvarar sig med att de inte gör något som inte storfursten och hans hejdukar själva ägnar sig åt, men de flesta brottslingar gör helt enkelt det de gör för att överleva ännu en dag i en grym värld.";
+	bakgrundstabeller.damarien[9].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[9].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[9].stridsfardigheterenheter=4;
+	
+
+	bakgrundstabeller.damarien[10] = {};
+	bakgrundstabeller.damarien[10].rubrik="Daakmunk/Daaknunna";
+	bakgrundstabeller.damarien[10].obestamd="en munk/nunna";
+	bakgrundstabeller.damarien[10].bestamd="munken/nunnan";
+	bakgrundstabeller.damarien[10].obestamdplural="munkar/nunnor";
+	bakgrundstabeller.damarien[10].bestamdplural="munkarna/nunnorna";
+	bakgrundstabeller.damarien[10].beskrivning="De finns de troende som väljer att svära sig till Daak och gå i kloster för att där tjäna honom. En del kloster ligger isolerade långt ute på landsbygden medan andra är belägna mitt i städer där man dagligen har kontakt med stadsborna. Vissa kloster är mycket strikta med tysthetslöfte och straff för minsta förseelse men i andra sker förbjudna ting bakom murarna och där handlar löftet snarare om att inte avslöja något för utomstående.";
+	bakgrundstabeller.damarien[10].kunskapmysterier=1;
+	bakgrundstabeller.damarien[10].kunskapsfardigheter=4;
+	bakgrundstabeller.damarien[10].valfriaenheter=4;
+	
+	
+
+	bakgrundstabeller.damarien[11] = {};
+	bakgrundstabeller.damarien[11].rubrik="Daakpräst";
+	bakgrundstabeller.damarien[11].beskrivning="Damarien är ett mörkt rike där falska gudar och demoner håller folket i ett järngrepp, men även här står enstaka kyrkor vigda till den sanna guden som ljus i ett fasansfullt mörker. Prästerna har till uppgift att rädda deras själar och hjälpa folket att finna Daak. De håller mässor, ger råd och är hjälp och stöd till dem som har det svårt eller har drabbats av tvivel. Många har valt detta värv på grund av sin tilltro till den ende guden och en vilja att göra gott men det finns de som, drivna av girighet och politiska ambitioner, använder tron som ett redskap för att manipulera sina anhängare och svartmåla sina fiender.";
+	bakgrundstabeller.damarien[11].kunskapmysterier=1;
+	bakgrundstabeller.damarien[11].kunskapsfardigheter=4;
+	bakgrundstabeller.damarien[11].mystikfardigheterenheter=4;
+	
+	
+
+	bakgrundstabeller.damarien[12] = {};
+	bakgrundstabeller.damarien[12].rubrik="Dansare";
+	bakgrundstabeller.damarien[12].beskrivning="Över hela storfurstendömet finns professionella dansare som roar hög som låg med sina rytmiska kroppsrörelser. Där finns allt från de hovdansare som underhåller furstar med sin skönhet och grace till folkdansare som leder böndernas skördefester. Det finns även de som genom sin dans berättar om helgonens liv i kyrkans mysteriespel och de som dansar urgamla rituella danser för att ära de gamla gudarna och de hedniska makterna.";
+	bakgrundstabeller.damarien[12].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[12].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[12].kanneteckenpoang=2;
+	
+
+
+	bakgrundstabeller.damarien[13] = {};
+	bakgrundstabeller.damarien[13].rubrik="Demagog";
+	bakgrundstabeller.damarien[13].beskrivning="Ord kan flytta berg, röra folkmassor till handling och få katastrofer att låta som glädjebud. En del demagoger är inte mer än skrävlare, andra är karismatiska sektledare, anstiftare till blodiga uppror eller sådana som älskar att skapa konflikter. Vissa talare är officiellt sanktionerade och uppbackade av storfursten för att sprida dennes ord till folket, andra är uppviglare och rebeller som ständigt lever på flykt undan kronans vrede.";
+	bakgrundstabeller.damarien[13].valfriatabellslag=1;
+	bakgrundstabeller.damarien[13].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[13].expertispoang=2;
+	
+
+	bakgrundstabeller.damarien[14] = {};
+	bakgrundstabeller.damarien[14].rubrik="Dibukkultist";
+	bakgrundstabeller.damarien[14].beskrivning="Allt som lever ska dö. Alla blommor ska vittra. Så även gudar, demoner och världen själv. Endast döden består. Många damarier fruktar och hatar den obeveklige skördemannen och hans mänskliga anhängare, men många fler dyrkar honom mer eller mindre öppet i hopp om en plats i hans mörka rike, där en stilla vind blåser genom tårpilar och vallmoblommor och skänker de döda en välsignad sömn och lindring från livets plågor. Andra ber till honom för skydd mot spöken och lamior och få är de som inte viker undan när de ser Dibuks barn, Kristallordens krigarorden, komma vandrande på vägen.";
+	bakgrundstabeller.damarien[14].kunskapmysterier=1;
+	bakgrundstabeller.damarien[14].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[14].stridsfardigheterenheter=4;
+	
+	
+
+	bakgrundstabeller.damarien[15] = {};
+	bakgrundstabeller.damarien[15].rubrik="Domare";
+	bakgrundstabeller.damarien[15].beskrivning="De damariska domstolarna är vida omtalade för sina okorrumperade och obarmhärtiga domare som genomför storfurstens hårda lagar efter att ha handplockats av denne. Under storfursten själv står ett antal praeatorer, som ansvarar för lagen i varje hertig- och furstendöme och under dessa flera länsdomare, som styr över rättvisan i enskilda städer eller grevskap. Domarna är hårda kvinnor och män som i första hand tjänar Thamas och i andra hand någon form av rättvisa. De är mäktiga allierade, men har nästan utan undantag många inflytelserika fiender från alla samhällsklasser.";
+	bakgrundstabeller.damarien[15].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[15].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[15].socialafardigheterenheter=4;
+	
+	
+
+	bakgrundstabeller.damarien[16] = {};
+	bakgrundstabeller.damarien[16].rubrik="Domedagspredikant";
+	bakgrundstabeller.damarien[16].beskrivning="Den sista tiden närmar sig. Tecknen blir allt fler och snart kommer den mörke Malgoarh och hans demoner att störta in i världen och alla som inte är svurna till Daak kommer slitas i stycken och torteras i all evighet. Domedagspredikanterna inser detta och försöker med hängivelse, förkunnanden och öppna predikningar varna folket. Domedagspredikanterna kan man se på torg, vandrande mellan städer och utanför kyrkorna.";
+	bakgrundstabeller.damarien[16].kunskapmysterier=1;
+	bakgrundstabeller.damarien[16].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[16].socialafardigheterenheter=4;
+	
+
+	bakgrundstabeller.damarien[17] = {};
+	bakgrundstabeller.damarien[17].rubrik="Dödgrävare";
+	bakgrundstabeller.damarien[17].beskrivning="Allt dör förr eller senare. De rika sätter mat i halsen och de fattiga svälter ihjäl. För dödgrävaren spelar det ingen roll – alla ska de ned i jorden. Gravar skottas upp, kroppar sänks ned och jord skyfflas över. En del tar extra tid och placerar en blomma på graven och säger en bön – andra plundrar de döda på allt de har och vissa säljer kroppar eller delar av kroppar till ljusskygga individer. Dödgrävare ses på med misstro då det finns många sagor och sånger där dödgrävare sägs stå i förbund med mörkrets makter.";
+	bakgrundstabeller.damarien[17].kunskapmysterier=1;
+	bakgrundstabeller.damarien[17].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[17].expertispoang=2;
+	
+	
+
+	bakgrundstabeller.damarien[18] = {};
+	bakgrundstabeller.damarien[18].rubrik="Falenu";
+	bakgrundstabeller.damarien[18].bestamd="falenun";
+	bakgrundstabeller.damarien[18].obestamdplural="faleni";
+	bakgrundstabeller.damarien[18].bestamdplural="falenierna";
+	bakgrundstabeller.damarien[18].beskrivning="Från norra Damarien kommer de mystiska faleni (sing	falenu) vars namn kommer från det vallanboriska ordet för nattfjärilar. Enligt sägnen hämtar nattfjärilar de dödas själar under natten och för dem till dödsriket. En människa som är falenu är en sorts hednisk präst eller andemedium som har en nära koppling till döden, antingen genom att de dött och återupplivats eller för att de haft en kraftfull nära-döden-upplevelse. Då man tror att de sett den andra sidan betraktas de som de dödas språkrör till de levande. Faleni kommer ursprungligen från Vallanborien, men man kan finna enstaka över hela storfurstendömet.";
+	bakgrundstabeller.damarien[18].kunskapmysterier=1;
+	bakgrundstabeller.damarien[18].mystikfardigheterenheter=4;
+	bakgrundstabeller.damarien[18].kanneteckenpoang=2;
+	
+	
+
+	bakgrundstabeller.damarien[19] = {};
+	bakgrundstabeller.damarien[19].rubrik="Fiskare";
+	bakgrundstabeller.damarien[19].beskrivning="På floder, sjöar och vid Purpurhavets och Takalorrsundets grunda stränder kan man se fiskarnas båtar. Vattnet är deras levebröd. Från djupet drar de upp sprattlande fiskar som glänser likt silver i solskenet. De lagar sina nät på ställningar vid stränderna och röker, saltar och jäser sin fångst. Många är vidskepliga och alla har de en respekt för vädrets makter, i synnerhet stormarna, som välter deras båtar och offrar dem till djupet.";
+	bakgrundstabeller.damarien[19].farderaventyr=1;
+	bakgrundstabeller.damarien[19].vildmarksfardigheterenheter=4;
+	bakgrundstabeller.damarien[19].expertispoang=2;
+	
+	
+
+	bakgrundstabeller.damarien[20] = {};
+	bakgrundstabeller.damarien[20].rubrik="Flagellant";
+	bakgrundstabeller.damarien[20].beskrivning="Klädd i trasor och med sönderpiskad rygg vandrar flagellanten genom Damarien. Denne är uppfylld av den heliga profeten Udars lidande och mässar osammanhängande för alla som vill lyssna. Vissa blir flagellanter efter religiösa visioner, andra som straff för sina synder. För att visa Udars barmhärtighet tar en del med sig föräldralösa barn i sitt följe och låter dem leva på allmosorna. De smetar in barnens kinder med sitt blod tills barnen är gamla nog att själva ta upp piskan och delta i självspäkelsen – den heligaste av riter.";
+	bakgrundstabeller.damarien[20].farderaventyr=1;
+	bakgrundstabeller.damarien[20].vildmarksfardigheterenheter=4;
+	bakgrundstabeller.damarien[20].expertispoang=2;
+	
+	
+
+	bakgrundstabeller.damarien[21] = {};
+	bakgrundstabeller.damarien[21].rubrik="Fogde";
+	bakgrundstabeller.damarien[21].beskrivning="Inte ens kronans nattgardister är mer fruktade och avskydda av allmogen än storfurstens fogdar. Fogdarna är ämbetsmän utsedda av storfursten och förvaltar exempelvis slott och tillhörande gårdar, en stad eller till och med en gruva åt kronan. De driver in skatter från området, säljer de skatter som betalas i form av boskap eller varor, och ansvarar också för att en del skattemedel används lokalt, till exempel för att underhålla vägar och marknadsplatser. Dessa män och kvinnor har extremt långtgående befogenheter när det gäller att driva in skatterna och drar sig inte för att statuera exempel om det behövs. De är dock relativt okorrumperade då de avlönas direkt av kronan och det är stränga straff för den fogde som försöker driva in extra medel åt sig själv.";
+	bakgrundstabeller.damarien[21].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[21].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[21].stridsfardigheterenheter=4;
+	
+	
+
+	bakgrundstabeller.damarien[22] = {};
+	bakgrundstabeller.damarien[22].rubrik="Forskare";
+	bakgrundstabeller.damarien[22].beskrivning="I Hammarnäs, Mirron och Targus kan man finna sammanslutningar av lärda män och kvinnor som arbetar för att fördjupa sina kunskaper människan, naturen, historia eller teologi. En del forskare arbetar på institutioner stödda av kronan eller kyrkan, men de allra flesta är personer med pengar och tid nog att fördjupa sig i världens mysterier. Många lärda har under åren flytt till Damarien från Kejsardömet, då Damariens härskare nästan alltid varit mer förlåtande mot forskning som i andra länder betraktats som hädisk.";
+	bakgrundstabeller.damarien[22].kunskapmysterier=1;
+	bakgrundstabeller.damarien[22].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[22].expertispoang=2;	
+	
+	bakgrundstabeller.damarien[23] = {};
+	bakgrundstabeller.damarien[23].rubrik="Fältskär";
+	bakgrundstabeller.damarien[23].beskrivning="När det sker stridigheter dör de flesta långt efter slaget av sina skador. Fältskären försöker rädda livet på dem. Denne läkekunnige är van att resa med soldater eller håller sig nära borgar och gränsposteringar. Fältskärer är skickliga på att stoppa blödningar, spjälka ben och genomföra vissa enklare kirurgiska ingrepp men trots detta dukar många av patienterna under och få har sett så mycket lidande i livets sista timmar som dessa män och kvinnor.";
+	bakgrundstabeller.damarien[23].striderdrabbningar=1;
+	bakgrundstabeller.damarien[23].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[23].stridsfardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[24] = {};
+	bakgrundstabeller.damarien[24].rubrik="Gatuförsäljare";
+	bakgrundstabeller.damarien[24].beskrivning="Skrikandes erbjudanden om färsk fisk, vackra tyger, nybakt bröd och väldoftande oljor står gatuförsäljarna i sina små affärer och lockar in folkhopen för att köpa deras varor. Med snabba ord som likt ljuv musik söker sig in i kundernas öron säljer de sina varor. De använder alla knep som finns för att klara vardagen och samtidigt försöka hålla uppe sitt rykte till morgondagen.";
+	bakgrundstabeller.damarien[24].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[24].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[24].expertispoang=2;
+	
+	
+	bakgrundstabeller.damarien[25] = {};
+	bakgrundstabeller.damarien[25].rubrik="Gisslan";
+	bakgrundstabeller.damarien[25].bestamd="gisslan";
+	bakgrundstabeller.damarien[25].pluralobestamd="gisslan";
+	bakgrundstabeller.damarien[25].pluralbestamd="gisslan";
+	bakgrundstabeller.damarien[25].beskrivning="Att sända sina barn, äkta hälft eller andra släktingar till fienden som en säkerhet för ett avtal har alltid förekommit i den damariska adeln, men under Thamas regering har det blivit en institution. I nästan alla adelsfamiljer, från de mäktigaste fursteätterna till de enklaste markägare, har någon kommenderats till Targus för det som kallas kronans gästfrihet av storfursten. Gisslan behandlas oftast väl och får en god utbildning på Thamas bekostnad, där lojaliteten mot kronan betonas mycket hårt. Men om deras släktingar missköter sig sitter gisslans huvud löst.";
+	bakgrundstabeller.damarien[25].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[25].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[25].expertispoang=2;
+	
+
+	bakgrundstabeller.damarien[26] = {};
+	bakgrundstabeller.damarien[26].rubrik="Godsherre";
+	bakgrundstabeller.damarien[26].beskrivning="I små gårdar, ensliga slott eller någon av Krylomars otaliga storjordbruk regerar godsherrarna, lågadel som ofta inte är mer än en storbonde med vapensköld och ett fint namn. En gång i tiden var många godsherrar lokala härskare som var fruktade och hade egna små arméer, men efter Thamas har de drabbats av obarmhärtiga utrensningar och många av dem är numera föga mer än tjänstemän som lever i ständig fruktan för storfurstens stränga fogdar och räkenskapsmän. Dessutom har flera urgamla godsägarfamiljer utplånats och ersatts av personer trogna storfursten, många av dem ofrälse eller utlänningar.";
+	bakgrundstabeller.damarien[26].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[26].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[26].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[26].beskrivning="";
+	
+	
+	
+	bakgrundstabeller.damarien[27] = {};
+	bakgrundstabeller.damarien[27].rubrik="Grovarbetare";
+	bakgrundstabeller.damarien[27].beskrivning="Yxor biter in i trädstammarna, hackor och hammare frigör marmor från stenbrotten och murar och byggnader byggs av ren mankraft. Grovarbetarna är fattiga damarier som lyckats hålla sig utanför livegenskapen, men de betalar ett högt pris för det i svett och lidande. De är kända för kamratskap och envishet. Arbetslagen sliter i både regn och gassande sol och sover sedan tungt i kojorna ute i vildmarken. När säsongen är över återvänder de till sina familjer med pengar eller till städerna i jakt på nytt arbete.";
+	bakgrundstabeller.damarien[27].valfriatabellslag=1;
+	bakgrundstabeller.damarien[27].vildmarksfardigheterenheter=4;
+	bakgrundstabeller.damarien[27].hantverkpoang=2;
+	
+	
+	
+	bakgrundstabeller.damarien[28] = {};
+	bakgrundstabeller.damarien[28].rubrik="Gråtare";
+	bakgrundstabeller.damarien[28].beskrivning="När en person dött anlitas gråtare för att sörja den döde och hålla onda makter borta från likvakan. Även när fattiga och okända lik ska begravas kallas de ofta in, eftersom döda som begravs obegråtna sägs hemsöka sina begravningsplatser. De klär sig i askgrå kläder, skriker, gråter och släpper ut sorg och vånda. De sjunger även begravningshymner där de, beroende på den dödes tro, ber Daaks helgon att visa den döde nåd eller Dibuk att öppna dödsrikets portar för den bortgångne. De vindtroende gråtarna ber den mörka Östanvinden att föra den dödes själ till en god pånyttfödelse och att snart låta den lyckliga Västanvinden återvända till den dödes hus. Ofta förrättar de sitt värv utanför den avlidnes hem eller vandrar utefter stadens gator och skriker den dödes namn.";
+	bakgrundstabeller.damarien[28].valfriatabellslag=1;
+	bakgrundstabeller.damarien[28].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[28].expertispoang=2;
+	bakgrundstabeller.damarien[26].beskrivning="";
+	
+	bakgrundstabeller.damarien[29] = {};
+	bakgrundstabeller.damarien[29].rubrik="Gränsvakt";
+	bakgrundstabeller.damarien[29].beskrivning="Alltsedan Thamas Vitfjäder krossade sina fiender och erövrade den damariska kronan har han gjort vad han kunnat för att ta kontroll över rikets gränser. Den paranoide storfursten är ständigt vaksam, mot såväl smugglare som de fiender som i exil planerar hans fall och mot utländska kungars spioner. Vid storfurstendömets gränser och hamnar arbetar dessa hårdföra och skarpsynta soldater som systematiskt genomsöker resenärers packning och skeppens last. Trots hot om hårda straff är några av dem korrupta, men de flesta tror fullt och fast på sitt uppdrag som storfurstendömets beskyddare.";
+	bakgrundstabeller.damarien[29].striderdrabbningar=1;
+	bakgrundstabeller.damarien[29].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[29].stridsfardigheterenheter=4;
+	
+	
+	bakgrundstabeller.damarien[30] = {};
+	bakgrundstabeller.damarien[30].rubrik="Gycklare";
+	bakgrundstabeller.damarien[30].beskrivning="Enkla nöjen för enkla människor. Gycklare underhåller det vanliga folket med allehanda konster såsom akrobatik, jonglering, eldblåsning och eldslukning samt enklare fakirtrick. Många gycklare vandrar mellan städerna för att finna nya platser där folk ännu inte sett deras uppträdande och dessa uppmärksamma personer för med sig skvaller och nyheter från storfurstendömets alla hörn.";
+	bakgrundstabeller.damarien[30].farderaventyr=1;
+	bakgrundstabeller.damarien[30].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[30].kanneteckenpoang=2;
+	
+	
+	bakgrundstabeller.damarien[31] = {};
+	bakgrundstabeller.damarien[31].rubrik="Hamnarbetare";
+	bakgrundstabeller.damarien[31].beskrivning="Nära botten av samhällets pyramid befinner sig hamnarbetarna och de utför den grova arbetsinsats som krävs för att stuva lasten på fartyg. De syns ständigt vandrande i hamnen, bärande på tunga säckar eller lårar. De är råbarkade typer med ytterst lite fritid som de gärna ägnar åt att dricka på billiga tavernor, ständigt beredda på slagsmål. Hamnarbetare vet ofta mycket om vad för last olika skepp och lagerbyggnader har i sina mörka utrymmen och för några extra stop öl på krogen blir de ofta benägna att berätta mer om lasten än dess ägare skulle vilja.";
+	bakgrundstabeller.damarien[31].striderdrabbningar=1;
+	bakgrundstabeller.damarien[31].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[31].expertispoang=2;
+	
+	bakgrundstabeller.damarien[32] = {};
+	bakgrundstabeller.damarien[32].rubrik="Hantverkare";
+	bakgrundstabeller.damarien[32].beskrivning="I städerna lever hantverkarna indelade i olika gillen. De mest inflytelserika hantverkarna är gillesmästare vilka anses vara några av stadens mäktigaste män som sitter på både rikligt med pengar och otaliga hantverkshemligheter. De som har lägst inflytande är lärlingar vilka under flera års tid får arbeta likt slavar åt någon av de andra medlemmarna i hopp om att lära sig värvet.";
+	bakgrundstabeller.damarien[32].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[32].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[32].hantverkpoang=2;
+	
+	bakgrundstabeller.damarien[33] = {};
+	bakgrundstabeller.damarien[33].rubrik="Hednapräst";
+	bakgrundstabeller.damarien[33].beskrivning="Även om Daakkyrkan dominerar bland de rika och mäktiga är hedendomen och de gamla sederna fortfarande starka i stora delar av furstendömet, där de gamla gudarna alltjämt är starka. Allt från Jordmodern Leticias munkar och nunnor till havsguden Navares saltpräster och de mystiska månsystrarna lever och verkar i Damarien för att fungera som gudarnas språkrör. Ibland i perfekt harmoni med Daaks präster och de fem vindarnas munkar, och ibland låsta i dödlig, oförlåtande konflikt.";
+	bakgrundstabeller.damarien[33].kunskapmysterier=1;
+	bakgrundstabeller.damarien[33].mystikfardigheterenheter=4;
+	bakgrundstabeller.damarien[33].kanneteckenpoang=2;
+	
+	bakgrundstabeller.damarien[34] = {};
+	bakgrundstabeller.damarien[34].rubrik="Henrudit";
+	bakgrundstabeller.damarien[34].beskrivning="Den heliga Henrudas orden är Damariens äldsta Daaktrogna klosterorden och följer sitt helgons exempel genom att med ord och lärdom ära Daak och Milargok Förkunnaren. Systrarna, som ofta är änkor från adeln eller rika borgarfamiljer, är en stor maktfaktor inom den damariska kyrkan och kontrollerar även de damariska kloster- och katedralskolorna där de rikas och mäktigas barn utbildas. Henruditerna har därför ofta stor makt och insyn i både adelns och kyrkans göromål och då orden utöver detta äger stora lantegendomar kan de normalt sett fredliga nunnorna vara mycket farliga fiender.";
+	bakgrundstabeller.damarien[34].kunskapmysterier=1;
+	bakgrundstabeller.damarien[34].mystikfardigheterenheter=4;
+	bakgrundstabeller.damarien[34].kunskapsfardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[35] = {};
+	bakgrundstabeller.damarien[35].rubrik="Herde";
+	bakgrundstabeller.damarien[35].beskrivning="På de damariska slätterna, floddalarna och bergssluttningarna vandrar stora skockar av får, svin och nötkreatur för att beta och äta upp sig inför vintern. Dessa djur övervakas och vallas av herdar, kvinnor och män som ibland tillbringar långa veckor i ensamhet långt borta från hemmets härd, ofta utan annat sällskap än sina carzimska väktarhundar. Herdarnas arbete är inte bara svårt, fattigt och ensamt, det kan även vara mycket farligt. Dels måste herden kunna vakta sina flockar mot rövare, boskapstjuvar och rovdjur. Dels kan många av dem även berätta gastkramande historier om de monster och skuggväsen som ensamma vallare ibland kunnat ana utanför lägereldens sken.";
+	bakgrundstabeller.damarien[35].farderaventyr=1;
+	bakgrundstabeller.damarien[35].vildmarksfardigheterenheter=4;
+	bakgrundstabeller.damarien[35].hantverkpoang=2;
+	
+	bakgrundstabeller.damarien[36] = {};
+	bakgrundstabeller.damarien[36].rubrik="Ikonmålare";
+	bakgrundstabeller.damarien[36].beskrivning="Ikonmålarna är högt respekterade hantverkare som lärt sig den svåra och tidskrävande konsten att med pensel fånga en liten del av Daaks härlighet på trä och målarduk. Många ikonmålare håller hårt på yrkets hemligheter och det sägs att flera av de största mästarna endast målar efter att under timmar av intensiva böner och självspäkning ha nått direktkontakt med Daaks osynliga rike. Nästan alla Daaktrogna damarier har minst en helig bild i sitt hem mot vilka de riktar sina böner och rikets Daakkyrkor har ofta otaliga, rikt dekorerade bilder av Daak, helgonen och profeterna. Ikonmålarna är nästan alltid munkar och nunnor, och då ikonförsäljning är en stor inkomstkälla för klostren är det inte ovanligt att dessa girigt försöker göra sig av med konkurrenter.";
+	bakgrundstabeller.damarien[36].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[36].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[36].hantverkpoang=2;
+	
+	bakgrundstabeller.damarien[37] = {};
+	bakgrundstabeller.damarien[37].rubrik="Indrivare";
+	bakgrundstabeller.damarien[37].beskrivning="Aggression, hotfullhet och ett respektingivande yttre är meriter hos indrivare i de lägre samhällsklasserna. Bland de mer förmögna är det vältalighet kryddad med dolda hot, skicklig dokumentation och en insikt i låntagarens tillgångar det som fungerar bäst. Deras roll är dock densamma – att utlånade pengar kommer tillbaka till sin ägare. Om detta löses med att fingrar bryts och tänder slås ut eller att affärer saboteras, familjer hotas och egendom bränns ned beror helt och hållet på situationen och summans storlek.";
+	bakgrundstabeller.damarien[37].striderdrabbningar=1;
+	bakgrundstabeller.damarien[37].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[37].stridsfardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[38] = {};
+	bakgrundstabeller.damarien[38].rubrik="Jordbrukare";
+	bakgrundstabeller.damarien[38].beskrivning="Storfurstendömet hålls vid liv av de som sliter med att odla dess magra jordar. Dessa sår fälten, vallar boskapen och frambringar den stora mängd spannmål och kött som fraktas till städerna på oxdragna vagnar. Under svältår är livet på landet mycket hårt men när skörden är god lever många gott och de som är lite mer bemedlade kan hyra in arbetare som daglönare eller har backstugusittare som utför en del av arbetet.";
+	bakgrundstabeller.damarien[38].farderaventyr=1;
+	bakgrundstabeller.damarien[38].vildmarksfardigheterenheter=4;
+	bakgrundstabeller.damarien[38].hantverkpoang=2;
+	
+	bakgrundstabeller.damarien[39] = {};
+	bakgrundstabeller.damarien[39].rubrik="Jordesoldatens vittne";
+	bakgrundstabeller.damarien[39].bestamd="vittnet";
+	bakgrundstabeller.damarien[39].obestamd="ett Jordesoldatens vittne";
+	bakgrundstabeller.damarien[39].pluralobestamd="Jordesoldatens vittnen";
+	bakgrundstabeller.damarien[39].pluralbestamd="vittnena";
+	bakgrundstabeller.damarien[39].beskrivning="Jordesoldatens vittnen är ett religiöst samfund som följer profeten Jordesoldatens läror om tapperhet, ärlighet, syskonskap och hårt arbete. Eftersom ordens medlemmar förkastar Daakkyrkans strikta hierarki har den förklarats kättersk av den jargiska moderkyrkan och rörelsens medlemmar, som inte tillåts ljuga om sin tro, jagas aktivt av inkvisitionen. I Damarien har rörelsen funnit en fristad och blivit populär bland hantverkare, soldater och andra Daaktroende som ser kyrkan som dekadent och korrupt.";
+	bakgrundstabeller.damarien[39].farderaventyr=1;
+	bakgrundstabeller.damarien[39].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[39].hantverkpoang=2;
+	
+	bakgrundstabeller.damarien[40] = {};
+	bakgrundstabeller.damarien[40].rubrik="Jägare";
+	bakgrundstabeller.damarien[40].beskrivning="I den damariska vildmarken lever dessa simpla människor på sin skicklighet med spjut, båge och fällor. Då och då reser de tillbaka till städerna eller byarna med hudar, kött eller hantverk i horn och ben. Vissa jägare arbetar ensamma men andra väljer att ansluta sig till jaktlag som tillsammans driver och fäller bytet.";
+	bakgrundstabeller.damarien[40].farderaventyr=1;
+	bakgrundstabeller.damarien[40].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[40].vildmarksfardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[41] = {};
+	bakgrundstabeller.damarien[41].rubrik="Kadarier";
+	bakgrundstabeller.damarien[41].beskrivning="Kadarierna är en märklig och legendarisk yrkeskår, som lever långa perioder ute i vildmarken för att övervaka de halvtama häst- och boskapsflockar som betar på de damariska slätterna och dalgångarna. Kadarierna är även hedniska präster som ursprungligen fått sitt namn från hästarnas och fruktbarhetens gud Kadar. Även om många kadarier i verkligheten lever hårda, slitsamma och farliga liv har de långhåriga prästerna romantiserats enormt i den damariska kulturen, där de i otaliga sånger och sagor framställs som tappra frihetskämpar, underbara sångare och fantastiska älskare.";
+	bakgrundstabeller.damarien[41].farderaventyr=1;
+	bakgrundstabeller.damarien[41].vildmarksfardigheterenheter=4;
+	bakgrundstabeller.damarien[41].hantverkpoang=2;
+	
+	bakgrundstabeller.damarien[42] = {};
+	bakgrundstabeller.damarien[42].rubrik="Kartograf";
+	bakgrundstabeller.damarien[42].beskrivning="Sedan Thamas erövring av Damariens tron har åtskilliga kartografer kallats till riket för att få ordning på dess otaliga små byar, gods, skogar och dalar. Dessutom skickas många kartografer i hemlighet till grannländer som Västmark och Soldarn för att med stor fara för sitt eget liv kartlägga rikenas vägar och terräng och deras duglighet för trupptransporter. Detta är sysslor som ställer höga krav på såväl hantverksskicklighet som matematisk noggrannhet och fysisk uthållighet.";
+	bakgrundstabeller.damarien[42].farderaventyr=1;
+	bakgrundstabeller.damarien[42].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[42].hantverkpoang=2;
+	
+	bakgrundstabeller.damarien[43] = {};
+	bakgrundstabeller.damarien[43].rubrik="Konfiskatör";
+	bakgrundstabeller.damarien[43].beskrivning="Ägodelar, varor och pengar på villovägar ska naturligtvis beslagtas och återbördas till sin rättmätiga ägare. Oftast rör det sig om någon form av egendom som stulits, förskingrats eller överlåtits till en ny ägare. En konfiskatör stödjer sig på en konfiskationsorder som utfärdats av någon av storfurstens tjänstemän och får normalt provision i efterhand – allt från en tiondel till hälften av godsets värde.";
+	bakgrundstabeller.damarien[43].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[43].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[43].socialafardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[44] = {};
+	bakgrundstabeller.damarien[44].rubrik="Kristallvigd";
+	bakgrundstabeller.damarien[44].bestamd="den kristallvigde";
+	bakgrundstabeller.damarien[44].pluralobestamd="kristallvigda";
+	bakgrundstabeller.damarien[44].pluralbestamd="de kristallvigda";
+	bakgrundstabeller.damarien[44].beskrivning="Kristallorden är ett urgammalt och inflytelserik hedniskt sällskap vars medlemmar ser det som sin plikt att försvara de gamla gudarnas anhängare i Damarien mot verkliga och inbillade hot. Orden är känd för sina årliga korståg mot vindmunkarna, men förföljer även fedaker och Daaks missionärer. De flesta kristallvigda är enkelt folk med vanliga arbeten som öppet eller i hemlighet underkastar sig en hednapräst och ingår i ett av de sällskap som kallas fratages.";
+	bakgrundstabeller.damarien[44].striderdrabbningar=1;
+	bakgrundstabeller.damarien[44].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[44].kanneteckenpoang=2;
+
+	bakgrundstabeller.damarien[45] = {};
+	bakgrundstabeller.damarien[45].rubrik="Kunskapare";
+	bakgrundstabeller.damarien[45].beskrivning="I tjänst åt någon uppsatt, vanligen någon inom kyrkan, någon av adelsätterna, ett handelshus eller kanske till och med ett främmande rike spionerar kunskaparen på sina mål och sänder tillbaka detaljerade rapporter om vad som pågår. En del kunskapare är inte mer än tjänare som får några extra guld genom att berätta vad dennes herrar har för sig medan andra kunskapare har tränats i sitt värv sedan barnsben.";
+	bakgrundstabeller.damarien[45].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[45].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[45].socialafardigheterenheter=4;
+	
+	
+	bakgrundstabeller.damarien[46] = {};
+	bakgrundstabeller.damarien[46].rubrik="Kurirryttare";
+	bakgrundstabeller.damarien[46].beskrivning="Nyheter färdas långsamt i ett land som Damarien, där vägar ofta är illa underhållna och resenärer riskerar att angripas av fredlösa och monster. När bud måste skickas med hast eller nyheter måste spridas till rikets alla invånare sänds kurirryttare mellan städerna. De spikar upp plakat, levererar sigillförseglade brev och viskar kodade budskap till utvalda personer. Så gott som alla stora släkter har egna kurirryttare, likaså kyrkan, Kristallorden och vindmunkarnas kloster.";
+	bakgrundstabeller.damarien[46].farderaventyr=1;
+	bakgrundstabeller.damarien[46].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[46].vildmarksfardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[47] = {};
+	bakgrundstabeller.damarien[47].rubrik="Kvädare";
+	bakgrundstabeller.damarien[47].beskrivning="Från de största borgarna till den enklaste trälstuga sjunger och berättar damarierna sånger, sagor och poesi. En skicklig sagoberättare är ett måste för varje respektabel ståndsperson och en skicklig kvädare med gott minne och vacker röst kan ofta leva väl på att vandra mellan byar och herresäten. Men det är långt ifrån ett farofritt värv, en missnöjd publik eller en adelsman som tror att någon av sagorna driver med honom kan leda till allt från bombardering med rutten frukt till ett fall från slottsmurarna.";
+	bakgrundstabeller.damarien[47].farderaventyr=1;
+	bakgrundstabeller.damarien[47].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[47].kanneteckenpoang=2;
+	
+	bakgrundstabeller.damarien[48] = {};
+	bakgrundstabeller.damarien[48].rubrik="Köpman";
+	bakgrundstabeller.damarien[48].beskrivning="Köpmannen säljer, byter och köper varor och försöker pressa fram så stor vinst som det bara är möjligt. Djärva chanstagningar, försenade leveranser eller mördande konkurrens kan helt slå ut en köpman. Damariens hamnar är en lockande men farlig marknad för många köpmän, ty där kan storfurstens plötsliga infall eller plundrande pirater när som helst förvandla lycka till undergång.";
+	bakgrundstabeller.damarien[48].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[48].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[48].socialafardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[49] = {};
+	bakgrundstabeller.damarien[49].rubrik="Lamiakultist";
+	bakgrundstabeller.damarien[49].beskrivning="Damarien är ett rike som allt sedan sin födelse legat under de vandödas skugga och otaliga är sagorna om de bleka vampyrer som sägs stryka runt nattetid och tömma människor på blod. De är väsen som förkastat Daak men genom mörk magi vunnit skönhet, ofantlig styrka och evigt liv. Runt om i storfurstendömet existerar alltjämt kulter som dyrkar dessa varelser i svarta mässor och blodsriter i hopp om att få del av deras makt och kanske slutligen vinna odödlighetens gåva.";
+	bakgrundstabeller.damarien[49].kunskapmysterier=1;
+	bakgrundstabeller.damarien[49].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[49].expertispoang=2;
+	
+	bakgrundstabeller.damarien[50] = {};
+	bakgrundstabeller.damarien[50].rubrik="Legosoldat";
+	bakgrundstabeller.damarien[50].beskrivning="De krigare som inte ansluter sig till storfurstens armé blir ofta legosoldater. Vissa är före detta soldater som valt att gå sin egen väg medan andra värvas direkt som unga män för att slåss i ett förband. Legosoldater reser land och rike runt för att slåss för dem som betalar bäst.";
+	bakgrundstabeller.damarien[50].striderdrabbningar=1;
+	bakgrundstabeller.damarien[50].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[50].vildmarksfardigheterenheter=4;
+	
+	
+	bakgrundstabeller.damarien[51] = {};
+	bakgrundstabeller.damarien[51].rubrik="Livegen";
+	bakgrundstabeller.damarien[51].bestamd="den livegne"
+	bakgrundstabeller.damarien[51].pluralobestamd="livegna"
+	bakgrundstabeller.damarien[51].pluralbestamd="de livegna"
+	bakgrundstabeller.damarien[51].beskrivning="De allra flesta av Damariens folk är livegna bönder som sliter hårt på någon furstes mark och som ses som föga mer än boskap av sina herrar. Även om en livegen inte kan säljas som en slav är de förbjudna att lämna sin jord utan sin herres tillåtelse och många av dem lever korta och hårda liv där de aldrig ser mer än sin egen hemby. Många livegna har levt hela sina liv på detta sätt, men andra tvingas in i detta tillstånd på grund av obetalda skulder eller fattigdom. Under Thamas har lagarna som reglerar de livegna skärpts, men många av dem stödjer ändå storfursten som anses ha gjort slut på krigen och många av de värsta övergreppen från giriga småfurstar.";
+	bakgrundstabeller.damarien[51].farderaventyr=1;
+	bakgrundstabeller.damarien[51].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[51].valfriaenheter=4;
+	
+	bakgrundstabeller.damarien[52] = {};
+	bakgrundstabeller.damarien[52].rubrik="Livvakt";
+	bakgrundstabeller.damarien[52].beskrivning="Dödens skugga vilar ständigt över Damariens rika och mäktiga och de som har råd håller sig därför nästan alltid med livvakter av något slag. Livvakterna kan komma från många olika bakgrunder, ibland stammar de från familjer som sedan generationer tillbaka visat sin lojalitet mot sina härskare, men ibland rör det sig om tillfälligt anställda äventyrare eller legoknektar. En god livvakt förväntas om så är nödvändigt dö för sin arbetsgivare, men till största delen består deras arbete av att försöka planera sin herres vardag på ett sådant sätt att sådana offer blir onödiga.";
+	bakgrundstabeller.damarien[52].striderdrabbningar=1;
+	bakgrundstabeller.damarien[52].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[52].valfriaenheter=4;
+	
+	bakgrundstabeller.damarien[53] = {};
+	bakgrundstabeller.damarien[53].rubrik="Månsyster";
+	bakgrundstabeller.damarien[53].pluralobestamd="månsystrar";
+	bakgrundstabeller.damarien[53].beskrivning="Under mörka nätter då landet badar i månens bleka sken samlas månsystrarna, grupper av hedningar som tillber de kvinnliga makterna genom extatiska danser och mystiska riter. Många av dem sägs ha skådat både andevärlden och Skugglandet och de sägs ha givits maken att både välsigna och förbanna vänner och fiender. Många damarier vänder sig även till de örtkunniga mystikerna för att bota de sjuka, men även för giftdekokter, kärleksbrygder och fosterfördrivning.";
+	bakgrundstabeller.damarien[53].kunskapmysterier=1;
+	bakgrundstabeller.damarien[53].kunskapsfardigheter=4;
+	bakgrundstabeller.damarien[53].rorelsefardigheterenheter=4;
+	
+	
+	bakgrundstabeller.damarien[54] = {};
+	bakgrundstabeller.damarien[54].rubrik="Lurendrejare";
+	bakgrundstabeller.damarien[54].beskrivning="Lurendrejaren tjänar sitt dagliga bröd genom att bedra sina medmänniskor och har med tiden utvecklat taskspel och bluffmakeri till en konstform oavsett om det rör sig om en charmör som sol-och-vårar ensamma ädlingar deras pengar eller en hänsynslös kvacksalvare som lurar av desperata sjuklingar deras sista slantar i utbyte mot verkningslösa kurer. Denna karriär kräver ett slipat munläder och en förmåga att snabbt försvinna och ligga lågt tills nästa möjlighet öppnar sig om någon börjar ställa obekväma frågor.";
+	bakgrundstabeller.damarien[54].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[54].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[54].expertispoang=2;
+	
+	bakgrundstabeller.damarien[55] = {};
+	bakgrundstabeller.damarien[55].rubrik="Lönnmördare";
+	bakgrundstabeller.damarien[55].beskrivning="I Damarien är det inte ovanligt att oönskade personer undanröjs genom lönnmord. Det kan röra sig om allt från brutala knivskärare i hamnkvarteren till subtila giftmördare vid hovet. Vissa lönnmördare arbetar åt storfursten, andra åt någon av de mäktigaste släkterna eller handelshusen. Dibuks barn har en grupp som kallas Dibuks fingrar medan vindmunkarna har lönnmördare i sitt sällskap Östanvindens skuggor. De professionella mördarna fungerar även som livvakter, rådgivare och som skydd mot andra lönnmördare.";
+	bakgrundstabeller.damarien[55].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[55].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[55].stridsfardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[56] = {};
+	bakgrundstabeller.damarien[56].rubrik="Medikus";
+	bakgrundstabeller.damarien[56].pluralobestamd="medikusar";
+	bakgrundstabeller.damarien[56].beskrivning="";
+	bakgrundstabeller.damarien[56].kunskapmysterier=1;
+	bakgrundstabeller.damarien[56].kunskapsfardigheter=4;
+	bakgrundstabeller.damarien[56].vildmarksfardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[57] = {};
+	bakgrundstabeller.damarien[57].rubrik="Munskänk";
+	bakgrundstabeller.damarien[57].rubrik="munskänkar";
+	bakgrundstabeller.damarien[57].beskrivning="Ju högre status en damarier kunnat kämpa sig till desto fler fiender får hon och förgiftning är en dödsorsak som är allt för vanlig hos de rika. Munskänkar är personer med mycket känsliga smaklökar som tränats i att upptäcka gifter i mat och dryck. Genom att äta en stund innan sin herre kan de utveckla förgiftningssymptom innan herren ens smakar maten. Dessa personer befinner sig mitt bland de högre stånden och har en inblick i många av de göromål som sker där.";
+	bakgrundstabeller.damarien[57].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[57].vildmarksfardigheterenheter=4;
+	bakgrundstabeller.damarien[57].expertispoang=2;
+	
+	bakgrundstabeller.damarien[58] = {};
+	bakgrundstabeller.damarien[58].rubrik="Mästerinformatör";
+	bakgrundstabeller.damarien[58].beskrivning="Ett av storfurstens mest fruktade maktinstrument är de kunskapare, angivare och spioner som är organiserade i samfundet \"Kronans mästerinformatörer\", i folkmun kallat \"Nattmarorna\". Även om underrättelsetjänsten inte är stor är dess ledare mästare på psykologisk krigföring och det sägs att de ibland använder sig av magiska hjälpmedel för att spionera på och mörda sina motståndare. De flesta av dess medlemmar är låga agenter som endast ska rapportera rykten de hör uppåt i hierarkin, medan andra är professionella lönnmördare eller torterare, några av dem besitter till och med magiska och ockulta kunskaper.";
+	bakgrundstabeller.damarien[58].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[58].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[58].socialafardigheterenheter=4;
+	
+	59 
+	
+	1 slag på Intriger & illgärningar, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.
+
+	bakgrundstabeller.damarien[59] = {};
+	bakgrundstabeller.damarien[59].rubrik="Nattgardist";
+	bakgrundstabeller.damarien[59].beskrivning="Vad som började som Thamas personliga livvakt utvecklades snart till storfurstens obarmhärtiga, hatade och fruktade elitstyrka, obändigt lojala till storfursten och drottningen och som med en blandning av våld, skräck och stenhård disciplin säkrat kronan på Thamas huvud. Nattgardisterna har alla personligen valts ut av storfursten, fått riddarslaget av honom och har i folkmun kommit att få öknamnet \"Mörkerhundarna\". Orden är känd för sin förkärlek för att slå till mot storfurstens fiender om natten och medlemskap i sällskapet är en utmärkt väg till makt och inflytande vid hovet i Targus.";
+	bakgrundstabeller.damarien[59].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[59].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[59].vildmarksfardigheterenheter=4;
+	
+	60 
+	
+	1 slag på Intriger & illgärningar, 4 enheter Sociala färdigheter, 4 valfria enheter.
+
+	bakgrundstabeller.damarien[60] = {};
+	bakgrundstabeller.damarien[60].rubrik="Ockrare";
+	bakgrundstabeller.damarien[60].beskrivning="Guld och silver flödar genom storfurstendömets städer och de som inga pengar har kan inte komma långt. Ockrarna är personer som har en egen förmögenhet och som gärna lånar ut en summa mot en riklig ränta. Det finns alltid de som vill göra affärer, behöver en medikus eller måste betala av en skuld. Om inte pengarna kommer tillbaka i tid tvingas ockraren ta hjälp av indrivare för att skydda sin investering.";
+	bakgrundstabeller.damarien[60].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[60].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[60].valfriaenheter=4;
+	
+	61 
+	
+	1 slag på Färder & äventyr, 4 enheter Kunskapsfärdigheter, 4 enheter Vildmarksfärdigheter.
+
+	bakgrundstabeller.damarien[61] = {};
+	bakgrundstabeller.damarien[61].rubrik="Pilgrim";
+	bakgrundstabeller.damarien[61].beskrivning="Allt från de enklaste bönder till de mäktigaste adelsmän ger sig ibland ut på pilgrimsresor, obeväpnade och i enkla kläder, för att få förlåtelse för sina synder, gudarnas välsignelse eller för att vinna insikt i de gudomliga mysterierna. De Daaktroende vandrar ibland till katedralerna i Targus eller Hammarnäset eller hela den långa, farliga vägen till Tibara i kejsardömet via Skymningsvägen. Nästan alla vindtroende försöker minst en gång i livet bege sig till Det vita klostret och många hedningar vandrar till de heliga platserna i Tallveden, Kristalltemplet eller något av Jordmoderns kloster.";
+	bakgrundstabeller.damarien[61].farderaventyr=1;
+	bakgrundstabeller.damarien[61].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[61].vildmarksfardigheterenheter=4;
+	
+	62 
+	
+	1 slag på Strider & drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Kännetecken.
+
+	bakgrundstabeller.damarien[62] = {};
+	bakgrundstabeller.damarien[62].rubrik="Pirat";
+	bakgrundstabeller.damarien[62].beskrivning="Från Piratöarna i söder till Mirrons mörka bakgator eller Purpurhavets otaliga öar härjar laglösa pirater och sjörövare. Dessa brutala män och kvinnor lever på att plundra skepp och ibland även kustbosättningar. De flesta pirater lever i små besättningar eller i (tätt sammansvetsade) klaner om de är tiraker, men på senare år har de religiösa fanatikerna i bandet Okurerna växt sig allt större. Vissa piratkaptener har lyckats få officiella kaparbrev av någon makthavare och kan då med deras välsignelse attackera skepp från fiendenationer.";
+	bakgrundstabeller.damarien[62].striderdrabbningar=1;
+	bakgrundstabeller.damarien[62].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[62].kanneteckenpoang=2;
+	
+	63 
+	
+	1 slag på Strider & drabbningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.
+
+	bakgrundstabeller.damarien[63] = {};
+	bakgrundstabeller.damarien[63].rubrik="Prisjägare";
+	bakgrundstabeller.damarien[63].beskrivning="Några använder sina kontakter och sitt skarpsinne, andra en sällan skådad våldsamhet, men i slutändan är prisjägarens enda mål att fånga in misstänkta brottslingar och upprorsmän och föra dem inför storfurstens domare för att dömas. Arresteringsorder spikas upp på väggar vid stadsportar eller läses upp av utropare och ju farligare byte och grövre brott desto mer silver kan de inbringa.";
+	bakgrundstabeller.damarien[63].striderdrabbningar=1;
+	bakgrundstabeller.damarien[63].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[63].stridsfardigheterenheter=4;
+	
+	64 
+	
+	1 slag på Strider & drabbningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.
+
+	bakgrundstabeller.damarien[64] = {};
+	bakgrundstabeller.damarien[64].rubrik="Protektor";
+	bakgrundstabeller.damarien[64].beskrivning="Det finns många värdefulla saker som behöver skyddas; personer, egendomar och föremål. En protektor har till uppgift att mot betalning vaka över dessa och ta till vapen om så skulle krävas. En del agerar som livvakter till bortskämda ädlingar, andra bär och skyddar familjens sigillstämplar och vissa är anställda av handelshus för att se till att lasten kommer fram orörd.";
+	bakgrundstabeller.damarien[64].striderdrabbningar=1;
+	bakgrundstabeller.damarien[64].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[64].stridsfardigheterenheter=4;
+	
+	65 
+	
+	1 slag på valfri tabell, 4 enheter Sociala färdigheter, 4 valfria enheter.
+
+	bakgrundstabeller.damarien[65] = {};
+	bakgrundstabeller.damarien[65].rubrik="Samarit";
+	bakgrundstabeller.damarien[65].beskrivning="Storfurstendömet är en obarmhärtig plats och den som inte kan hålla sig på fötter trampas ned. Gamla personer dör ensamma i sina stugor, sjuka dukar under i feberfrossor och spädbarn skriker av hunger. Det finns dock de som svurit sina liv åt att bistå sjuka, lytta och modfällda även om de inte kan betala för sig. Dessa barmhärtiga människor finner man bland alla samhällsklasser, till och med på de mest oväntade ställen.";
+	bakgrundstabeller.damarien[65].valfriatabellslag=1;
+	bakgrundstabeller.damarien[65].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[65].valfriaenheter=4;
+	
+	66 
+	
+	1 slag på Kunskap & mysterier, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.
+
+	bakgrundstabeller.damarien[66] = {};
+	bakgrundstabeller.damarien[66].rubrik="Sebaelit";
+	bakgrundstabeller.damarien[66].beskrivning="Krigarmunkarna i S:t Sebaels orden har vigt sina liv åt att skydda det damariska folket mot monster, svartkonstnärer och kättare. Även om orden är en blek skugga av den jargiska inkvisitionen är Sebaeliterna fruktade och respekterade av många damarier och bröderna har ofta kommit att samarbeta med hedningar och trollkarlarna i Santimarexorden för att besegra ännu värre hot mot människornas själar.";
+	bakgrundstabeller.damarien[66].kunskapmysterier=1;
+	bakgrundstabeller.damarien[66].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[66].stridsfardigheterenheter=4;
+	
+	67 
+	
+	1 slag på Färder & äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.
+
+	bakgrundstabeller.damarien[67] = {};
+	bakgrundstabeller.damarien[67].rubrik="Sjöfarare";
+	bakgrundstabeller.damarien[67].beskrivning="Saltet, brisen, måsarnas skratt och strömmarnas nyckfullhet. Ingenting går upp mot att möta soluppgången på ett majestätiskt fartyg, högt uppe i riggen med en bit skeppsskorpa i ena handen och en flaska rom i den andra. Sjöfararna reser vida kring i sina gungande borgar. Det är dock ett farligt värv; på mörka vatten hopas stormar och orkaner som kan slita de största skeppen i stycken. Djupt under ytan ligger monster och sjöodjur vilande i väntan på att ett lämpligt mål med mat ska råka segla förbi.";
+	bakgrundstabeller.damarien[67].farderaventyr=1;
+	bakgrundstabeller.damarien[67].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[67].vildmarksfardigheterenheter=4;
+	
+	bakgrundstabeller.damarien[68] = {};
+	bakgrundstabeller.damarien[68].rubrik="Skarprättare";
+	bakgrundstabeller.damarien[68].beskrivning="De damariska skarprättarna är både fruktade, avskydda och respekterade. Medan bödlarna i många andra riken utgörs av benådade fångar eller kriminella så är de damariska mästermännen högt tränade och välbetalda hantverkare, vars titel ofta går i arv från far till son. Detta beror bland annat på att avrättningar inom det drakoniska damariska rättssystemet ofta är både hantverksmässigt och tekniskt avancerade historier som kräver god hand med verktyg och kunskap om den mänskliga kroppen. Likväl går de flesta damarier ur vägen när de ser den svartklädde mästermannen komma gående på stadens gator tillsammans med sina rackare.";
+	bakgrundstabeller.damarien[68].striderdrabbningar=1;
+	bakgrundstabeller.damarien[68].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[68].hantverkpoang=2;
+	
+	69 
+	
+	1 slag på Färder & äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.
+
+	bakgrundstabeller.damarien[69] = {};
+	bakgrundstabeller.damarien[69].rubrik="Skogvaktare";
+	bakgrundstabeller.damarien[69].beskrivning="I djupet av de mörka damariska skogarna vandrar skogvaktarna, män och kvinnor som arbetar för adeln och storfursten med att stoppa tjuvjägare och vedtjuvar. Skogvaktarens yrke kan vara ytterst riskabelt, då våldsamma konfrontationer med stråtrövare, fredlösa, monster och alver är en del av vardagen. Många skogvaktare är härdade krigare med stor vildmarksvana och respekt för de fasor och hemligheter som gömmer sig i skogarnas djup.";
+	bakgrundstabeller.damarien[69].farderaventyr=1;
+	bakgrundstabeller.damarien[69].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[69].vildmarksfardigheterenheter=4;
+	
+	70 
+	
+	1 slag på Intriger & illgärningar, 4 enheter Kunskapsfärdigheter, 2 Språkenheter.
+
+	bakgrundstabeller.damarien[70] = {};
+	bakgrundstabeller.damarien[70].rubrik="Skrivare";
+	bakgrundstabeller.damarien[70].beskrivning="Med bläckstänk på sina fingrar, en fjäderpenna i sitt grepp och böjd rygg fyller de ark efter ark med text. Skrivare finns överallt i storfurstendömet. Många arbetar som tjänstemän i byråkratin, andra skapar vackra kopior av kända böcker eller skriver ned order från militärer, handelsfurstar eller adelsmän. Då de skriver av och kopierar många texter och böcker besitter de ofta en bred kunskap om många olika ämnen och vissa har en insikt i affärer som inte bör bli allmänt kända.";
+	bakgrundstabeller.damarien[70].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[70].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[70].sprakenheter=2;
+	
+	71 
+	
+	1 slag på Intriger & illgärningar, 4 valfria enheter, 2 poäng Hantverk.
+
+	bakgrundstabeller.damarien[71] = {};
+	bakgrundstabeller.damarien[71].rubrik="Skulptör";
+	bakgrundstabeller.damarien[71].beskrivning="De finns de som vigt sina liv åt att forma stenen och skapa vackra och imponerande konstverk. Dvärgar har en fallenhet för denna konstform och Helm var innan stadens fördärv känd över stora delar av Mundana för sina skickliga stenhuggare. Vissa konstverk är så sköna eller skräckinjagande att deras blotta existens gett upphov till rykten om vissa skulptörers makt att till och med ge sina skapelser liv.";
+	bakgrundstabeller.damarien[71].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[71].valfriaenheter=4;
+	bakgrundstabeller.damarien[71].hantverkpoang=2;
+	
+	72 
+	
+	1 slag på Intriger & illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Expertiser.
+
+	bakgrundstabeller.damarien[72] = {};
+	bakgrundstabeller.damarien[72].rubrik="Sköka";
+	bakgrundstabeller.damarien[72].beskrivning="Lust, passion och frestelse fördöms av kyrkan och de som mot betalning utför dessa tjänster är bespottade av så gott som alla. Men lidelsen och lusten genomsyrar hela storfurstendömet och tvingar män och kvinnor som saknar andra medel att sälja sina kroppar för att klara dagen. Det är ett farligt värv där man riskerar att drabbas av sjukdomar, våldsamma kunder och för kvinnorna även oönskade graviditeter.";
+	bakgrundstabeller.damarien[72].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[72].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[72].expertispoang=2;
+	
+	73 
+	
+	1 slag på Färder & äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.
+
+	bakgrundstabeller.damarien[73] = {};
+	bakgrundstabeller.damarien[73].rubrik="Smugglare";
+	bakgrundstabeller.damarien[73].beskrivning="Att frakta varor genom Damarien eller till andra länder utan rätt papper är en omöjlighet och även om man har dessa försvinner mycket av vinsten i tull, mutor och skatter. Smugglaren ser till att frakta varor utan att någon får reda på det. En del leder mindre karavaner genom obygden, har dolda utrymmen i sina vagnar och de mest framgångsrika hela skepp fyllda med smuggelgods.";
+	bakgrundstabeller.damarien[73].farderaventyr=1;
+	bakgrundstabeller.damarien[73].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[73].vildmarksfardigheterenheter=4;
+	
+	74 
+	
+	1 slag på Strider & drabbningar, 4 enheter Stridsfärdigheter, 4 valfria enheter.
+
+	bakgrundstabeller.damarien[74] = {};
+	bakgrundstabeller.damarien[74].rubrik="Soldat";
+	bakgrundstabeller.damarien[74].beskrivning="Innan Thamas erövring av Damarien hade varje furstendöme och adelsfamilj sina egna styrkor, men efter att storfursten krossade de flesta av sina fiender har en gemensam armé, lojal endast till honom, börjat byggas upp. Tusentals unga damarier har tagits in till armén, ibland frivilligt och ibland med tvång, och tränas hårt på storfurstens slott i Targus och Hammarnäset. En soldats liv är ofta hårt och inramat, men många känner en starkt samhörighet och lojalitet mot härskaren som de i slutändan känner har givit dem och deras familjer ett bättre och tryggare liv.";
+	bakgrundstabeller.damarien[74].striderdrabbningar=1;
+	bakgrundstabeller.damarien[74].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[74].valfriaenheter=4;
+	
+	75 
+	
+	1 slag på Intriger & illgärningar, 4 enheter Rörelsefärdigheter, 4 enheter Sociala färdigheter.
+
+	bakgrundstabeller.damarien[75] = {};
+	bakgrundstabeller.damarien[75].rubrik="Spelare";
+	bakgrundstabeller.damarien[75].beskrivning="Spelare finns i alla delar av samhället och en del är inget annat än smutsiga trashankar som pantsätter sina skor i hoppet om att vinna en handfull mynt. Andra är rika ädlingar som över dyra viner tömmer familjens skattkistor, spelar bort tillgångar, hästar och skepp. För en spelare är det få saker som inte kan satsas på ett djärvt tärningskast.";
+	bakgrundstabeller.damarien[75].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[75].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[75].socialafardigheterenheter=4;
+	
+	76 
+	
+	1 slag på Kunskap & mysterier, 4 enheter Mystikfärdigheter, 4 valfria enheter.
+
+	
+	bakgrundstabeller.damarien[76] = {};
+	bakgrundstabeller.damarien[76].rubrik="Spindelsierska";
+	bakgrundstabeller.damarien[76].beskrivning="Den urgamla spådomskonsten att läsa framtiden i spindlars rörelser över magiska tecken kallas \"arachnomanti\" och har utövats i Damarien sedan urminnes tider. Konsten har hedniska rötter och kopplas till Modern Arachna, spindelgudinnan som spinner ödets väv och anses kommunicera sina önskningar via sina åttabenta döttrar. Trots Daakkyrkans uttryckliga fördömanden besöker många damarier, hög som låg, ofta i hemlighet spindelsierskorna för att få råd från den nyckfulla ödesgudinnan i livets svåra stunder.";
+	bakgrundstabeller.damarien[76].kunskapmysterier=1;
+	bakgrundstabeller.damarien[76].mystikfardigheterenheter=4;
+	bakgrundstabeller.damarien[76].valfriaenheter=4;
+
+	77 
+	
+	1 slag på Strider & drabbningar, 4 enheter Sociala färdigheter, 4 enheter Stridsfärdigheter.
+
+	bakgrundstabeller.damarien[77] = {};
+	bakgrundstabeller.damarien[77].rubrik="Stadsvakt";
+	bakgrundstabeller.damarien[77].beskrivning="Stadsportarna ska vaktas, handelsmännens varor ska sökas igenom, fyllebråk ska stoppas, det ska hållas utkik efter eldsvådor och brottslingar arresteras. Stadsvakten känner till varje gränd, varje bakgata, kommer ihåg ansiktena på de vanliga handelsmännen och har alltid ett öga på dem som tycks sticka ut. En del tar allvarligt på att hålla ordning i staden, andra ser det som en god position att ta mutor och är inte mycket mer än brottslingar med befogenheter.";
+	bakgrundstabeller.damarien[77].striderdrabbningar=1;
+	bakgrundstabeller.damarien[77].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[77].stridsfardigheterenheter=4;
+
+	78 
+	
+	1 slag på Intriger & illgärningar, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken.
+
+	bakgrundstabeller.damarien[78] = {};
+	bakgrundstabeller.damarien[78].rubrik="Straffånge";
+	bakgrundstabeller.damarien[78].beskrivning="Dessa olyckliga kvinnor och män har drabbats av den obarmhärtiga damariska rättvisan men \"benådats\" av storfursten och fått sina dödsdomar omvandlade till slaveri och straffarbete. Många straffångar slutar sina dagar på något av de många stenbrotten eller borgbyggena på Vaktö eller vid Krylons stränder, som soldater i straffregementen eller som roddare på storfurstens galärer. Ett fåtal lyckliga slutar som sekreterare eller bokförare, men inte ens de undkommer de vanprydande brännmärkningar som i resten av livet visar att de är brottslingar och slavar under kronan.";
+	bakgrundstabeller.damarien[78].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[78].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[78].kanneteckenpoang=2;
+
+	79 
+	
+	1 slag på Färder & äventyr, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.
+
+	bakgrundstabeller.damarien[79] = {};
+	bakgrundstabeller.damarien[79].rubrik="Stråtrövare";
+	bakgrundstabeller.damarien[79].beskrivning="Med vägarna tungt trafikerade av resande människor är det inte konstigt att vissa valt att tjäna sitt leverne på att råna och stjäla från andra. Med utrustning och vapen i varierande kvalitet lägger de sig i bakhåll och anfaller när offren minst anar det. En del rövarband består bara av två till tre individer medan andra kan bli upp mot tjugo och trettio. Dessa kan till och med anfalla större mål såsom en av kronans transporter eller ett förnämt rikemansfölje med beväpnad eskort.";
+	bakgrundstabeller.damarien[79].farderaventyr=1;
+	bakgrundstabeller.damarien[79].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[79].vildmarksfardigheterenheter=4;
+
+	80 
+	
+	1 slag på valfri tabell, 4 enheter Rörelsefärdigheter, 2 poäng Hantverk.
+
+	bakgrundstabeller.damarien[80] = {};
+	bakgrundstabeller.damarien[80].rubrik="Tandsmed";
+	bakgrundstabeller.damarien[80].beskrivning="Soldater får sina tänder utslagna, ädlingars garnityr drabbas av röta efter för mycket sötsaker och kyrkans män gnisslar tänder i sömnen över all synd som begås. Tandsmeden är den som ser över detta. De mest välbärgade har mottagningar i de största städerna, där ersätter de förlorade tänder med guld eller silver. De fattiga tandsmederna reser mellan byar och drar ut tänder med grova tänger.";
+	bakgrundstabeller.damarien[80].valfriatabellslag=1;
+	bakgrundstabeller.damarien[80].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[80].hantverkpoang=2;
+
+	81 
+	
+	1 slag på Färder & äventyr, 4 enheter Rörelsefärdigheter, 2 poäng Kännetecken.
+
+	bakgrundstabeller.damarien[81] = {};
+	bakgrundstabeller.damarien[81].rubrik="Tiggare";
+	bakgrundstabeller.damarien[81].beskrivning="Med utsträckta händer sträcker sig smutsiga, utmärglade och trasklädda gestalter mot dem som har pengar och ber om att få några silver så de kan få mat för dagen. Har de tur passerar förmögna som delar ut allmosor, andra gånger jagar stadsvakten bort dem med sparkar och slag. I vissa städer får tiggarna särskilda tiggarbrickor som de syr fast på sina kläder eller har i ett band runt halsen för att visa att de har rätten att be om allmosor.";
+	bakgrundstabeller.damarien[81].farderaventyr=1;
+	bakgrundstabeller.damarien[81].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[81].kanneteckenpoang=2;
+
+	bakgrundstabeller.damarien[82] = {};
+	bakgrundstabeller.damarien[82].rubrik="Tjuv";
+	bakgrundstabeller.damarien[82].rubrik="tjuvar";
+	bakgrundstabeller.damarien[82].beskrivning="Högt ovan hustaken och långt ner i stadens mörkaste vrår är det inte stadsvakten, prästerskapet, adeln eller köpmännen som regerar. Här lever tjuvarna på att ta från allt och alla som inte håller tillräckligt god uppsyn över sina fickor och hus.";
+	bakgrundstabeller.damarien[82].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[82].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[82].vildmarksfardigheterenheter=4;
+
+	83 
+	
+	1 slag på Intriger & illgärningar, 4 enheter Kunskapsfärdigheter, 4 enheter Sociala färdigheter.
+
+	bakgrundstabeller.damarien[83] = {};
+	bakgrundstabeller.damarien[83].rubrik="Tjänsteman";
+	bakgrundstabeller.damarien[83].beskrivning="Thamas Vitfjäder har sedan sitt trontillträde jobbat outtröttligt för att skapa ett centraliserat rike med enade lagar och en gemensam administration. Den nya tidens grevar, hertigar och godsherrar och andra makthavare är tjänstemän utvalda bara för sin kompetens och lojalitet mot storfursten. De är administratörer, bokförare och övervakare av fogdar och lägre tjänstemän. Även om tjänstemannatitlar ger stor makt är det även en mycket farlig karriärväg, fylld av intriger, där man ständigt måste vara uppmärksam både på storfurstens fiender och på konkurrenter som vill röja en ur vägen.";
+	bakgrundstabeller.damarien[83].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[83].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[83].socialafardigheterenheter=4;
+
+	84 
+	
+	1 slag på Intriger & illgärningar, 4 valfria enheter, 2 poäng Expertiser.
+
+	bakgrundstabeller.damarien[84] = {};
+	bakgrundstabeller.damarien[84].rubrik="Torterare";
+	bakgrundstabeller.damarien[84].beskrivning="Damarien är fyllt av hemligheter som måste avslöjas och personer som måste straffas. Torterarens roll är att bryta sönder ett mänskligt psyke och tvinga fram erkännanden eller sarga offer till oigenkännlighet. I dunkla valv pressas glödgade tänger mot bar hud, lemmar slits ur led och piskor sargar kroppar. Torterare är vanligen anlitade av armén, stadsvakten, brottsorganisationer eller rika släkter. De som blir torterare är oftast kallhamrade individer eller personer som finner en stor njutning i sitt värv.";
+	bakgrundstabeller.damarien[84].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[84].valfriaenheter=4;
+	bakgrundstabeller.damarien[84].expertispoang=2;
+
+	bakgrundstabeller.damarien[85] = {};
+	bakgrundstabeller.damarien[85].rubrik="Ungtupp";
+	bakgrundstabeller.damarien[85].pluralobestamd="ungtuppar";
+	bakgrundstabeller.damarien[85].beskrivning="Ivenagallos, Ungtupparna, kallas en grupp av unga, ogifta officerare och adelsmän (samt enstaka -kvinnor). De tillbringar sin fritid med att spatsera runt i Damariens städer klädda i det senaste modet från Lemira och Consaber och mäta sin status mot varandra i ständiga dueller över inbillade och verkliga ärekränkningar. Även om både storfursten och kyrkan ser denna livsstil som dekadent och omoralisk uppmuntras den ofta mer eller mindre av äldre adelsmän och befäl, som knappt betraktar ungdomarna som vuxna innan de ådragit sig ett par duellärr.";
+	bakgrundstabeller.damarien[85].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[85].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[85].socialafardigheterenheter=4;
+
+	86 
+
+	1 slag på Strider & drabbningar, 4 enheter Sociala färdigheter, 4 enheter Stridsfärdigheter.
+
+	bakgrundstabeller.damarien[86] = {};
+	bakgrundstabeller.damarien[86].rubrik="Upprorsmakare";
+	bakgrundstabeller.damarien[86].beskrivning="I mörka skogar, i borgar högt uppe bland bergen, i städernas slum och bortom Damariens gränser samlas de som önskar se Thamas Envåldshärskaren och dennes grymma regim störtad en gång för alla. Med alla medel försöker de värva alla från fattiga damariska livegna till utländska furstar i sin kamp mot tyrannen, allt medan de obarmhärtigt och oupphörligt jagas av storfurstens lakejer.";
+	bakgrundstabeller.damarien[86].striderdrabbningar=1;
+	bakgrundstabeller.damarien[86].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[86].stridsfardigheterenheter=4;
+
+	87 
+	
+	1 slag på Strider & drabbningar, 4 enheter Stridsfärdigheter, 2 poäng Expertiser.
+
+	
+	bakgrundstabeller.damarien[87] = {};
+	bakgrundstabeller.damarien[87].rubrik="Utkastare";
+	bakgrundstabeller.damarien[87].beskrivning="När ett fyllebråk urartar och ett vänskapligt handgemäng övergår till sparkar och kanske dragna vapen behövs det någon som kan sära på de inblandade och ge dem alla en kraftig spark mot dörren. Detta är utkastarens jobb. Om det inte vore för dessa individer skulle många krogar snart vara i spillror.";
+	bakgrundstabeller.damarien[87].striderdrabbningar=1;
+	bakgrundstabeller.damarien[87].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[87].expertispoang=2;
+
+	88 Utropare
+	
+	1 slag på Intriger & illgärningar, 4 enheter Sociala färdigheter, 4 valfria enheter.
+
+	bakgrundstabeller.damarien[88] = {};
+	bakgrundstabeller.damarien[88].rubrik="";
+	bakgrundstabeller.damarien[88].beskrivning="I de väldiga städerna måste nyheter förkunnas till folket. Då många inte kan läsa är det utroparens roll att meddela invånarna om makthavarnas beslut. På torg och vid stadsportar proklamerar de storfurstens nyaste lagar, efterlysta brottslingar, arbeten som utlyses, vad som sker i staden, stundande offentliga avrättningar och nyheter från resten av storfurstendömet. Det är få som har en sådan insikt i stadens affärer som utroparna.";
+	bakgrundstabeller.damarien[88].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[88].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[88].valfriaenheter=4;
+
+	89 
+
+	1 slag på Kunskap & mysterier, 4 enheter Mystikfärdigheter, 4 enheter Stridsfärdigheter.
+
+	bakgrundstabeller.damarien[89] = {};
+	bakgrundstabeller.damarien[89].rubrik="Vampyrjägare";
+	bakgrundstabeller.damarien[89].beskrivning="För utomstående är Damarien känt som det mörka riket där lamior en gång härskade och där vandöda varelser alltjämt vandrar genom natten. Sådana historier är inte helt tagna ur intet och vissa damarier har tagit på sig uppdraget att jaga lamior och andra styggelser; de motiveras av så olika motiv som brinnande tro, hämnd, kunskapstörst eller ibland bara för sin egen försörjnings skull. För att bekämpa lamior, demoner och spöken har vampyrjägaren ofta djupa kunskaper i förbjudna magiska och ockulta konster och det är inte ovanligt att dessa vagabonder slutar sina ofta korta liv minst lika fruktade som de väsen de jagar.";
+	bakgrundstabeller.damarien[89].kunskapmysterier=1;
+	bakgrundstabeller.damarien[89].mystikfardigheterenheter=4;
+	bakgrundstabeller.damarien[89].stridsfardigheterenheter=4;
+
+	90 
+	
+	1 slag på Färder & äventyr, 4 enheter Rörelsefärdigheter, 4 enheter Vildmarksfärdigheter.
+
+	bakgrundstabeller.damarien[90] = {};
+	bakgrundstabeller.damarien[90].rubrik="Vandrare";
+	bakgrundstabeller.damarien[90].beskrivning="De flesta damarier ser med misstänksamhet på dem som valt att vända ryggen till städernas eller bondbyarnas relativa trygghet för att söka sig ut på vägarna och vildmarken. Oavsett om de är kringvandrande hantverkare, nomadiska fedaker eller fattiga tiggarmunkar så har de besökt många fler platser och mött långt fler människor än de allra flesta damarier ens kan föreställa sig.";
+	bakgrundstabeller.damarien[90].farderaventyr=1;
+	bakgrundstabeller.damarien[90].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[90].vildmarksfardigheterenheter=4;
+
+	91 
+	
+	1 slag på Strider & drabbningar, 4 enheter Rörelsefärdigheter, 4 enheter Stridsfärdigheter.
+
+	bakgrundstabeller.damarien[91] = {};
+	bakgrundstabeller.damarien[91].rubrik="Vapenmästare";
+	bakgrundstabeller.damarien[91].beskrivning="Vapenmästarna ser strid som en konstform. De lär sig invecklade och många gånger vackra sätt att kämpa och för många handlar det mer om uppvisning än om faktisk kamp. En del vapenmästare tjänar som instruktörer, livvakter eller underhållare hos de rika och mäktiga. Andra vandrar mellan byarna och erbjuder sina tjänster för en handfull mynt.";
+	bakgrundstabeller.damarien[91].striderdrabbningar=1;
+	bakgrundstabeller.damarien[91].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[91].stridsfardigheterenheter=4;
+
+	92 
+	
+	1 slag på Strider & drabbningar, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.
+
+	bakgrundstabeller.damarien[92] = {};
+	bakgrundstabeller.damarien[92].rubrik="Vargriddare";
+	bakgrundstabeller.damarien[92].beskrivning="Vargriddarorden var en gång i tiden ett legendariskt sällskap med uppgiften att skydda Damariens landsbygd mot monster och stråtrövare. Men efter att de ställde sig på fel sida mot storfursten har orden förbjudits och drivits i landsflykt till Soldarn och Västmark. Vargriddarna är numera en rörelse av Damariska adelsmän och ofrälse som svurit att göra slut på Thamas tyranni och återupprätta den damariska adelns makt. Ingen vargriddare kan vara öppet aktiv inom Damarien, men flera av deras medlemmar och agenter arbetar i hemlighet inom landets gränser. Kontakt med dem är mycket riskabelt, då storfursten ser dem och alla som samarbetar med dem som farliga hot mot riket.";
+	bakgrundstabeller.damarien[92].striderdrabbningar=1;
+	bakgrundstabeller.damarien[92].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[92].vildmarksfardigheterenheter=4;
+
+	93 
+	
+	1 slag på Strider & drabbningar, 4 enheter Stridsfärdigheter, 4 enheter Vildmarksfärdigheter.
+
+	bakgrundstabeller.damarien[93] = {};
+	bakgrundstabeller.damarien[93].rubrik="Veteran";
+	bakgrundstabeller.damarien[93].beskrivning="Krig skördar sina offer och veteranen har dräpt fler än denne kan minnas och förlorat många vänner till vinande pilar och svärdshugg. Våldsamheterna har satt sina spår och många veteraner vrider sig i mardrömmar, häller i sig vin för att glömma eller har övergått till att bli obehagligt avtrubbade. Även om de krigiska dagarna är över för veteranen är det ack så lätt att ta till vapen för att tjäna några enkla silver då den vanliga världen för dem blivit främmande och olustig.";
+	bakgrundstabeller.damarien[93].striderdrabbningar=1;
+	bakgrundstabeller.damarien[93].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[93].vildmarksfardigheterenheter=4;
+
+	bakgrundstabeller.damarien[94] = {};
+	bakgrundstabeller.damarien[94].rubrik="Vindmunk";
+	bakgrundstabeller.damarien[94].rubrik="vindmunkar";
+	bakgrundstabeller.damarien[94].beskrivning="Från sina kloster på de damariska slätterna eller Khazimbergens toppar mässar de fem vindarnas tjänare sina böner i jakt på jämvikt och insikt i vindarnas natur. Dessa mystiska män och kvinnor hör till en av Damariens mäktigaste fraktioner och klostret är en inflytelserik markägare och maktfaktor. Detta har givit munkarna flera mäktiga vänner, men ännu fler mäktiga fiender, bland annat den hedniska Kristallorden.";
+	bakgrundstabeller.damarien[94].kunskapmysterier=1;
+	bakgrundstabeller.damarien[94].kunskapsfardigheterenheter=4;
+	bakgrundstabeller.damarien[94].socialafardigheterenheter=4;
+
+	95 
+	
+	1 slag på Intriger & illgärningar, 4 enheter Sociala färdigheter, 2 poäng Expertiser.
+
+	bakgrundstabeller.damarien[95] = {};
+	bakgrundstabeller.damarien[95].rubrik="Vinkännare";
+	bakgrundstabeller.damarien[95].beskrivning="Vinkännaren är ansvarig för de juridiska dokument som anger vem som får jäsa vin, och provsmakar det som ska säljas och kontrollerar att det lagras på korrekt sätt. De som arbetar med detta är oftast så goda vinkännare att de bara genom att dofta på vinet kan berätta exakt från vilken vingård det kommer, vilken druva som använts och vilken årgång det är.";
+	bakgrundstabeller.damarien[95].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[95].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[95].expertispoang=2;
+
+	bakgrundstabeller.damarien[96] = {};
+	bakgrundstabeller.damarien[96].rubrik="Vägvisare";
+	bakgrundstabeller.damarien[96].beskrivning="I både stad och vildmark är det viktigt att hitta rätt. Handelsresande, pilgrimer och andra resande sällskap anlitar därför en vägvisare för att leda dem genom labyrinten av stigar, vägar, broar, vadställen och korsningar. Förutom den vanliga betalningen i form av silver brukar uppdragsgivaren även få stå för mat och dryck för vägvisaren under hela resan.";
+	bakgrundstabeller.damarien[96].farderaventyr=1;
+	bakgrundstabeller.damarien[96].rorelsefardigheterenheter=4;
+	bakgrundstabeller.damarien[96].vildmarksfardigheterenheter=4;
+
+	bakgrundstabeller.damarien[97] = {};
+	bakgrundstabeller.damarien[97].rubrik="Värdshusvärd";
+	bakgrundstabeller.damarien[97].pluralobestamd="värdshusvärdar";
+	bakgrundstabeller.damarien[97].beskrivning="Mat serveras, rum städas, golv sopas, stop diskas, resande kommer och resande ger sig av. En värdshusvärd träffar och pratar med många olika typer av individer och blir snart en person som är välunderrättad om vad som händer i staden och världen. De mest nedgångna värdshusen är inget mer än rökiga och pisstinkande gryt där ölen är utspädd och gästerna fattiga medan de mest luxuösa värdshusen har en hel stab av tjänare, otaliga rum, ett stort kök, en fylld vinkällare och ett gott anseende.";
+	bakgrundstabeller.damarien[97].valfriatabellslag=1;
+	bakgrundstabeller.damarien[97].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[97].expertispoang=2;
+
+	bakgrundstabeller.damarien[98] = {};
+	bakgrundstabeller.damarien[98].rubrik="Xinukultist";
+	bakgrundstabeller.damarien[98].beskrivning="De plågade skrik som kommer från Xinus anhängare är ett offer till den mörka guden. I sina privata tortyrkammare dyrkar de smärtans och det eviga lidandets furste, den vansinnige Xinu. Under svarta mässor når dyrkarna extas genom att piska sig och sina anhängare till ljudet av psalmerna. Få, om ens någon av de invigda kommer någonsin kunna återvända till den oskyldiga sinnesro som de en gång hade, sedan den sadistiska och förbjudna gudomen satt sina klor i deras själar. De anser sig utvalda inför den kommande striden och tränar för att bli Xinus förkämpar.";
+	bakgrundstabeller.damarien[98].kunskapmysterier=1;
+	bakgrundstabeller.damarien[98].stridsfardigheterenheter=4;
+	bakgrundstabeller.damarien[98].expertispoang=2;
+
+	bakgrundstabeller.damarien[99] = {};
+	bakgrundstabeller.damarien[99].rubrik="Ädling";
+	bakgrundstabeller.damarien[99].pluralobestamd="ädlingar";
+	bakgrundstabeller.damarien[99].beskrivning="En gång i tiden var den damariske aristokraten oinskränkt härskare över sin egen domän, där den lokale makthavarens vilja bokstavligen var lag och den avlägsne storfursten bara var en av många mäktiga adelsmän. Denna tid är sedan länge förbi, och sedan Thamas utrensningar är större delen av adeln krossad eller hunsad. Några adelsmän önskar sig tillbaka till den gamla tiden, medan andra är besatta av att visa sig värdiga storfurstens gunst. Många adelsmän är uppkomlingar som nått sin position tack vare Thamas, och de ses på med intensivt men tyst förakt av de gamla släkter som alltjämt kunnat hålla fast vid sina uråldriga titlar och herresäten.";
+	bakgrundstabeller.damarien[99].intrigerillgarningar=2;
+	bakgrundstabeller.damarien[99].socialafardigheterenheter=4:
+	bakgrundstabeller.damarien[99].valfriaenheter=4;
+
+	bakgrundstabeller.damarien[100] = {};
+	bakgrundstabeller.damarien[100].rubrik="Älskare/älskarinna";
+	bakgrundstabeller.damarien[100].bestamd="älskaren/älskarinnan";
+	bakgrundstabeller.damarien[100].pluralobestamd="älskare/älskarinnor";
+	bakgrundstabeller.damarien[100].pluralbestamd="älskarna/älskarinnorna";
+	bakgrundstabeller.damarien[100].beskrivning="Trots kyrkans och moralisters intensiva fördömanden är det mycket vanligt att rika och mäktiga damarier lever mer eller mindre öppet tillsammans med en eller flera älskare eller hålldamer. En älskares situation är ofta riskabel, då de är helt beroende av sin partners nycker och kan ofta när som helst förvisas från dennes hem utan några lagliga konsekvenser, ofta tillsammans med sina oäkta och därför arvlösa barn. Trots detta finns det otaliga älskare och frillor som kunnat få stort inflytande och makt och slutat sina dagar som respekterade inte bara av sina älskade, utan även av samhället i stort.";
+	bakgrundstabeller.damarien[100].intrigerillgarningar=1;
+	bakgrundstabeller.damarien[100].socialafardigheterenheter=4;
+	bakgrundstabeller.damarien[100].expertispoang=2;
+
+	
+	
+	
 	
 	handelsetabellista=hamta_handelsetabellista();
 	fardighetslistaobjekt=hamta_fardighetslistaobjekt();
@@ -1851,7 +2784,7 @@
 	
 	
 	for (i=0;i<bakgrundstabeller.lista.length;i++){
-		// LÃ¤gger till nummer pÃ¥ bakgrundstabell fÃ¶r att senare sparas under rollpersonsobjektet.
+		// Lägger till nummer på bakgrundstabell för att senare sparas under rollpersonsobjektet.
 		bakgrundstabeller[bakgrundstabeller.lista[i]][0].nummer=i;
 	
 	
@@ -1870,14 +2803,14 @@
 				bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak="";
 				for (i=0;i<handelsetabellista.namn.length;i++){
 					if (handelsetabellista.namn[i] in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
-						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += "1 slag pÃ¥ " + handelsetabellista.rubrik[i];
+						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += "1 slag på " + handelsetabellista.rubrik[i];
 					}
 				}
 				if ("valfriatabellslag" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
-					bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += "1 slag pÃ¥ valfri tabell, ";
+					bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += "1 slag på valfri tabell, ";
 				}
 				
-				for (i=0;i<7;i++){ // De sex vanliga kategorierna plus sprÃ¥k
+				for (i=0;i<7;i++){ // De sex vanliga kategorierna plus språk
 					if (fardighetsgrupplista[i] + "enheter" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
 						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += ", 4 enheter " + fardighetsgrupplista_plur[i];
 					}
@@ -1885,93 +2818,101 @@
 				
 				for (i=0;i<ovrigafardighetergrupplista_namn.length;i++){
 					if (ovrigafardighetergrupplista_namn[i] + "poang" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
-						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak +=", 2 poÃ¤ng " + ovrigafardighetergrupplista_plur[i];
+						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak +=", 2 poäng " + ovrigafardighetergrupplista_plur[i];
 					}
 				}
 				
 				bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += ".";
 			}
 			
-			// Plural och bestÃ¤md form
+			// Plural och bestämd form
 	
 			//bakgrundstabeller[bakgrundstabeller.lista[m]][n].tabellresultat = n;
         	bakgrundstabeller[bakgrundstabeller.lista[m]][n].tabellnamn = bakgrundstabeller.lista[m];  
         	
 			if ("obestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
-				if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].obestamd==""){
-					bakgrundstabeller[bakgrundstabeller.lista[m]][n].obestamd="en " + bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase();
-				}
 			}else{
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].obestamd=="";
+			}
+			if ("bestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
+			}else{
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=="";
+			}
+			if ("pluralobestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
+			}else{
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=="";
+			}
+			if ("pluralbestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
+			}else{
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=="";
+			}
+			
+			// Alla bakgrunder har n-genus om inte annat fastställs.
+			if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].obestamd==""){
 				bakgrundstabeller[bakgrundstabeller.lista[m]][n].obestamd="en " + bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase();
 			}
-			// skapar bestÃ¤md form med Ã¤ndelse -n om det slutar pÃ¥ a eller e, -en annars
-			if ("bestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
 			
-			
-				if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd==""){
-					if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-1) == "e"){
-						
-						bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "n";
-					}else if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-1) == "a"){
-						
-						bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "n";
-					
-					
-					}else{
-						bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "en";
-					}
-				}
-			}else{
+			// skapar bestämd form med ändelse -n om det slutar på a eller e, -en annars
+			if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd==""){
 				if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-1) == "e"){
-						
+					
 					bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "n";
 				}else if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-1) == "a"){
-				
+					
 					bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "n";
-					
-					
+				
+				}else if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-2) == "er"){
+					bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "n";
+				
+				}else if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-3) == "man"){
+					bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "nen";
+				
+				
 				}else{
 					bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "en";
 				}
 			}
 			
-			// skapar obestÃ¤md form plural, samma som rubrik om det slutar pÃ¥ -are, med Ã¤ndelse -er annars.
-			if ("pluralobestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
-				if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd==""){
-					if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-3) == "are"){
-						
-						bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase();
-					}else{
-						bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "er";
-					 
-					}
-				}
-			}else{
+			
+			// skapar obestämd form plural, samma som rubrik om det slutar på -are eller -ier, med ändelse -er, -ar eller -or annars.
+			
+			if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd==""){
 				if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-3) == "are"){
-						
+					
 					bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase();
+				
+				}else if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-3) == "ier"){
+					bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase();
+				
+				}else if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-3) == "man"){
+					bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase().slice(0,-2) + "än";
+				
+				}else if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-1) == "e"){
+					bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase().slice(0,-2) + "ar";				
+				
+				}else if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-1) == "a"){
+					bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase().slice(0,-2) + "or";
+					
 				}else{
 					bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.toLowerCase() + "er";
-					 
+				 
 				}
 			}
-			if ("pluralbestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
 			
-				if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralbestamd==""){
-					if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-3) == "are"){
-						bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralbestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd.slice(0,-1) + "na";
-					}else{
-						bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralbestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd + "na";
-					}
-				}
-			}else{
+			// Skapar bestämd form plural
+			
+			if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralbestamd==""){
 				if (bakgrundstabeller[bakgrundstabeller.lista[m]][n].rubrik.slice(-3) == "are"){
 					bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralbestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd.slice(0,-1) + "na";
+				
+				}else if(bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd.slice(-3) == "män"){
+					bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralbestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd + "nen";
+				
 				}else{
 					bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralbestamd=bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd + "na";
-				
 				}
 			}
+			
 			bakgrundstabeller[bakgrundstabeller.lista[m]][n].Bestamd = inledandeversal(bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd);
 			bakgrundstabeller[bakgrundstabeller.lista[m]][n].Obestamd = inledandeversal(bakgrundstabeller[bakgrundstabeller.lista[m]][n].obestamd);
 			bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralBestamd = inledandeversal(bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralbestamd);
