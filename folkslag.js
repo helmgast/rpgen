@@ -22,7 +22,7 @@
 	var s;
 	var t;
 	
-	var folkslaglista = ["adasier", "cermirier", "cirefalier", "damarier", "fedaki", "genver", "jahann", "jargier", "kamorian", "marnakhtirak", "missla", "pyar", "taup", "utmarkare", "zolod"];
+	var folkslaglista = ["adasier", "cermirier", "cirefalier", "damarier", "fedaki", "genver", "ghor", "jahann", "jargier", "kamorian", "marnakhtirak", "missla", "pyar", "taup","thism", "utmarkare", "zolod"];
 	//var folkslaglista = ["adasier", "cirefalier", "fedaki", "genver", "jahann", "jargier", "kamorian"];
 	//var folkslaglista = ["zolod"];
 	var folkslagobjekt={};
@@ -1934,7 +1934,7 @@
 	zolod.subval[0][3][0].grundbelastning.bonus=-8;
 	zolod.subval[0][3][0].forflyttning = {};
 	zolod.subval[0][3][0].forflyttning.bonus=-4;
-	
+	zolod.subval[0][3][0].formaga="Modifierar total belastning med –8";
 	
 	zolod.subval[0].push([]);
 	zolod.subval[0][4][0]={};
@@ -2687,6 +2687,339 @@ var utmarkare={};
 	damarier.subval[3][10][0].ovrigt="Rollpersonens familj är kuvade lojalister.";
 	damarier.subval[3][10][0].beskrivning="Rollpersonens familj var tidigare neutrala eller aktiva fiender till Thamas, men efter att stora delar av släkten fängslats, avrättats eller tagits som gisslan av regimen är de flesta av dess medlemmar nu antingen lojala eller för rädda för att våga sätta sig upp mot storfursten.";
 
+	var ghor={};
+	folkslagobjekt.ghor=ghor;
+    ghor.rubrik="Ghor";
+	ghor.namn="ghor";
+	ghor.beskrivning="Med sina över 180 000 invånare är det uråldriga Khazimrenk-Ghor det äldsta, mäktigaste och största av Mundanas alla dvärgfästen. Dess konung är informellt överhuvud över alla Ghordvärgar och har dessutom mycket högt anseende även bland andra dvärgklaner och människoriken. Den enorma dvärgastaden och dess invånare har sedan lång tid tillbaka haft ett starkt inflytande över alla de omkringliggande rikena på Asharinahalvön och många Ghordvärgar har ända sedan Damas den svartes dagar levt och verkat i Damarien. De är troligen Mundanas främsta stenhuggare och när det kommer till icke-magisk smideskonst står deras likar bara att finna bland roghandvärgarna. Ghordvärgarna i allmänhet och de från Khazim-renk-Ghor i synnerhet har rykte om sig att ofta ha en aningen arrogant attityd både mot människor och mot andradvärgar, då de aldrig tycks tröttna på att påminna demom sin status som den första klanen. De flesta av demär mycket politiskt och religiöst konservativa och ser inte sällan med misstro på dvärgar som de anser avvikit frånde gamla traditionerna och guden Vontars lagar." + "\n" + "Ghordvärgar, män som kvinnor, är i regel runt 140 cm långa, kraftigt byggda och väger ungefär 65 kg. Deras hår och skägg är oftast bruna och ögonen mörkblåa, även om många andra hår- och ögonfärger förekommer."
+	
+	ghor.subval=[[[]]];
+	ghor.subval[0][0][0]={};
+	ghor.subval[0][0][0].valdasub = [];
+	ghor.subval[0][0][0].vald = 0;
+	ghor.subval[0][0][0].styrka = {};
+	ghor.subval[0][0][0].styrka.varde=12;
+	ghor.subval[0][0][0].talighet = {};
+	ghor.subval[0][0][0].talighet.varde=10;
+	ghor.subval[0][0][0].rorlighet = {};
+	ghor.subval[0][0][0].rorlighet.varde=7;
+	ghor.subval[0][0][0].uppfattning = {};
+	ghor.subval[0][0][0].uppfattning.varde=7;
+	ghor.subval[0][0][0].vilja = {};
+	ghor.subval[0][0][0].vilja.varde=10;
+	ghor.subval[0][0][0].psyke = {};
+	ghor.subval[0][0][0].psyke.varde=8;
+	ghor.subval[0][0][0].visdom = {};
+	ghor.subval[0][0][0].visdom.varde=8;
+	ghor.subval[0][0][0].utstralning = {};
+	ghor.subval[0][0][0].utstralning.varde=8;
+	ghor.subval[0][0][0].beskrivningattribut=[[["Styrka"],["3T6"]],[["Tålighet"],["2T6\+2"]],[["Rörlighet"],["1T6\+3"]],[["Uppfattning"],["1T6\+3"]],[["Vilja"],["2T6\+2"]],[["Psyke"],["2T6"]],[["Visdom"],["2T6"]],[["Utstrålning"],["2T6"]]]
+	
+	ghor.subval[0].push([]);
+	ghor.subval[0][1][0]={};
+	ghor.subval[0][1][0].valdasub = [];
+	ghor.subval[0][1][0].vald = 0;
+	ghor.subval[0][1][0].rubrik="Stenens barn";
+	ghor.subval[0][1][0].beskrivning="Ghordvärgar är väl anpassade för ett livunder marken, och är redo att försvara sina hem med livet som insats.";
+	ghor.subval[0][1][0].beskrivninghak="De får expertisen Grottsystem 4T6 och 3 enheter Stridsfärdigheter."
+	ghor.subval[0][1][0].grottsystem={};
+	ghor.subval[0][1][0].grottsystem.enheter=3;
+	ghor.subval[0][1][0].stridsfardigheterenheter=3;
+	
+	ghor.subval[0].push([]);
+	ghor.subval[0][2][0]={};
+	ghor.subval[0][2][0].valdasub = [];
+	ghor.subval[0][2][0].vald = 0;
+	ghor.subval[0][2][0].rubrik="Fast mark";
+	ghor.subval[0][2][0].beskrivning="Dvärgarnas balanssinne gör att de föredrar att ha fast mark under fötterna. Få saker är så beryktadesom den dvärgiska sjösjukan."; 
+	ghor.subval[0][2][0].beskrivninghak="Färdigheterna Simma och Sjömannaskap är Svårlärda. Dvärgar är vana att gå långasträckor och är Lättlärda i Marsch.";
+	ghor.subval[0][2][0].marsch = {};
+	ghor.subval[0][2][0].marsch.lattlard=1;
+	ghor.subval[0][2][0].sjomannaskap = {};
+	ghor.subval[0][2][0].sjomannaskap.lattlard=-1;
+	ghor.subval[0][2][0].simma = {};
+	ghor.subval[0][2][0].simma.lattlard=-1;
+	ghor.subval[0][2][0].formaga="Sjösjuk";
+	
+	ghor.subval[0].push([]);
+	ghor.subval[0][3][0]={};
+	ghor.subval[0][3][0].valdasub = [];
+	ghor.subval[0][3][0].vald = 0;
+	ghor.subval[0][3][0].rubrik="Kort och kraftig";
+	ghor.subval[0][3][0].beskrivning="En dvärg kan bära tunga rustningar utan att hindras. De modifierar sin totala Belastning med –8 för att se hur belastade de är. De är dock ett kortvuxet släkte och får därför –1T6 Förflyttning.";
+	ghor.subval[0][3][0].grundbelastning = {};
+	ghor.subval[0][3][0].grundbelastning.bonus=-8;
+	ghor.subval[0][3][0].forflyttning = {};
+	ghor.subval[0][3][0].forflyttning.bonus=-4;
+	ghor.subval[0][3][0].formaga="Modifierar total belastning med –8";
+	
+	ghor.subval[0].push([]);
+	ghor.subval[0][4][0]={};
+	ghor.subval[0][4][0].valdasub = [];
+	ghor.subval[0][4][0].vald = 0;
+	ghor.subval[0][4][0].rubrik="Mörkersyn"
+	ghor.subval[0][4][0].beskrivning="Dvärgar kan se i totalt mörker. De får kännetecknet Mörkersyn 4T6."
+	ghor.subval[0][4][0].morkersyn = {};
+	ghor.subval[0][4][0].morkersyn.enheter=3;
+	
+	ghor.subval[0].push([]);
+	ghor.subval[0][5][0]={};
+	ghor.subval[0][5][0].valdasub = [];
+	ghor.subval[0][5][0].vald = 0;
+	ghor.subval[0][5][0].rubrik="Jag står här"
+	ghor.subval[0][5][0].beskrivning="Ghordvärgarna är ett konservativt folk som idealiserar de som hårdnackat vägrar tumma på sina principer.";
+	ghor.subval[0][5][0].beskrivninghak="I sociala konflikter får dvärgen +1T6 på alla slag för att motstå försök att påverka eller ändra dennes åsikter och känslor."
+	ghor.subval[0][5][0].skarptminne = {};
+	ghor.subval[0][5][0].skarptminne.enheter=3;
+	ghor.subval[0][5][0].formaga="I sociala konflikter får dvärgen +1T6 på alla slag för att motstå försök att påverka eller ändra dennes åsikter och känslor."
+	
+	ghor.subval[0].push([]);
+	ghor.subval[0][6][0]={};
+	ghor.subval[0][6][0].valdasub = [];
+	ghor.subval[0][6][0].vald = 0;
+	ghor.subval[0][6][0].rubrik="Vontars folk"
+	ghor.subval[0][6][0].beskrivning="Dvärgarna är Vontars folk och är svurna att lyda gudens strikta regler. De får expertisen Vontars levnadsregler 4T6. Förolämpas ghordvärgens klan, familj eller tro av en annan dvärg måste denne få upprättelse eller drabbas av Nedbrytning 40 (utsatthet)."
+	ghor.subval[0][6][0].vontarslevnadsregler = {};
+	ghor.subval[0][6][0].vontarslevnadsregler.enheter=3;
+	ghor.subval[0][6][0].ovrigt="Förolämpas ghordvärgens klan, familj eller tro av en annan dvärg måste denne få upprättelse eller drabbas av Nedbrytning 40 (utsatthet)."
+	
+	ghor.subval[0].push([]);
+	ghor.subval[0][7][0]={};
+	ghor.subval[0][7][0].valdasub = [];
+	ghor.subval[0][7][0].vald = 0;
+	ghor.subval[0][7][0].antalsubval=3;
+	
+	ghor.subval[0][7][1]={};
+	ghor.subval[0][7][1].rubrik="Talade språk";
+	ghor.subval[0][7][1].beskrivning="Rukh, lägre jargiska";
+	ghor.subval[0][7][1].taladesprak="Rukh, lägre jargiska";
+	ghor.subval[0][7][1].rukh = {};
+	ghor.subval[0][7][1].rukh.enheter=1;
+	ghor.subval[0][7][1].lagrejargiska = {};
+	ghor.subval[0][7][1].lagrejargiska.enheter=1;
+	
+	ghor.subval[0][7][2]={};
+	ghor.subval[0][7][2].rubrik="Skriftspråk";
+	ghor.subval[0][7][2].beskrivning="Rukh-nekh.";
+	ghor.subval[0][7][2].skriftsprak="Rukh-nekh.";
+	ghor.subval[0][7][2].rukhnekh = {};
+	ghor.subval[0][7][2].rukhnekh.enheter=1;
+	
+	
+	ghor.subval[0][7][3]={};
+	ghor.subval[0][7][3].rubrik="Kvinno- och mansnamn";
+	ghor.subval[0][7][3].beskrivning="Anar, Arghim, Augun, Bivor, Durr, Dvaig, Dzahl, Funbir, Genar, Hanar, Haral, Hemn, Hrazim, Khezir, Khorim, Midur, Nekhem, Rolvi, Stiar, Trumbar, Turhan, Umber, Vathar, Veig, Zirim, Zimis";
+	ghor.subval[0][7][3].namnlista=["Anar", " Arghim", " Augun", " Bivor", " Durr", " Dvaig", " Dzahl", " Funbir", " Genar", " Hanar", " Haral", " Hemn", " Hrazim", " Khezir", " Khorim", " Midur", " Nekhem", " Rolvi", " Stiar", " Trumbar", " Turhan", " Umber", " Vathar", " Veig", " Zirim", " Zimis"];
+	
+	var thism={};
+	folkslagobjekt.thism=thism;
+    thism.rubrik="Thism";
+	thism.namn="thism";
+	thism.beskrivning="Thismalverna i den damariska Järvskogen är kända som fruktansvärda krigare, kanske än mer än sina fränder på andra håll, och de försvarar vildsint sitt territorium. De är uppdelade på tre hus med delvis egna traditioner, även om de av nöd och sedvänja arbetar mycket nära varandra. " + "\n" + "Thism är ofta drygt 190 cm långa, ganska smalt byggda och väger ungefär 70 kg. De är oftast blonda eller brunhåriga, och ögonen är oftast klarblå. Bland Järvskogens alver tycks dock nötbruna ögon vara något vanligare än på andra håll."
+	
+	thism.subval=[[[]]];
+	thism.subval[0][0][0]={};
+	thism.subval[0][0][0].valdasub = [];
+	thism.subval[0][0][0].vald = 0;
+	thism.subval[0][0][0].styrka = {};
+	thism.subval[0][0][0].styrka.varde=9;
+	thism.subval[0][0][0].talighet = {};
+	thism.subval[0][0][0].talighet.varde=9;
+	thism.subval[0][0][0].rorlighet = {};
+	thism.subval[0][0][0].rorlighet.varde=10;
+	thism.subval[0][0][0].uppfattning = {};
+	thism.subval[0][0][0].uppfattning.varde=10;
+	thism.subval[0][0][0].vilja = {};
+	thism.subval[0][0][0].vilja.varde=8;
+	thism.subval[0][0][0].psyke = {};
+	thism.subval[0][0][0].psyke.varde=8;
+	thism.subval[0][0][0].visdom = {};
+	thism.subval[0][0][0].visdom.varde=8;
+	thism.subval[0][0][0].utstralning = {};
+	thism.subval[0][0][0].utstralning.varde=8;
+	thism.subval[0][0][0].beskrivningattribut=[[["Styrka"],["2T6\+1"]],[["Tålighet"],["2T6\+1"]],[["Rörlighet"],["2T6\+2"]],[["Uppfattning"],["2T6\+2"]],[["Vilja"],["2T6"]],[["Psyke"],["2T6"]],[["Visdom"],["2T6"]],[["Utstrålning"],["2T6"]]]
+	
+	
+	thism.subval[0].push([]);
+	thism.subval[0][1][0]={};
+	thism.subval[0][1][0].valdasub = [];
+	thism.subval[0][1][0].vald = 0;
+	thism.subval[0][1][0].rubrik="Alviska drag";
+	thism.subval[0][1][0].beskrivning="Thisms utstrålning och ädla drag gör att man omedelbart lägger märke till dem. ";
+	thism.subval[0][1][0].beskrivninghak="\+2 Intryck";
+	thism.subval[0][1][0].intryck = {};
+	thism.subval[0][1][0].intryck.bonus=2;
+
+	thism.subval[0].push([]);
+	thism.subval[0][2][0]={};
+	thism.subval[0][2][0].valdasub = [];
+	thism.subval[0][2][0].vald = 0;
+	thism.subval[0][2][0].rubrik="Alviska ögat";
+	thism.subval[0][2][0].beskrivning="Det alviska ögat innebär man känner av när man blir iakttagen av en alv, men effekten är även omvänd så att alver känner av när de blir iakttagna.";
+	thism.subval[0][2][0].beskrivninghak="Alver kan anstränga sig för att både förstärka och dölja effekten av det alviska ögat. Hur bra de är på detta mäts med kännetecknet Alviska ögat som de börjar med 3T6 i.";
+	thism.subval[0][2][0].alviskaogat = {};
+	thism.subval[0][2][0].alviskaogat.enheter=1;
+	
+	thism.subval[0].push([]);
+	thism.subval[0][3][0]={};
+	thism.subval[0][3][0].valdasub = [];
+	thism.subval[0][3][0].vald = 0;
+	thism.subval[0][3][0].rubrik="Biotropiskt fält";
+	thism.subval[0][3][0].beskrivning="Alver genomströmmas av biotropisk kraft vilket stoppar blödningar.";
+	thism.subval[0][3][0].beskrivninghak="En alv som blöder slår varje runda ett Livskraftslag mot blödningens svårighet för att se ifall den upphör. Detta sker efter att blödningen hanterats under rundan.";
+	thism.subval[0][3][0].formaga="Vid blödning får ett Livskraftslag mot blödningens svårighet slås varje runda för att stoppa blodflödet."
+	
+	thism.subval[0].push([]);
+	thism.subval[0][4][0]={};
+	thism.subval[0][4][0].valdasub = [];
+	thism.subval[0][4][0].vald = 0;
+	thism.subval[0][4][0].rubrik="Förbannelsens folk"
+	thism.subval[0][4][0].beskrivning="Tiden läker inga sår för den vars minnen inte bleknar med åren."
+	thism.subval[0][4][0].beskrivninghak="Alver kan inte välja att höja Välmående vid början av ett spelmöte (enligt reglerna på sida 140 i Grundboken), men kan som vanligt återfå det genom att uppfylla karaktärsdrag.";
+	thism.subval[0][4][0].formaga="Kan ej välja att höja Välmående vid början av ett spelmöte (enligt reglerna på sida 140 i Grundboken), men kan som vanligt återfå det genom att uppfylla karaktärsdrag.";
+	
+	thism.subval[0].push([]);
+	thism.subval[0][5][0]={};
+	thism.subval[0][5][0].valdasub = [];
+	thism.subval[0][5][0].vald = 0;
+	thism.subval[0][5][0].rubrik="Edsvuren"
+	thism.subval[0][5][0].beskrivning="Thisms samhälle består av ett system av lojalitet och trohetseder som garanterar deras plats i hierarkin.";
+	thism.subval[0][5][0].beskrivninghak="En thismalv får +1T6 på alla slag för Självkontroll där ett misslyckande skulle innebära att alven bryter en trohetsed eller går emot en överordnads instruktioner.";
+	thism.subval[0][5][0].formaga="Får +1T6 på alla slag för Självkontroll där ett misslyckande skulle innebära att alven bryter en trohetsed eller går emot en överordnads instruktioner.";
+	
+	thism.subval[0].push([]);
+	thism.subval[0][6][0]={};
+	thism.subval[0][6][0].valdasub = [];
+	thism.subval[0][6][0].vald = 0;
+	thism.subval[0][6][0].rubrik="Långlivad";
+	thism.subval[0][6][0].beskrivning="Thism lever inte för evigt men betydligt längre än någon människa eller dvärg. Av detta får de 4 enheter Kunskapsfärdigheter samt +2 Självkontroll.";
+	thism.subval[0][6][0].kunskapsfardigheterenheter=4;
+	thism.subval[0][6][0].sjalvkontroll = {};
+	thism.subval[0][6][0].sjalvkontroll.bonus=2;
+	
+	
+	thism.subval[0].push([]);
+	thism.subval[0][7][0]={};
+	thism.subval[0][7][0].valdasub = [];
+	thism.subval[0][7][0].vald = 0;
+	thism.subval[0][7][0].rubrik="Nattsyn"
+	thism.subval[0][7][0].beskrivning="thism har god nattsyn och kan se bra i ljussvaga förhållanden. Är det totalt mörker ser de dock ingenting. De får kännetecknet Nattsyn 4T6."
+	thism.subval[0][7][0].nattsyn = {};
+	thism.subval[0][7][0].nattsyn.enheter=3;
+	
+	
+	
+	thism.subval[0].push([]);
+	thism.subval[0][8][0]={};
+	thism.subval[0][8][0].valdasub = [];
+	thism.subval[0][8][0].vald = 0;
+	thism.subval[0][8][0].antalsubval=2;
+	
+	thism.subval[0][8][1]={};
+	thism.subval[0][8][1].rubrik="Kvinnonamn";
+	thism.subval[0][8][1].kvinnonamnlista=["Avaliel", "Ceranidel", "Evinal", "Gialari", "Ilian", "Odesse", "Siusad", "Tielesin", "Uliadi", "Yviol"];
+	thism.subval[0][8][1].beskrivning="Avaliel, Ceranidel, Evinal, Gialari, Ilian, Odesse, Siusad, Tielesin, Uliadi, Yviol";
+	
+	thism.subval[0][8][2]={};
+	thism.subval[0][8][2].rubrik="Mansnamn";
+	thism.subval[0][8][2].beskrivning="Alean, Belion, Ceranidan, Edarion, Guderian, Isanion, Lunerian, Uanir, Ysanan";
+	thism.subval[0][8][2].mansnamnlista=["Alean", "Belion", "Ceranidan", "Edarion", "Guderian", "Isanion", "Lunerian", "Uanir", "Ysanan"];
+
+	thism.subval.push([[]]);
+	thism.subval[1][0][0]={};
+	thism.subval[1][0][0].valdasub = [];
+	thism.subval[1][0][0].vald = 0;
+	thism.subval[1][0][0].rubrik="Hus";
+	thism.subval[1][0][0].beskrivning="Beroende på vilket hus thismalven tillhör erhålls en av följande egenskaper:";
+	thism.subval[1][0][0].antalsubval=1;
+	
+
+	
+	thism.subval[1].push([]);
+	thism.subval[1][1][0]={};
+	thism.subval[1][1][0].valdasub = [];
+	thism.subval[1][1][0].vald = 0;
+	thism.subval[1][1][0].rubrik="vhic Amlosa";
+	thism.subval[1][1][0].beskrivning="Många av Järvskogens främsta skarpskyttar och jägare har under historien kommit från detta hus, vars medlemmar har rykte om sig att vara tysta, förslagna och tålmodiga. Husets symbol är en rötkrälare. ";
+	thism.subval[1][1][0].beskrivninghak="De är Lättlärda i Gömma och börjar med 4T6 i kännetecknet Alviska ögat samt 3 enheter för vildmarksfärdigheter.";
+	thism.subval[1][1][0].ovrigt="Hus: vhic Amlosa"
+	thism.subval[1][1][0].gomma={};
+	thism.subval[1][1][0].gomma.lattlard=1;
+	thism.subval[1][1][0].alviskaogat={};
+	thism.subval[1][1][0].alviskaogat.enheter=2;
+	thism.subval[1][1][0].vildmarksfardigheterenheter=3;
+	thism.subval[1][1][0].antalsubval=2;
+	
+	thism.subval[1][1].push();
+	thism.subval[1][1][1]={};
+	thism.subval[1][1][1].rubrik="Talade språk";
+	thism.subval[1][1][1].beskrivning="felya telieoro.";
+	thism.subval[1][1][1].felyatelieoro = {};
+	thism.subval[1][1][1].felyatelieoro.enheter=1;
+	
+	thism.subval[1][1].push();
+	thism.subval[1][1][2]={};
+	thism.subval[1][1][2].rubrik="Skriftspråk";
+	thism.subval[1][1][2].beskrivning="Inga.";
+	
+	thism.subval[1].push([]);
+	thism.subval[1][2][0]={};
+	thism.subval[1][2][0].valdasub = [];
+	thism.subval[1][2][0].vald = 0;
+	thism.subval[1][2][0].rubrik="vhic Nangalie";
+	thism.subval[1][2][0].beskrivning="Då inga sanarialver lever i den dystra  Järvskogen  har många av de uppgifter som i Sunari  sköts av denna stam istället fallit på hus Nangalies  lott. Genom historien har drygt hälften av Sholye hen’oros ledare kommit från detta hus. Nangalies symbol är en bevingad orm."; 
+	thism.subval[1][2][0].beskrivninghak="De är Lättlärda i Ledarskap  och får 3 enheter på Kunskapsfärdigheter.";
+	thism.subval[1][2][0].ovrigt="Hus: vhic Nangalie"
+	thism.subval[1][2][0].ledarskap={};
+	thism.subval[1][2][0].ledarskap.lattlard=1;
+	thism.subval[1][2][0].kunskapsfardigheterenheter=3;
+	thism.subval[1][2][0].antalsubval=2;
+	
+	thism.subval[1][2].push();
+	thism.subval[1][2][1]={};
+	thism.subval[1][2][1].rubrik="Talade språk";
+	thism.subval[1][2][1].beskrivning="Felya telieoro, felya sanari.";
+	thism.subval[1][2][1].felyatelieoro = {};
+	thism.subval[1][2][1].felyatelieoro.enheter=1;
+	thism.subval[1][2][1].felyasanari = {};
+	thism.subval[1][2][1].felyasanari.enheter=1;
+	
+	thism.subval[1][2].push();
+	thism.subval[1][2][2]={};
+	thism.subval[1][2][2].rubrik="Skriftspråk";
+	thism.subval[1][2][2].beskrivning="Felya-nai.";
+	thism.subval[1][2][2].felyanai = {};
+	thism.subval[1][2][2].felyanai.enheter=1;
+	
+	thism.subval[1].push([]);
+	thism.subval[1][3][0]={};
+	thism.subval[1][3][0].valdasub = [];
+	thism.subval[1][3][0].vald = 0;
+	thism.subval[1][3][0].rubrik="vhic Vaksama";
+	thism.subval[1][3][0].beskrivning="Hus Vaksama har ett rykte om sig som brutala och orädda krigare. Nästan alla Järvskogens molnryttare kommer från detta hus och det är ofta stridsmän från Vaksama som leder Sholye hen’oros alver i strid. Husets symbol är en heavé-drake. "; 
+	thism.subval[1][3][0].beskrivninghak="[De är Lättlärda i Krigföring och får 1 Avtrubbningskryss för våld samt 3 enheter stridsfärdigheter. En rollperson från hus Vaksama talar i grund endast felya telieoro och får inget skriftspråk från start.]";
+	thism.subval[1][3][0].ovrigt="Hus: vhic Vaksama"
+	thism.subval[1][3][0].krigforing={};
+	thism.subval[1][3][0].krigforing.lattlard=1;
+	thism.subval[1][3][0].avtrubbningvald=2;
+	thism.subval[1][3][0].stridsfardigheterenheter=3;
+	thism.subval[1][3][0].antalsubval=2;
+	
+	thism.subval[1][3].push();
+	thism.subval[1][3][1]={};
+	thism.subval[1][3][1].rubrik="Talade språk";
+	thism.subval[1][3][1].beskrivning="Felya telieoro";
+	thism.subval[1][3][1].felyatelieoro = {};
+	thism.subval[1][3][1].felyatelieoro.enheter=1;
+	
+	
+	thism.subval[1][3].push();
+	thism.subval[1][3][2]={};
+	thism.subval[1][3][2].rubrik="Skriftspråk";
+	thism.subval[1][3][2].beskrivning="Inga.";
+	
+	
+	
 
 	
 	// förmodligen battre med lista av objekt, därav kommentering

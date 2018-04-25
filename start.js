@@ -514,7 +514,7 @@ function skrivfolkslagkategorier(){
 				htmlkod += "</b>";
 			}
 		}
-		
+		/*
 		if (i==Math.floor(window.parent.folkslagobjekt.lista.length/3)){
 			htmlkod += "<br>";
 		}else if (i == 2 * Math.floor(window.parent.folkslagobjekt.lista.length/3)){
@@ -524,6 +524,16 @@ function skrivfolkslagkategorier(){
 		}else{
 			htmlkod += " &#124; ";
 		}
+		*/
+		if(i==window.parent.folkslagobjekt.lista.length-1){
+			// Skriv inget
+		}else if ((i+1)%5==0){
+			htmlkod += "<br>";
+		}else{
+			htmlkod += " &#124; ";
+		}
+		
+		
 	}
 
 	htmlkod += "</td>";
@@ -542,6 +552,7 @@ function slumpafolkslag(){
 }
 
 function skrivfolkslag(){
+	console.log("skrivfolklag körs");
 	
 	var sidocellbredd=18;
 	var sidocellbreddextra=23;
@@ -586,7 +597,9 @@ function skrivfolkslag(){
 		if (aktivtfolkslagobjekt.subval[i][j][k].slumpning==1){
 			htmlkod += "<td colspan=\"3\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'folkslag\'," + i + "," + j + "," + k + ");return false;\">" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald +  "</td>";
 		}else{
-			htmlkod += "<td colspan=\"3\"><b>" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald +  "</td>";
+			console.log("här skrivs folkslagsbeskrivningvald"),
+			htmlkod += "<td colspan=\"3\"><b>" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald; 
+			htmlkod +=  "</td>";
 		}
 		htmlkod += "</tr>";
 		for (j=1;j<aktivtfolkslagobjekt.subval[i].length;j++){
@@ -760,10 +773,16 @@ function skrivfolkslag(){
 				htmlkod += "<td colspan=\"3\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'folkslag\'," + i + "," + j + "," + k + ");return false;\">" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivning +  "</td>";
 			}else{
 				htmlkod += "<td colspan=\"3\"><b>" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald +  "</td>";
+				console.log("Skriver beskrivningvald för folkslaget");
 			}
 			
 			if ("beskrivning" in aktivtfolkslagobjekt.subval[i][j][k]){
 				htmlkod += ": " + aktivtfolkslagobjekt.subval[i][j][k].beskrivning;
+				console.log("beskrivning finns i folkslagsobjektet");
+			}
+			if ("beskrivninghak" in aktivtfolkslagobjekt.subval[i][j][k]){
+				htmlkod += " &#91;" + aktivtfolkslagobjekt.subval[i][j][k].beskrivninghak + "&#93;";
+				console.log("beskrivninghak finns i folkslagsobjektet");
 			}
 			htmlkod += "</td>";
 			htmlkod += "</tr>";
@@ -5411,8 +5430,8 @@ function skrivvanstersammanfattning(){
 	htmlkod +="<td><div id=\"rollperson_bakgrund\"></div></td>";
 	htmlkod += "</tr>";
 	htmlkod += "<tr>";
-	htmlkod +="<td><b>Folkslag:<div id=\"rollperson_folkslag_subkategorirubrik\"></div></b></td>";
-	htmlkod +="<td><div id=\"rollperson_folkslag\"></div><div id=\"rollperson_folkslag_subkategori\"></div></td>";
+	htmlkod +="<td><b>Folkslag:<div id=\"rollperson_folkslag_subkategorirubrik\"></div><div id=\"rollperson_folkslag_subkategorirubrik2\"></div></b></td>";
+	htmlkod +="<td><div id=\"rollperson_folkslag\"></div><div id=\"rollperson_folkslag_subkategori\"></div><div id=\"rollperson_folkslag_subkategori2\"></div></td>";
 	htmlkod += "</tr>";
 	htmlkod += "<tr>";
 	htmlkod +="<td><b>Arketyp:</b></td>";
@@ -6082,6 +6101,10 @@ function uppdateravanstersammanfattning(){
 			document.getElementById("rollperson_folkslag_subkategorirubrik").innerHTML = "" + rollperson.folkslag.subval[1][0][0].rubrik + ":";
 			document.getElementById("rollperson_folkslag_subkategori").innerHTML ="" + rollperson.folkslag.subval[1][rollperson.folkslag.subval[1][0][0].valdasub[0]][0].rubrik;
 			
+			if (rollperson.folkslag.subval.length>2){
+				document.getElementById("rollperson_folkslag_subkategorirubrik2").innerHTML = "" + rollperson.folkslag.subval[2][0][0].rubrik + ":";
+				document.getElementById("rollperson_folkslag_subkategori2").innerHTML ="" + rollperson.folkslag.subval[2][rollperson.folkslag.subval[2][0][0].valdasub[0]][0].rubrik;
+			}
 		}
 		
 		for (i=0;i<grundattributlista.length;i++){

@@ -260,6 +260,7 @@ function hamta_fardighetslistaobjekt (){
 	sprakfardigheter.push("felyasanari");
 	sprakfardigheter.push("felyanari");
 	sprakfardigheter.push("felyaalarina");
+	sprakfardigheter.push("felyatelieoro");
 	sprakfardigheter.push("forianska");
 	sprakfardigheter.push("genvero");
 	sprakfardigheter.push("jahanniska");
@@ -293,13 +294,16 @@ function hamta_fardighetslistaobjekt (){
 	sprakfardigheter.push("nanaqee");
 	sprakfardigheter.push("nermadiska");
 	sprakfardigheter.push("nushuri");
+	sprakfardigheter.push("targatiska");
 	sprakfardigheter.push("tarhaiska");
 	sprakfardigheter.push("tauriska");
 	sprakfardigheter.push("thogenewa");
 	sprakfardigheter.push("tokon");
 	sprakfardigheter.push("trhzz");
 	sprakfardigheter.push("uni");
+	sprakfardigheter.push("valacha");
 	sprakfardigheter.push("vallanboriska");
+	sprakfardigheter.push("vannai");
 	sprakfardigheter.push("ventus");
 	sprakfardigheter.push("ylkanno");
 	sprakfardigheter.push("zrigio");
@@ -530,6 +534,7 @@ function hamta_fardighetslistaobjekt (){
     kanneteckenfardigheter[0]="alldagligtutseende";
 	kanneteckenfardigheter.push("allvarliguppsyn");
 	kanneteckenfardigheter.push("allatare");
+	kanneteckenfardigheter.push("alviskaogat");
 	kanneteckenfardigheter.push("auraavobehag");
 	kanneteckenfardigheter.push("auraavsjalvsakerhet");
 	kanneteckenfardigheter.push("avvikandeogonfarg");
@@ -1146,6 +1151,8 @@ function hamta_fardighetsobjekt () {
 	fardighetsobjekt["allatare"].rubrik="Allätare"; 
 	fardighetsobjekt["allatare"].beskrivning="Personen tycks kunna äta vad som helst utan att bli sjuk: skämd mat, rått kött, gräs och daggmaskar. Personen får slå med färdigheten istället för Livskraft om färdigheten är högre då det gäller att motstå illamående eller sjukdomar. Dessutom har personen lätt för att hitta något ätbart i stort sett överallt."; 
 
+	fardighetsobjekt["alviskaogat"].rubrik="Alvisk ögat";
+	
 	fardighetsobjekt["auraavobehag"].rubrik="Aura av obehag"; 
 	fardighetsobjekt["auraavobehag"].beskrivning="Det är något obehagligt med personen. En krypande olustig känsla."; 
 
@@ -1262,7 +1269,9 @@ function hamta_fardighetsobjekt () {
 
 	fardighetsobjekt["skarpaanletsdrag"].rubrik="Skarpa anletsdrag"; 
 	fardighetsobjekt["skarpaanletsdrag"].beskrivning="Personen har skarpa och definierade anletsdrag."; 
-
+	
+	fardighetsobjekt["skarptminne"].rubrik="Skarpt minne"; 
+	
 	fardighetsobjekt["struktureratsinne"].rubrik="Strukturerat sinne"; 
 	fardighetsobjekt["struktureratsinne"].beskrivning="Personen har ett mycket strukturerat sinne och upptäcker avvikelser och oegentligheter samt är skicklig på att lägga upp planer."; 
 
