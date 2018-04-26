@@ -2953,7 +2953,7 @@ var utmarkare={};
 	thism.subval[1][1].push();
 	thism.subval[1][1][1]={};
 	thism.subval[1][1][1].rubrik="Talade språk";
-	thism.subval[1][1][1].beskrivning="felya telieoro.";
+	thism.subval[1][1][1].beskrivning="Felya telieoro.";
 	thism.subval[1][1][1].felyatelieoro = {};
 	thism.subval[1][1][1].felyatelieoro.enheter=1;
 	
@@ -2997,7 +2997,7 @@ var utmarkare={};
 	thism.subval[1][3][0].vald = 0;
 	thism.subval[1][3][0].rubrik="vhic Vaksama";
 	thism.subval[1][3][0].beskrivning="Hus Vaksama har ett rykte om sig som brutala och orädda krigare. Nästan alla Järvskogens molnryttare kommer från detta hus och det är ofta stridsmän från Vaksama som leder Sholye hen’oros alver i strid. Husets symbol är en heavé-drake. "; 
-	thism.subval[1][3][0].beskrivninghak="[De är Lättlärda i Krigföring och får 1 Avtrubbningskryss för våld samt 3 enheter stridsfärdigheter. En rollperson från hus Vaksama talar i grund endast felya telieoro och får inget skriftspråk från start.]";
+	thism.subval[1][3][0].beskrivninghak="De är Lättlärda i Krigföring och får 1 Avtrubbningskryss för våld samt 3 enheter stridsfärdigheter. ";
 	thism.subval[1][3][0].ovrigt="Hus: vhic Vaksama"
 	thism.subval[1][3][0].krigforing={};
 	thism.subval[1][3][0].krigforing.lattlard=1;
