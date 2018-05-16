@@ -2663,312 +2663,365 @@
     bakgrundstabeller.ghor[0].rubrik="Ghor";
     bakgrundstabeller.ghor[0].namn="ghor";
 	
+	bakgrundstabeller.ghor[1] = {};
 	bakgrundstabeller.ghor[1].rubrik="Alkemist";
 	bakgrundstabeller.ghor[1].beskrivning="I sina laboratorier och verkstäder arbetar de dvärgiska alkemisterna hårt för att nå nya kunskaper i materians mysterier eller för att skapa de elixir, preparat och magiska föremål som krävs för alla möjliga syften i dvärgarnas städer. ";
 	bakgrundstabeller.ghor[1].kunskapmysterier=1;
 	bakgrundstabeller.ghor[1].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[1].mystikfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[2] = {};
 	bakgrundstabeller.ghor[2].rubrik="Ambassadör";
 	bakgrundstabeller.ghor[2].beskrivning="Dessa dvärgar har tilldelas hedersuppdraget att föra konungens och fästets talan i utombergingarnas riken. ";
 	bakgrundstabeller.ghor[2].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[2].socialafardigheterenheter=4;
 	bakgrundstabeller.ghor[2].stridsfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[3] = {};
 	bakgrundstabeller.ghor[3].rubrik="Arkivarie";
 	bakgrundstabeller.ghor[3].beskrivning="I det urgamla och välordnade dvärgfästet kan arkiv och bibliotek nå enorma proportioner och för att byråkratin ska fungera kräver fästet därför hela truppstyrkor av noggranna, tålmodiga och pedantiska arkivarier. ";
 	bakgrundstabeller.ghor[3].kunskapmysterier=1;
 	bakgrundstabeller.ghor[3].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[3].hantverkpoang=4;
 
+	bakgrundstabeller.ghor[4] = {};
 	bakgrundstabeller.ghor[4].rubrik="Brottsling";
 	bakgrundstabeller.ghor[4].beskrivning="Den dvärgiska lagen är drakonisk, dogmatisk och oförlåtande vilket gör att de dvärgar som fälls för brott, som i människornas ögon framstår som triviala, straffas genom att tatueras i ansiktet, så att deras skam för evigt ska vara uppenbar för omgivningen. Brottslingen är en dvärg som fällts för ett brott men tillåtits stanna i dvärgfästet. ";
 	bakgrundstabeller.ghor[4].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[4].rorelsefardigheterenheter=4;
 	bakgrundstabeller.ghor[4].kannetackenpoang=4;
 
+	bakgrundstabeller.ghor[5] = {};
 	bakgrundstabeller.ghor[5].rubrik="Bryggare";
 	bakgrundstabeller.ghor[5].beskrivning="Bryggarna framställer öl och andra jästa drycker, inklusive det legendariska kvasr-ölet, och betraktas därför av andra dvärgar som några av fästets mest respekterade hantverkare. ";
 	bakgrundstabeller.ghor[5].valfriatabellslag=1;
 	bakgrundstabeller.ghor[5].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[5].hantverkpoang=4;
 
+	bakgrundstabeller.ghor[6] = {};
 	bakgrundstabeller.ghor[6].rubrik="Grottsvampodlare";
 	bakgrundstabeller.ghor[6].beskrivning="Med oändligt tålamod och stor yrkesstolthet förser svampodlarna i sina underjordiska odlingsgångar fästet med en stor del av den mat som de mångtaliga invånarna behöver. ";
 	bakgrundstabeller.ghor[6].farderaventyr=1;
 	bakgrundstabeller.ghor[6].valfriaenheter=4;
 	bakgrundstabeller.ghor[6].hantverkpoang=4;
 
+	bakgrundstabeller.ghor[7] = {};
 	bakgrundstabeller.ghor[7].rubrik="Gruvbestskötare";
 	bakgrundstabeller.ghor[7].beskrivning="De enorma, maskliknande varelser som kallas gruvbestar är en av de viktigaste källorna till kött och läder i dvärgfästet och föds upp i underjordiska farmer. Eftersom djuren kan vara mycket aggressiva måste skötarna vara vaksamma och bra på att försvara sig. ";
 	bakgrundstabeller.ghor[7].farderaventyr=1;
 	bakgrundstabeller.ghor[7].stridsfardigheterenheter=4;
 	bakgrundstabeller.ghor[7].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[8] = {};
 	bakgrundstabeller.ghor[8].rubrik="Grävare";
 	bakgrundstabeller.ghor[8].beskrivning="I mörkret under dvärgfästet sliter grävarna oavbrutet i sin jakt på resurser eller för att bygga ut dvärgarnas underjordiska domäner. ";
 	bakgrundstabeller.ghor[8].farderaventyr=1;
 	bakgrundstabeller.ghor[8].rorelsefardigheterenheter=4;
 	bakgrundstabeller.ghor[8].stridsfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[9] = {};
 	bakgrundstabeller.ghor[9].rubrik="Handlare";
 	bakgrundstabeller.ghor[9].beskrivning="De dvärgiska köpmännen är bland de dvärgar som har allra mest kontakt med utombergingar, oavsett om de bedriver sitt arbete vid fästets portar eller om de köper och säljer sina varor i människornas städer och handelsstationer. ";
 	bakgrundstabeller.ghor[9].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[9].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[9].socialafardigheterenheter=4;
 
+	bakgrundstabeller.ghor[10] = {};
 	bakgrundstabeller.ghor[10].rubrik="Hantverkare";
 	bakgrundstabeller.ghor[10].beskrivning="Otaliga hantverkare, från skräddare, snickare och garvare till guldsmeder, glasblåsare, bildhuggare och tatuerare sliter oavbrutet för att hålla liv i den väldiga dvärgastaden och dess aldrig sinande behov av alla möjliga varor och arbeten. ";
 	bakgrundstabeller.ghor[10].valfriatabellslag=1;
 	bakgrundstabeller.ghor[10].rorelsefardigheterenheter=4;
 	bakgrundstabeller.ghor[10].hantverkpoang=4;
 
+	bakgrundstabeller.ghor[11] = {};
 	bakgrundstabeller.ghor[11].rubrik="Ingenjör";
 	bakgrundstabeller.ghor[11].beskrivning="De dvärgiska ingenjörerna är några av Mundanas skickligaste och mest hemlighetsfulla forskare, byggare och uppfinnare. Det är tack vare dem dvärgarna kan titulera sig upphovsmän av allt från jättelika smältugnar till urverket, tryckpressen och siffran noll. ";
 	bakgrundstabeller.ghor[11].valfriatabellslag=1;
 	bakgrundstabeller.ghor[11].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[11].hantverkpoang=4;
 
+	bakgrundstabeller.ghor[12] = {};
 	bakgrundstabeller.ghor[12].rubrik="Kurir";
 	bakgrundstabeller.ghor[12].beskrivning="Kurirerna är modiga och uthålliga dvärgar som har tagit på sig det farliga arbetet att föra brev, befallningar och meddelanden mellan dvärgfästen och ibland även till utombergingarnas riken. ";
 	bakgrundstabeller.ghor[12].farderaventyr=1;
 	bakgrundstabeller.ghor[12].socialafardigheterenheter=4;
 	bakgrundstabeller.ghor[12].stridsfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[13] = {};
 	bakgrundstabeller.ghor[13].rubrik="Kvädare";
 	bakgrundstabeller.ghor[13].beskrivning="Kvädarna håller den dvärgiska historien, sagorna och sångerna levande genom att författa och framföra både nya och klassiska verk i samband med allt från högtidliga tillfällen till druckna värdshuskvällar. ";
 	bakgrundstabeller.ghor[13].farderaventyr=1;
 	bakgrundstabeller.ghor[13].rorelsefardigheterenheter=4;
 	bakgrundstabeller.ghor[13].socialafardigheterenheter=4;
 
+	bakgrundstabeller.ghor[14] = {};
 	bakgrundstabeller.ghor[14].rubrik="Lagkunnig";
 	bakgrundstabeller.ghor[14].beskrivning="Dessa dvärgar, oavsett om de arbetar som domare, anförare eller svarsförare, har vigt sina liv åt att studera de urgamla, hårda och mycket invecklade dvärgiska lagtexterna och att retoriskt skickligt argumentera för sin sak. ";
 	bakgrundstabeller.ghor[14].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[14].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[14].socialafardigheterenheter=4;
 
+	bakgrundstabeller.ghor[15] = {};
 	bakgrundstabeller.ghor[15].rubrik="Läkare";
 	bakgrundstabeller.ghor[15].beskrivning="De dvärgiska läkarna har genom årtusenden kommit att producera några av Mundanas främsta helare, även om de är ytterst hemlighetsfulla och ovilliga att dela med sig av sina kunskaper till utombergingar. ";
 	bakgrundstabeller.ghor[15].kunskapmysterier=1;
 	bakgrundstabeller.ghor[15].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[15].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[16] = {};
 	bakgrundstabeller.ghor[16].rubrik="Magimästare";
 	bakgrundstabeller.ghor[16].beskrivning="Dvärgar i gemen misstror magi, även om de respekterar den stora kunskap och självdisciplin som utbildningen kräver och den makt som en skicklig magimästare besitter. Den dvärgiska magin är tätt knuten till Vontartron och nästan helt centrerad kring de fyra elementaraspekterna. ";
 	bakgrundstabeller.ghor[16].kunskapmysterier=1;
 	bakgrundstabeller.ghor[16].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[16].mystikfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[17] = {};
 	bakgrundstabeller.ghor[17].rubrik="Milissoldat";
 	bakgrundstabeller.ghor[17].beskrivning="Alla dvärgar är värnpliktiga och har i uppdrag att skydda sitt fäste i krigstid. Några av milissoldaterna, bland annat portmilisen som skyddar fästets ytligaste kvarter, arbetar även i fredstid med att skydda dvärgastaden. ";
 	bakgrundstabeller.ghor[17].striderdrabbningar=1;
 	bakgrundstabeller.ghor[17].stridsfardigheterenheter=4;
 	bakgrundstabeller.ghor[17].expertispoang=4;
 
+	bakgrundstabeller.ghor[18] = {};
 	bakgrundstabeller.ghor[18].rubrik="Niding";
 	bakgrundstabeller.ghor[18].beskrivning="Det vanligaste straffet för brott i den dvärgiska kulturen är evig förvisning från fästet. De allra flesta dvärgar tar sitt liv efter en sådan dom och anses då ha försonats med Vontar, men ett fåtal nidingar väljer att fortsätta leva i skam och vanära utanför fästet. ";
 	bakgrundstabeller.ghor[18].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[18].rorelsefardigheterenheter=4;
 	bakgrundstabeller.ghor[18].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[19] = {};
 	bakgrundstabeller.ghor[19].rubrik="Prospektör";
 	bakgrundstabeller.ghor[19].beskrivning="Dvärgfästena hungrar alltid efter järn, guld, stenkol, rent vatten och andra naturresurser. Då är det prospektörernas värv att söka efter lämpliga nya stenbrott, gruvor, brunnar och ibland, i samarbete med utforskarna, även platser att uppföra nya fästen på. ";
 	bakgrundstabeller.ghor[19].farderaventyr=1;
 	bakgrundstabeller.ghor[19].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[19].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[20] = {};
 	bakgrundstabeller.ghor[20].rubrik="Smed";
 	bakgrundstabeller.ghor[20].beskrivning="I dvärgfästets monstruösa smedjor, omgivna av enorma masugnar, skapar några av Mundanas främsta smeder otroliga smidesarbeten i form av verktyg, vapen, maskindelar och konstruktionselement. ";
 	bakgrundstabeller.ghor[20].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[20].valfriaenheter=4;
 	bakgrundstabeller.ghor[20].hantverkpoang=4;
 
+	bakgrundstabeller.ghor[21] = {};
 	bakgrundstabeller.ghor[21].rubrik="Spindelväktare";
 	bakgrundstabeller.ghor[21].beskrivning="Spindelväktarna är vapenmästare vars uppgift går ut på att upptäcka och eliminera hot mot säkerheten i själva dvärgfästet, såsom tiraker, vättar, jättespindlar eller monster från djupen. De är så gott som oöverträffade vad gäller strider i underjordens mörker. ";
 	bakgrundstabeller.ghor[21].striderdrabbningar=1;
 	bakgrundstabeller.ghor[21].rorelsefardigheterenheter=4;
 	bakgrundstabeller.ghor[21].stridsfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[22] = {};
 	bakgrundstabeller.ghor[22].rubrik="Tirakbaneman";
 	bakgrundstabeller.ghor[22].beskrivning="Bland utombergingar är tirakbanemännen de allra mest legendariska dvärgkrigarna. I krigstid är det deras uppgift att rekognosera och spana på fiender utanför dvärgfästet och i vissa fall leda överraskningsattacker och hämndaktioner mot utombergingarnas styrkor. ";
 	bakgrundstabeller.ghor[22].striderdrabbningar=1;
 	bakgrundstabeller.ghor[22].stridsfardigheterenheter=4;
 	bakgrundstabeller.ghor[22].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[23] = {};
 	bakgrundstabeller.ghor[23].rubrik="Utforskare";
 	bakgrundstabeller.ghor[23].beskrivning="Några av de allra mest äventyrliga och modiga av dvärgarnas folk är de som under långa tider lämnar dvärgasamhällets trygghet och ger sig ut i världen för att finna nya riken, folkslag och platser lämpade för nya fästen och kolonier. ";
 	bakgrundstabeller.ghor[23].farderaventyr=1;
 	bakgrundstabeller.ghor[23].rorelsefardigheterenheter=4;
 	bakgrundstabeller.ghor[23].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[24] = {};
 	bakgrundstabeller.ghor[24].rubrik="Vontarpräst";
 	bakgrundstabeller.ghor[24].beskrivning="Vontars stränga prästerskap predikar gudens ord, och bidrar därtill med goda råd till varje dvärg som söker upp dem för att få vägledning vid svåra livsval. ";
 	bakgrundstabeller.ghor[24].kunskapmysterier=1;
 	bakgrundstabeller.ghor[24].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.ghor[24].mystikfardigheterenheter=4;
 
+	bakgrundstabeller.ghor[25] = {};
 	bakgrundstabeller.ghor[25].rubrik="Äldste";
 	bakgrundstabeller.ghor[25].beskrivning="Under dvärgkungen regeras varje fäste av äldstarnas råd, som dels består av de olika husens äldstar och dels av ämbetsäldstarna som utsetts av kungen. Äldstarna är ofta mycket kunniga och plikttrogna makthavare, men inte sällan extremt konservativa även med dvärgiska mått mätt. ";
 	bakgrundstabeller.ghor[25].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[25].socialafardigheterenheter=4;
 	bakgrundstabeller.ghor[25].valfriaenheter=4;
 
+
 	bakgrundstabeller.jarvskogen = [];
 	bakgrundstabeller.jarvskogen[0] = {};
 	bakgrundstabeller.jarvskogen[0].subval = [[[]]];
 	bakgrundstabeller.jarvskogen[0].vald = 0;
     bakgrundstabeller.jarvskogen[0].rubrik="Järvskogen";
-    bakgrundstabeller.jarvskogen[0].namn="ghor";
+    bakgrundstabeller.jarvskogen[0].namn="jarvskogen";
 	
+	bakgrundstabeller.jarvskogen[1] = {};
 	bakgrundstabeller.jarvskogen[1].rubrik="Bard";
 	bakgrundstabeller.jarvskogen[1].beskrivning="Järvskogens barder är poeter och musiker som underhåller sina trötta fränder vid dagens slut med lustiga sånger, sätter ord på de sörjandes smärta vid begravningar och komponerar verser som låter forna hjältars dåd leva för evigt.";
 	bakgrundstabeller.jarvskogen[1].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[1].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[1].socialafardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[2] = {};
 	bakgrundstabeller.jarvskogen[2].rubrik="Byggare";
 	bakgrundstabeller.jarvskogen[2].beskrivning="De alviska byggmästarna i Järvskogen har under årtusenden inte bara lärt sig konsten att bygga avancerade, bekväma hem med mycket enkla medel, utan behärskar även konsten att uppföra hela byar så väl kamouflerade att de är i det närmaste omöjliga att finna för den oinvigde.";
 	bakgrundstabeller.jarvskogen[2].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[2].valfriaenheter=4;
 	bakgrundstabeller.jarvskogen[2].hantverkpoang=4;
 
+	bakgrundstabeller.jarvskogen[3] = {};
 	bakgrundstabeller.jarvskogen[3].rubrik="Djurskötare";
 	bakgrundstabeller.jarvskogen[3].beskrivning="Järvskogsalverna har under lång tid tämjt och domesticerat otaliga djur. Särskilda djurskötare övervakar aveln, tämjandet och skötseln av dessa djur, oavsett om det rör sig om silkesmaskar, tama jätteskogskatter eller jaktfalkar.";
 	bakgrundstabeller.jarvskogen[3].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[3].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[3].expertispoang=4;
 
+	bakgrundstabeller.jarvskogen[4] = {};
 	bakgrundstabeller.jarvskogen[4].rubrik="Ensamvarg";
 	bakgrundstabeller.jarvskogen[4].beskrivning="En del alver är av olika skäl inte längre en del av den alviska gemenskapens skydd och värme, utan lever istället ensamma liv ute i vildmarken. Oavsett om så har skett grund av alvens eget val eller om denne förvisats för något brott har denne tvingats lära sig överleva på egen hand i en farlig värld.";
 	bakgrundstabeller.jarvskogen[4].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[4].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[4].kannetackenpoang=4;
 
+	bakgrundstabeller.jarvskogen[5] = {};
 	bakgrundstabeller.jarvskogen[5].rubrik="Felyanashon";
 	bakgrundstabeller.jarvskogen[5].beskrivning="De alviska krigarna, som på felya kallas felyanashon nodinaé, är välkända för sin disciplin och förmåga att nyttja terrängen till sin fördel. I Järvskogen är så gott som alla vuxna alver i någon mån krigare, men bland dem som på heltid valt att viga sina liv till krigskonsten märks vid sidan av de disciplinerade försvararnas förband även ädla vapenmästare och orädda låglandsryttare.";
 	bakgrundstabeller.jarvskogen[5].striderdrabbningar=1;
 	bakgrundstabeller.jarvskogen[5].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[5].stridsfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[6] = {};
 	bakgrundstabeller.jarvskogen[6].rubrik="Furste";
 	bakgrundstabeller.jarvskogen[6].beskrivning="Vart och ett av de tre järvskogshusen regeras av varsin husfurste, som formellt är underställd autokraten i Emori, även om de i praktiken är självstyrande. Under dessa tre står furstarna, som närmast motsvarar människornas baroner. Dessa titlar är ärftliga och många fursteätter kan spåra sitt ursprung åtskilliga årtusenden tillbaka i tiden.";
 	bakgrundstabeller.jarvskogen[6].intrigerillgarningar=1;
 	bakgrundstabeller.jarvskogen[6].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[6].socialafardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[7] = {};
 	bakgrundstabeller.jarvskogen[7].rubrik="Handelsman";
 	bakgrundstabeller.jarvskogen[7].beskrivning="Alverna i Järvskogen misstror omvärlden och sätter en stolthet i att alltid vara självförsörjande. Likväl finns det varor som de inte kan producera själva och några vältaliga och modiga alver har tatgit på sig det farliga uppdraget att handla med i första hand pyaralverna, i andra hand människorna vid väl undangömda handelsplatser.";
 	bakgrundstabeller.jarvskogen[7].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[7].socialafardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[7].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[8] = {};
 	bakgrundstabeller.jarvskogen[8].rubrik="Hantverkare";
 	bakgrundstabeller.jarvskogen[8].beskrivning="Skräddare, garvare och pilmakare utgör ryggraden i thismalvernas samhälle och bland de egalitära järvskogsalverna är det snarare regel än undantag att en riktigt skicklig hantverksmästare belönas med en ädlingstitel.";
 	bakgrundstabeller.jarvskogen[8].valfriatabellslag=1;
 	bakgrundstabeller.jarvskogen[8].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[8].hantverkpoang=4;
 
+	bakgrundstabeller.jarvskogen[9] = {};
 	bakgrundstabeller.jarvskogen[9].rubrik="Jägare";
 	bakgrundstabeller.jarvskogen[9].beskrivning="Jägarnas arbete går dels ut på att förse sina fränder med viltkött, men även att spåra och jaga ned farliga monster och odjur som hotar alvsamhället.";
 	bakgrundstabeller.jarvskogen[9].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[9].vildmarksfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[9].hantverkpoang=4;
 
+	bakgrundstabeller.jarvskogen[10] = {};
 	bakgrundstabeller.jarvskogen[10].rubrik="Kurtisan";
 	bakgrundstabeller.jarvskogen[10].beskrivning="De alviska kurtisanerna är framstående dansare, sångare och konversatörer vars uppgift det är att skapa en behaglig, avslappnad och sensuell stämning vid sammankomster, fester och i furstarnas hov. I Järvskogen finns endast ett fåtal av dessa kvinnor och män, men de är några av alvsamhällets högst skattade medlemmar.";
 	bakgrundstabeller.jarvskogen[10].intrigerillgarningar=1;
 	bakgrundstabeller.jarvskogen[10].socialafardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[10].expertispoang=4;
 
+	bakgrundstabeller.jarvskogen[11] = {};
 	bakgrundstabeller.jarvskogen[11].rubrik="Läkare";
 	bakgrundstabeller.jarvskogen[11].beskrivning="De alviska helarna är väl bevandrade i många av läkekonstens och kirurgins mysterier. Med sina läkekonster och helande sånger har de under årens lopp slitit otaliga av sina fränder ur dödens armar.";
 	bakgrundstabeller.jarvskogen[11].intrigerillgarningar=1;
 	bakgrundstabeller.jarvskogen[11].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[11].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[12] = {};
 	bakgrundstabeller.jarvskogen[12].rubrik="Lärd";
 	bakgrundstabeller.jarvskogen[12].beskrivning="Järvskogen är fattig på böcker, skriftrullar och högre bildning, vilket gör att de få lärda kvinnor och män som ändå lever i skogen kommit att bli mästare på memorering och muntliga traditioner. Många av dem undervisar unga alver och är rådgivare vid furstehoven.";
 	bakgrundstabeller.jarvskogen[12].kunskapmysterier=1;
 	bakgrundstabeller.jarvskogen[12].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[12].socialafardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[13] = {};
 	bakgrundstabeller.jarvskogen[13].rubrik="Molnryttare";
 	bakgrundstabeller.jarvskogen[13].beskrivning="Dessa alver har lyckats få en héave-drake präglad på sig och utgör därför en del av en vördad elitgrupp av luftburna spejare och krigare.";
 	bakgrundstabeller.jarvskogen[13].striderdrabbningar=1;
 	bakgrundstabeller.jarvskogen[13].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[13].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[14] = {};
 	bakgrundstabeller.jarvskogen[14].rubrik="Mystiker";
 	bakgrundstabeller.jarvskogen[14].beskrivning="Utan tillgång till hjälp från sanaristammens hemlighetsfulla magimästare har ett fåtal av Järvskogens thismalver börjat utforska magins mysterier på egen hand.";
 	bakgrundstabeller.jarvskogen[14].kunskapmysterier=1;
 	bakgrundstabeller.jarvskogen[14].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[14].mystikfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[15] = {};
 	bakgrundstabeller.jarvskogen[15].rubrik="Odlare";
 	bakgrundstabeller.jarvskogen[15].beskrivning="Bland trädkronorna och i väl undangömda gläntor breder fält och odlingar ut sig i den mörka skogen och här arbetar alviska odlare hårt för att förse sina fränder med föda.";
 	bakgrundstabeller.jarvskogen[15].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[15].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[15].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[16] = {};
 	bakgrundstabeller.jarvskogen[16].rubrik="Skarpskytt";
 	bakgrundstabeller.jarvskogen[16].beskrivning="Dessa de allra mest legendariska och fruktade av alvkrigare är oöverträffade bågskyttar och mästare på att röra sig obemärkt genom vildmarken.";
 	bakgrundstabeller.jarvskogen[16].striderdrabbningar=1;
 	bakgrundstabeller.jarvskogen[16].stridsfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[16].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[17] = {};
 	bakgrundstabeller.jarvskogen[17].rubrik="Skrivare";
 	bakgrundstabeller.jarvskogen[17].beskrivning="Endast en liten, men inflytelserik del av Järvskogens praktiskt lagda och föga lärdomsaktiga alver behärskar skrivkonsten och bokföringens ädla konst, men dessa har dock ofta en hög maktställning nära maktens centrum.";
 	bakgrundstabeller.jarvskogen[17].intrigerillgarningar=1;
 	bakgrundstabeller.jarvskogen[17].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[17].socialafardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[18] = {};
 	bakgrundstabeller.jarvskogen[18].rubrik="Smed";
 	bakgrundstabeller.jarvskogen[18].beskrivning="Oavsett om de arbetar med att tillverka grovsmide, verktyg eller vapen är smederna vitala för järvskogsalvernas överlevnad. Bristen på metall gör att endast skogens skickligaste hantverkarna tillåts utöva detta yrke.";
 	bakgrundstabeller.jarvskogen[18].striderdrabbningar=1;
 	bakgrundstabeller.jarvskogen[18].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[18].hantverkpoang=4;
 
+	bakgrundstabeller.jarvskogen[19] = {};
 	bakgrundstabeller.jarvskogen[19].rubrik="Spanare";
 	bakgrundstabeller.jarvskogen[19].beskrivning="Det sägs vara omöjligt att korsa Järvskogens bryn utan att känna ilningar från alviska blickar. Spanarna finns överallt i skogarna, där de dolda bland träden och undervegetationen håller inkräktare och andra hot under uppsikt.";
 	bakgrundstabeller.jarvskogen[19].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[19].rorelsefardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[19].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[20] = {};
 	bakgrundstabeller.jarvskogen[20].rubrik="Stigfinnare";
 	bakgrundstabeller.jarvskogen[20].beskrivning="När någon måste korsa den mörka vildmarken bortom alvernas bosättningar tar de ofta hjälp av de många skickliga och orädda stigfinnarna. Dessa guider och vildmarksvandrare lever på gränsen mellan alvernas riken och vildmarkens fasor och känner bättre än någon annan de snabbaste och säkraste vägarna genom skogarna.";
 	bakgrundstabeller.jarvskogen[20].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[20].stridsfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[20].vildmarksfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[21] = {};
 	bakgrundstabeller.jarvskogen[21].rubrik="Sändebud";
 	bakgrundstabeller.jarvskogen[21].beskrivning="När Järvskogens alver måste föra meddelanden till utomstående såsom andra alver, människor eller dvärgar, då skickar de sändebuden. Då de delvis är ambassadörer och delvis postiljoner måste de vara såväl snabba som stridsvana, politiskt pålästa och kvicka i repliken.";
 	bakgrundstabeller.jarvskogen[21].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[21].socialafardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[21].stridsfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[22] = {};
 	bakgrundstabeller.jarvskogen[22].rubrik="Trädmästare";
 	bakgrundstabeller.jarvskogen[22].beskrivning="Järvskogens alver uppför många av sina byggnader i skogens alltjämt levande träd. Det är trädmästarna som genom en blandning av magiska och världsliga medel möjliggör detta genom att forma träden. De ansvarar även för att skydda dem mot röta och skadedjursangrepp.";
 	bakgrundstabeller.jarvskogen[22].kunskapmysterier=1;
 	bakgrundstabeller.jarvskogen[22].mystikfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[22].hantverkpoang=4;
 
+	bakgrundstabeller.jarvskogen[23] = {};
 	bakgrundstabeller.jarvskogen[23].rubrik="Väktare";
 	bakgrundstabeller.jarvskogen[23].beskrivning="Väktarna är krigare vars uppgift är att upprätthålla freden alver emellan och att straffa brottslingar. Thismalvernas kultur är mycket fokuserad på heder, lojalitet och samhörighet, och fördömer alla brott mot andra alver hårt. Samhällets fokus på personlig heder gör att även små förolämpningar lätt urartar i blodiga konflikter alver emellan.";
 	bakgrundstabeller.jarvskogen[23].striderdrabbningar=1;
 	bakgrundstabeller.jarvskogen[23].socialafardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[23].stridsfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[24] = {};
 	bakgrundstabeller.jarvskogen[24].rubrik="Ädling";
 	bakgrundstabeller.jarvskogen[24].beskrivning="Ädlingarna är den alviska motsvarigheten till människornas riddare och utgör eliten i det hierarkiska thismsamhället. Ädlingarnas titlar är inte ärftliga, utan delas ut av husfurstarna som belöning för lojalitet, personlig duglighet och tapperhet. Ädlingarna respekteras djupt även bland de egalitära järvskogsalverna.";
 	bakgrundstabeller.jarvskogen[24].intrigerillgarningar=1;
 	bakgrundstabeller.jarvskogen[24].socialafardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[24].stridsfardigheterenheter=4;
 
+	bakgrundstabeller.jarvskogen[25] = {};
 	bakgrundstabeller.jarvskogen[25].rubrik="Örtmästare";
 	bakgrundstabeller.jarvskogen[25].beskrivning="När det kommer till kunskaper om de remarkabla egenskaperna hos skogens många växter finns det ingen mer kunnig än de alviska örtmästarna, som förser samhället både med vildvippans läkande krafter, månklockans förrädiska gift och alvgräsets lugnande dunster.";
 	bakgrundstabeller.jarvskogen[25].kunskapmysterier=1;
 	bakgrundstabeller.jarvskogen[25].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.jarvskogen[25].vildmarksfardigheterenheter=4;
+
+
 
 
 	
