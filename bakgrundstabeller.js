@@ -3,7 +3,7 @@
 	// expertispoang=2 eller expertiser=2?
 	
 	
-    bakgrundstabellista = ["jargiensbefolkning", "vildmark", "nermadasbefolkning", "damarien", "ghor", jarvskogen"];
+    bakgrundstabellista = ["jargiensbefolkning", "vildmark", "nermadasbefolkning", "damarien", "ghor", "jarvskogen"];
 	var bakgrundstabeller = {};
 	var i;
 	bakgrundstabeller.lista=bakgrundstabellista;
