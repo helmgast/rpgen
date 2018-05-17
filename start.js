@@ -595,15 +595,16 @@ function skrivfolkslag(){
 		htmlkod += "<tr>";
 		// Endast om resultatet kan slumpas om ska det finnas en länk
 		if (aktivtfolkslagobjekt.subval[i][j][k].slumpning==1){
-			htmlkod += "<td colspan=\"3\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'folkslag\'," + i + "," + j + "," + k + ");return false;\">" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald +  "</td>";
+			htmlkod += "<td colspan=\"3\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'folkslag\'," + i + "," + j + "," + k + ");return false;\">" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald ;
 		}else{
 			console.log("här skrivs folkslagsbeskrivningvald"),
 			htmlkod += "<td colspan=\"3\"><b>" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald; 
-			if ("beskrivninghak" in aktivtfolkslagobjekt.subval[i][j][k]){
-				htmlkod += " &#91;" + aktivtfolkslagobjekt.subval[i][j][k].beskrivninghak + "&#93;";
-			}
-			htmlkod +=  "</td>";
 		}
+		if ("beskrivninghak" in aktivtfolkslagobjekt.subval[i][j][k]){
+			htmlkod += " &#91;" + aktivtfolkslagobjekt.subval[i][j][k].beskrivninghak + "&#93;";
+		}
+		htmlkod +=  "</td>";
+		
 		htmlkod += "</tr>";
 		for (j=1;j<aktivtfolkslagobjekt.subval[i].length;j++){
 			k=0;
@@ -657,14 +658,15 @@ function skrivfolkslag(){
 			//console.log(aktivtfolkslagobjekt.subval[i][j][0].rubrik);
 			
 			if (aktivtfolkslagobjekt.subval[i][j][k].slumpning==1){
-				htmlkod += "<td colspan=\"3\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'folkslag\'," + i + "," + j + "," + k + ");return false;\">" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald +  "</td>";
+				htmlkod += "<td colspan=\"3\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'folkslag\'," + i + "," + j + "," + k + ");return false;\">" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald ;
 			}else{
 				htmlkod += "<td colspan=\"3\"><b>" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald 
-				if ("beskrivninghak" in aktivtfolkslagobjekt.subval[i][j][k]){
-				htmlkod += " &#91;" + aktivtfolkslagobjekt.subval[i][j][k].beskrivninghak + "&#93;";
-				}
-				htmlkod +="</td>";
 			}
+			if ("beskrivninghak" in aktivtfolkslagobjekt.subval[i][j][k]){
+			htmlkod += " &#91;" + aktivtfolkslagobjekt.subval[i][j][k].beskrivninghak + "&#93;";
+			}
+			htmlkod +="</td>";
+			
 			
 			htmlkod += "</tr>";
 			
@@ -710,12 +712,14 @@ function skrivfolkslag(){
 				}
 				
 				if (aktivtfolkslagobjekt.subval[i][j][k].slumpning==1){
-					htmlkod += "<td colspan=\"3\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'folkslag\'," + i + "," + j + "," + k + ");return false;\">" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald +  "</td>";
+					htmlkod += "<td colspan=\"3\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'folkslag\'," + i + "," + j + "," + k + ");return false;\">" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald ;
 				}else{
-					htmlkod += "<td colspan=\"3\"><b>" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald +  "</td>";
+					htmlkod += "<td colspan=\"3\"><b>" + aktivtfolkslagobjekt.subval[i][j][k].rubrik + "</b>: " +  aktivtfolkslagobjekt.subval[i][j][k].beskrivningvald;
 				}
-				
-				
+				if ("beskrivninghak" in aktivtfolkslagobjekt.subval[i][j][k]){
+				htmlkod += " &#91;" + aktivtfolkslagobjekt.subval[i][j][k].beskrivninghak + "&#93;";
+				}
+				htmlkod +=  "</td>"
 				htmlkod += "</td>";
 				htmlkod += "</tr>";
 			}
