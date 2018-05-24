@@ -1941,7 +1941,7 @@
 	bakgrundstabeller.damarien[10].bestamdplural="munkarna/nunnorna";
 	bakgrundstabeller.damarien[10].beskrivning="De finns de troende som väljer att svära sig till Daak och gå i kloster för att där tjäna honom. En del kloster ligger isolerade långt ute på landsbygden medan andra är belägna mitt i städer där man dagligen har kontakt med stadsborna. Vissa kloster är mycket strikta med tysthetslöfte och straff för minsta förseelse men i andra sker förbjudna ting bakom murarna och där handlar löftet snarare om att inte avslöja något för utomstående.";
 	bakgrundstabeller.damarien[10].kunskapmysterier=1;
-	bakgrundstabeller.damarien[10].kunskapsfardigheter=4;
+	bakgrundstabeller.damarien[10].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.damarien[10].valfriaenheter=4;
 	
 	
@@ -2677,6 +2677,7 @@
 
 	bakgrundstabeller.ghor[3] = {};
 	bakgrundstabeller.ghor[3].rubrik="Arkivarie";
+	bakgrundstabeller.ghor[3].pluralobestamd="arkivarier";
 	bakgrundstabeller.ghor[3].beskrivning="I det urgamla och välordnade dvärgfästet kan arkiv och bibliotek nå enorma proportioner och för att byråkratin ska fungera kräver fästet därför hela truppstyrkor av noggranna, tålmodiga och pedantiska arkivarier. ";
 	bakgrundstabeller.ghor[3].kunskapmysterier=1;
 	bakgrundstabeller.ghor[3].kunskapsfardigheterenheter=4;
@@ -2684,6 +2685,7 @@
 
 	bakgrundstabeller.ghor[4] = {};
 	bakgrundstabeller.ghor[4].rubrik="Brottsling";
+	bakgrundstabeller.ghor[4].pluralobestamd="brottslingar";
 	bakgrundstabeller.ghor[4].beskrivning="Den dvärgiska lagen är drakonisk, dogmatisk och oförlåtande vilket gör att de dvärgar som fälls för brott, som i människornas ögon framstår som triviala, straffas genom att tatueras i ansiktet, så att deras skam för evigt ska vara uppenbar för omgivningen. Brottslingen är en dvärg som fällts för ett brott men tillåtits stanna i dvärgfästet. ";
 	bakgrundstabeller.ghor[4].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[4].rorelsefardigheterenheter=4;
@@ -2754,6 +2756,9 @@
 
 	bakgrundstabeller.ghor[14] = {};
 	bakgrundstabeller.ghor[14].rubrik="Lagkunnig";
+	bakgrundstabeller.ghor[14].bestamd="den lagkunnige";
+	bakgrundstabeller.ghor[14].pluralobestamd="lagkunniga";
+	bakgrundstabeller.ghor[14].pluralbestamd="de lagkunniga";
 	bakgrundstabeller.ghor[14].beskrivning="Dessa dvärgar, oavsett om de arbetar som domare, anförare eller svarsförare, har vigt sina liv åt att studera de urgamla, hårda och mycket invecklade dvärgiska lagtexterna och att retoriskt skickligt argumentera för sin sak. ";
 	bakgrundstabeller.ghor[14].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[14].kunskapsfardigheterenheter=4;
@@ -2782,6 +2787,7 @@
 
 	bakgrundstabeller.ghor[18] = {};
 	bakgrundstabeller.ghor[18].rubrik="Niding";
+	bakgrundstabeller.ghor[18].pluralobestamd="nidingar";
 	bakgrundstabeller.ghor[18].beskrivning="Det vanligaste straffet för brott i den dvärgiska kulturen är evig förvisning från fästet. De allra flesta dvärgar tar sitt liv efter en sådan dom och anses då ha försonats med Vontar, men ett fåtal nidingar väljer att fortsätta leva i skam och vanära utanför fästet. ";
 	bakgrundstabeller.ghor[18].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[18].rorelsefardigheterenheter=4;
@@ -2831,6 +2837,8 @@
 
 	bakgrundstabeller.ghor[25] = {};
 	bakgrundstabeller.ghor[25].rubrik="Äldste";
+	bakgrundstabeller.ghor[25].pluralobestamd="äldste";
+	bakgrundstabeller.ghor[25].pluralbestamd="äldsterna";
 	bakgrundstabeller.ghor[25].beskrivning="Under dvärgkungen regeras varje fäste av äldstarnas råd, som dels består av de olika husens äldstar och dels av ämbetsäldstarna som utsetts av kungen. Äldstarna är ofta mycket kunniga och plikttrogna makthavare, men inte sällan extremt konservativa även med dvärgiska mått mätt. ";
 	bakgrundstabeller.ghor[25].intrigerillgarningar=1;
 	bakgrundstabeller.ghor[25].socialafardigheterenheter=4;
@@ -2867,6 +2875,7 @@
 
 	bakgrundstabeller.jarvskogen[4] = {};
 	bakgrundstabeller.jarvskogen[4].rubrik="Ensamvarg";
+	bakgrundstabeller.jarvskogen[4].pluralobestamd="ensamvargar";
 	bakgrundstabeller.jarvskogen[4].beskrivning="En del alver är av olika skäl inte längre en del av den alviska gemenskapens skydd och värme, utan lever istället ensamma liv ute i vildmarken. Oavsett om så har skett grund av alvens eget val eller om denne förvisats för något brott har denne tvingats lära sig överleva på egen hand i en farlig värld.";
 	bakgrundstabeller.jarvskogen[4].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[4].vildmarksfardigheterenheter=4;
@@ -2923,6 +2932,9 @@
 
 	bakgrundstabeller.jarvskogen[12] = {};
 	bakgrundstabeller.jarvskogen[12].rubrik="Lärd";
+	bakgrundstabeller.jarvskogen[12].bestamd="den lärde";
+	bakgrundstabeller.jarvskogen[12].pluralobestamd="lärde";
+	bakgrundstabeller.jarvskogen[12].pluralbestamd="de lärde";
 	bakgrundstabeller.jarvskogen[12].beskrivning="Järvskogen är fattig på böcker, skriftrullar och högre bildning, vilket gör att de få lärda kvinnor och män som ändå lever i skogen kommit att bli mästare på memorering och muntliga traditioner. Många av dem undervisar unga alver och är rådgivare vid furstehoven.";
 	bakgrundstabeller.jarvskogen[12].kunskapmysterier=1;
 	bakgrundstabeller.jarvskogen[12].kunskapsfardigheterenheter=4;
@@ -2951,6 +2963,7 @@
 
 	bakgrundstabeller.jarvskogen[16] = {};
 	bakgrundstabeller.jarvskogen[16].rubrik="Skarpskytt";
+	bakgrundstabeller.jarvskogen[16].pluralobestamd="skarpskyttar";
 	bakgrundstabeller.jarvskogen[16].beskrivning="Dessa de allra mest legendariska och fruktade av alvkrigare är oöverträffade bågskyttar och mästare på att röra sig obemärkt genom vildmarken.";
 	bakgrundstabeller.jarvskogen[16].striderdrabbningar=1;
 	bakgrundstabeller.jarvskogen[16].stridsfardigheterenheter=4;
@@ -2986,6 +2999,10 @@
 
 	bakgrundstabeller.jarvskogen[21] = {};
 	bakgrundstabeller.jarvskogen[21].rubrik="Sändebud";
+	bakgrundstabeller.jarvskogen[21].pluralobestamd="sändebud";
+	bakgrundstabeller.jarvskogen[21].pluralbestamd="sändebuden";
+	bakgrundstabeller.jarvskogen[21].obestamd="ett sändebud";
+	bakgrundstabeller.jarvskogen[21].bestamd="sändebudet";
 	bakgrundstabeller.jarvskogen[21].beskrivning="När Järvskogens alver måste föra meddelanden till utomstående såsom andra alver, människor eller dvärgar, då skickar de sändebuden. Då de delvis är ambassadörer och delvis postiljoner måste de vara såväl snabba som stridsvana, politiskt pålästa och kvicka i repliken.";
 	bakgrundstabeller.jarvskogen[21].farderaventyr=1;
 	bakgrundstabeller.jarvskogen[21].socialafardigheterenheter=4;
@@ -3007,6 +3024,7 @@
 
 	bakgrundstabeller.jarvskogen[24] = {};
 	bakgrundstabeller.jarvskogen[24].rubrik="Ädling";
+	bakgrundstabeller.jarvskogen[24].pluralobestamd="ädlingar";
 	bakgrundstabeller.jarvskogen[24].beskrivning="Ädlingarna är den alviska motsvarigheten till människornas riddare och utgör eliten i det hierarkiska thismsamhället. Ädlingarnas titlar är inte ärftliga, utan delas ut av husfurstarna som belöning för lojalitet, personlig duglighet och tapperhet. Ädlingarna respekteras djupt även bland de egalitära järvskogsalverna.";
 	bakgrundstabeller.jarvskogen[24].intrigerillgarningar=1;
 	bakgrundstabeller.jarvskogen[24].socialafardigheterenheter=4;
