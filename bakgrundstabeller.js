@@ -2085,7 +2085,6 @@
 	bakgrundstabeller.damarien[26].intrigerillgarningar=1;
 	bakgrundstabeller.damarien[26].kunskapsfardigheterenheter=4;
 	bakgrundstabeller.damarien[26].socialafardigheterenheter=4;
-	bakgrundstabeller.damarien[26].beskrivning="";
 	
 	
 	
@@ -2104,7 +2103,6 @@
 	bakgrundstabeller.damarien[28].valfriatabellslag=1;
 	bakgrundstabeller.damarien[28].socialafardigheterenheter=4;
 	bakgrundstabeller.damarien[28].expertispoang=2;
-	bakgrundstabeller.damarien[26].beskrivning="";
 	
 	bakgrundstabeller.damarien[29] = {};
 	bakgrundstabeller.damarien[29].rubrik="Gränsvakt";
@@ -2314,14 +2312,14 @@
 	bakgrundstabeller.damarien[56] = {};
 	bakgrundstabeller.damarien[56].rubrik="Medikus";
 	bakgrundstabeller.damarien[56].pluralobestamd="medikusar";
-	bakgrundstabeller.damarien[56].beskrivning="";
+	bakgrundstabeller.damarien[56].beskrivning="När folk blir sjuka, ben måste spjälkas och sår måste sys tillkallas en medikus. Denne specialiserar sig på kroppens mysterier och hur man botar åkommor genom åderlåtning, beska dekokter och stinkande salvor. Kunskapen om hur man når balans i kroppens vätskor gör dessa individer mycket respekterade.";
 	bakgrundstabeller.damarien[56].kunskapmysterier=1;
 	bakgrundstabeller.damarien[56].kunskapsfardigheter=4;
 	bakgrundstabeller.damarien[56].vildmarksfardigheterenheter=4;
 	
 	bakgrundstabeller.damarien[57] = {};
 	bakgrundstabeller.damarien[57].rubrik="Munskänk";
-	bakgrundstabeller.damarien[57].rubrik="munskänkar";
+	bakgrundstabeller.damarien[57].pluralobestamd="munskänkar";
 	bakgrundstabeller.damarien[57].beskrivning="Ju högre status en damarier kunnat kämpa sig till desto fler fiender får hon och förgiftning är en dödsorsak som är allt för vanlig hos de rika. Munskänkar är personer med mycket känsliga smaklökar som tränats i att upptäcka gifter i mat och dryck. Genom att äta en stund innan sin herre kan de utveckla förgiftningssymptom innan herren ens smakar maten. Dessa personer befinner sig mitt bland de högre stånden och har en inblick i många av de göromål som sker där.";
 	bakgrundstabeller.damarien[57].intrigerillgarningar=1;
 	bakgrundstabeller.damarien[57].vildmarksfardigheterenheter=4;
@@ -2557,7 +2555,7 @@
 	bakgrundstabeller.damarien[87].expertispoang=2;
 
 	bakgrundstabeller.damarien[88] = {};
-	bakgrundstabeller.damarien[88].rubrik="";
+	bakgrundstabeller.damarien[88].rubrik="Utropare";
 	bakgrundstabeller.damarien[88].beskrivning="I de väldiga städerna måste nyheter förkunnas till folket. Då många inte kan läsa är det utroparens roll att meddela invånarna om makthavarnas beslut. På torg och vid stadsportar proklamerar de storfurstens nyaste lagar, efterlysta brottslingar, arbeten som utlyses, vad som sker i staden, stundande offentliga avrättningar och nyheter från resten av storfurstendömet. Det är få som har en sådan insikt i stadens affärer som utroparna.";
 	bakgrundstabeller.damarien[88].intrigerillgarningar=1;
 	bakgrundstabeller.damarien[88].socialafardigheterenheter=4;
@@ -2602,7 +2600,7 @@
 
 	bakgrundstabeller.damarien[94] = {};
 	bakgrundstabeller.damarien[94].rubrik="Vindmunk";
-	bakgrundstabeller.damarien[94].rubrik="vindmunkar";
+	bakgrundstabeller.damarien[94].pluralobestamd="vindmunkar";
 	bakgrundstabeller.damarien[94].beskrivning="Från sina kloster på de damariska slätterna eller Khazimbergens toppar mässar de fem vindarnas tjänare sina böner i jakt på jämvikt och insikt i vindarnas natur. Dessa mystiska män och kvinnor hör till en av Damariens mäktigaste fraktioner och klostret är en inflytelserik markägare och maktfaktor. Detta har givit munkarna flera mäktiga vänner, men ännu fler mäktiga fiender, bland annat den hedniska Kristallorden.";
 	bakgrundstabeller.damarien[94].kunskapmysterier=1;
 	bakgrundstabeller.damarien[94].kunskapsfardigheterenheter=4;
@@ -3069,6 +3067,11 @@
 					}
 				}
 				
+				
+				if ("valfriaenheter" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
+						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak += ", 4 valfria enheter ";
+				}
+					
 				for (i=0;i<ovrigafardighetergrupplista_namn.length;i++){
 					if (ovrigafardighetergrupplista_namn[i] + "poang" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
 						bakgrundstabeller[bakgrundstabeller.lista[m]][n].beskrivninghak +=", 2 poäng " + ovrigafardighetergrupplista_plur[i];
