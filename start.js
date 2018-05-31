@@ -345,7 +345,7 @@ function skrivbakgrunderkategorier(){
 }
 
 function slumpabakgrunder(){
-	slumptalarray=slumpaflera(2,aktiv_bakgrundstabell.length-1);
+	slumptalarray=slumpaflera(2,aktiv_bakgrundstabell.length-1).splice(1,2);
 	skrivbakgrunder(slumptalarray);
 }
 
@@ -368,20 +368,20 @@ function skrivbakgrunder(bakgrundstabellslag){
 	bakgrundindexarray=bakgrundstabellslag;
 	
 	var htmlkod = "<div class=\"garald\">";
-	if (bakgrundstabellslag[1]>0){
+	if (bakgrundstabellslag[0]>0){
 		htmlkod += "<div id=\"bakgrund_val_1_beskrivning\" name=\"\">";
 		htmlkod += "<p class=\"indrag\">"
-		htmlkod += "<b>" + bakgrundindexarray[1] + " " + aktiv_bakgrundstabell[bakgrundindexarray[1]].rubrik + "</b><br>";
-		htmlkod += aktiv_bakgrundstabell[bakgrundindexarray[1]].beskrivning + "<br>";
-		htmlkod += "&#91;" + aktiv_bakgrundstabell[bakgrundindexarray[1]].beskrivninghak + "&#93;";
+		htmlkod += "<b>" + bakgrundindexarray[0] + " " + aktiv_bakgrundstabell[bakgrundindexarray[0]].rubrik + "</b><br>";
+		htmlkod += aktiv_bakgrundstabell[bakgrundindexarray[0]].beskrivning + "<br>";
+		htmlkod += "&#91;" + aktiv_bakgrundstabell[bakgrundindexarray[0]].beskrivninghak + "&#93;";
 		htmlkod += "</p>"
 		htmlkod += "</div>"
 		
 		htmlkod += "<div id=\"bakgrund_val_2_beskrivning\" name=\"\">";
 		htmlkod += "<p class=\"indrag\">";
-		htmlkod += "<b>" + bakgrundindexarray[2] + " " + aktiv_bakgrundstabell[bakgrundindexarray[2]].rubrik + "</b><br>";
-		htmlkod += aktiv_bakgrundstabell[bakgrundindexarray[2]].beskrivning + "<br>";
-		htmlkod += "&#91;" + aktiv_bakgrundstabell[bakgrundindexarray[2]].beskrivninghak + "&#93;<p>";
+		htmlkod += "<b>" + bakgrundindexarray[1] + " " + aktiv_bakgrundstabell[bakgrundindexarray[1]].rubrik + "</b><br>";
+		htmlkod += aktiv_bakgrundstabell[bakgrundindexarray[1]].beskrivning + "<br>";
+		htmlkod += "&#91;" + aktiv_bakgrundstabell[bakgrundindexarray[1]].beskrivninghak + "&#93;<p>";
 		htmlkod += "</p>"
 		htmlkod += "</div>";
 		htmlkod += "</div>";
@@ -406,12 +406,49 @@ function skrivbakgrunder(bakgrundstabellslag){
 	//window.parent.document.getElementById('hogerkategorival').height="60";
 	htmlkodrubrik += "<table style=\"width:100%\">";
 	htmlkodrubrik += "<tr>";
-	htmlkodrubrik += "<td class=\"center\" width=\"25%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpabakgrunder();return false;\">Slå på tabell</a></td>";
-	htmlkodrubrik += "<td class=\"center\"><div><span class=\"middle\"></span><h1>" + aktiv_bakgrundstabell[0].rubrik +"</div></h1></td>";
-	if (bakgrundstabellslag[1]>0){
-		htmlkodrubrik += "<td class=\"center\" width=\"25%\">Välj: <span class=\"break0p5em\"></span><div id=\"bakgrund_val_1\" name=\"\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparabakgrund(aktiv_bakgrundstabell, bakgrundindexarray\[1\]);return false;\">" + aktiv_bakgrundstabell[bakgrundindexarray[1]].rubrik + " &rArr;</a></div><span class=\"break0p25em\"></span><div id=\"bakgrund_val_2\" name=\"\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparabakgrund(aktiv_bakgrundstabell, bakgrundindexarray\[2\]);return false;\">" + aktiv_bakgrundstabell[bakgrundindexarray[2]].rubrik +  " &rArr;</a></div></td>";
+	htmlkodrubrik += "<td colspan=4>";
+	htmlkodrubrik += "&nbsp;";
+	htmlkodrubrik += "</td>";
+	
+	htmlkodrubrik += "<td class=\"center\" rowspan=3><div><span class=\"middle\"></span><h1>" + aktiv_bakgrundstabell[0].rubrik +"</div></h1></td>";
+	
+	
+	
+	if (bakgrundstabellslag[0]>0){
+		htmlkodrubrik += "<td class=\"center\" width=\"25%\" rowspan=3>Välj: <span class=\"break0p5em\"></span><div id=\"bakgrund_val_1\" name=\"\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparabakgrund(aktiv_bakgrundstabell, bakgrundindexarray\[0\]);return false;\">" + aktiv_bakgrundstabell[bakgrundindexarray[0]].rubrik + " &rArr;</a></div><span class=\"break0p25em\"></span><div id=\"bakgrund_val_2\" name=\"\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparabakgrund(aktiv_bakgrundstabell, bakgrundindexarray\[1\]);return false;\">" + aktiv_bakgrundstabell[bakgrundindexarray[1]].rubrik +  " &rArr;</a></div></td>";
 	}else{
-		htmlkodrubrik += "<td class=\"center\" width=\"25%\"><div id=\"bakgrund_val_1\" name=\"\"></div><div id=\"bakgrund_val_2\" name=\"\"></div></td>";
+		htmlkodrubrik += "<td class=\"center\" width=\"25%\" rowspan=3><div id=\"bakgrund_val_1\" name=\"\"></div><div id=\"bakgrund_val_2\" name=\"\"></div></td>";
+	}
+	htmlkodrubrik += "</tr>";
+	htmlkodrubrik += "<tr>";
+	htmlkodrubrik += "<td class=\"center\" width=\"25%\" colspan=4><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpabakgrunder();return false;\">Slå på tabell</a></td>";
+	htmlkodrubrik += "</tr>";
+	htmlkodrubrik += "<tr>";
+	if (bakgrundstabellslag[0]==0){
+		htmlkodrubrik +="<td class=\"center\" colspan=4>";
+		htmlkodrubrik +="&nbsp;";
+		htmlkodrubrik +="</td>";
+	}else{
+		htmlkodrubrik +="<td class=\"center\" rowspan=1>";
+		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrabakgrundstabellslag(-10);return false;\">";
+		htmlkodrubrik +="<span style=\"white-space: nowrap\">&#8211;10</span>"; 
+		htmlkodrubrik += "</a>";
+		htmlkodrubrik +="</td>";
+		htmlkodrubrik +="<td class=\"center\"  rowspan=1>";
+		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrabakgrundstabellslag(-1);return false;\">";
+		htmlkodrubrik +="<span style=\"white-space: nowrap\">&#8211;1</span>"; 
+		htmlkodrubrik += "</a>";
+		htmlkodrubrik +="</td>";
+		htmlkodrubrik +="<td class=\"center\" rowspan=1>";
+		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrabakgrundstabellslag(1);return false;\">";
+		htmlkodrubrik +="<span style=\"white-space: nowrap\">&#43;1</span>"; 
+		htmlkodrubrik += "</a>";
+		htmlkodrubrik +="</td>";
+		htmlkodrubrik +="<td class=\"center\"  rowspan=1>";
+		htmlkodrubrik += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"andrabakgrundstabellslag(10);return false;\">";
+		htmlkodrubrik +="<span style=\"white-space: nowrap\">&#43;10</span>"; 
+		htmlkodrubrik += "</a>";
+		htmlkodrubrik +="</td>";
 	}
 	htmlkodrubrik += "</tr>";
 	htmlkodrubrik += "</table>";
@@ -420,7 +457,7 @@ function skrivbakgrunder(bakgrundstabellslag){
 	document.getElementById("hogerkategoritabell").innerHTML="";
 	document.getElementById("hogerkategoribeskrivning").innerHTML=htmlkod;
 	document.getElementById("hogerkategorirubrik").innerHTML=htmlkodrubrik;
-	if (bakgrundstabellslag[1]>0){
+	if (bakgrundstabellslag[0]>0){
 		//window.alert([document.getElementById("bakgrund_val_1_beskrivning").offsetTop, document.getElementById("bakgrund_val_2_beskrivning").offsetTop]);
 		bakgrundval1scroll=document.getElementById("bakgrund_val_1_beskrivning").offsetTop;
 		bakgrundval2scroll=document.getElementById("bakgrund_val_2_beskrivning").offsetTop;
@@ -1910,6 +1947,28 @@ function slumparesterandehandelser(){
 		}
 	}
 	rpvalkategori('fardighetstabeller');
+}
+
+function andrabakgrundstabellslag(andring){
+	var inputnummer;
+	var outputnummer;
+	var i;
+	
+	inputnummer=bakgrundindexarray;
+	outputnummer=inputnummer;
+	for (i=0; i<inputnummer.length;i++){
+		
+		outputnummer[i]=inputnummer[i]+andring;
+		while(outputnummer[i]<=0){
+			outputnummer[i] += (aktiv_bakgrundstabell.length-1)
+		}
+		
+		while(outputnummer[i]>=aktiv_bakgrundstabell.length){
+			outputnummer[i] -= (aktiv_bakgrundstabell.length-1)
+		}
+	}
+	skrivbakgrunder(outputnummer);
+	
 }
 
 function andrahandelsetabellslag(andring){
