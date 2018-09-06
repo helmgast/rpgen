@@ -1649,7 +1649,7 @@
 	pyar.subval[0][1][0]={};
 	pyar.subval[0][1][0].valdasub = [];
 	pyar.subval[0][1][0].vald = 0;
-	pyar.subval[0][1][0].rubrik="Alviska ögat";
+	pyar.subval[0][1][0].rubrik="Alviska drag";
 	pyar.subval[0][1][0].beskrivning="Pyar har en förtrollande utstrålning, och enligt många, vackert utseende och får därför bonus +2 Intryck.";
 	pyar.subval[0][1][0].intryck = {};
 	pyar.subval[0][1][0].intryck.bonus=2;
@@ -1662,82 +1662,101 @@
 	pyar.subval[0][2][0].beskrivning="Pyar genomströmmas av biotropisk kraft vilket stoppar blödningar. En pyaralv som blöder slår varje runda ett Livskraftslag mot blödningens svårighet för att se ifall den upphör. Detta sker efter att blödningen hanterats under rundan.";
 	pyar.subval[0][2][0].formaga="Vid blödning får ett Livskraftslag mot blödningens svårighet slås varje runda för att stoppa blodflödet."
 	
-	
 	pyar.subval[0].push([]);
 	pyar.subval[0][3][0]={};
 	pyar.subval[0][3][0].valdasub = [];
 	pyar.subval[0][3][0].vald = 0;
-	pyar.subval[0][3][0].rubrik="Långlivad";
-	pyar.subval[0][3][0].beskrivning="Pyar lever inte för evigt men betydligt längre än någon människa eller dvärg. Av detta får de 4 enheter Kunskapsfärdigheter samt +2 Självkontroll.";
-	pyar.subval[0][3][0].kunskapsfardigheterenheter=4;
-	pyar.subval[0][3][0].sjalvkontroll = {};
-	pyar.subval[0][3][0].sjalvkontroll.bonus=2;
+	pyar.subval[0][3][0].rubrik="Alviska ögat";
+	pyar.subval[0][3][0].beskrivning="Det alviska ögat innebär man känner av när man blir iakttagen av en alv, men effekten är även omvänd så att alver känner av när de blir iakttagna.";
+	pyar.subval[0][3][0].beskrivninghak="Alver kan anstränga sig för att både förstärka och dölja effekten av det alviska ögat. Hur bra de är på detta mäts med kännetecknet Alviska ögat som de börjar med 3T6 i.";
+	pyar.subval[0][3][0].alviskaogat = {};
+	pyar.subval[0][3][0].alviskaogat.enheter=1;
 	
 	pyar.subval[0].push([]);
 	pyar.subval[0][4][0]={};
 	pyar.subval[0][4][0].valdasub = [];
 	pyar.subval[0][4][0].vald = 0;
-	pyar.subval[0][4][0].rubrik="Medlem i handelshus"
-	pyar.subval[0][4][0].beskrivning="Som pyar är man alltid medlem i ett handelshus och hittar fränder världen över. De är Lättlärda i färdigheten Kulturkännedom samt att de får expertisen Kontakt i varje stad 4T6."
-	pyar.subval[0][4][0].kulturkannedom = {};
-	pyar.subval[0][4][0].kulturkannedom.lattlard=1;
-	pyar.subval[0][4][0].kontaktivarjestad = {};
-	pyar.subval[0][4][0].kontaktivarjestad.enheter=3;
-	pyar.subval[0][4][0].ovrigt="Medlem i ett handelshus";
+	pyar.subval[0][4][0].rubrik="Förbannelsens folk"
+	pyar.subval[0][4][0].beskrivning="Tiden läker inga sår för den vars minnen inte bleknar med åren."
+	pyar.subval[0][4][0].beskrivninghak="Alver kan inte välja att höja Välmående vid början av ett spelmöte (enligt reglerna på sida 140 i Grundboken), men kan som vanligt återfå det genom att uppfylla karaktärsdrag.";
+	pyar.subval[0][4][0].formaga="Kan ej välja att höja Välmående vid början av ett spelmöte (enligt reglerna på sida 140 i Grundboken), men kan som vanligt återfå det genom att uppfylla karaktärsdrag.";
+	
 	
 	pyar.subval[0].push([]);
 	pyar.subval[0][5][0]={};
 	pyar.subval[0][5][0].valdasub = [];
 	pyar.subval[0][5][0].vald = 0;
-	pyar.subval[0][5][0].rubrik="Nattsyn"
-	pyar.subval[0][5][0].beskrivning="Pyar har god nattsyn och kan se bra i ljussvaga förhållanden. Är det totalt mörker ser de dock ingenting. De får kännetecknet Nattsyn 4T6."
-	pyar.subval[0][5][0].nattsyn = {};
-	pyar.subval[0][5][0].nattsyn.enheter=3;
-	
+	pyar.subval[0][5][0].rubrik="Långlivad";
+	pyar.subval[0][5][0].beskrivning="Pyar lever inte för evigt men betydligt längre än någon människa eller dvärg. Av detta får de 4 enheter Kunskapsfärdigheter samt +2 Självkontroll.";
+	pyar.subval[0][5][0].kunskapsfardigheterenheter=4;
+	pyar.subval[0][5][0].sjalvkontroll = {};
+	pyar.subval[0][5][0].sjalvkontroll.bonus=2;
 	
 	pyar.subval[0].push([]);
 	pyar.subval[0][6][0]={};
 	pyar.subval[0][6][0].valdasub = [];
 	pyar.subval[0][6][0].vald = 0;
-	pyar.subval[0][6][0].rubrik="Personkännare"
-	pyar.subval[0][6][0].beskrivning="Efter lång tid bland andra folkslag har pyar lärt sig läsa av deras kroppsspråk. De är Lättlärda i färdigheten Genomskåda."
-	pyar.subval[0][6][0].genomskada = {};
-	pyar.subval[0][6][0].genomskada.lattlard=1;
+	pyar.subval[0][6][0].rubrik="Medlem i handelshus"
+	pyar.subval[0][6][0].beskrivning="Som pyar är man alltid medlem i ett handelshus och hittar fränder världen över. De är Lättlärda i färdigheten Kulturkännedom samt att de får expertisen Kontakt i varje stad 4T6."
+	pyar.subval[0][6][0].kulturkannedom = {};
+	pyar.subval[0][6][0].kulturkannedom.lattlard=1;
+	pyar.subval[0][6][0].kontaktivarjestad = {};
+	pyar.subval[0][6][0].kontaktivarjestad.enheter=3;
+	pyar.subval[0][6][0].ovrigt="Medlem i ett handelshus";
 	
 	pyar.subval[0].push([]);
 	pyar.subval[0][7][0]={};
 	pyar.subval[0][7][0].valdasub = [];
 	pyar.subval[0][7][0].vald = 0;
-	pyar.subval[0][7][0].antalsubval=4;
+	pyar.subval[0][7][0].rubrik="Nattsyn"
+	pyar.subval[0][7][0].beskrivning="Pyar har god nattsyn och kan se bra i ljussvaga förhållanden. Är det totalt mörker ser de dock ingenting. De får kännetecknet Nattsyn 4T6."
+	pyar.subval[0][7][0].nattsyn = {};
+	pyar.subval[0][7][0].nattsyn.enheter=3;
 	
-	pyar.subval[0][7][1]={};
-	pyar.subval[0][7][1].rubrik="Talade språk"
-	pyar.subval[0][7][1].beskrivning="Felya sanari, lägre jargiska"
-	pyar.subval[0][7][1].taladesprak="Felya sanari, lägre jargiska"
-	pyar.subval[0][7][1].felyasanari = {};
-	pyar.subval[0][7][1].felyasanari.enheter=1;
-	pyar.subval[0][7][1].lagrejargiska = {};
-	pyar.subval[0][7][1].lagrejargiska.enheter=1;
 	
-	pyar.subval[0][7][2]={};
-	pyar.subval[0][7][2].rubrik="Skriftspråk"
-	pyar.subval[0][7][2].beskrivning="Felya-nai, jargisk skrift."
+	pyar.subval[0].push([]);
+	pyar.subval[0][8][0]={};
+	pyar.subval[0][8][0].valdasub = [];
+	pyar.subval[0][8][0].vald = 0;
+	pyar.subval[0][8][0].rubrik="Personkännare"
+	pyar.subval[0][8][0].beskrivning="Efter lång tid bland andra folkslag har pyar lärt sig läsa av deras kroppsspråk. De är Lättlärda i färdigheten Genomskåda."
+	pyar.subval[0][8][0].genomskada = {};
+	pyar.subval[0][8][0].genomskada.lattlard=1;
 	
-	pyar.subval[0][7][2].skriftsprak="Felya-nai, jargisk skrift."
-	pyar.subval[0][7][2].felyanai = {};
-	pyar.subval[0][7][2].felyanai.enheter=1;
-	pyar.subval[0][7][2].jargiskskrift = {};
-	pyar.subval[0][7][2].jargiskskrift.enheter=1;
+	pyar.subval[0].push([]);
+	pyar.subval[0][9][0]={};
+	pyar.subval[0][9][0].valdasub = [];
+	pyar.subval[0][9][0].vald = 0;
+	pyar.subval[0][9][0].antalsubval=4;
 	
-	pyar.subval[0][7][3]={};
-	pyar.subval[0][7][3].rubrik="Kvinnonamn";
-	pyar.subval[0][7][3].kvinnonamnlista=["Avaliel", "Ceranidel", "Evinal", "Gialari", "Ilian", "Odesse", "Siusad", "Tielesin", "Uliadi", "Yviol"];
-	pyar.subval[0][7][3].beskrivning="Avaliel, Ceranidel, Evinal, Gialari, Ilian, Odesse, Siusad, Tielesin, Uliadi, Yviol";
+	pyar.subval[0][9][1]={};
+	pyar.subval[0][9][1].rubrik="Talade språk"
+	pyar.subval[0][9][1].beskrivning="Felya sanari, lägre jargiska"
+	pyar.subval[0][9][1].taladesprak="Felya sanari, lägre jargiska"
+	pyar.subval[0][9][1].felyasanari = {};
+	pyar.subval[0][9][1].felyasanari.enheter=1;
+	pyar.subval[0][9][1].lagrejargiska = {};
+	pyar.subval[0][9][1].lagrejargiska.enheter=1;
 	
-	pyar.subval[0][7][4]={};
-	pyar.subval[0][7][4].rubrik="Mansnamn"
-	pyar.subval[0][7][4].beskrivning="Alean, Belion, Ceranidan, Edarion, Guderian, Isanion, Lunerian, Uanir, Ysanan";
-	pyar.subval[0][7][4].mansnamnlista=["Alean", "Belion", "Ceranidan", "Edarion", "Guderian", "Isanion", "Lunerian", "Uanir", "Ysanan"];
+	pyar.subval[0][9][2]={};
+	pyar.subval[0][9][2].rubrik="Skriftspråk"
+	pyar.subval[0][9][2].beskrivning="Felya-nai, jargisk skrift."
+	
+	pyar.subval[0][9][2].skriftsprak="Felya-nai, jargisk skrift."
+	pyar.subval[0][9][2].felyanai = {};
+	pyar.subval[0][9][2].felyanai.enheter=1;
+	pyar.subval[0][9][2].jargiskskrift = {};
+	pyar.subval[0][9][2].jargiskskrift.enheter=1;
+	
+	pyar.subval[0][9][3]={};
+	pyar.subval[0][9][3].rubrik="Kvinnonamn";
+	pyar.subval[0][9][3].kvinnonamnlista=["Avaliel", "Ceranidel", "Evinal", "Gialari", "Ilian", "Odesse", "Siusad", "Tielesin", "Uliadi", "Yviol"];
+	pyar.subval[0][9][3].beskrivning="Avaliel, Ceranidel, Evinal, Gialari, Ilian, Odesse, Siusad, Tielesin, Uliadi, Yviol";
+	
+	pyar.subval[0][9][4]={};
+	pyar.subval[0][9][4].rubrik="Mansnamn"
+	pyar.subval[0][9][4].beskrivning="Alean, Belion, Ceranidan, Edarion, Guderian, Isanion, Lunerian, Uanir, Ysanan";
+	pyar.subval[0][9][4].mansnamnlista=["Alean", "Belion", "Ceranidan", "Edarion", "Guderian", "Isanion", "Lunerian", "Uanir", "Ysanan"];
 
 	
 
