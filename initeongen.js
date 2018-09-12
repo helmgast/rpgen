@@ -5,6 +5,7 @@ function initeongen(){
 	
 	miljoobjekt=hamta_miljolistor();
 	arketypobjekt=hamta_arketyplistor();
+	sallskapobjekt=hamta_sallskaplistor();
 	bakgrundstabeller=hamta_bakgrundstabeller();
 	folkslagobjekt=hamta_folkslaglistor();
 	handelsetabeller=hamta_handelsetabeller();
@@ -28,6 +29,7 @@ function initeongen(){
 	rollperson=new rpval();
 	
 	
+	
 	rollperson.handelsetabellobjektlista=[];
 	rollperson.ovrigafardigheter={};
 	rollperson.ovrigafardigheter.anvant_expertispoang=0;
@@ -46,8 +48,13 @@ function initeongen(){
 	rollperson.ovrigafardigheter.kannetecken.anvantpoang=0;
 	rollperson.ovrigafardigheter.kannetecken.lista=[];
 	
+	rollperson.arketypsallskapsval=0;
+	rollperson.miljosallskapsval=0;
+	
+	
 	aktivtrpvalobjekt=arketypobjekt.krigare;
 	aktivtfolkslagobjekt=folkslagobjekt[folkslagobjekt.lista[0]];
+	aktivtsallskapobjekt=sallskapobjekt[sallskapobjekt.lista[0]];
 	aktivtarketypobjekt=arketypobjekt[arketypobjekt.lista[0]];
 	aktivtmiljoobjekt=miljoobjekt[miljoobjekt.lista[0]];
 	aktiv_bakgrundstabell=bakgrundstabeller[bakgrundstabeller.lista[0]];

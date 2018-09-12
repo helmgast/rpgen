@@ -494,6 +494,9 @@ function sparabakgrund(bakgrundtabellnamn, bakgrundindex){
 			if ("attributtarningar" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.attributtarningar);
 			}
+			if ("sallskap" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.sallskap);
+			}
 			if ("arketyp" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.arketyp);
 			}
@@ -936,6 +939,9 @@ function sparafolkslag(){
 			if ("attributtarningar" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.attributtarningar);
 			}
+			if ("sallskap" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.sallskap);
+			}
 			
 			if ("arketyp" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.arketyp);
@@ -1182,6 +1188,9 @@ function sparagrundattribut(){
 				if ("folkslag" in rollperson){
 					rollperson= summerarollperson(rollperson, rollperson.folkslag);
 				}
+				if ("sallskap" in rollperson){
+					rollperson= summerarollperson(rollperson, rollperson.sallskap);
+				}
 				
 				if ("arketyp" in rollperson){
 					rollperson= summerarollperson(rollperson, rollperson.arketyp);
@@ -1211,6 +1220,217 @@ function sparagrundattribut(){
 	// extratarningar är global
 	
 }
+
+function skrivsallskapkategorier(){
+	
+	var sidocellbredd=18;
+	
+	var htmlkod = "<div class='garaldcenter'>";
+
+	window.parent.document.getElementById('hogerkategorival').height="80";
+	htmlkod += "<table style=\"width:100%\">";
+	htmlkod += "<tr>";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\">";
+	htmlkod += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumpasallskap();return false;\">Slumpa sällskap</a>";
+	htmlkod += "</td>";
+	htmlkod += "<td class=\"center\">";
+	for (i=0;i<window.parent.sallskapobjekt.lista.length;i++){
+		//console.log(i);
+		if ("sallskap" in rollperson){
+			if (rollperson.sallskap.namn==window.parent.sallskapobjekt[window.parent.sallskapobjekt.lista[i]].namn){
+				htmlkod += "<b>";
+			}
+		}
+		htmlkod += "<a id=\"rpvalkategori_" + window.parent.sallskapobjekt[window.parent.sallskapobjekt.lista[i]].namn + "\" title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"bytsallskap('" + window.parent.sallskapobjekt[window.parent.sallskapobjekt.lista[i]].namn + "');return false;\">" + window.parent.sallskapobjekt[window.parent.sallskapobjekt.lista[i]].rubrik + "</a>"; 
+		
+		if ("sallskap" in rollperson){
+			if (rollperson.sallskap.namn==window.parent.sallskapobjekt[window.parent.sallskapobjekt.lista[i]].namn){
+				htmlkod += "</b>";
+			}
+		}
+		/*
+		if (i==Math.floor(window.parent.folkslagobjekt.lista.length/3)){
+			htmlkod += "<br>";
+		}else if (i == 2 * Math.floor(window.parent.folkslagobjekt.lista.length/3)){
+			htmlkod += "<br>";
+		}else if(i==window.parent.folkslagobjekt.lista.length-1){
+			// Skriv inget
+		}else{
+			htmlkod += " &#124; ";
+		}
+		*/
+		if(i==window.parent.sallskapobjekt.lista.length-1){
+			// Skriv inget
+		}else if ((i+1)%5==0){
+			htmlkod += "<br>";
+		}else{
+			htmlkod += " &#124; ";
+		}
+		
+		
+	}
+
+	htmlkod += "</td>";
+	//htmlkod += "<td class=\"center\" width=\"18%\">";
+	htmlkod += "<td class=\"center\" style=\"width:" + sidocellbredd + "%\">";
+	//htmlkod += "<a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"slumparesterandeval(rollperson);return false;\">" + "Slumpa resterande val" + "</a>"
+	htmlkod += "</td>";
+	htmlkod += "</td></tr></table>";
+	htmlkod += "</div>";
+	document.getElementById("hogerkategorival").innerHTML = htmlkod;
+}
+function slumpasallskap(){
+	sallskapindex=slumpa(sallskapobjekt.lista.length);
+	aktivtsallskapobjekt=sallskapobjekt[sallskapobjekt.lista[sallskapindex-1]];
+	document.getElementById("hogerkategoribeskrivning").scrollTop=0;
+	skrivsallskap();
+}
+
+
+function skrivsallskap(){
+	
+	
+	var sidocellbredd=18;
+	var sidocellbreddextra=23;
+	var knappcellbredd=4;
+	aktivtrpvalobjekt=aktivtsallskapobjekt;
+	
+	
+	// Sällskapets subval väljs normalt inte under sällskap utan istället under arketyp/miljö
+	/*
+	if (aktivtsallskapobjekt.aktiverad==0){
+		aktivtsallskapobjekt=valj_subval(aktivtsallskapobjekt,1);
+		nollasubval(aktivtsallskapobjekt);
+	}
+	*/
+
+	
+	
+	var htmlkod = "<div class='garald'>";
+	var i
+	var j
+	var m
+	
+	var harsubval=0;
+	var sallskaprubriker=[["utbredning","Utbredning"],["antagningskrav","Antagningskrav"],["forpliktelser","Förpliktelser"],["tabun","Tabun"],["vannerfiender","Vänner och fiender"],["fardigheterstridskonster","Färdigheter och stridskonster"],["symboler","Symboler"]];
+	htmlkod += "<table style=\"width:100%\">";
+	htmlkod += "<tr>";
+	htmlkod += "<td class=\"beskrivning\">" + aktivtsallskapobjekt.beskrivning + "</td>";
+	htmlkod += "<tr>";
+	htmlkod += "</table>";
+	htmlkod += "<table style=\"width:100%\">";
+	for (m=0;m<sallskaprubriker.length;m++){
+		if (sallskaprubriker[m][0] in aktivtsallskapobjekt.subval[0][0][0]){
+			htmlkod += "<tr>";
+			htmlkod += "<td><b>" + sallskaprubriker[m][1] + ": </b>";
+			htmlkod += "" + aktivtsallskapobjekt.subval[0][0][0][sallskaprubriker[m][0]] + "</td>";
+			htmlkod += "</tr>";
+		}
+	}
+	
+	
+	
+	htmlkod += "<table style=\"width:100%\">";
+	htmlkod += "<tr>";
+	htmlkod += "<td colspan=\"2\"><b>Utrustning och resurser</b>: Rollpersonen kan välja bland resurserna nedan. Dessa är valbara under resursvalen för antingen arketyp eller miljö.</td></tr>";
+	
+	
+	for (j=1;j<aktivtsallskapobjekt.subval[1].length;j++){
+		htmlkod += "<tr>";
+		htmlkod += "<td style=\"width:8%\"></td>";
+		htmlkod += "<td><b>" + aktivtsallskapobjekt.subval[1][j][0].rubrik + "</b>: " + aktivtsallskapobjekt.subval[1][j][0].beskrivning + "</td>";
+		htmlkod += "</tr>";
+	}
+	
+	
+	
+	var htmlkodrubrik = "<div class='garaldcenter'>";
+
+	htmlkodrubrik += "<table style=\"width:100%\">";
+	htmlkodrubrik += "<tr>";
+	htmlkodrubrik += "<td class=\"center\" style=\"width:" + sidocellbreddextra + "%\">&nbsp;</td>";
+	htmlkodrubrik += "<td class=\"center\"><div><span></span><h1>" + aktivtsallskapobjekt.rubrik +"</div></h1></td>";
+	htmlkodrubrik += "<td class=\"center\" style=\"width:" + sidocellbreddextra + "%\"><a title=\"Click to do something\" href=\"PleaseEnableJavascript.html\" onclick=\"sparasallskap();return false;\">Välj " + aktivtsallskapobjekt.rubrik + " &rArr;</a></td>";
+	htmlkodrubrik += "</tr>";
+	htmlkodrubrik += "</table>";
+	htmlkodrubrik += "</div>";
+	
+	
+	document.getElementById("hogerkategoritabell").innerHTML = "";
+	document.getElementById("hogerkategorirubrik").innerHTML = htmlkodrubrik;
+	document.getElementById("hogerkategoribeskrivning").innerHTML = htmlkod;
+}
+
+function sparasallskap(){
+	//folkslagobjektet är globalt, spara klon till rp
+	// Lös ut frågan med subval
+	// Kör full sammanfattning
+	// Visa sammanfattning till vänster
+	// Gå till grundattribut till höger
+	//console.log("sparafolkslag körs");
+	
+	//var saknadrubrikarray=kontrollerasubval(rollpersonsvalobjekt);
+	//window.alert("sparasallskap körs, rollperson.arketypsallskapsval = " + rollperson.arketypsallskapsval + ", rollperson.miljosallskapsval = " + rollperson.miljosallskapsval);
+	var i;
+	
+	slump=1;
+	if (rollperson.handelsetabellobjektlista.length > 0){
+		window.alert("Sällskap kan ej ändras efter att händelsetabellslagen påbörjats");
+	}else if (rollperson.arketypsallskapsval==1){
+		window.alert("Sällskapet kan ej ändras eftersom sällskapsval gjorts under arketypen. Ändra först arketypens resursval och byt därefter sällskap." );
+	}else if (rollperson.miljosallskapsval==1){
+		window.alert("Sällskapet kan ej ändras eftersom sällskapsval gjorts under miljön. Ändra först miljöns resursval och byt därefter sällskap." );
+	
+	}else{
+		if ("sallskap" in rollperson){
+			rollperson=nollarollperson(rollperson);
+			
+			if ("bakgrund" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.bakgrund);
+			}
+			if ("attributtarningar" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.attributtarningar);
+			}
+			
+			if ("folkslag" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.miljo);
+			}
+			
+			if ("arketyp" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.arketyp);
+			}
+			if ("miljo" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.miljo);
+			}
+			
+		}else{
+		
+		}
+		rollperson.sallskap=clone(aktivtsallskapobjekt);
+		//---
+		//rollperson.folkslag=valj_subval(rollperson.sallskap, slump);
+		// Subval summeras inte här, det görs istället under arketyp eller miljö
+		//rollperson.folkslag=summera_subval(rollperson.sallskap);
+		
+		
+		rollperson= summerarollperson(rollperson, rollperson.sallskap);
+		
+		// Extraenheter
+		rollperson=nollaextraenheter(rollperson);
+		rollperson=extraenheter(rollperson);
+		
+		
+		rollperson=kvarhandelsetabellslag(rollperson);
+		
+		
+		uppdateravanstersammanfattning();
+		skrivhogerkategorityper();
+		skrivsallskapkategorier();
+	}
+}
+
+
+
 
 function skrivarketypkategorier(){
 	
@@ -1317,10 +1537,11 @@ function slumpamiljo(){
 function skrivarketypmiljo(objektstyp){
 	//window.alert("skrivarketyper kallad");
 	
+
 	var sidocellbredd=18;
 	var sidocellbreddextra=23;
 	var knappcellbredd=4;
-	
+	var komplementobjektstyp="";
 	slumpsubvalarray=["pengarslag", "vardeslag", "kontaktenhetbool"];
 	
 	//var aktivtrpvalobjekt
@@ -1333,6 +1554,7 @@ function skrivarketypmiljo(objektstyp){
 		}
 		//aktivtrpvalobjekt=clone(aktivtarketypobjekt);
 		aktivtrpvalobjekt=aktivtarketypobjekt;
+		komplementobjektstyp="miljo";
 	}else if (objektstyp=="miljo"){
 		if (aktivtmiljoobjekt.aktiverad==0){
 		
@@ -1340,6 +1562,7 @@ function skrivarketypmiljo(objektstyp){
 			nollasubval(aktivtmiljoobjekt);
 		}
 		aktivtrpvalobjekt=aktivtmiljoobjekt;
+		komplementobjektstyp="arketyp";
 	}
 	
 	document.getElementById("hogerkategoribeskrivning").innerHTML = "";
@@ -1378,6 +1601,100 @@ function skrivarketypmiljo(objektstyp){
 	htmlkod +="<tr>";
 	htmlkod +="<td class=\"rubrikniva2\" colspan=\"3\">Utrustning \& resurser</td>";
 	htmlkod +="</tr>";
+	
+	
+	/*
+	// Testsällskap
+	rollperson.sallskap={};
+	rollperson.sallskap.namn="testsallskap";
+	rollperson.sallskap.rubrik="Testsällskap";
+	rollperson.sallskap.subval = [[[]]];
+	rollperson.sallskap.subval[0][0][0] = {};
+	rollperson.sallskap.subval[0][0][0].valdasub = [];
+	rollperson.sallskap.subval[0][0][0].vald = 1;
+	rollperson.sallskap.subval[0][0][0].slumpning = 0;
+	
+	rollperson.sallskap.subval.push([[]]);
+	rollperson.sallskap.subval[1][0][0]  = {};
+	rollperson.sallskap.subval[1][0][0].valdasub = [];
+	rollperson.sallskap.subval[1][0][0].vald = 0;
+	rollperson.sallskap.subval[1][0][0].slumpning = 0;
+	
+	rollperson.sallskap.subval[1].push([]);
+	rollperson.sallskap.subval[1][1][0] = {};
+	rollperson.sallskap.subval[1][1][0].valdasub = [];
+	rollperson.sallskap.subval[1][1][0].vald = 0;
+	rollperson.sallskap.subval[1][1][0].kontakt = "Lojal andreman."
+	rollperson.sallskap.subval[1][1][0].rubrik="Andreman"
+	rollperson.sallskap.subval[1][1][0].beskrivning="Rollpersonen har vid sin sida en lojal andreman som är dennes högra hand."
+    rollperson.sallskap.subval[1][1][0].slumpning = 0;
+	
+	rollperson.sallskap.subval[1].push([]);
+	rollperson.sallskap.subval[1][2][0] = {};
+	rollperson.sallskap.subval[1][2][0].valdasub = [];
+	rollperson.sallskap.subval[1][2][0].vald = 0;
+	rollperson.sallskap.subval[1][2][0].avtrubbningvald=1;
+	rollperson.sallskap.subval[1][2][0].avtrubbningovernaturligt=1;
+	rollperson.sallskap.subval[1][2][0].rubrik="Avtrubbning"
+	rollperson.sallskap.subval[1][2][0].beskrivning="1 Avtrubbningskryss vardera för våld och övernaturligt."
+	rollperson.sallskap.subval[1][2][0].slumpning = 0;
+   
+	rollperson.sallskap.subval[1].push([]);
+	rollperson.sallskap.subval[1][3][0] = {};
+	rollperson.sallskap.subval[1][3][0].valdasub = [];
+	rollperson.sallskap.subval[1][3][0].vald = 0;
+	rollperson.sallskap.subval[1][3][0].resurs = "Emblem som kan ge \+1T6 bonus på en vald social färdighet.";
+	rollperson.sallskap.subval[1][3][0].rubrik="Emblem"
+	rollperson.sallskap.subval[1][3][0].beskrivning="Rollpersonen har ett emblem som visar på dennes position som ledare. Det kan handla om militära dekorationer, om stöd från en makthavare eller emblem från en orden. Emblemet ger rollpersonen en pondus och associeras med en valfri social färdighet. När rollpersonen visar emblemet för någon som ser upp till eller respekterar dess innebörd så får rollpersonen en bonus på \+1T6 för den associerade färdigheten."
+	rollperson.sallskap.subval[1][3][0].slumpning = 0;
+	
+	for (j=1;j<rollperson.sallskap.subval[1].length;j++){
+		rollperson.sallskap.subval[1][j][0].sallskap=1;
+	}
+	*/
+	
+	
+	if ("sallskap" in rollperson){
+		if ("namn" in rollperson.sallskap){
+			if (rollperson.sallskap.namn.length>1){
+				// Lägg bara till val från sällskapet om det inte tidigare har gjorts varken i det aktuella valet eller hos dess komplement (arketyp|miljö)
+				//window.alert("innan aktivtrpvalobjekt.sallskapsval");
+				if (aktivtrpvalobjekt.sallskapsval==0){
+					//window.alert("arketypsallskapsval= " + rollperson.arketypsallskapsval + ", miljosallskapsval = " + rollperson.miljosallskapsval);
+					if (rollperson.arketypsallskapsval+rollperson.miljosallskapsval==0){
+						
+						i=1;
+						m=aktivtrpvalobjekt.subval[i].length;
+						//window.alert("Innan forloop");
+						for (j=1;j<rollperson.sallskap.subval[1].length;j++){
+							aktivtrpvalobjekt.subval[1].push([]);
+							//window.alert("Efter push");
+							aktivtrpvalobjekt.subval[1][m+j-1][0]={};
+							aktivtrpvalobjekt.subval[1][m+j-1][0]=rollperson.sallskap.subval[1][j][0];
+							if ("beskrivningvald" in aktivtrpvalobjekt.subval[1][m+j-1][0]){
+							}else{
+								aktivtrpvalobjekt.subval[1][m+j-1][0].beskrivningvald=aktivtrpvalobjekt.subval[1][m+j-1][0].beskrivning + " <i>(Från sällskapet " + rollperson.sallskap.rubrik + " </i>)";
+							}
+							
+						}
+					}
+					aktivtrpvalobjekt.sallskapsval=1;
+				}
+			}
+		}
+	}
+	
+	//window.alert("aktivtrpvalrubrik = " + aktivtrpvalobjekt.rubrik);
+	//window.alert("110-rubrik = " + aktivtrpvalobjekt.subval[1][1][0].rubrik);
+	//window.alert("120-rubrik = " + aktivtrpvalobjekt.subval[1][2][0].rubrik);
+	//window.alert("130-rubrik = " + aktivtrpvalobjekt.subval[1][3][0].rubrik);
+	//window.alert("140-rubrik = " + aktivtrpvalobjekt.subval[1][4][0].rubrik);
+	//window.alert("150-rubrik = " + aktivtrpvalobjekt.subval[1][5][0].rubrik);
+	//window.alert("160-rubrik = " + aktivtrpvalobjekt.subval[1][6][0].rubrik);
+	//window.alert("170-rubrik = " + aktivtrpvalobjekt.subval[1][7][0].rubrik);
+	//window.alert("180-rubrik = " + aktivtrpvalobjekt.subval[1][8][0].rubrik);
+	
+	//window.alert("efter kopiering");
 	
 	i=0;
 	for (j=1;j<aktivtrpvalobjekt.subval[0].length;j++){
@@ -1455,6 +1772,8 @@ function skrivarketypmiljo(objektstyp){
 			htmlkod +="<td></td>";
 			
 			// Om ett subval kan lämnas som ej valt (exempelvis kamorianers hamnskiftarförmåga)
+			//window.alert("start k=1");
+			
 			if ("minantalsubval" in aktivtrpvalobjekt.subval[i][j][0]){
 				if (aktivtrpvalobjekt.subval[i][j][0].minantalsubval < aktivtrpvalobjekt.subval[i][j][0].antalsubval){
 					htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
@@ -1467,9 +1786,11 @@ function skrivarketypmiljo(objektstyp){
 					}
 					htmlkod += " onchange=\"togglecheckbox\(\'" + objektstyp + "\'," + i + "," + j + "," + k + "\);\"></form></td>";
 				}
+			//window.alert("mellan if och första else if");
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval== aktivtrpvalobjekt.subval[i].length-1){
 				// Alla subval ska väljas, inputform behövs ej
 				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"></td>";
+			//window.alert("mellan första else if och andra");
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval==1){
 				// Endast ett subval, radiobutton
 				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
@@ -1481,7 +1802,7 @@ function skrivarketypmiljo(objektstyp){
 					htmlkod += " checked = \"checked\"";
 				}
 				htmlkod += " onchange=\"toggleradio\(\'" + objektstyp + "\'," + i + "," + j + "," + k + "\);\"></form></td>";
-				
+			//window.alert("mellan andra else if och tredje else if");	
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval>=2){
 				// Flera subval, checkbox
 				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
@@ -1494,7 +1815,7 @@ function skrivarketypmiljo(objektstyp){
 				}
 				htmlkod += " onchange=\"togglecheckbox\(\'" + objektstyp + "\'," + i + "," + j + "," + k + "\);\"></form></td>";
 			}
-		
+			//window.alert("innan slumpning-if");
 			if (aktivtrpvalobjekt.subval[i][j][k].slumpning==1){
 				htmlkod += "<td colspan=\"1\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'" + objektstyp + "\'," + i + "," + j + "," + k + ");return false;\">" + aktivtrpvalobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtrpvalobjekt.subval[i][j][k].beskrivningvald +  "</td>";
 			}else{
@@ -1514,14 +1835,14 @@ function skrivarketypmiljo(objektstyp){
 	htmlkod +="</tr>";
 	
 	
-		
+	//window.alert("mellan i=0, i=1");	
 	
 	i=1;
-
+	
 	for (j=1;j<aktivtrpvalobjekt.subval[1].length;j++){
 		k=0;
 		htmlkod +="<tr>";
-		
+		//window.alert("början av loopen . i= " + i + ", j=" + j + ", k=" + k);
 		if ("minantalsubval" in aktivtrpvalobjekt.subval[i][0][0]){
 			if (aktivtrpvalobjekt.subval[i][0][0].minantalsubval < aktivtrpvalobjekt.subval[i][0][0].antalsubval){
 				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + "00\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\"";
@@ -1571,11 +1892,12 @@ function skrivarketypmiljo(objektstyp){
 			htmlkod += "<td colspan=\"2\"><b>" + aktivtrpvalobjekt.subval[i][j][k].rubrik + "</b>: " +  aktivtrpvalobjekt.subval[i][j][k].beskrivningvald +  "</td>";
 		}
 		htmlkod +="</tr>";
+		//window.alert("innan k-loopen . i= " + i + ", j=" + j + ", k=" + k);
 		
 		for (k=1;k<aktivtrpvalobjekt.subval[1][j].length;k++){
 			htmlkod +="<tr>";
 			htmlkod +="<td></td>";
-			
+			//window.alert("innan minantalsubval");
 			// Om ett subval kan lämnas som ej valt (exempelvis kamorianers hamnskiftarförmåga)
 			if ("minantalsubval" in aktivtrpvalobjekt.subval[i][j][0]){
 				if (aktivtrpvalobjekt.subval[i][j][0].minantalsubval < aktivtrpvalobjekt.subval[i][j][0].antalsubval){
@@ -1589,9 +1911,11 @@ function skrivarketypmiljo(objektstyp){
 					}
 					htmlkod += " onchange=\"togglecheckbox\(\'" + objektstyp + "\'," + i + "," + j + "," + k + "\);\"></form></td>";
 				}
+			//window.alert("mellan if och första else if; k=" + k);
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval== aktivtrpvalobjekt.subval[i].length-1){
 				// Alla subval ska väljas, inputform behövs ej
 				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"></td>";
+			//window.alert("mellan första else if och andra else if; k=" + k);
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval==1){
 				// Endast ett subval, radiobutton
 				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"radio\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
@@ -1603,7 +1927,7 @@ function skrivarketypmiljo(objektstyp){
 					htmlkod += " checked = \"checked\"";
 				}
 				htmlkod += " onchange=\"toggleradio\(\'" + objektstyp + "\'," + i + "," + j + "," + k + "\);\"></form></td>";
-				
+			//window.alert("mellan andra else if och tredje else if; k=" + k);	
 			}else if (aktivtrpvalobjekt.subval[i][j][0].antalsubval>=2){
 				// Flera subval, checkbox
 				htmlkod += "<td style=\"width:" + knappcellbredd + "%\" valign=\"top\"><input type=\"checkbox\" name=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + "0\" value=\"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\" id = \"" + objektstyp + "_subval_" + i.toString() + j.toString() + k.toString() + "\"";
@@ -1616,7 +1940,7 @@ function skrivarketypmiljo(objektstyp){
 				}
 				htmlkod += " onchange=\"togglecheckbox\(\'" + objektstyp + "\'," + i + "," + j + "," + k + "\);\"></form></td>";
 			}
-		
+			//window.alert("Innan slumpningif" + k);
 			if (aktivtrpvalobjekt.subval[i][j][k].slumpning==1){
 				htmlkod += "<td colspan=\"1\"><b><a title=\"Slumpa om resultat\" href=\"PleaseEnableJavascript.html\" class=\"omslumpning\" onclick=\"slumpaomuppdaterasubval(\'" + objektstyp + "\'," + i + "," + j + "," + k + ");return false;\">" + aktivtrpvalobjekt.subval[i][j][k].rubrik + "</a></b>: " +  aktivtrpvalobjekt.subval[i][j][k].beskrivningvald +  "</td>";
 			}else{
@@ -1628,13 +1952,14 @@ function skrivarketypmiljo(objektstyp){
 			htmlkod +="</td>";
 			htmlkod +="</tr>";
 		}
-		
+		//window.alert("slutet av loopen. i= " + i + ", j=" + j + ", k=" + k);
 	}
 
 	htmlkod +="</table>";
 	htmlkod +="</div>";
 	//window.alert(htmlkod);
 	
+	//window.alert("efter subvalsgenomgång");
 	
 	var htmlkodrubrik = "<div class='garaldcenter'>";
 
@@ -1704,6 +2029,9 @@ function sparaarketyp(){
 			if ("attributtarningar" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.attributtarningar);
 			}
+			if ("sallskap" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.sallskap);
+			}
 			
 			if ("miljo" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.miljo);
@@ -1728,6 +2056,7 @@ function sparaarketyp(){
 		skrivhogerkategorityper();
 		skrivarketypkategorier();
 	}
+	//window.alert("sparaarketyp körs, rollperson.arketypsallskapsval = " + rollperson.arketypsallskapsval + ", rollperson.miljosallskapsval = " + rollperson.miljosallskapsval);
 
 }
 function sparamiljo(){
@@ -1760,6 +2089,9 @@ function sparamiljo(){
 			}
 			if ("attributtarningar" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.attributtarningar);
+			}
+			if ("sallskap" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.sallskap);
 			}
 			
 			if ("arketyp" in rollperson){
@@ -2985,6 +3317,9 @@ function sparaovrigafardigheter(){
 			}
 			if ("folkslag" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.folkslag);
+			}
+			if ("sallskap" in rollperson){
+				rollperson= summerarollperson(rollperson, rollperson.sallskap);
 			}
 			if ("arketyp" in rollperson){
 				rollperson= summerarollperson(rollperson, rollperson.arketyp);
@@ -5125,6 +5460,10 @@ function rpvalkategori(kategorinamn){
 	}else if (kategorinamn =="grundattribut"){
 		document.getElementById("hogerkategoribeskrivning").scrollTop=0;
 		skrivgrundattribut();
+	}else if (kategorinamn =="sallskap"){
+		skrivsallskapkategorier();
+		document.getElementById("hogerkategoribeskrivning").scrollTop=0;
+		skrivsallskap();
 	}else if (kategorinamn =="arketyp"){
 		skrivarketypkategorier();
 		document.getElementById("hogerkategoribeskrivning").scrollTop=0;
@@ -5225,6 +5564,13 @@ function bytfolkslag(folkslagsnamn){
 	
 	skrivfolkslag();
 }
+function bytsallskap(sallskapsnamn){
+	aktivtsallskapobjekt=sallskapobjekt[sallskapsnamn];
+	document.getElementById("hogerkategoribeskrivning").scrollTop=0;
+	
+	skrivsallskap();
+}
+
 function bytarketyp(arketypnamn){
 	aktivtarketypobjekt=arketypobjekt[arketypnamn];
 	document.getElementById("hogerkategoribeskrivning").scrollTop=0;
@@ -5998,6 +6344,17 @@ function skrivhogerkategorityper(){
 		htmlkod += " Grundattribut ";
 	}
 	htmlkod += "&#124;" 
+	/*
+	if ("sallskap" in rollperson){
+		htmlkod += "<b>";
+	}
+	htmlkod += "<a id=\"rpvalkategori_sallskap\" title=\"Välj rollpersonens sällskap\" href=\"rpvalkategorier_sallskap.html\" target=\"hogerkategorival\" onclick=\"rpvalkategori(\'sallskap\');return false;\"> Sällskap </a>";
+	if ("sallskap" in rollperson){
+		htmlkod += "</b>";
+	}
+	htmlkod += "&#124;" 
+	*/
+	
 	if ("arketyp" in rollperson){
 		htmlkod += "<b>";
 	}

@@ -53,6 +53,8 @@ function summera_subval(rollpersonsvalobjekt){
     
     fardighetslistaobjekt=hamta_fardighetslistaobjekt();
 	fardighetslista=fardighetslistaobjekt.fardighetslista;
+	
+	rollpersonsvalobjekt.sallskapsval=0;
     i=0; // obligatoriska resultat
     p=0; // Tredje index, skilt från noll endast för subsubval
 	/*
@@ -99,6 +101,13 @@ function summera_subval(rollpersonsvalobjekt){
 					rollpersonsvalobjekt.subval[i][j][0].valdasubsubtotal=[0].concat(rollpersonsvalobjekt.subval[i][j][0].valdasub);
 				}else{
 					rollpersonsvalobjekt.subval[i][j][0].valdasubsubtotal=[0];
+				}
+			}
+			
+			// Skriver om ett sällskapsval gjorts via arketyp eller miljö
+			if ("sallskap" in rollpersonsvalobjekt.subval[i][j][0]){
+				if (rollpersonsvalobjekt.subval[i][j][0].sallskap==1){
+					rollpersonsvalobjekt.sallskapsval=1;
 				}
 			}
 			
@@ -534,7 +543,24 @@ function summerarollperson(rollperson, rollpersonsvalobjekt) {
    // Vardena anger grund for folkslag och bonus for andra
    
    // rollpersonsval folkslag, bakgrund, arketyp, miljo, attributtarningar, handelsetabeller(numrerade)
-   
+	//window.alert("rollpersonsvalobjekt.typ = " + rollpersonsvalobjekt.typ)
+	if (rollpersonsvalobjekt.typ=="arketyp"){
+		
+		if (rollpersonsvalobjekt.sallskapsval==1){
+			
+			rollperson.arketypsallskapsval=1;
+		}else if(rollpersonsvalobjekt.sallskapsval==0){
+			rollperson.arketypsallskapsval=0;
+		}
+	}else if (rollpersonsvalobjekt.typ=="miljo"){
+		if (rollpersonsvalobjekt.sallskapsval==1){
+			
+			rollperson.miljosallskapsval=1;
+		}else if(rollpersonsvalobjekt.sallskapsval==0){
+			rollperson.miljosallskapsval=0;
+		}
+	}
+	
    	i=0; // grundattribut
    	for (j=0;j < rpvalmatris[i].length; j++){
 		if ([rpvalmatris[i][j]] in rollpersonsvalobjekt){
@@ -561,10 +587,7 @@ function summerarollperson(rollperson, rollpersonsvalobjekt) {
 			
 			}
 			
-			
-            
 			//---
-			
         }
 	}
     

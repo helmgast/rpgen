@@ -2039,6 +2039,7 @@
 
 	bakgrundstabeller.damarien[21] = {};
 	bakgrundstabeller.damarien[21].rubrik="Fogde";
+	bakgrundstabeller.damarien[21].pluralobestamd="fogdar";
 	bakgrundstabeller.damarien[21].beskrivning="Inte ens kronans nattgardister är mer fruktade och avskydda av allmogen än storfurstens fogdar. Fogdarna är ämbetsmän utsedda av storfursten och förvaltar exempelvis slott och tillhörande gårdar, en stad eller till och med en gruva åt kronan. De driver in skatter från området, säljer de skatter som betalas i form av boskap eller varor, och ansvarar också för att en del skattemedel används lokalt, till exempel för att underhålla vägar och marknadsplatser. Dessa män och kvinnor har extremt långtgående befogenheter när det gäller att driva in skatterna och drar sig inte för att statuera exempel om det behövs. De är dock relativt okorrumperade då de avlönas direkt av kronan och det är stränga straff för den fogde som försöker driva in extra medel åt sig själv.";
 	bakgrundstabeller.damarien[21].intrigerillgarningar=1;
 	bakgrundstabeller.damarien[21].kunskapsfardigheterenheter=4;
@@ -3106,19 +3107,19 @@
         	
 			if ("obestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
 			}else{
-				bakgrundstabeller[bakgrundstabeller.lista[m]][n].obestamd=="";
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].obestamd="";
 			}
 			if ("bestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
 			}else{
-				bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd=="";
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].bestamd="";
 			}
 			if ("pluralobestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
 			}else{
-				bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=="";
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd="";
 			}
 			if ("pluralbestamd" in bakgrundstabeller[bakgrundstabeller.lista[m]][n]){
 			}else{
-				bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralobestamd=="";
+				bakgrundstabeller[bakgrundstabeller.lista[m]][n].pluralbestamd="";
 			}
 			
 			// Alla bakgrunder har n-genus om inte annat fastställs.

@@ -401,9 +401,11 @@ function valj_subval(rollpersonsvalobjekt, slump){
 										if ("kontakter" in rollpersonsvalobjekt.subval[s][t][u]){
 											if (kontaktord[x] in rollpersonsvalobjekt.subval[s][t][u].kontakter[q]){
 												kontaktordobjekt["new" + kontaktord[x]] = rollpersonsvalobjekt.subval[s][t][u].kontakter[q][kontaktord[x]];
+												
 											}else{
 												kontaktordobjekt["new" + kontaktord[x]] = "en kontakt";
 												kontaktordsaknas=1;
+												
 											}
 										}
 									}
@@ -589,7 +591,7 @@ function valj_subval(rollpersonsvalobjekt, slump){
 	//Summera beskrivningvald och beskrivninghakvald
     // Lägger ihop beskrivningvald och beskrivninghakvald från subval till rot, 
 	if ("typ" in rollpersonsvalobjekt){
-		if (rollpersonsvalobjekt.typ="handelsetabellslag"){		// endast för händelsetabellslag
+		if (rollpersonsvalobjekt.typ=="handelsetabellslag"){		// endast för händelsetabellslag
 			
 			for (i=0; i < rollpersonsvalobjekt.subval.length;i++){
 				

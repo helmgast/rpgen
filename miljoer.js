@@ -712,8 +712,9 @@
 	miljoobjekt.lista=miljolista;
 	for (t = 0; t < miljoobjekt.lista.length; t++){
     	//miljoobjektlista[miljolista[i]] = window[miljolista[i]];
+		miljoobjekt[miljolista[t]].typ="miljo";
 		miljoobjekt[miljolista[t]].aktiverad=0;
-		
+		miljoobjekt[miljolista[t]].sallskapsval=0;
 		// Sätter beskrivningvaldbas till beskrivning om den förra saknas
 		for (i=0;i<miljoobjekt[miljolista[t]].subval.length;i++){
 			for (j=0;j<miljoobjekt[miljolista[t]].subval[i].length;j++){

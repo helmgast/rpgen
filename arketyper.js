@@ -983,8 +983,9 @@
     for (t = 0; t < arketypobjekt.lista.length; t++){
     	
     //    arketypobjekt[arketyplista[i]] = this[arketyplista[i]];
+		arketypobjekt[arketyplista[t]].typ="arketyp";
 		arketypobjekt[arketyplista[t]].aktiverad=0;
-		
+		arketypobjekt[arketyplista[t]].sallskapsval=0;
 		// Sätter beskrivningvaldbas till beskrivning om den förra saknas
 		for (i=0;i<arketypobjekt[arketyplista[t]].subval.length;i++){
 			for (j=0;j<arketypobjekt[arketyplista[t]].subval[i].length;j++){

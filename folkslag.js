@@ -3047,6 +3047,7 @@ var utmarkare={};
 	folkslagobjekt.lista=folkslaglista;
 	for (t = 0; t < folkslagobjekt.lista.length; t++){
     	// folkslagobjektlista[folkslaglista[i]] = window[folkslaglista[i]];
+		folkslagobjekt[folkslaglista[t]].typ="folkslag";
 		folkslagobjekt[folkslaglista[t]].aktiverad=0;
 		folkslagobjekt.rubriker[t]=folkslagobjekt[folkslagobjekt.lista[t]].rubrik;
 		
